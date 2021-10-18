@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import { Suspense, lazy } from "react"; //added
 import HomeHeader from "../sections/Home/HomeHeader";
 import Curriculum from "../sections/Home/Curriculum";
-// import Mentors from "../sections/Home/Mentors";
+import Mentors from "../sections/Home/Mentors";
 import CovidSafety from "../sections/Home/CovidSafety";
-// import AgsSlider from "../sections/Home/AgsSlider";
+import AgsSlider from "../sections/Home/AgsSlider";
 import { API } from "../http/API";
 import { connect } from "react-redux";
-// import InfoTabs from "../sections/Home/InfoTabs";
+import InfoTabs from "../sections/Home/InfoTabs";
 import OurPrograms from "../sections/Home/OurPrograms";
 import { Helmet } from "react-helmet";
 import { constants } from "../utils/constants";
-const InfoTabs = lazy(() => import("../sections/Home/InfoTabs"));
-const Mentors = lazy(() => import("../sections/Home/Mentors"));
-const AgsSlider = lazy(() => import("../sections/Home/AgsSlider"));
 
 class Home extends Component {
   state = {
@@ -22,10 +18,13 @@ class Home extends Component {
     lifeagsData: [],
     currentPage: null,
     content: null,
+    scrollPosition: 0,
   };
 
   componentDidMount() {
     let currentPage = null;
+    window.addEventListener("scroll", this.handleScroll);
+
     API.get(`/pages`)
       .then((response) => {
         if (response.status === 200 || response.status === 201) {
@@ -78,11 +77,18 @@ class Home extends Component {
         console.log(err);
       });
   }
+
+  // caculate scroll position
+  handleScroll = (event) => {
+    let scroll = window.scrollY;
+    this.setState({ scrollPosition: scroll });
+  };
+
   render() {
     const { content } = this.state;
     const { global } = this.props;
     return (
-      <div className='home-page'>
+      <div className='home-page mb-5'>
         <Helmet>
           <title>
             {`AGS | ${
@@ -116,44 +122,53 @@ class Home extends Component {
           }
           bannerImg={content?.banner?.image}
         />
-        <Suspense fallback={<h2 className='text-center'>Loading...</h2>}>
-          <InfoTabs
-            expData={this.state.expData}
-            isArabic={global?.activeLanguage === "ar"}
-            language={global?.activeLanguage}
-          />
-        </Suspense>
-        <Curriculum
-          Curriculum={
-            global?.activeLanguage === "ar"
-              ? content?.arabic?.curriculmSection
-              : content?.curriculmSection
-          }
+
+        <InfoTabs
+          expData={this.state.expData}
+          isArabic={global?.activeLanguage === "ar"}
           language={global?.activeLanguage}
         />
-        <Suspense fallback={<h2 className='text-center'>Loading...</h2>}>
+
+        {this.state.scrollPosition > 440 && (
+          <Curriculum
+            Curriculum={
+              global?.activeLanguage === "ar"
+                ? content?.arabic?.curriculmSection
+                : content?.curriculmSection
+            }
+            language={global?.activeLanguage}
+          />
+        )}
+
+        {this.state.scrollPosition > 1100 && (
           <Mentors
             mentors={this.state.mentorsData}
             isArabic={global?.activeLanguage === "ar"}
             language={global?.activeLanguage}
           />
-        </Suspense>
-        <OurPrograms language={global?.activeLanguage} />
+        )}
 
-        <Suspense fallback={<h2 className='text-center'>Loading...</h2>}>
+        {this.state.scrollPosition > 1640 && (
+          <OurPrograms language={global?.activeLanguage} />
+        )}
+
+        {this.state.scrollPosition > 2210 && (
           <AgsSlider
             lifeagsData={this.state.lifeagsData}
             isArabic={global?.activeLanguage === "ar"}
             language={global?.activeLanguage}
           />
-        </Suspense>
-        <CovidSafety
-          Covid={
-            global?.activeLanguage === "ar"
-              ? content?.arabic?.covidSection
-              : content?.covidSection
-          }
-        />
+        )}
+
+        {this.state.scrollPosition > 2760 && (
+          <CovidSafety
+            Covid={
+              global?.activeLanguage === "ar"
+                ? content?.arabic?.covidSection
+                : content?.covidSection
+            }
+          />
+        )}
       </div>
     );
   }
