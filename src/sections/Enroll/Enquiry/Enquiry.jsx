@@ -19,7 +19,7 @@ const defaultState = {
     parent_email: "",
     parent_phone: "",
     cb_phone: "",
-    child_dob: currentDate(),
+    child_dob: '',
 }
 
 function Enquiry(props) {

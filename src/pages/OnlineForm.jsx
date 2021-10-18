@@ -7,6 +7,7 @@ import { constants } from "../utils/constants"
 class OnlineForm extends Component {
 
     render() {
+        
         const { global } = this.props;
         return (
             <div className="home-page">

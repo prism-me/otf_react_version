@@ -21,7 +21,7 @@
       }
     }
     .Ethos {
-      height: 80vh;
+      height: 66vh;
       //background-size: cover;
       background-size: 100%;
       background-position: center;
@@ -36,9 +36,12 @@
         background-size: 120% /* work with the background-size */
       }
       @media #{$lg} {
-        height: 45vh;
+        height: 29vh;
         background-size: cover;
         padding: 0;
+        &:hover{
+          background-size: 100% /* work with the background-size */
+        }
       }
       @media #{$md} {
         background-size: cover;

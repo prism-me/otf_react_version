@@ -14,13 +14,14 @@ const defaultState = {
     message: "",
     variant: "",
     name: '',
-    email: ''
+    email: '',
+    number: '',
 }
 
 function OurPrograms(props) {
     const [init, setInit] = useState(defaultState);
 
-    let { name, email, isRequestPending, isOpen, message, variant } = init;
+    let { name, email, number, isRequestPending, isOpen, message, variant } = init;
 
     const validation = (obj) => {
         let valid = { error: true, message: "" }
@@ -49,6 +50,16 @@ function OurPrograms(props) {
                 ]
                 }`
         }
+        if (obj.number === "") {
+            valid.error = false;
+            valid.message += valid.message ? `\n${constants?.site_content?.contact_us?.numb_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.contact_us?.numb_req[
+                props.language
+                ]
+                }`
+        }
 
         return valid;
     }
@@ -68,6 +79,7 @@ function OurPrograms(props) {
             let inputData = {
                 name: init.name,
                 email: init.email,
+                number: init.number,
                 flag: "waitlist"
             }
             setInit({
@@ -150,6 +162,16 @@ function OurPrograms(props) {
                                             <Form.Control name={"email"} value={email} onChange={handleChange}
                                                 type="text" placeholder={
                                                     constants?.site_content?.waitlist?.enter_email[
+                                                    props.language
+                                                    ]
+                                                }
+                                                className={"formFields"} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3" controlId="formGroupEmail">
+                                            <Form.Control name={"number"} value={number} onChange={handleChange}
+                                                type="text" placeholder={
+                                                    constants?.site_content?.contact_us?.phone[
                                                     props.language
                                                     ]
                                                 }

@@ -16,12 +16,14 @@ import { constants } from "../utils/constants"
 class Enroll extends Component {
     state = {
         currentPage: null,
+        faqPage: null,
         content: null,
         faqData: []
     }
 
     componentDidMount() {
         let currentPage = null;
+        let faqPage = null;
         API.get(`/pages`).then((response) => {
             if (
                 response.status === 200 ||
@@ -30,7 +32,10 @@ class Enroll extends Component {
                 currentPage = response.data.data.find(
                     (x) => x.slug === "Enroll-page"
                 );
-                this.setState({ currentPage });
+                faqPage = response.data.data.find(
+                    (x) => x.slug === "faq-page"
+                );
+                this.setState({ currentPage, faqPage });
                 API.get(`/all_sections/${currentPage._id}`)
                     .then(
                         (response) => {
@@ -46,20 +51,7 @@ class Enroll extends Component {
                         }
                     )
                     .catch((err) => console.log(err));
-            }
-        })
-            .catch((err) => console.log(err));
-
-        API.get(`/pages`).then((response) => {
-            if (
-                response.status === 200 ||
-                response.status === 201
-            ) {
-                currentPage = response.data.data.find(
-                    (x) => x.slug === "faq-page"
-                );
-                this.setState({ currentPage });
-                API.get(`/all_sections/${currentPage._id}`)
+                API.get(`/all_sections/${faqPage._id}`)
                     .then(
                         (response) => {
                             if (response.data.data) {

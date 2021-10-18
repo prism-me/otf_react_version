@@ -188,7 +188,7 @@ function MainNavbar(props) {
               <div
                 className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
               >
-                <Dropdown>
+                {/* <Dropdown>
                   <Dropdown.Toggle
                     variant=" btn-sm"
                     id="dropdown-basic">
@@ -212,7 +212,7 @@ function MainNavbar(props) {
                       </div>
                     </Dropdown.Item>
                   </Dropdown.Menu>
-                </Dropdown>
+                </Dropdown> */}
               </div>
               <LinkContainer to={`/${props.global.activeLanguage}/Enroll`}>
                 <button className={"enrollButton"}>
