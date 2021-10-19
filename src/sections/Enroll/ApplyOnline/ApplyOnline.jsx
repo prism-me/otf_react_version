@@ -4,9 +4,9 @@ import { useHistory } from "react-router-dom";
 import { constants } from "../../../utils/constants"
 
 export default function ApplyOnline(props) {
-    function refreshPage() {
-        window.location.reload(false);
-    }
+    // function refreshPage() {
+    //     window.location.reload(false);
+    // }
     const history = useHistory();
     return (
         <div className="ApplyOnline" id={"applyOnline"}>
@@ -16,14 +16,15 @@ export default function ApplyOnline(props) {
                         {props.applyOnlineSec?.title}
                         {/* Apply Online by filling the form and submitting related documents  */}
                     </p>
-                    <button className="btn btn-lg shadow btnstyleB"
-                        onClick={() => {
-                            history.push(
-                                `/${props.language
-                                }/OnlineForm`
-                            );
-                            refreshPage()
-                        }}
+                    <a href={`/${props.language
+                        }/OnlineForm`} className="btn btn-lg shadow btnstyleB"
+                    // onClick={() => {
+                    //     history.push(
+                    //         `/${props.language
+                    //         }/OnlineForm`
+                    //     );
+                    //     refreshPage()
+                    // }}
                     >
                         {
                             constants?.site_content?.app_online[
@@ -31,7 +32,7 @@ export default function ApplyOnline(props) {
                             ]
                         }
                         {/* Apply Online */}
-                    </button>
+                    </a>
                 </div>
             </Container>
         </div>

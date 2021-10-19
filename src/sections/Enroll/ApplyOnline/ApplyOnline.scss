@@ -26,12 +26,12 @@
       font-size: 21px;
       font-weight: 500;
       border:none;
-      width: 250px;
-      height: 60px;
+      // width: 250px;
+      // height: 60px;
+      padding: 1rem 2rem;
       border-radius: 58px;
       background: $bg-color;
       @media #{$sm,$lsm,$xsm,$tiny} {
-        width: 100%;
         font-size: 16px;
       }
     }
