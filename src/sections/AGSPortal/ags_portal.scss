@@ -140,7 +140,14 @@
   }
   .mblScreenInfo{
     @media #{$sm} {
-    display: block !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  }
+  .mblEmailSpace{
+    @media #{$sm} {
+    margin-top: 0.5rem;
     }
   }
   //On Mbl Screen

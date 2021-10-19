@@ -146,7 +146,7 @@ function Layout(props) {
                       toggleDrawer(false);
                     }}
                     // primary="Academics"
-                    primary={global.activeLanguage === "en" ? "Academics" : "أكاديميون"}
+                    primary={global.activeLanguage === "en" ? "Academics" : "شؤون أكاديمية"}
                   />
                 </ListItem>
                 <ListItem button>
@@ -166,7 +166,7 @@ function Layout(props) {
                       toggleDrawer(false);
                     }}
                     // primary="AGS Portal"
-                    primary={global.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
+                    primary={global.activeLanguage === "en" ? "AGS Portal" : "بوابة المدرسة الأمريكية الخليجية"}
                   />
                 </ListItem>
                 <ListItem button>
@@ -230,7 +230,7 @@ function Layout(props) {
                       borderRadius: "60px",
                       width: "100%"
                     }}>
-                      {global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+                      {global.activeLanguage === "en" ? "Enroll" : "سجل"}
                     </button>
                   </ListItemText>
                 </ListItem>

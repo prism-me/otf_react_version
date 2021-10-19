@@ -94,9 +94,9 @@ const AgsPortalComponent = (props) => {
             </Hidden>
             <div className="footer-info">
                 <Container>
-                    <Row className="justify-content-center align-items-center mblScreenInfo">
+                    <Row className="justify-content-center align-items-center">
                         <Col sm={12} lg="auto" md="auto">
-                            <div className="txt">
+                            <div className="txt mblScreenInfo">
                                 <p>
                                     {props.contactSec?.title}
                                     {/* For IT support, please contact us at: */}
@@ -104,18 +104,18 @@ const AgsPortalComponent = (props) => {
                             </div>
                         </Col>
                         <Col sm={6} lg="auto" md="auto">
-                            <div className="email">
+                            <div className="email mblScreenInfo mblEmailSpace">
                                 <a href="mailto:helpdesk@ags.ae">
-                                    <MailOutlineIcon />
+                                    <MailOutlineIcon style={{ marginRight: "0.5rem" }} />
                                     {props.contactSec?.email}
                                     {/* helpdesk@ags.ae */}
                                 </a>
                             </div>
                         </Col>
                         <Col sm={6} lg="auto" md="auto">
-                            <div className="phone">
+                            <div className="phone mblScreenInfo">
                                 <a href="tel:06-5061111">
-                                    <PhoneOutlinedIcon />
+                                    <PhoneOutlinedIcon style={{ marginRight: "0.5rem" }} />
                                     {props.contactSec?.phone}
                                     {/* 06-5061111 */}
                                 </a>

@@ -6,6 +6,12 @@
     padding:10px;
     z-index: 999;
     margin-right: -50px;
+    @media #{$sm} {
+      margin-right: -36px;
+    }
+    @media #{$md} {
+      margin-right: -39px;
+    }
 
   .contact-pannel-btn{
     background:$white;
