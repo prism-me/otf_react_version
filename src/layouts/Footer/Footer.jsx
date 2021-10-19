@@ -90,18 +90,19 @@ function Footer(props) {
                 {/* ADMISSIONS */}
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to="#">
-                  <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Virtual Admissions" : "التقديم الإفتراضي"}
-                    {/* Virtual Admissions  */}
-                  </Nav.Link>
-                </LinkContainer>
-                <LinkContainer to={`/${global.activeLanguage}/Enroll`}>
-                  <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Enroll Online" : "التسجيل عبر الإنترنت"}
-                    {/* Enroll Online */}
-                  </Nav.Link>
-                </LinkContainer>
+                {/* <LinkContainer to="#"> */}
+                {/* <Nav.Link className=" fdeco"> */}
+                {/* {global.activeLanguage === "en" ? "Virtual Admissions" : "التقديم الإفتراضي"} */}
+                {/* </Nav.Link> */}
+                {/* </LinkContainer> */}
+                <a href={`/${global.activeLanguage}/OnlineForm`}
+                  className=" fdeco text-white text-decoration-none" style={{ paddingTop: "8px" }}
+                >
+                  {/* <Nav.Link className=" fdeco"> */}
+                  {global.activeLanguage === "en" ? "Enroll Online" : "التسجيل عبر الإنترنت"}
+                  {/* Enroll Online */}
+                  {/* </Nav.Link> */}
+                </a>
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
                 <HashLink to={`/${global.activeLanguage}/Enroll` + "#Tuition_Fees"} className={"hashLinkStyling"}>
                   {global.activeLanguage === "en" ? "Tuition Fees" : "الرسوم الدراسية"}

@@ -56,29 +56,18 @@ class Home extends Component {
         console.log(err);
       });
 
-    API.get("/exp_and_life")
-      .then((response) => {
-        this.setState({
-          lifeagsData: response.data.data.filter(
-            (x) => x.type === "life-at-ags"
-          ),
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    API.get('/exp_and_life').then(response => {
+      this.setState({ 
 
-    API.get("/exp_and_life")
-      .then((response) => {
-        this.setState({
-          expData: response.data.data.filter(
-            (x) => x.type === "experience-with-ags"
-          ),
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+        lifeagsData: response.data.data.filter(x => x.type === "life-at-ags") ,
+
+        expData: response.data.data.filter(x => x.type === "experience-with-ags") 
+      
       });
+    })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   // caculate scroll position
