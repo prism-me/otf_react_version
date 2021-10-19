@@ -229,6 +229,15 @@ function OurPrograms(props) {
                                         }
                                         className={"formFields"} />
                                 </Form.Group>
+                                <Form.Group className="mb-3" controlId="formGroupPhone">
+                                    <Form.Control name={"number"} value={number} onChange={handleChange}
+                                        type="text" placeholder={
+                                            constants?.site_content?.contact_us?.phone[
+                                            props.language
+                                            ]
+                                        }
+                                        className={"formFields"} />
+                                </Form.Group>
                                 <center>
                                     {
                                         !isRequestPending ?
