@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
+import BounceLoader from "react-spinners/BounceLoader";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
 // import header_bgMB from "./../../../assets/images/agsbanners/HomePage.JPG";
@@ -37,54 +38,67 @@ function HomeHeader(props) {
   return (
     <>
       <Hidden smDown>
-        <div
-          style={{
-            height: "",
-            backgroundImage: `url(${isPlaying && props?.bannerImg})`,
-          }}
-          className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
-          <BackGroundVideo
-            // blur={2}
-            bannerImg={props.bannerImg}
-            // videoSource={videoSource}
-          >
-            <div className='content'>
-              {/*<div className='sub-content' >*/}
-              <div className={"inner-header flex"}>
-                <Container>
-                  <Row>
-                    <Col sm={5}>
-                      {!isPlaying ? (
-                        <div className='description-column'>
-                          <div className='header-logo-wrapper'>
-                            {/* <img src={logo} alt="AGS Logo" className="header-logo" /> */}
-                          </div>
-                          <h1 className='intro-title'>
-                            {props.banner?.title}
-                            {/* AMERICAN GULF SCHOOL */}
-                          </h1>
-                          <p className={"intro-title2"}>
-                            {props.banner?.subtitle}
-                            {/* EDUCATION DONE RIGHT */}
-                          </p>
-                          <p
-                            className={"subtitle"}
-                            dangerouslySetInnerHTML={{
-                              __html: props.banner?.description,
-                            }}>
-                            {/* Take a look at what the CEO of the school
+        {!props?.bannerImg ? (
+          <div
+            className={`d-flex flex-column text-center align-items-center justify-content-center`}
+            style={{
+              position: "absolute",
+              zIndex: 99999,
+              height: "100%",
+              width: "100%",
+              background: "rgba(255,255,255,0.6)",
+            }}>
+            <BounceLoader color={"#1a2c52e6"} size={100} />
+          </div>
+        ) : (
+          <div
+            style={{
+              height: "",
+              backgroundImage: `url(${isPlaying && props?.bannerImg})`,
+            }}
+            className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
+            <BackGroundVideo
+              // blur={2}
+              bannerImg={props.bannerImg}
+              // videoSource={videoSource}
+            >
+              <div className='content'>
+                {/*<div className='sub-content' >*/}
+                <div className={"inner-header flex"}>
+                  <Container>
+                    <Row>
+                      <Col sm={5}>
+                        {!isPlaying ? (
+                          <div className='description-column'>
+                            <div className='header-logo-wrapper'>
+                              {/* <img src={logo} alt="AGS Logo" className="header-logo" /> */}
+                            </div>
+                            <h1 className='intro-title'>
+                              {props.banner?.title}
+                              {/* AMERICAN GULF SCHOOL */}
+                            </h1>
+                            <p className={"intro-title2"}>
+                              {props.banner?.subtitle}
+                              {/* EDUCATION DONE RIGHT */}
+                            </p>
+                            <p
+                              className={"subtitle"}
+                              dangerouslySetInnerHTML={{
+                                __html: props.banner?.description,
+                              }}>
+                              {/* Take a look at what the CEO of the school
                             <br />
                             has to say. */}
-                          </p>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                    </Col>
-                    <Hidden smDown>
-                      <Col sm={{ span: 6 }} className={"iconSpace"}>
-                        <div className='video-promo-content'>
-                          {/* <button className="btn About-video-play-icon"
+                            </p>
+                          </div>
+                        ) : (
+                          ""
+                        )}
+                      </Col>
+                      <Hidden smDown>
+                        <Col sm={{ span: 6 }} className={"iconSpace"}>
+                          <div className='video-promo-content'>
+                            {/* <button className="btn About-video-play-icon"
                             onClick={togglePlay}
                           >
                             {isPlaying ? (
@@ -93,15 +107,16 @@ function HomeHeader(props) {
                               <PlayArrowIcon className={"AboutVideoplaySize"} />
                             )}
                           </button> */}
-                        </div>
-                      </Col>
-                    </Hidden>
-                  </Row>
-                </Container>
+                          </div>
+                        </Col>
+                      </Hidden>
+                    </Row>
+                  </Container>
+                </div>
               </div>
-            </div>
-          </BackGroundVideo>
-        </div>
+            </BackGroundVideo>
+          </div>
+        )}
       </Hidden>
       <Hidden mdUp>
         <div
