@@ -31,20 +31,29 @@ function BottomTabNavigator(props) {
       >
         <Link to={`/${props.activeLanguage}/agsPortal`}>
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <InputIcon className={"iconSize"} />
-            <span>AGS Portal</span>
+            <InputIcon className={props.activeLanguage === "en" ? "iconSize" : "iconSizeArabic"} />
+            <span>
+              {props.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
+              {/* AGS Portal */}
+            </span>
           </button>
         </Link>
         <Link to={`/${props.activeLanguage}/Enroll`}>
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <PersonAddIcon className={"iconSize"} />
-            <span>ENROLL</span>
+            <PersonAddIcon className={props.activeLanguage === "en" ? "iconSize" : "iconSizeArabic"} />
+            <span>
+              {props.activeLanguage === "en" ? "Enroll" : "سجل"}
+              {/* ENROLL */}
+            </span>
           </button>
         </Link>
         <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1" target="_blank">
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <RoomIcon className={"iconSize"} />
-            <span>Location</span>
+            <RoomIcon className={props.activeLanguage === "en" ? "iconSize" : "iconSizeArabic"} />
+            <span>
+              {props.activeLanguage === "en" ? "Location" : "موقعك"}
+              {/* Location */}
+            </span>
           </button>
         </a>
       </BottomNavigation>
