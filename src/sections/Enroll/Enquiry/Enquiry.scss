@@ -15,6 +15,11 @@
         font-size: 22px;
       }
     }
+    input[type="date"]:not(.has-value):before{
+      color: #495057;
+      content: attr(placeholder);
+      margin-right: 0.5rem;
+    }
     .Enquiry {
       height: 80vh;
       //background-size: cover;

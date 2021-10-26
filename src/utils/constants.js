@@ -335,6 +335,10 @@ export const constants = {
         en: "Parent/Guardian’s Mobile Number",
         ar: "رقم هاتف الوالد / ولي الأمر"
       },
+      childDob: {
+        en: "Child’s Date Of Birth",
+        ar: "تاريخ ميلاد الطفل"
+      },
       submit: {
         en: "Submit",
         ar: "إرسال"
@@ -346,6 +350,10 @@ export const constants = {
       name_req: {
         en: "Parent/Guardian’s Full Name Required",
         ar: "مطلوب الاسم الكامل للوالد / الوصي"
+      },
+      dob_req: {
+        en: "Child’s Date Of Birth Required",
+        ar: "يجب إدخال تاريخ ميلاد الطفل"
       },
     },
     school_tour: {

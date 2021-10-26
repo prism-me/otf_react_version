@@ -63,6 +63,16 @@ function Enquiry(props) {
                     ]
                     }`
             }
+            if (obj.child_dob === "") {
+                valid.error = false;
+                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.dob_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.req_call?.dob_req[
+                    props.language
+                    ]
+                    }`
+            }
         }
         if (type === "cb") {
             if (obj.cb_parent_name === "") {
@@ -357,8 +367,13 @@ function Enquiry(props) {
                                                     <Form.Control name={"child_dob"} onChange={handleChange}
                                                         type="date"
                                                         value={child_dob}
-                                                        placeholder="Child’s Date Of Birth"
-                                                        className={"formFields"} />
+                                                        placeholder={
+                                                            constants?.site_content?.req_call?.childDob[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        className={"formFields"}
+                                                    />
                                                 </Form.Group>
                                                 <center>
                                                     {
@@ -513,7 +528,11 @@ function Enquiry(props) {
                                             <Form.Control name={"child_dob"} onChange={handleChange}
                                                 type="date"
                                                 value={child_dob}
-                                                placeholder="Child’s Date Of Birth"
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.childDob[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <center>
