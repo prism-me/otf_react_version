@@ -42,6 +42,7 @@
       width: 200px;
       img {
         width: 100%;
+        background-color: transparentize(#ffffff, .4);
         @media #{$md} {
           width: 200px;
         }

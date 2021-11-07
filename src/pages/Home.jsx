@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import HomeHeader from "../sections/Home/HomeHeader";
 import Curriculum from "../sections/Home/Curriculum";
 import Mentors from "../sections/Home/Mentors";
@@ -24,7 +26,8 @@ class Home extends Component {
   componentDidMount() {
     let currentPage = null;
     window.addEventListener("scroll", this.handleScroll);
-
+    //add animation on scroll
+    AOS.init({ duration: 2000 });
     API.get(`/pages`)
       .then((response) => {
         if (response.status === 200 || response.status === 201) {
@@ -53,18 +56,21 @@ class Home extends Component {
         console.log(err);
       });
 
-    API.get('/exp_and_life').then(response => {
-      this.setState({ 
+    API.get("/exp_and_life")
+      .then((response) => {
+        this.setState({
+          lifeagsData: response.data.data.filter(
+            (x) => x.type === "life-at-ags"
+          ),
 
-        lifeagsData: response.data.data.filter(x => x.type === "life-at-ags") ,
-
-        expData: response.data.data.filter(x => x.type === "experience-with-ags") 
-      
-      });
-    })
-      .catch(err => {
-        console.log(err)
+          expData: response.data.data.filter(
+            (x) => x.type === "experience-with-ags"
+          ),
+        });
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   // caculate scroll position
@@ -77,88 +83,103 @@ class Home extends Component {
     const { content } = this.state;
     const { global } = this.props;
     return (
-      <div className='home-page mb-5'>
-        <Helmet>
-          <title>
-            {`AGS | ${
-              global?.activeLanguage === "ar"
-                ? content?.arabic?.meta_details?.title ||
-                  constants?.site_content?.site_name
-                : content?.meta_details?.title ||
-                  constants?.site_content?.site_name
-            }`}
-          </title>
-          {/* <title>
+      <>
+        <div className='home-page mb-5'>
+          <Helmet>
+            <title>
+              {`AGS | ${
+                global?.activeLanguage === "ar"
+                  ? content?.arabic?.meta_details?.title ||
+                    constants?.site_content?.site_name
+                  : content?.meta_details?.title ||
+                    constants?.site_content?.site_name
+              }`}
+            </title>
+            {/* <title>
             {`{ this.state.currentPage?.meta_details?.title ||
               constants?.site_content?.site_name }`}
           </title> */}
-          <meta
-            name='description'
-            content={
+            <meta
+              name='description'
+              content={
+                global?.activeLanguage === "ar"
+                  ? content?.arabic?.meta_details?.description ||
+                    constants?.site_content?.seo_description
+                  : content?.meta_details?.description ||
+                    constants?.site_content?.seo_description
+              }
+            />
+          </Helmet>
+
+          <HomeHeader
+            banner={
               global?.activeLanguage === "ar"
-                ? content?.arabic?.meta_details?.description ||
-                  constants?.site_content?.seo_description
-                : content?.meta_details?.description ||
-                  constants?.site_content?.seo_description
+                ? content?.arabic?.banner
+                : content?.banner
             }
+            bannerImg={content?.banner?.image}
           />
-        </Helmet>
-        <HomeHeader
-          banner={
-            global?.activeLanguage === "ar"
-              ? content?.arabic?.banner
-              : content?.banner
-          }
-          bannerImg={content?.banner?.image}
-        />
 
-        <InfoTabs
-          expData={this.state.expData}
-          isArabic={global?.activeLanguage === "ar"}
-          language={global?.activeLanguage}
-        />
+          <div data-aos='fade-up'>
+            <InfoTabs
+              expData={this.state.expData}
+              isArabic={global?.activeLanguage === "ar"}
+              language={global?.activeLanguage}
+            />
+          </div>
 
-        {this.state.scrollPosition > 440 && (
-          <Curriculum
-            Curriculum={
-              global?.activeLanguage === "ar"
-                ? content?.arabic?.curriculmSection
-                : content?.curriculmSection
-            }
-            language={global?.activeLanguage}
-          />
-        )}
+          {this.state.scrollPosition > 440 && (
+            <div data-aos='fade-up'>
+              <Curriculum
+                Curriculum={
+                  global?.activeLanguage === "ar"
+                    ? content?.arabic?.curriculmSection
+                    : content?.curriculmSection
+                }
+                language={global?.activeLanguage}
+              />
+            </div>
+          )}
 
-        {this.state.scrollPosition > 1100 && (
-          <Mentors
-            mentors={this.state.mentorsData}
-            isArabic={global?.activeLanguage === "ar"}
-            language={global?.activeLanguage}
-          />
-        )}
+          {this.state.scrollPosition > 1100 && (
+            <div data-aos='fade-up'>
+              <Mentors
+                mentors={this.state.mentorsData}
+                isArabic={global?.activeLanguage === "ar"}
+                language={global?.activeLanguage}
+              />
+            </div>
+          )}
 
-        {this.state.scrollPosition > 1640 && (
-          <OurPrograms language={global?.activeLanguage} />
-        )}
+          {this.state.scrollPosition > 1640 && (
+            <div data-aos='fade-up'>
+              <OurPrograms language={global?.activeLanguage} />
+            </div>
+          )}
 
-        {this.state.scrollPosition > 2210 && (
-          <AgsSlider
-            lifeagsData={this.state.lifeagsData}
-            isArabic={global?.activeLanguage === "ar"}
-            language={global?.activeLanguage}
-          />
-        )}
+          {this.state.scrollPosition > 2210 && (
+            <div data-aos='fade-up'>
+              <AgsSlider
+                lifeagsData={this.state.lifeagsData}
+                isArabic={global?.activeLanguage === "ar"}
+                language={global?.activeLanguage}
+              />
+            </div>
+          )}
 
-        {this.state.scrollPosition > 2760 && (
-          <CovidSafety
-            Covid={
-              global?.activeLanguage === "ar"
-                ? content?.arabic?.covidSection
-                : content?.covidSection
-            }
-          />
-        )}
-      </div>
+          {this.state.scrollPosition > 2760 && (
+            <div data-aos='fade-up'>
+              <CovidSafety
+                Covid={
+                  global?.activeLanguage === "ar"
+                    ? content?.arabic?.covidSection
+                    : content?.covidSection
+                }
+              />
+            </div>
+          )}
+        </div>
+      </>
     );
   }
 }

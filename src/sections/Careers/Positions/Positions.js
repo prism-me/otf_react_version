@@ -10,6 +10,7 @@ import ApplyNow from "../../../components/Modals/ApplyNow/ApplyNow";
 const Positions = (props) => {
     const [modalShow, setModalShow] = React.useState(false);
     const [currentIndex, setCurrentIndex] = React.useState(0);
+    const [jobDescription, setJobDescription] = React.useState();
 
     const slidesData = [
         {
@@ -88,45 +89,45 @@ const Positions = (props) => {
                         dotListClass="custom-dot-list-style"
                         itemClass="listStyle"
                     >
-                        {
-                            slidesData.map((slides, index) => (
-                                <div className={"description-column"}>
-                                    <Card className={"cardStyle"}>
-                                        <Card.Body >
-                                            <Row>
-                                                <Col xs={12} sm={12} md={12} lg={12}>
-                                                    <p className={"subtitle"}>
-                                                        {
-                                                            slides.position
-                                                        }
-                                                    </p>
-                                                </Col>
-                                                <br />
-                                                <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
-                                                    <button class="schoolbtn btn-lg"
-                                                        onClick={() => {
-                                                            setCurrentIndex(index);
-                                                            setModalShow(true)
-                                                        }
-                                                        }
-                                                    >
-                                                        {
-                                                            constants?.site_content?.apply_now[
-                                                            props.language
-                                                            ]
-                                                        }
-                                                        {/* APPLY NOW */}
-                                                    </button>
-                                                </Col>
-                                            </Row>
-                                        </Card.Body>
-                                    </Card>
-                                </div>
-                            ))
+                        {props.careerData.map((slides, index) => (
+                            <div className={"description-column"}>
+                                <Card className={"cardStyle"}>
+                                    <Card.Body >
+                                        <Row>
+                                            <Col xs={12} sm={12} md={12} lg={12}>
+                                                <p className={"subtitle"}>
+                                                    {slides.designation}
+                                                </p>
+                                            </Col>
+                                            <br />
+                                            <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
+                                                <button class="schoolbtn btn-lg"
+                                                    onClick={() => {
+                                                        setCurrentIndex(index);
+                                                        setModalShow(true);
+                                                        setJobDescription(props.language === 'ar' ? slides.arabic.description : slides.description);
+                                                    }
+                                                    }
+                                                >
+                                                    {
+                                                        constants?.site_content?.apply_now[
+                                                        props.language
+                                                        ]
+                                                    }
+                                                    {/* APPLY NOW */}
+                                                </button>
+                                            </Col>
+                                        </Row>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        ))
                         }
                         <ApplyNow
-                            show={modalShow} onHide={() => setModalShow(false)}
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
                             lang={props.language}
+                            careerDescription={jobDescription}
                         />
                     </Carousel>
                 </div>
@@ -155,21 +156,22 @@ const Positions = (props) => {
                         itemClass="listStyle"
                     >
                         {
-                            slidesData.map((slides, index) => (
+                            props.careerData.map((slides, index) => (
                                 <div className={"description-column"}>
                                     <Card className={"cardStyle"}>
                                         <Card.Body >
 
                                             <p className={"subtitle"}>
                                                 {
-                                                    slides.position
+                                                    slides.designation
                                                 }
                                             </p>
                                             <div className="d-flex justify-content-center align-items-center">
                                                 <button class="schoolbtn btn-lg"
                                                     onClick={() => {
                                                         setCurrentIndex(index);
-                                                        setModalShow(true)
+                                                        setModalShow(true);
+                                                        setJobDescription(props.language === 'ar' ? slides.arabic.description : slides.description);
                                                     }
                                                     }
                                                 >
@@ -186,10 +188,17 @@ const Positions = (props) => {
                                 </div>
                             ))
                         }
+                        {/* <ApplyNow
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
+                            lang={props.language}
+                            career={props.careerData}
+                        /> */}
                         <ApplyNow
                             show={modalShow}
                             onHide={() => setModalShow(false)}
                             lang={props.language}
+                            careerDescription={jobDescription}
                         />
                     </Carousel>
                 </div>
