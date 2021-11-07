@@ -11,6 +11,7 @@ import { API } from "../http/API";
 class Careers extends Component {
   state = {
     mentorsData: [],
+    careerData:[],
     currentPage: null,
     content: null,
   }
@@ -48,9 +49,13 @@ class Careers extends Component {
     API.get('/mentors').then(response => {
       this.setState({ mentorsData: response.data.data });
     })
-      .catch(err => {
-        console.log(err)
-      })
+      .catch(err => { console.log(err) })
+
+    API.get('/career').then(response => {
+      console.log("career :: ", response.data.data);
+      this.setState({ careerData: response.data.data });
+    })
+      .catch(err => { console.log(err) })
   }
   render() {
     const {
@@ -107,6 +112,7 @@ class Careers extends Component {
               : content?.position3
           }
           language={global?.activeLanguage}
+          careerData={this.state.careerData}
         />
         <ContentSection
           content={
