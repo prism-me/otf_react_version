@@ -47,7 +47,7 @@
       border-radius: 50px;
       transition: background-size 1s ease-in-out;
       &:hover{
-        background-size: 120% /* work with the background-size */
+        background-size: 110% /* work with the background-size */
       }
       @media #{$lg,$md} {
         height: 50vh;

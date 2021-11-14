@@ -115,7 +115,7 @@ export const constants = {
       ar: "عرض المزيد >",
     },
     view_calender: {
-      en: "View Calender",
+      en: "View Calendar",
       ar: "عرض التقويم",
     },
     calender: {

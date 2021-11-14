@@ -47,7 +47,7 @@ function AgsSlider(props) {
                 ssr={true} // means to render carousel on server-side.
                 infinite={false}
                 draggable={true}
-                autoPlay={true}
+                autoPlay={false}
                 autoPlaySpeed={3000}
                 keyBoardControl={true}
                 customTransition="all .5s"
