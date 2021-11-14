@@ -75,8 +75,8 @@ const Positions = (props) => {
                     <Carousel
                         responsive={responsive}
                         swipeable={true}
-                        showDots={true}
-                        arrows={false}
+                        showDots={false}
+                        arrows={true}
                         ssr={true} // means to render carousel on server-side.
                         infinite={false}
                         draggable={true}
@@ -103,7 +103,7 @@ const Positions = (props) => {
                                             <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
                                                 <button class="schoolbtn btn-lg"
                                                     onClick={() => {
-                                                        setCurrentIndex(index);
+                                                        // setCurrentIndex(index);
                                                         setModalShow(true);
                                                         setJobDescription(props.language === 'ar' ? slides.arabic.description : slides.description);
                                                     }
@@ -123,13 +123,13 @@ const Positions = (props) => {
                             </div>
                         ))
                         }
-                        <ApplyNow
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                            lang={props.language}
-                            careerDescription={jobDescription}
-                        />
                     </Carousel>
+                    <ApplyNow
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                        lang={props.language}
+                        careerDescription={jobDescription}
+                    />
                 </div>
             </Hidden>
             <Hidden mdUp>
@@ -169,7 +169,7 @@ const Positions = (props) => {
                                             <div className="d-flex justify-content-center align-items-center">
                                                 <button class="schoolbtn btn-lg"
                                                     onClick={() => {
-                                                        setCurrentIndex(index);
+                                                        // setCurrentIndex(index);
                                                         setModalShow(true);
                                                         setJobDescription(props.language === 'ar' ? slides.arabic.description : slides.description);
                                                     }
@@ -188,19 +188,13 @@ const Positions = (props) => {
                                 </div>
                             ))
                         }
-                        {/* <ApplyNow
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                            lang={props.language}
-                            career={props.careerData}
-                        /> */}
-                        <ApplyNow
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                            lang={props.language}
-                            careerDescription={jobDescription}
-                        />
                     </Carousel>
+                    <ApplyNow
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                        lang={props.language}
+                        careerDescription={jobDescription}
+                    />
                 </div>
             </Hidden>
 

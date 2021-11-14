@@ -12,63 +12,52 @@ const defaultState = {
     isOpen: false,
     message: "",
     variant: "",
+    isRequestPending: false,
+    name: '',
+    email: '',
+    number: '',
     isSubmitResponse: true,
     isSubmitResponseCB: true,
     cb_parent_name: "",
-    parent_name: "",
-    parent_email: "",
-    parent_phone: "",
     cb_phone: "",
-    child_dob: '',
 }
 
 function Enquiry(props) {
     const [init, setInit] = useState(defaultState);
-    let { isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant, cb_phone, cb_parent_name, isSubmitResponseCB } = init;
+    let { name, email, number, isRequestPending, isOpen, message, variant, cb_phone, cb_parent_name, isSubmitResponseCB } = init;
     const validation = (obj, type) => {
         let valid = { error: true, message: "" }
         let emailRegex = STRINGS.REGEX.EMAIL;
         if (type === "bst") {
-            if (obj.parent_email === "") {
+            if (obj.email === "") {
                 valid.error = false;
-                valid.message += valid.message ? `\n${constants?.site_content?.school_tour?.email_req[
+                valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.email_req[
                     props.language
                 ]
-                    }` : `${constants?.site_content?.school_tour?.email_req[
+                    }` : `${constants?.site_content?.waitlist?.email_req[
                     props.language
                     ]
                     }`
-            } else if (!emailRegex.test(obj.parent_email)) {
+            } else if (!emailRegex.test(obj.email)) {
                 valid.error = false;
-                valid.message += valid.message ? `\n${obj.parent_email} is not a valid email` : `${obj.parent_email} is not a valid email`
+                valid.message += valid.message ? `\n${obj.email} is not a valid email` : `${obj.email} is not a valid email`
             }
-            if (obj.parent_name === "") {
+            if (obj.name === "") {
                 valid.error = false;
-                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.name_req[
+                valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.name_req[
                     props.language
                 ]
-                    }` : `${constants?.site_content?.req_call?.name_req[
-                    props.language
-                    ]
-                    }`
-            }
-
-            if (obj.parent_phone === "") {
-                valid.error = false;
-                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.numb_req[
-                    props.language
-                ]
-                    }` : `${constants?.site_content?.req_call?.numb_req[
+                    }` : `${constants?.site_content?.waitlist?.name_req[
                     props.language
                     ]
                     }`
             }
-            if (obj.child_dob === "") {
+            if (obj.number === "") {
                 valid.error = false;
-                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.dob_req[
+                valid.message += valid.message ? `\n${constants?.site_content?.contact_us?.numb_req[
                     props.language
                 ]
-                    }` : `${constants?.site_content?.req_call?.dob_req[
+                    }` : `${constants?.site_content?.contact_us?.numb_req[
                     props.language
                     ]
                     }`
@@ -99,32 +88,29 @@ function Enquiry(props) {
         return valid;
     }
 
-    const handleSubmitBookTour = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         let validate = validation(init, "bst")
         if (validate.error) {
             let inputData = {
-                parent_name: init.parent_name,
-                parent_email: init.parent_email,
-                parent_phone: init.parent_phone,
-                child_dob: convertedDate(init.child_dob),
-                flag: "book_school_tour"
+                name: init.name,
+                email: init.email,
+                number: init.number,
+                flag: "waitlist"
             }
             setInit({
                 ...init,
-                isSubmitResponse: false
+                isRequestPending: true
             })
 
-            API.post("book_tour", inputData).then((res) => {
+            API.post("waitlist", inputData).then((res) => {
                 if (res.status === STRINGS.REQUEST_STATUS) {
                     setInit({
                         ...init,
-                        isSubmitResponse: true,
-                        parent_name: "",
-                        parent_email: "",
-                        parent_phone: "",
-                        child_dob: "",
+                        isRequestPending: false,
+                        cb_parent_name: "",
+                        cb_phone: "",
                         isOpen: true,
                         message: res.data.message,
                         variant: "success"
@@ -132,7 +118,7 @@ function Enquiry(props) {
                 } else {
                     setInit({
                         ...init,
-                        isSubmitResponse: true,
+                        isRequestPending: false,
                         isOpen: true,
                         message: res.data.message,
                         variant: "error"
@@ -308,87 +294,53 @@ function Enquiry(props) {
                                         <Card.Body>
                                             <h4 className={" intro-title"}>
                                                 {
-                                                    constants?.site_content?.school_tour?.title[
+                                                    constants?.site_content?.waitlist?.title[
                                                     props.language
                                                     ]
                                                 }
-                                                {/* Book a School Tour */}
                                             </h4>
-                                            <p className={"subTitle"}>
-                                                {
-                                                    constants?.site_content?.school_tour?.subtitle[
-                                                    props.language
-                                                    ]
-                                                }
-                                                {/* Book a tour with our Admissions team to visit American Gulf School
-                                                Sharjah,
-                                                located in Al Rahmaniya 4, Sharjah.
-                                                To book a tour of American Gulf School, please fill out the form below
-                                                and a
-                                                member of our Admissions team will contact you to arrange a suitable
-                                                time */}
-                                            </p>
-                                            <Form onSubmit={handleSubmitBookTour}>
-                                                <Form.Group className="mb-3" controlId="formGroupName"
-                                                >
-                                                    <Form.Control name={"parent_name"} onChange={handleChange}
-                                                        type="text"
-                                                        value={parent_name}
+                                            <Form onSubmit={handleSubmit}>
+                                                <Form.Group className="mb-3" controlId="formGroupName">
+                                                    <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
                                                         placeholder={
-                                                            constants?.site_content?.school_tour?.enter_pname[
+                                                            constants?.site_content?.waitlist?.enter_name[
                                                             props.language
                                                             ]
                                                         }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Control name={"parent_email"} onChange={handleChange}
-                                                        type="text"
-                                                        value={parent_email}
-                                                        placeholder={
-                                                            constants?.site_content?.school_tour?.enter_pemail[
+                                                    <Form.Control name={"email"} value={email} onChange={handleChange}
+                                                        type="text" placeholder={
+                                                            constants?.site_content?.waitlist?.enter_email[
                                                             props.language
                                                             ]
                                                         }
                                                         className={"formFields"} />
                                                 </Form.Group>
-                                                <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                    <Form.Control name={"parent_phone"} onChange={handleChange}
-                                                        type="number"
-                                                        value={parent_phone}
-                                                        placeholder={
-                                                            constants?.site_content?.req_call?.enter_pnumb[
+
+                                                <Form.Group className="mb-3" controlId="formGroupEmail">
+                                                    <Form.Control name={"number"} value={number} onChange={handleChange}
+                                                        type="text" placeholder={
+                                                            constants?.site_content?.contact_us?.phone[
                                                             props.language
                                                             ]
                                                         }
                                                         className={"formFields"} />
-                                                </Form.Group>
-                                                <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                    <Form.Control name={"child_dob"} onChange={handleChange}
-                                                        type="date"
-                                                        value={child_dob}
-                                                        placeholder={
-                                                            constants?.site_content?.req_call?.childDob[
-                                                            props.language
-                                                            ]
-                                                        }
-                                                        className={"formFields"}
-                                                    />
                                                 </Form.Group>
                                                 <center>
                                                     {
-                                                        isSubmitResponse ?
-                                                            <button type={"submit"}
-                                                                className={"enroll"}>
+                                                        !isRequestPending ?
+                                                            <button className={"enroll"}>
                                                                 {
-                                                                    constants?.site_content?.req_call?.submit[
+                                                                    constants?.site_content?.waitlist?.enroll[
                                                                     props.language
                                                                     ]
                                                                 }
-                                                                {/* SUBMIT */}
                                                             </button> :
                                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                                     }
+
                                                 </center>
                                             </Form>
                                         </Card.Body>
@@ -472,64 +424,35 @@ function Enquiry(props) {
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
                                         {
-                                            constants?.site_content?.school_tour?.title[
+                                            constants?.site_content?.waitlist?.title[
                                             props.language
                                             ]
                                         }
-                                        {/* Book a School Tour */}
                                     </h4>
-                                    <p className={"subTitle"}>
-                                        {
-                                            constants?.site_content?.school_tour?.subtitle[
-                                            props.language
-                                            ]
-                                        }
-                                        {/* Book a tour with our Admissions team to visit American Gulf School Sharjah,
-                                        located in Al Rahmaniya 4, Sharjah.
-                                        To book a tour of American Gulf School, please fill out the form below and a
-                                        member of our Admissions team will contact you to arrange a suitable time */}
-                                    </p>
-                                    <Form onSubmit={handleSubmitBookTour}>
-                                        <Form.Group className="mb-3" controlId="formGroupName"
-                                        >
-                                            <Form.Control name={"parent_name"} onChange={handleChange}
-                                                type="text"
-                                                value={parent_name}
+                                    <Form onSubmit={handleSubmit}>
+                                        <Form.Group className="mb-3" controlId="formGroupName">
+                                            <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
                                                 placeholder={
-                                                    constants?.site_content?.school_tour?.enter_pname[
+                                                    constants?.site_content?.waitlist?.enter_name[
                                                     props.language
                                                     ]
                                                 }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
-                                            <Form.Control name={"parent_email"} onChange={handleChange}
-                                                type="text"
-                                                value={parent_email}
-                                                placeholder={
-                                                    constants?.site_content?.school_tour?.enter_pemail[
+                                            <Form.Control name={"email"} value={email} onChange={handleChange}
+                                                type="text" placeholder={
+                                                    constants?.site_content?.waitlist?.enter_email[
                                                     props.language
                                                     ]
                                                 }
                                                 className={"formFields"} />
                                         </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formGroupNumber">
-                                            <Form.Control name={"parent_phone"} onChange={handleChange}
-                                                type="number"
-                                                value={parent_phone}
-                                                placeholder={
-                                                    constants?.site_content?.req_call?.enter_pnumb[
-                                                    props.language
-                                                    ]
-                                                }
-                                                className={"formFields"} />
-                                        </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formGroupNumber">
-                                            <Form.Control name={"child_dob"} onChange={handleChange}
-                                                type="date"
-                                                value={child_dob}
-                                                placeholder={
-                                                    constants?.site_content?.req_call?.childDob[
+
+                                        <Form.Group className="mb-3" controlId="formGroupEmail">
+                                            <Form.Control name={"number"} value={number} onChange={handleChange}
+                                                type="text" placeholder={
+                                                    constants?.site_content?.contact_us?.phone[
                                                     props.language
                                                     ]
                                                 }
@@ -537,18 +460,17 @@ function Enquiry(props) {
                                         </Form.Group>
                                         <center>
                                             {
-                                                isSubmitResponse ?
-                                                    <button type={"submit"}
-                                                        className={"enroll"}>
+                                                !isRequestPending ?
+                                                    <button className={"enroll"}>
                                                         {
-                                                            constants?.site_content?.req_call?.submit[
+                                                            constants?.site_content?.waitlist?.enroll[
                                                             props.language
                                                             ]
                                                         }
-                                                        {/* SUBMIT */}
                                                     </button> :
                                                     <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
+
                                         </center>
                                     </Form>
                                 </Card.Body>

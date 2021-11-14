@@ -105,6 +105,45 @@
         }
       }
     }
+
+
+ //Design on MBL Screen
+ .cardStyleMBL{
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  .intro-title {
+    font-size: 22px;
+    color: $bg-color;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .formFields{
+    border-radius: 60px;
+    //border: 1px solid;
+    //border-image-slice: 1;
+    //border-image-source: $gradient;
+  }
+  .enroll{
+    background: $bg-color;
+    border: none;
+    color: white;
+    padding: 0.5rem 3rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+  }
+  .enroll:hover{
+    border: 1px solid $bg-color;
+    background: $hover-color;
+    color: $primary-color;
+  }
+}
+
+
+
+
     //Design On MbL Screen
     .cardStyleMBL{
       width: 100%;
