@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
-// import header_bgMB from "./../../../assets/images/agsbanners/HomePage.JPG";
+import header_bgMB from "./../../../assets/images/agsbanners/HomePage.JPG";
 import header_bg from "./../../../assets/images/agsbanners/homepageBanner.png";
 // import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/PrincipalWelcomeMessage.mp4";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -31,7 +31,7 @@ function HomeHeader(props) {
     setIsPlaying(!isPlaying);
   };
 
-  // const videoSource = "https://american-gulf-school.b-cdn.net/videos/PrincipalWelcomeMessage.mp4";
+  const videoSource = "https://american-gulf-school.b-cdn.net/videos/AGS%20Principal's%20Message-v2.mov.mp4";
 
   // const videoSource = AGSPrincipalWelcomeMessage;
 
@@ -60,7 +60,7 @@ function HomeHeader(props) {
             <BackGroundVideo
               // blur={2}
               bannerImg={props.bannerImg}
-              // videoSource={videoSource}
+              videoSource={videoSource}
             >
               <div className='content'>
                 {/*<div className='sub-content' >*/}
@@ -98,15 +98,15 @@ function HomeHeader(props) {
                       <Hidden smDown>
                         <Col sm={{ span: 6 }} className={"iconSpace"}>
                           <div className='video-promo-content'>
-                            {/* <button className="btn About-video-play-icon"
-                            onClick={togglePlay}
-                          >
-                            {isPlaying ? (
-                              <PauseIcon className={"AboutVideoplaySize"} />
-                            ) : (
-                              <PlayArrowIcon className={"AboutVideoplaySize"} />
-                            )}
-                          </button> */}
+                            <button className="btn About-video-play-icon"
+                              onClick={togglePlay}
+                            >
+                              {isPlaying ? (
+                                <PauseIcon className={"AboutVideoplaySize"} />
+                              ) : (
+                                <PlayArrowIcon className={"AboutVideoplaySize"} />
+                              )}
+                            </button>
                           </div>
                         </Col>
                       </Hidden>
@@ -121,7 +121,7 @@ function HomeHeader(props) {
       <Hidden mdUp>
         <div
           className='home-header'
-          // style={{ backgroundImage: `url(${header_bgMB})` }}
+          style={{ backgroundImage: `url(${header_bgMB})` }}
         >
           <div className={"inner-header flex"}>
             <Container>
