@@ -4,6 +4,11 @@
     @media #{$sm ,$md} {
       padding-top: 2rem;
     }
+    input[type="date"]:not(.has-value):before{
+      color: #495057;
+      content: attr(placeholder);
+      margin-right: 0.5rem;
+    }
     .programs {
       height: 100vh;
       // background-size: 100%;

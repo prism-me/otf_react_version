@@ -216,10 +216,6 @@ function Enquiry(props) {
                     className="Enquiry"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
-                    {/*<div className="op-div">*/}
-                    {/*</div>*/}
-                    {/*<div className="wavy-div">*/}
-                    {/*</div>*/}
                     <div className="description-column">
                         <Container fluid>
                             <Row>
