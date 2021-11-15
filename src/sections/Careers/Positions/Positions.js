@@ -81,7 +81,6 @@ const Positions = (props) => {
                         infinite={false}
                         draggable={true}
                         autoPlay={false}
-                        autoPlaySpeed={3000}
                         keyBoardControl={true}
                         customTransition="all .5s"
                         transitionDuration={500}

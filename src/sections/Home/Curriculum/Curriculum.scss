@@ -19,18 +19,16 @@
     height: 70vh;
     //background-size: cover;
     background-size: 100%;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 888;
-    transition: background-size 1s ease-in-out;
-    &:hover{
-      background-size: 120% /* work with the background-size */
-    }
+    // position: relative;
+    // z-index: 888;
+    // transition: background-size 1s ease-in-out;
+
     @media #{$lg} {
       height: 45vh;
       background-size: cover;
@@ -44,6 +42,8 @@
       height: 80vh;
     }
     .description-column {
+
+      margin: 22rem auto 2rem !important;
       .cardStyle{
         padding: 1rem;
         width: 950px;

@@ -41,7 +41,8 @@
     .navbar-brand {
       width: 200px;
       img {
-        width: 100%;
+        width: 245px;
+        height: 87px;
         background-color: transparentize(#ffffff, .4);
         @media #{$md} {
           width: 200px;
