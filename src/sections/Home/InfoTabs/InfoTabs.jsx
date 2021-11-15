@@ -41,7 +41,7 @@ function InfoTabs(props) {
       <Carousel responsive={responsive}
         swipeable={true}
         showDots={true}
-        arrows={false}
+        arrows={true}
         ssr={true} // means to render carousel on server-side.
         infinite={false}
         draggable={true}
