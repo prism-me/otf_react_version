@@ -18,13 +18,14 @@ export default function ApplyOnline(props) {
                     </p>
                     <a href={`/${props.language
                         }/OnlineForm`} className="btn btn-lg shadow btnstyleB"
-                    // onClick={() => {
-                    //     history.push(
-                    //         `/${props.language
-                    //         }/OnlineForm`
-                    //     );
-                    //     refreshPage()
-                    // }}
+                    // {/* <button className="btn btn-lg shadow btnstyleB"
+                    //     onClick={() => {
+                    //         history.push(
+                    //             `/${props.language
+                    //             }/OnlineForm`
+                    //         );
+                    //         refreshPage()
+                    //     }} */}
                     >
                         {
                             constants?.site_content?.app_online[

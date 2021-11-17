@@ -6,6 +6,7 @@ import Layout from "./layouts/Layout";
 import Navigation from "./navigator/Navigation";
 import ScrollToTop from "./utils/ScrollToTop";
 
+
 function App() {
   const [loader, setLoader] = useState(true);
   useEffect(() => {

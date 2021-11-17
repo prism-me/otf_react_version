@@ -12,6 +12,7 @@ import OnlineForm from "../pages/OnlineForm";
 import careers from "../pages/Careers";
 import Primaryschool from "../pages/Primaryschool";
 import OurTeam from "../pages/OurTeam";
+import Sitemap from "../Sitemap";
 
 export const routes = [
   {
@@ -116,6 +117,13 @@ export const routes = [
     name: "OurTeam",
     path: "/OurTeam",
     component: OurTeam,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "Sitemap",
+    path: "/sitemap",
+    component: Sitemap,
     isPrivate: false,
     exact: true,
   },
