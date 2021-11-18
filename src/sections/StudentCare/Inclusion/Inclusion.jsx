@@ -56,8 +56,8 @@ function Inclusion(props) {
                                 <p
                                     className={
                                         props.isArabic
-                                            ? "text-right subTitle"
-                                            : "text-left subTitle"
+                                            ? "subTitleArabic"
+                                            : "subTitle"
                                     }
                                     dangerouslySetInnerHTML={{
                                         __html: isReadMore ?

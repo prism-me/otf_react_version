@@ -25,6 +25,15 @@
       font-weight: 400;
       margin-bottom: 1rem;
       text-align: justify;
+      direction: ltr;
+    }
+    .subTitleArabic {
+      margin-top: 0 !important;
+      font-size: $sub-fonts;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      text-align: justify;
+      direction: rtl;
     }
   .LearnmoreButton{
     font-weight: 500;
