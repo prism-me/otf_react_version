@@ -1,7 +1,7 @@
 import axios from "axios";
 // import { store } from "./../store";
 
-const apiURL = "https://prismcloudhosting.com/AGS_APIs/public/api/";
+const apiURL = "https://ags.ae/AGS_APIs/public/api/";
 export const API = axios.create({
   baseURL: apiURL,
   timeout: 60000,
