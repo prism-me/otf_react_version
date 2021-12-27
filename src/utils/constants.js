@@ -249,7 +249,7 @@ export const constants = {
       },
       admission: {
         en: "FOR ADMISSIONS",
-        ar: "للقبول"
+        ar: "للقبول والتسجيل"
       },
       help_desk: {
         en: "HELP DESK & QUERIES",
