@@ -108,7 +108,7 @@ export const constants = {
     },
     life_at_ags: {
       en: "LIFE AT AMERICAN GULF SCHOOL",
-      ar: "الحياة في مدرسة الخليج الأمريكية",
+      ar: "الحياة في المدرسة الأمريكيّة الخليجيّة",
     },
     view_more: {
       en: "View More >",

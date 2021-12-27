@@ -75,7 +75,7 @@ function MainNavbar(props) {
               toggleDrawer(false);
             }}
             // primary="About us"
-            primary={props.global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
+            primary={props.global.activeLanguage === "en" ? "About Us" : " عن المدرسة"}
             className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
@@ -86,7 +86,7 @@ function MainNavbar(props) {
               toggleDrawer(false);
             }}
             // primary="Academics"
-            primary={props.global.activeLanguage === "en" ? "Academics" : "شؤون أكاديمية"}
+            primary={props.global.activeLanguage === "en" ? "Academics" : "الشؤون الأكاديمية"}
             className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>

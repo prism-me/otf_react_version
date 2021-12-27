@@ -69,15 +69,13 @@ function Layout(props) {
   const { global } = props;
   return (
     <div
-      className={`layout ${
-        global?.activeLanguage === "ar"
-          ? "arabic-direction"
-          : "english-direction"
-      }`}>
+      className={`layout ${global?.activeLanguage === "ar"
+        ? "arabic-direction"
+        : "english-direction"
+        }`}>
       <div
-        className={`${
-          props.showSpinner ? "d-flex" : "d-none"
-        } flex-column text-center align-items-center justify-content-center`}
+        className={`${props.showSpinner ? "d-flex" : "d-none"
+          } flex-column text-center align-items-center justify-content-center`}
         style={{
           position: "absolute",
           zIndex: 99999,
@@ -131,7 +129,7 @@ function Layout(props) {
                     primary={
                       global.activeLanguage === "en"
                         ? "About Us"
-                        : "معلومات عنا"
+                        : " عن المدرسة"
                     }
                   />
                 </ListItem>
@@ -145,7 +143,7 @@ function Layout(props) {
                     primary={
                       global.activeLanguage === "en"
                         ? "Academics"
-                        : "شؤون أكاديمية"
+                        : "الشؤون الأكاديمية"
                     }
                   />
                 </ListItem>
@@ -248,7 +246,7 @@ function Layout(props) {
                       history.push(`/${global.activeLanguage}/Enroll`);
                       toggleDrawer(false);
                     }}
-                    // primary="Enroll"
+                  // primary="Enroll"
                   >
                     <button
                       style={{

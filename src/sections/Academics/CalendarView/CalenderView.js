@@ -132,7 +132,7 @@ const CalendarView = (props) => {
                                             </span></div>
                                         <span className="_circle-month">
                                             {
-                                                props.lang === "en" ? "Nov" : "نو مبر "
+                                                props.lang === "en" ? "Nov" : "نوفمبر"
                                             }
                                             {/* Nov */}
                                         </span>
@@ -270,7 +270,7 @@ const CalendarView = (props) => {
                                             </span></div>
                                         <span className="_circle-month">
                                             {
-                                                props.lang === "en" ? "JAN" : "جنوری"
+                                                props.lang === "en" ? "JAN" : "يناير"
                                             }
                                             {/* JAN */}
                                         </span>
