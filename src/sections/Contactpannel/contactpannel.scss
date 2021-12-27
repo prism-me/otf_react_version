@@ -25,3 +25,30 @@
   }
 
 }
+.contact-pannel-main-Arabic {
+  position: fixed;
+  top: 82%;
+  right:0px;
+  transform: rotate(-90deg);
+  padding:10px;
+  z-index: 9999999;
+  margin-right: -50px;
+  @media #{$sm} {
+    margin-right: -36px;
+  }
+  @media #{$md} {
+    margin-right: -39px;
+  }
+
+.contact-pannel-btn{
+  background:$white;
+  border: 2px solid #CDB786;
+  color: #1A2C52;
+  padding: 0 3rem;
+  border-radius: 60px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0px 0px 15px #ccc;
+}
+
+}

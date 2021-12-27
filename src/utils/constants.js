@@ -70,11 +70,11 @@ export const constants = {
     },
     learn_more: {
       en: "Learn More ",
-      ar: "تعرف على المزيد",
+      ar: "عرض المزيد",
     },
     learn_less: {
       en: "Show Less ",
-      ar: "عرض أقل",
+      ar: "إخفاء",
     },
     apply_now: {
       en: "APPLY NOW",
