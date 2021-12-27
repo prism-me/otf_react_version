@@ -11,7 +11,7 @@ import { types } from "../redux/global/types";
 
 class Navigation extends Component {
   state = {
-    loginModal: false,
+    // loginModal: false,
     allError: {}
   };
   setLoginModal = (status) => { };

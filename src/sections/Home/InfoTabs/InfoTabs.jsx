@@ -30,8 +30,8 @@ function InfoTabs(props) {
   };
   return (
     <div className={"info-tabs"} dir="ltr">
-      {console.log("constants?.site_content :: ",constants?.site_content.exp_ags)}
-      {console.log("props.language :: ",props.language)}
+      {/* {console.log("constants?.site_content :: ",constants?.site_content.exp_ags)}
+      {console.log("props.language :: ",props.language)} */}
       <h2 className={"InfoTitle"}>
         {
           props.language === "ar" ? constants?.site_content?.exp_ags.ar : constants?.site_content?.exp_ags.en

@@ -24,6 +24,7 @@ function* setActiveLanguage(action) {
     if (window.location.pathname === "/") {
       // let location = window.location.pathname;
       let route = `/${action.payload.language}`;
+      // console.log("route", route)
       // setTimeout(() => {
       //   window.location.reload();
       // }, 0);
