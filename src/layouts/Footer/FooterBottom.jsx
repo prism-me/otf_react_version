@@ -18,7 +18,6 @@ function FooterBottom(props) {
               {props.language === "ar" ?
                 <p>
                   الطبع والنشر © <a href="/">المدرسة الأمريكيّة الخليجيّة</a> - ٢٠٢١ | تم الإنشاء بواسطة<a href="https://www.prism-me.com/"> بريزم ديجيتال</a>
-                  {/* جميع الحقوق محفوظة لدى <a href="/">@المدرسة الأمريكية الخليجية</a>  - ٢٠٢١ | تم التصميم بواسطة <a href="https://www.prism-me.com/"> بريزم ديجيتال</a> */}
                 </p>
                 : <p>
                   Copyright By <a href="/">@American Gulf School</a> - 2021 | Powered By <a href="https://www.prism-me.com/"> Prism Digital </a>
