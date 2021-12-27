@@ -86,7 +86,7 @@ class Home extends Component {
       <>
         <div className='home-page mb-5'>
           <Helmet>
-            <title>
+            {/* <title>
               {`AGS | ${
                 global?.activeLanguage === "ar"
                   ? content?.arabic?.meta_details?.title ||
@@ -94,7 +94,8 @@ class Home extends Component {
                   : content?.meta_details?.title ||
                     constants?.site_content?.site_name
               }`}
-            </title>
+            </title> */}
+            <title>AGS | American Gulf School Sharjah | Education Done Right</title>
             {/* <title>
             {`{ this.state.currentPage?.meta_details?.title ||
               constants?.site_content?.site_name }`}
