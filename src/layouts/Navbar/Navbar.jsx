@@ -225,7 +225,7 @@ function MainNavbar(props) {
                   // href={`/` || `/${props.global.activeLanguage}`}
                   style={{ cursor: "pointer" }}
                 >
-                  {['right'].map((anchor) => (
+                  {[props.global.activeLanguage === "en" ? "right" : "left"].map((anchor) => (
                     <React.Fragment key={anchor}>
                       <MenuIcon
                         onClick={toggleDrawer(anchor, true)}
