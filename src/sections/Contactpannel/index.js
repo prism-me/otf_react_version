@@ -6,8 +6,7 @@ const Contactpannel = (props) => {
         <>
             {isPlaying ? "" : (
                 <div
-                    // className="contact-pannel-main"
-                    className={props?.activeLanguage == "en" ? "contact-pannel-main" : "contact-pannel-main-Arabic"}
+                    className="contact-pannel-main"
                 >
                     <div className="contact-number">
                         <a href='tel:06-5061111' className="contact-pannel-btn text-decoration-none"><PhoneOutlinedIcon />
