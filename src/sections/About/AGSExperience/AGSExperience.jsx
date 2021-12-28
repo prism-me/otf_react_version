@@ -48,7 +48,7 @@ const AgsExperience = (props) => {
                                         {/* View more */}
                                     </button> : <button className={"viewButton"}>
                                         {
-                                            constants?.site_content?.learn_less[
+                                            constants?.site_content?.view_less[
                                             props.language
                                             ]
                                         }

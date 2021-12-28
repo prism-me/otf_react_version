@@ -66,7 +66,7 @@ export const constants = {
     },
     read_more: {
       en: "Read More >",
-      ar: " قرأ المزيد>",
+      ar: "عرض المزيد >",
     },
     learn_more: {
       en: "Learn More ",
@@ -112,7 +112,11 @@ export const constants = {
     },
     view_more: {
       en: "View More >",
-      ar: "عرض المزيد >",
+      ar: "المزيد >",
+    },
+    view_less: {
+      en: "View Less",
+      ar: "أقل",
     },
     view_calender: {
       en: "View Calendar",
@@ -333,11 +337,11 @@ export const constants = {
       },
       enter_pnumb: {
         en: "Parent/Guardian’s Mobile Number",
-        ar: "رقم هاتف الوالد / ولي الأمر"
+        ar: "رقم هاتف ولي الأمر \ الوصي."
       },
       childDob: {
         en: "Child’s Date Of Birth",
-        ar: "تاريخ ميلاد الطفل"
+        ar: "تاريخ ميلاد الطّالب المُراد الاستفسار عنه "
       },
       submit: {
         en: "Submit",
@@ -359,19 +363,20 @@ export const constants = {
     school_tour: {
       title: {
         en: "Book a School Tour",
-        ar: "احجز جولة مدرسية"
+        ar: "احجز لجولة في المدرسة"
       },
       subtitle: {
         en: "Book a tour with our Admissions team to visit American Gulf School Sharjah, located in Al Rahmaniya 4, Sharjah. To book a tour of American Gulf School, please fill out the form below and a member of our Admissions team will contact you to arrange a suitable time.",
-        ar: "احجز جولة لزيارة المدرسة الأمريكية الخليجية في الشارقة مع فريق القبول لدينا، والتي تقع في منطقة الرحمانية 4، الشارقة. لحجز جولة في المدرسة الأمريكية الخليجية، يرجى ملء النموذج أدناه، وسوف يتصل بك أحد أعضاء فريق القبول لدينا لترتيب وقت مناسب:"
+        ar: `يمكنك من هنا حجز موعدًا لأخد جولة مع أحد أعضاء قسم القبول والتسجيل في المدرسة الأمريكيّة الخليجيّة، الواقعة في إمارة الشّارقة\ الرّحمانيّة 4.
+        يرجى تعبئة البيانات التّالية، وسيقوم أحد موظّفو المدرسة بالتّواصل معك مباشرةً لتحديد الموعد المناسب.`
       },
       enter_pname: {
         en: "Parent/Guardian’s Full Name",
-        ar: "الاسم الكامل للوالد / ولي الأمر"
+        ar: "اسم ولي الأمر \ الوصي "
       },
       enter_pemail: {
         en: "Parent/Guardian’s Email",
-        ar: "البريد الالكتروني للوالد / ولي الأمر"
+        ar: "البريد الإلكتروني لولي الأمر \ الوصي"
       },
       email_req: {
         en: "Parent/Guardian’s Email Required",
@@ -392,7 +397,7 @@ export const constants = {
         ar: "اسم الوالد / الوصي"
       },
       enter_pnumb: {
-        en: "Parent/Guardian’s Mobile Number",
+        en: "rdian’s Mobile Number",
         ar: "رقم هاتف الوالد / ولي الأمر"
       },
       submit: {

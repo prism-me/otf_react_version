@@ -22,7 +22,7 @@ function FeesPayments(props) {
                 >
                     <div className="description-column">
                         <Container>
-                            <Card className={"cardStyle"}>
+                            <Card className={"cardStyle"} dir="ltr">
                                 <Card.Body>
                                     <Table responsive className={"text-center"}>
                                         <p className={"subtitle"}
@@ -41,7 +41,7 @@ function FeesPayments(props) {
             </Hidden>
             <Hidden mdUp>
                 <Container>
-                    <Card className={"cardStyleMBL"}>
+                    <Card className={"cardStyleMBL"} dir="ltr">
                         <Card.Body>
                             <Table responsive className={"text-center TableMB"}>
                                 <p className={"subtitle"}

@@ -1,8 +1,17 @@
 import React from 'react';
 import { Hidden } from "@material-ui/core";
 import { constants } from "../../../utils/constants"
+import $ from 'jquery';
 
 export default function ScrollableTabsButtonAuto(props) {
+
+    $(document).ready(function () {
+        $('.TabButton').click(function () {
+            $('.TabButton.active').removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+
     const scrollToBottom1 = () => {
         const bottomEle = document.getElementById(0);
         bottomEle.scrollIntoView({ behavior: "smooth" });
