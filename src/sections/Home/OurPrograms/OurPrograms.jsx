@@ -317,7 +317,7 @@ function OurPrograms(props) {
                                             props.language
                                             ]
                                         }
-                                        className={"formFields"}
+                                        className={"formFields dobField"}
                                     />
                                 </Form.Group>
                                 <center>
