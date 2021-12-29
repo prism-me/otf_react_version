@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Container, Form } from "react-bootstrap";
 import header_bg from "../../../assets/images/agsbackgrounds/waitlistbackground.jpg";
 import Hidden from "@material-ui/core/Hidden";
@@ -8,6 +8,7 @@ import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
 import { constants } from "../../../utils/constants"
 import { convertedDate, currentDate } from "../../../utils/base";
+// import $ from "jquery"
 
 const defaultState = {
     isOpen: false,
@@ -21,6 +22,30 @@ const defaultState = {
 }
 
 function OurPrograms(props) {
+
+    // $(document).ready(function () {
+    //     $('#date-picker-exchange').pickadate({
+    //         monthsFull: ['يناير', 'فبراير', '	مارس', '	أبريل/إبريل', 'أيار', 'حزيران', 'تموز', '	آب', 'أيلول', 'تشرين الأول', 'تشرين الثاني', 'كانون الأول'],
+    //         monthsShort: ['يناير', 'فبراير', '	مارس', '	أبريل/إبريل', 'أيار', 'حزيران', 'تموز', '	آب', 'أيلول', 'تشرين الأول', 'تشرين الثاني', 'كانون الأول'],
+    //         weekdaysFull: ['الأحد', 'السبت', 'الجمعه', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الأثنين'],
+    //         weekdaysShort: ['الأحد', 'السبت', 'الجمعه', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الأثنين'],
+    //         today: 'اليوم',
+    //         clear: 'اختيار واضح',
+    //         close: 'إلغاء',
+    //         formatSubmit: 'yyyy/mm/dd'
+    //     });
+
+    // });
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "./arabicdate.js";
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        }
+    }, []);
 
     const [init, setInit] = useState(defaultState);
     let { isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant } = init;
@@ -213,18 +238,39 @@ function OurPrograms(props) {
                                                 }
                                                 className={"formFields"} />
                                         </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formGroupNumber">
-                                            <Form.Control name={"child_dob"} onChange={handleChange}
-                                                type="date"
-                                                value={child_dob}
-                                                placeholder={
-                                                    constants?.site_content?.req_call?.childDob[
-                                                    props.language
-                                                    ]
-                                                }
-                                                className={"formFields"}
-                                            />
-                                        </Form.Group>
+                                        {
+                                            props.language === "en" ?
+                                                <Form.Group className="mb-3" controlId="formGroupNumber">
+                                                    <Form.Control name={"child_dob"} onChange={handleChange}
+                                                        type="date"
+                                                        value={child_dob}
+                                                        placeholder={
+                                                            constants?.site_content?.req_call?.childDob[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        className={"formFields"}
+                                                    />
+                                                </Form.Group> :
+                                                // <Form.Group className="mb-3" controlId="formGroupNumber">
+                                                //     <Form.Control name={"child_dob"} onChange={handleChange}
+                                                //         type="text"
+                                                //         value={child_dob}
+                                                //         placeholder="التاريخ المحدد"
+                                                //         // placeholder={
+                                                //         //     constants?.site_content?.req_call?.childDob[
+                                                //         //     props.language
+                                                //         //     ]
+                                                //         // }
+                                                //         id="date-picker-exchange"
+                                                //         className="formFields datepicker"
+                                                //     // className={"formFields"}
+                                                //     />
+                                                // </Form.Group>
+                                                <div class="md-form">
+                                                    <input dir="rtl" placeholder="التاريخ المحدد" type="text" id="date-picker-exchange" class="form-control datepicker" />
+                                                </div>
+                                        }
                                         <center>
                                             {
                                                 isSubmitResponse ?
@@ -308,18 +354,36 @@ function OurPrograms(props) {
                                         }
                                         className={"formFields"} />
                                 </Form.Group>
-                                <Form.Group className="mb-3" controlId="formGroupNumber">
-                                    <Form.Control name={"child_dob"} onChange={handleChange}
-                                        type="date"
-                                        value={child_dob}
-                                        placeholder={
-                                            constants?.site_content?.req_call?.childDob[
-                                            props.language
-                                            ]
-                                        }
-                                        className={"formFields dobField"}
-                                    />
-                                </Form.Group>
+                                {
+                                    props.language === "en" ?
+                                        <Form.Group className="mb-3" controlId="formGroupNumber">
+                                            <Form.Control name={"child_dob"} onChange={handleChange}
+                                                type="date"
+                                                value={child_dob}
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.childDob[
+                                                    props.language
+                                                    ]
+                                                }
+                                                className={"formFields"}
+                                            />
+                                        </Form.Group> :
+                                        <Form.Group className="mb-3" controlId="formGroupNumber">
+                                            <Form.Control name={"child_dob"} onChange={handleChange}
+                                                type="text"
+                                                value={child_dob}
+                                                placeholder="التاريخ المحدد"
+                                            // placeholder={
+                                            //     constants?.site_content?.req_call?.childDob[
+                                            //     props.language
+                                            //     ]
+                                            // }
+                                            // id="date-picker-exchange"
+                                            // className="formFields datepicker"
+                                            // className={"formFields"}
+                                            />
+                                        </Form.Group>
+                                }
                                 <center>
                                     {
                                         isSubmitResponse ?
@@ -338,60 +402,6 @@ function OurPrograms(props) {
                             </Form>
                         </Card.Body>
                     </Card>
-                    {/* <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
-                        <Card.Body>
-                            <h4 className={" intro-title"}>
-                                {
-                                    constants?.site_content?.waitlist?.title[
-                                    props.language
-                                    ]
-                                }
-                            </h4>
-                            <Form onSubmit={handleSubmit}>
-                                <Form.Group className="mb-3" controlId="formGroupName">
-                                    <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                        placeholder={
-                                            constants?.site_content?.waitlist?.enter_name[
-                                            props.language
-                                            ]
-                                        }
-                                        className={"formFields"} />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                    <Form.Control name={"email"} value={email} onChange={handleChange}
-                                        type="text" placeholder={
-                                            constants?.site_content?.waitlist?.enter_email[
-                                            props.language
-                                            ]
-                                        }
-                                        className={"formFields"} />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="formGroupPhone">
-                                    <Form.Control name={"number"} value={number} onChange={handleChange}
-                                        type="text" placeholder={
-                                            constants?.site_content?.contact_us?.phone[
-                                            props.language
-                                            ]
-                                        }
-                                        className={"formFields"} />
-                                </Form.Group>
-                                <center>
-                                    {
-                                        !isRequestPending ?
-                                            <button className={"enroll"}>
-                                                {
-                                                    constants?.site_content?.waitlist?.enroll[
-                                                    props.language
-                                                    ]
-                                                }
-                                            </button> :
-                                            <Spinner color1={"#1a2c52"} size={"sm"} />
-                                    }
-
-                                </center>
-                            </Form>
-                        </Card.Body>
-                    </Card> */}
                 </Container>
             </Hidden>
         </div>
