@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
-import header_bgMB from "./../../../assets/images/agsbanners/HomePage.JPG";
+import header_bgMB from "./../../../assets/images/agsbanners/HomePage.jpg";
 import header_bg from "./../../../assets/images/agsbanners/homepageBanner.png";
 // import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/PrincipalWelcomeMessage.mp4";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

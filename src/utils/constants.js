@@ -337,11 +337,11 @@ export const constants = {
       },
       enter_pnumb: {
         en: "Parent/Guardian’s Mobile Number",
-        ar: "رقم هاتف ولي الأمر \ الوصي."
+        ar: ".رقم هاتف ولي الأمر \\ الوصي."
       },
       childDob: {
-        en: "Child’s Date Of Birth",
-        ar: "تاريخ ميلاد الطّالب المُراد الاستفسار عنه "
+        en: "Child’s Date Of Birth dd/mm/yyyy",
+        ar: ".تاريخ ميلاد الطّالب المُراد الاستفسار عنه \\ اليوم \\ الشّهر \\ السّنة "
       },
       submit: {
         en: "Submit",
@@ -372,11 +372,11 @@ export const constants = {
       },
       enter_pname: {
         en: "Parent/Guardian’s Full Name",
-        ar: "اسم ولي الأمر \ الوصي "
+        ar: "اسم ولي الأمر \\ الوصي "
       },
       enter_pemail: {
         en: "Parent/Guardian’s Email",
-        ar: "البريد الإلكتروني لولي الأمر \ الوصي"
+        ar: "البريد الإلكتروني لولي الأمر \\ الوصي"
       },
       email_req: {
         en: "Parent/Guardian’s Email Required",
@@ -398,7 +398,7 @@ export const constants = {
       },
       enter_pnumb: {
         en: "rdian’s Mobile Number",
-        ar: "رقم هاتف الوالد / ولي الأمر"
+        ar: "رقم هاتف الوالد // ولي الأمر"
       },
       submit: {
         en: "Submit",

@@ -11,7 +11,7 @@ const SnackBar = (props) => {
     return (
         <div className="d-flex w-100 position-fixed" style={{zIndex: "999"}}>
             <div className={`snack_bar ${isOpen && "show"}`} style={{
-                backgroundColor: `${variant === "success" ? "#085f08" : variant === "error" ? "#5f0808" : "#2f4269"}`
+                backgroundColor: `${variant === "success" ? "#085f08" : variant === "error" ? "#5f0808" : "#2f4269"}`,marginLeft: "-245px", width: "500px"
             }}>
                 {
                     message

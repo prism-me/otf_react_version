@@ -8,6 +8,9 @@ import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
 import { constants } from "../../../utils/constants"
 import { convertedDate, currentDate } from "../../../utils/base";
+import DatePicker from "react-multi-date-picker";
+import gregorian_ar from "react-date-object/locales/gregorian_ar";
+import "react-multi-date-picker/styles/layouts/mobile.css"
 // import $ from "jquery"
 
 const defaultState = {
@@ -107,6 +110,14 @@ function OurPrograms(props) {
             [e.target.name]: e.target.value
         });
     }
+
+    const dateChange = (value) => {
+        //your modification on passed value ....
+        setInit({
+            ...init,
+            child_dob: value
+        });
+      }
 
     const handleSubmitBookTour = (e) => {
         e.preventDefault();
@@ -240,36 +251,37 @@ function OurPrograms(props) {
                                         </Form.Group>
                                         {
                                             props.language === "en" ?
-                                                <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                    <Form.Control name={"child_dob"} onChange={handleChange}
-                                                        type="date"
-                                                        value={child_dob}
-                                                        placeholder={
-                                                            constants?.site_content?.req_call?.childDob[
-                                                            props.language
-                                                            ]
-                                                        }
-                                                        className={"formFields"}
-                                                    />
-                                                </Form.Group> :
+                                            <Form.Group className="mb-3" controlId="formGroupNumber">
+                                                <DatePicker className="rmdp-mobile" placeholder={
+                                                        constants?.site_content?.req_call?.childDob[
+                                                        props.language]} name={"child_dob"} onChange={dateChange} value={child_dob} />
+                                            </Form.Group>
+                                                 :
                                                 // <Form.Group className="mb-3" controlId="formGroupNumber">
                                                 //     <Form.Control name={"child_dob"} onChange={handleChange}
                                                 //         type="text"
                                                 //         value={child_dob}
                                                 //         placeholder="التاريخ المحدد"
-                                                //         // placeholder={
-                                                //         //     constants?.site_content?.req_call?.childDob[
-                                                //         //     props.language
-                                                //         //     ]
-                                                //         // }
+                                                        // placeholder={
+                                                        //     constants?.site_content?.req_call?.childDob[
+                                                        //     props.language
+                                                        //     ]
+                                                        // }
                                                 //         id="date-picker-exchange"
                                                 //         className="formFields datepicker"
                                                 //     // className={"formFields"}
                                                 //     />
                                                 // </Form.Group>
-                                                <div class="md-form">
-                                                    <input dir="rtl" placeholder="التاريخ المحدد" type="text" id="date-picker-exchange" class="form-control datepicker" />
-                                                </div>
+                                                // <div class="md-form">
+                                                //     <input dir="rtl" placeholder="التاريخ المحدد" type="text" id="date-picker-exchange" class="form-control datepicker" />
+                                                // </div>
+                                                <Form.Group className="mb-3" controlId="formGroupNumber">
+                                                    <DatePicker locale={gregorian_ar} className="rmdp-mobile" 
+                                                        placeholder={
+                                                        constants?.site_content?.req_call?.childDob[
+                                                        props.language]}  />
+
+                                                </Form.Group>
                                         }
                                         <center>
                                             {
