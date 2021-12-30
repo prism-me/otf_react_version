@@ -31,7 +31,8 @@ function HomeHeader(props) {
     setIsPlaying(!isPlaying);
   };
 
-  const videoSource = "https://american-gulf-school.b-cdn.net/videos/AGS%20Principal's%20Message-v2.mov.mp4";
+  // const videoSource = "https://american-gulf-school.b-cdn.net/videos/AGS%20Principal's%20Message-v2.mov.mp4";
+  const videoSource = "";
 
   // const videoSource = AGSPrincipalWelcomeMessage;
 
@@ -67,7 +68,7 @@ function HomeHeader(props) {
                 <div className={"inner-header flex"}>
                   <Container>
                     <Row>
-                      <Col sm={5}>
+                      <Col sm={10}>
                         {!isPlaying ? (
                           <div className='description-column'>
                             <div className='header-logo-wrapper'>
@@ -95,7 +96,7 @@ function HomeHeader(props) {
                           ""
                         )}
                       </Col>
-                      <Hidden smDown>
+                      {/* <Hidden smDown>
                         <Col sm={{ span: 6 }} className={"iconSpace"}>
                           <div className='video-promo-content'>
                             <button className="btn About-video-play-icon"
@@ -109,7 +110,7 @@ function HomeHeader(props) {
                             </button>
                           </div>
                         </Col>
-                      </Hidden>
+                      </Hidden> */}
                     </Row>
                   </Container>
                 </div>
