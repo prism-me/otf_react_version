@@ -11,7 +11,6 @@ import { convertedDate, currentDate } from "../../../utils/base";
 import DatePicker from "react-multi-date-picker";
 import gregorian_ar from "react-date-object/locales/gregorian_ar";
 import "react-multi-date-picker/styles/layouts/mobile.css"
-// import $ from "jquery"
 
 const defaultState = {
     isOpen: false,
@@ -25,30 +24,6 @@ const defaultState = {
 }
 
 function OurPrograms(props) {
-
-    // $(document).ready(function () {
-    //     $('#date-picker-exchange').pickadate({
-    //         monthsFull: ['يناير', 'فبراير', '	مارس', '	أبريل/إبريل', 'أيار', 'حزيران', 'تموز', '	آب', 'أيلول', 'تشرين الأول', 'تشرين الثاني', 'كانون الأول'],
-    //         monthsShort: ['يناير', 'فبراير', '	مارس', '	أبريل/إبريل', 'أيار', 'حزيران', 'تموز', '	آب', 'أيلول', 'تشرين الأول', 'تشرين الثاني', 'كانون الأول'],
-    //         weekdaysFull: ['الأحد', 'السبت', 'الجمعه', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الأثنين'],
-    //         weekdaysShort: ['الأحد', 'السبت', 'الجمعه', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الأثنين'],
-    //         today: 'اليوم',
-    //         clear: 'اختيار واضح',
-    //         close: 'إلغاء',
-    //         formatSubmit: 'yyyy/mm/dd'
-    //     });
-
-    // });
-
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = "./arabicdate.js";
-        script.async = true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
 
     const [init, setInit] = useState(defaultState);
     let { isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant } = init;
@@ -117,7 +92,7 @@ function OurPrograms(props) {
             ...init,
             child_dob: value
         });
-      }
+    }
 
     const handleSubmitBookTour = (e) => {
         e.preventDefault();
@@ -251,35 +226,17 @@ function OurPrograms(props) {
                                         </Form.Group>
                                         {
                                             props.language === "en" ?
-                                            <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                <DatePicker className="rmdp-mobile" placeholder={
+                                                <Form.Group className="mb-3" controlId="formGroupNumber">
+                                                    <DatePicker className="rmdp-mobile" placeholder={
                                                         constants?.site_content?.req_call?.childDob[
                                                         props.language]} name={"child_dob"} onChange={dateChange} value={child_dob} />
-                                            </Form.Group>
-                                                 :
-                                                // <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                //     <Form.Control name={"child_dob"} onChange={handleChange}
-                                                //         type="text"
-                                                //         value={child_dob}
-                                                //         placeholder="التاريخ المحدد"
-                                                        // placeholder={
-                                                        //     constants?.site_content?.req_call?.childDob[
-                                                        //     props.language
-                                                        //     ]
-                                                        // }
-                                                //         id="date-picker-exchange"
-                                                //         className="formFields datepicker"
-                                                //     // className={"formFields"}
-                                                //     />
-                                                // </Form.Group>
-                                                // <div class="md-form">
-                                                //     <input dir="rtl" placeholder="التاريخ المحدد" type="text" id="date-picker-exchange" class="form-control datepicker" />
-                                                // </div>
+                                                </Form.Group>
+                                                :
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
-                                                    <DatePicker locale={gregorian_ar} className="rmdp-mobile" 
+                                                    <DatePicker locale={gregorian_ar} className="rmdp-mobile"
                                                         placeholder={
-                                                        constants?.site_content?.req_call?.childDob[
-                                                        props.language]}  />
+                                                            constants?.site_content?.req_call?.childDob[
+                                                            props.language]} />
 
                                                 </Form.Group>
                                         }
@@ -369,31 +326,16 @@ function OurPrograms(props) {
                                 {
                                     props.language === "en" ?
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
-                                            <Form.Control name={"child_dob"} onChange={handleChange}
-                                                type="date"
-                                                value={child_dob}
-                                                placeholder={
-                                                    constants?.site_content?.req_call?.childDob[
-                                                    props.language
-                                                    ]
-                                                }
-                                                className={"formFields"}
-                                            />
+                                            <DatePicker className="rmdp-mobile" placeholder={
+                                                constants?.site_content?.req_call?.childDob[
+                                                props.language]} name={"child_dob"} onChange={dateChange} value={child_dob} />
                                         </Form.Group> :
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
-                                            <Form.Control name={"child_dob"} onChange={handleChange}
-                                                type="text"
-                                                value={child_dob}
-                                                placeholder="التاريخ المحدد"
-                                            // placeholder={
-                                            //     constants?.site_content?.req_call?.childDob[
-                                            //     props.language
-                                            //     ]
-                                            // }
-                                            // id="date-picker-exchange"
-                                            // className="formFields datepicker"
-                                            // className={"formFields"}
-                                            />
+                                            <DatePicker locale={gregorian_ar} className="rmdp-mobile"
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.childDob[
+                                                    props.language]} />
+
                                         </Form.Group>
                                 }
                                 <center>
