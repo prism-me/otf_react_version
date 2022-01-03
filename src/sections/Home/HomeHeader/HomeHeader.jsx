@@ -70,7 +70,7 @@ function HomeHeader(props) {
                     <Row>
                       <Col sm={10}>
                         {!isPlaying ? (
-                          <div className='description-column'>
+                          <div className='description-column banner-text-arabic-direction'>
                             <div className='header-logo-wrapper'>
                               {/* <img src={logo} alt="AGS Logo" className="header-logo" /> */}
                             </div>
