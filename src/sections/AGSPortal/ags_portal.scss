@@ -23,8 +23,8 @@
 
   .agsPortal {
     height: 65vh;
-    //background-size: cover;
-    background-size: 100%;
+    background-size: cover;
+    // background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -32,10 +32,10 @@
     align-items: center;
     position: relative;
     z-index: 888;
-    transition: background-size 1s ease-in-out;
-    &:hover{
-      background-size: 120% /* work with the background-size */
-    }
+    // transition: background-size 1s ease-in-out;
+    // &:hover{
+    //   background-size: 120% /* work with the background-size */
+    // }
     @media #{$lg} {
       height: 24vh;
       background-size: cover;
