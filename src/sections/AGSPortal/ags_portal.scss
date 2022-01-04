@@ -37,7 +37,7 @@
     //   background-size: 120% /* work with the background-size */
     // }
     @media #{$lg} {
-      height: 24vh;
+      height: 45vh;
       background-size: cover;
     }
     // @media #{$md} {
@@ -46,7 +46,7 @@
     // }
   
     @media #{$xxl} {
-      height: 45vh;
+      height: 75vh;
     }
 
     .description-column {
