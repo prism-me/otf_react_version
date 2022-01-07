@@ -53,12 +53,13 @@
       margin-top: 40%;
       .cardStyle{
         padding: 1rem;
-        width: 950px;
+        width: 715px;
         border-radius: 30px;
         @media #{$md} {
           width: 100%;
           padding: 1.5rem 1rem;
         }
+
         .viewButton{
           font-weight: 500;
           background: transparent;
@@ -124,6 +125,7 @@
       @media #{$sm,$md} {
         margin: 0;
       }
+
     }
     .intro-title {
       font-size: 22px;
@@ -144,6 +146,9 @@
     .TableMB{
       @media #{$sm} {
         width: 818px;
+      }
+      @media #{$xsm} {
+        width: 580px;
       }
     }
     .table thead th {
