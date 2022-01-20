@@ -266,7 +266,7 @@ function Layout(props) {
           </Drawer>
         </nav>
       </Hidden>
-      <Navbar show={visible} toggleDrawer={(show) => toggleDrawer(show)} />
+      <Navbar show={visible} toggleDrawer={(show) => toggleDrawer(show)} cssRoute={history.location.pathname}/>
       <Contactpannel activeLanguage={global.activeLanguage} />
       {props.children}
       <BackToTop />

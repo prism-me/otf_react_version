@@ -3,6 +3,7 @@ import { types } from "./types";
 let initialState = {
   showSpinner: false,
   activeLanguage: "en",
+  navbarClass : "",
 };
 const globalReducer = (state = initialState, action) => {
   switch (action.type) {
