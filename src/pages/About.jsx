@@ -63,12 +63,11 @@ class About extends Component {
             <div className="home-page about-section">
                 <Helmet>
                     <title>
-                        {`AGS | ${global?.activeLanguage === "ar"
-                            ? content?.arabic?.meta_details?.title ||
-                            constants?.site_content?.site_name :
-                            content?.meta_details?.title ||
-                            constants?.site_content?.site_name
-                            }`}
+                    { 
+                        global?.activeLanguage === "ar"
+                        ? content?.arabic?.meta_details?.title  
+                        : content?.meta_details?.title    
+                        }
                     </title>
                     <meta
                         name="description"

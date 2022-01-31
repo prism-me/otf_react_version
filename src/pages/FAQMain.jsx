@@ -48,12 +48,11 @@ class FAQMain extends Component {
             <div className="home-page">
                 <Helmet>
                     <title>
-                        {`AGS | ${global?.activeLanguage === "ar"
-                            ? faqData?.arabic?.meta_details?.title ||
-                            constants?.site_content?.site_name :
-                            faqData?.meta_details?.title ||
-                            constants?.site_content?.site_name
-                            }`}
+                        {
+                        global?.activeLanguage === "ar"
+                            ? faqData?.arabic?.meta_details?.title
+                            : faqData?.meta_details?.title 
+                        }
                     </title>
                     <meta
                         name="description"

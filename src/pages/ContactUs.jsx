@@ -10,7 +10,13 @@ const ContactUs = (props) => {
         <div className="home-page">
             <Helmet>
                 <title>
-                    {`AGS | ${constants?.site_content?.meta_cnt[global?.activeLanguage]}`}
+                    {
+                        
+                        constants?.site_content?.meta_cnt[global?.activeLanguage]
+
+
+
+                        } 
                 </title>
                 <meta
                     name="description"

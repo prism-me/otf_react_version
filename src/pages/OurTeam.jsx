@@ -25,7 +25,7 @@ class Academics extends Component {
             <div className="home-page">
                 <Helmet>
                     <title>
-                        {`AGS | ${constants?.site_content?.meta_team[global?.activeLanguage]}`}
+                        {constants?.site_content?.meta_team[global?.activeLanguage]}
                     </title>
                     <meta
                         name="description"

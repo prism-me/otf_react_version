@@ -25,7 +25,7 @@ class StudentCare extends Component {
             <div className="home-page">
                 <Helmet>
                     <title>
-                        {`AGS | ${constants?.site_content?.meta_std[global?.activeLanguage]}`}
+                        {constants?.site_content?.meta_std[global?.activeLanguage]}
                     </title>
                     <meta
                         name="description"
