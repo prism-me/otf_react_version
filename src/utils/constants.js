@@ -136,39 +136,27 @@ export const constants = {
         ar: "اليوم الأول من الفصل الدراسي"
       },
       term1heading2: {
-        en: "Prophet Muhammad's (PBUH) birthday",
+        en: "Break",
         ar: "مولد النبي (صلى الله عليه وسلم)"
       },
       term1heading3: {
-        en: "UAE Flag Day",
+        en: "Winter Break",
         ar: "يوم العلم الإماراتي"
-      },
-      term1heading4: {
-        en: "Commemoration Day",
-        ar: "يوم الشهيد"
-      },
-      term1heading5: {
-        en: "National Day",
-        ar: "اليوم الوطني"
-      },
-      term1heading6: {
-        en: "Beginning of Winter Break",
-        ar: "بداية عطلة الشتاء"
       },
       term2: {
         en: "TERM 2 : SPRING 2022",
         ar: "الفصل الدراسي الثاني: ربيع 2022"
       },
       term2heading1: {
-        en: "First day of term",
+        en: "School Return",
         ar: "اليوم الأول من الفصل الدراسي"
       },
       term2heading2: {
-        en: "Beginning of Spring Break",
+        en: "Break",
         ar: "بداية عطلة الربيع"
       },
       term2heading3: {
-        en: "Start of Ramadan (TBC)",
+        en: "Spring Break",
         ar: "بداية شهر رمضان (سيتم التأكيد لاحقاً)"
       },
       term3: {
@@ -176,23 +164,11 @@ export const constants = {
         ar: "الفصل الدراسي الثالث: صيف 2022"
       },
       term3heading1: {
-        en: "First day of term (TBC)",
+        en: "School Return",
         ar: "اليوم الأول من الفصل الدراسي (سيتم التأكيد لاحقاً)"
       },
       term3heading2: {
-        en: "Start of Eid al-Fiter",
-        ar: "بداية عيد الفطر"
-      },
-      term3heading3: {
-        en: "Eid al-Fiter ends",
-        ar: "نهاية عيد الفطر"
-      },
-      term3heading4: {
-        en: "Public Holiday",
-        ar: "عطلة رسمية"
-      },
-      term3heading5: {
-        en: "Last day of Academic Year",
+        en: "Last day of School",
         ar: "اليوم الأخير من العام الدراسي"
       },
     },

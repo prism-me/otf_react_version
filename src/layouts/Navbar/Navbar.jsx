@@ -19,7 +19,7 @@ import { connect } from "react-redux";
 
 function MainNavbar(props) {
   const history = useHistory();
-  const [route_css , update_route] = useState();
+  const [route_css, update_route] = useState();
   const [state, setState] = React.useState({
     right: false,
   });
@@ -34,40 +34,40 @@ function MainNavbar(props) {
 
   useEffect(() => {
 
-    console.log('-------------------------------------------------------',props.cssRoute);
+    console.log('-------------------------------------------------------', props.cssRoute);
 
     let route_mod = window.location.href;
-    if(route_mod){
-      route_mod= route_mod.split("/")[4];
-      if(route_mod === undefined || route_mod === ""){
+    if (route_mod) {
+      route_mod = route_mod.split("/")[4];
+      if (route_mod === undefined || route_mod === "") {
 
         update_route("dropdown-basic");
 
-      }else{
+      } else {
         update_route("dropdown-basic-arabic");
       }
 
     }
 
-  },[props.cssRoute]);
+  }, [props.cssRoute]);
 
 
   useEffect(() => {
     // console.log()
     return history.listen((location) => {
       let route_mod = location.pathname;
-      route_mod= route_mod.split("/")[2];
+      route_mod = route_mod.split("/")[2];
 
-        if(route_mod === undefined || route_mod === ""){
-  
-          update_route("dropdown-basic");
-  
-        }else{
-          update_route("dropdown-basic-arabic");
-        }
-  
-    }) 
- },[history])
+      if (route_mod === undefined || route_mod === "") {
+
+        update_route("dropdown-basic");
+
+      } else {
+        update_route("dropdown-basic-arabic");
+      }
+
+    })
+  }, [history])
 
   console.log(route_css);
   const list = (anchor) => (
@@ -227,13 +227,13 @@ function MainNavbar(props) {
               <div
                 className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
               >
-                {console.log("----------------------",route_css)}
-                
+                {console.log("----------------------", route_css)}
+
                 <Dropdown>
                   <Dropdown.Toggle
                     variant=" btn-sm"
                     id={route_css}
-                    >
+                  >
                     {props.global.activeLanguage === "en" ? "Language" : "اللغة"}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>

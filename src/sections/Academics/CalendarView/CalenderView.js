@@ -86,24 +86,33 @@ const CalendarView = (props) => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
+                                <div className="circle-holder lg">
+                                    <div className="_circle lg">
                                         <div className="_circle-inner">
                                             {
-                                                props.lang === "en" ? "21" : "21"
+                                                props.lang === "en" ? "18" : "18"
                                             }
-                                            {/* 21 */}
+                                            {/* 01 */}
                                             <span className="_circle-em">
                                                 {
-                                                    props.lang === "en" ? "st" : ""
+                                                    props.lang === "en" ? "th" : ""
                                                 }
                                                 {/* st */}
-                                            </span></div>
+                                            </span>
+                                            -
+                                            {
+                                                props.lang === "en" ? "20" : "20"
+                                            }<span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span>
+                                        </div>
                                         <span className="_circle-month">
                                             {
                                                 props.lang === "en" ? "OCT" : "أكتوبر"
                                             }
-                                            {/* OCT */}
                                         </span>
                                     </div>
                                     <div className="_circle-txt">
@@ -113,28 +122,36 @@ const CalendarView = (props) => {
                                                 props.lang
                                                 ]
                                             }
-                                            {/* Prophet Muhammad's (PBUH) birthday */}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
+                                <div className="circle-holder lg">
+                                    <div className="_circle lg">
                                         <div className="_circle-inner">
                                             {
-                                                props.lang === "en" ? "03" : "03"
+                                                props.lang === "en" ? "12" : "12"
                                             }
-                                            {/* 03 */}
+                                            {/* 01 */}
                                             <span className="_circle-em">
                                                 {
-                                                    props.lang === "en" ? "rd" : ""
+                                                    props.lang === "en" ? "th" : ""
                                                 }
-                                                {/* rd */}
-                                            </span></div>
+                                                {/* st */}
+                                            </span>
+                                            -
+                                            {
+                                                props.lang === "en" ? "30" : "30"
+                                            }<span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span>
+                                        </div>
                                         <span className="_circle-month">
                                             {
-                                                props.lang === "en" ? "Nov" : "نوفمبر"
+                                                props.lang === "en" ? "Dec" : "ديسمبر "
                                             }
-                                            {/* Nov */}
                                         </span>
                                     </div>
                                     <div className="_circle-txt">
@@ -144,100 +161,6 @@ const CalendarView = (props) => {
                                                 props.lang
                                                 ]
                                             }
-                                            {/* UAE Flag Day */}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "01" : "01"
-                                            }
-                                            {/* 01 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "st" : ""
-                                                }
-                                                {/* st */}
-                                            </span></div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "Dec" : "ديسمبر "
-                                            }
-                                            {/* Dec */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term1heading4[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* Commemoration Day */}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "02" : "02"
-                                            }
-                                            {/* 02 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "nd" : ""
-                                                }
-                                                {/* nd */}
-                                            </span></div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "Dec" : "ديسمبر "
-                                            }
-                                            {/* Dec */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term1heading5[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* National Day */}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "12" : "12"
-                                            }
-                                            {/* 12 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "th" : ""
-                                                }
-                                                {/* th */}
-                                            </span></div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "Dec" : "ديسمبر "
-                                            }
-                                            {/* Dec */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term1heading6[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* Beginning of Winter Break */}
                                         </p>
                                     </div>
                                 </div>
@@ -286,24 +209,33 @@ const CalendarView = (props) => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
+                                <div className="circle-holder lg">
+                                    <div className="_circle lg">
                                         <div className="_circle-inner">
                                             {
-                                                props.lang === "en" ? "27" : "27"
+                                                props.lang === "en" ? "13" : "13"
                                             }
-                                            {/* 27 */}
+                                            {/* 01 */}
                                             <span className="_circle-em">
                                                 {
                                                     props.lang === "en" ? "th" : ""
                                                 }
+                                                {/* st */}
+                                            </span>
+                                            -
+                                            {
+                                                props.lang === "en" ? "14" : "14"
+                                            }<span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
                                                 {/* th */}
-                                            </span></div>
+                                            </span>
+                                        </div>
                                         <span className="_circle-month">
                                             {
-                                                props.lang === "en" ? "MAR" : "مارس"
+                                                props.lang === "en" ? "JAN" : "يناير"
                                             }
-                                            {/* MAR */}
                                         </span>
                                     </div>
                                     <div className="_circle-txt">
@@ -313,28 +245,36 @@ const CalendarView = (props) => {
                                                 props.lang
                                                 ]
                                             }
-                                            {/* Beginning of Spring Break */}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
+                                <div className="circle-holder lg">
+                                    <div className="_circle lg">
                                         <div className="_circle-inner">
                                             {
-                                                props.lang === "en" ? "02" : "02"
+                                                props.lang === "en" ? "27" : "27"
                                             }
-                                            {/* 02 */}
+                                            {/* 01 */}
                                             <span className="_circle-em">
                                                 {
-                                                    props.lang === "en" ? "nd" : ""
+                                                    props.lang === "en" ? "th" : ""
                                                 }
-                                                {/* nd */}
-                                            </span></div>
+                                                {/* st */}
+                                            </span>
+                                            -
+                                            {
+                                                props.lang === "en" ? "07" : "07"
+                                            }<span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span>
+                                        </div>
                                         <span className="_circle-month">
                                             {
                                                 props.lang === "en" ? "APRIL" : "أبريل"
                                             }
-                                            {/* APRIL */}
                                         </span>
                                     </div>
                                     <div className="_circle-txt">
@@ -344,7 +284,6 @@ const CalendarView = (props) => {
                                                 props.lang
                                                 ]
                                             }
-                                            {/* Start of Ramadan (TBC) */}
                                         </p>
                                     </div>
                                 </div>
@@ -397,18 +336,18 @@ const CalendarView = (props) => {
                                     <div className="_circle">
                                         <div className="_circle-inner">
                                             {
-                                                props.lang === "en" ? "01" : "01"
+                                                props.lang === "en" ? "30" : "30"
                                             }
                                             {/* 01 */}
                                             <span className="_circle-em">
                                                 {
-                                                    props.lang === "en" ? "st" : ""
+                                                    props.lang === "en" ? "th" : ""
                                                 }
                                                 {/* st */}
                                             </span></div>
                                         <span className="_circle-month">
                                             {
-                                                props.lang === "en" ? "MAY" : "مايو"
+                                                props.lang === "en" ? "JUNE" : "يونيو"
                                             }
                                             {/* MAY */}
                                         </span>
@@ -421,109 +360,6 @@ const CalendarView = (props) => {
                                                 ]
                                             }
                                             {/* Start of Eid al-Fiter */}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "02" : "02"
-                                            }
-                                            {/* 02 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "nd" : ""
-                                                }
-                                                {/* nd */}
-                                            </span></div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "MAY" : "مايو"
-                                            }
-                                            {/* May */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term3heading3[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* Eid al-Fiter ends */}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="circle-holder lg">
-                                    <div className="_circle lg">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "01" : "01"
-                                            }
-                                            {/* 01 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "st" : ""
-                                                }
-                                                {/* st */}
-                                            </span>
-                                            -
-                                            05<span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "th" : ""
-                                                }
-                                                {/* th */}
-                                            </span>
-                                        </div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "MAY" : "مايو"
-                                            }
-                                            {/* May */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term3heading4[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* Public Holiday */}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">
-                                            {
-                                                props.lang === "en" ? "03" : "03"
-                                            }
-                                            {/* 03 */}
-                                            <span className="_circle-em">
-                                                {
-                                                    props.lang === "en" ? "rd" : ""
-                                                }
-                                                {/* rd */}
-                                            </span></div>
-                                        <span className="_circle-month">
-                                            {
-                                                props.lang === "en" ? "July" : "يوليو"
-                                            }
-                                            {/* July */}
-                                        </span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>
-                                            {
-                                                constants?.site_content?.calender?.term3heading5[
-                                                props.lang
-                                                ]
-                                            }
-                                            {/* Last day of Academic Year */}
                                         </p>
                                     </div>
                                 </div>
