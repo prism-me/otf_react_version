@@ -27,6 +27,9 @@ const PrincipleMessage = (props) => {
                             </div>
                     }
                 </div>
+                {
+                    props.PrincipleMsg?.description &&
+                <div>
                 <hr className="principalmsgHr" />
                 <div
                     // className="sucessDiv"
@@ -48,6 +51,10 @@ const PrincipleMessage = (props) => {
                     </p>
 
                 </div>
+                </div>
+                
+                
+                }
             </Container>
         </div>
     );
