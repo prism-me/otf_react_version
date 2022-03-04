@@ -1,0 +1,39 @@
+.privacy{
+    padding-top: 6rem;
+    @media #{$sm,$md} {
+      padding-top: 1rem;
+    }
+    .title{
+        font-size: 25px;
+        font-weight: 500;
+        margin: 2rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        @media #{$sm} {
+          font-size: 22px;
+        }
+    }
+    .title2{
+        font-size: 25px;
+        font-weight: 500;
+        @media #{$sm} {
+          font-size: 22px;
+        }
+    }
+    .privacyDiv{
+        p {
+            margin-top: 0 !important;
+            font-size: $sub-fonts;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            @media #{$sm,$md} {
+              margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -12,6 +12,8 @@ import OnlineForm from "../pages/OnlineForm";
 import careers from "../pages/Careers";
 import Primaryschool from "../pages/Primaryschool";
 import OurTeam from "../pages/OurTeam";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+
 
 export const routes = [
   {
@@ -116,6 +118,13 @@ export const routes = [
     name: "OurTeam",
     path: "/OurTeam",
     component: OurTeam,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "PrivacyPolicy",
+    path: "/privacy-policy",
+    component: PrivacyPolicy,
     isPrivate: false,
     exact: true,
   },
