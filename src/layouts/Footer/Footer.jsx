@@ -154,11 +154,6 @@ function Footer(props) {
                     {/* Student Care support   */}
                   </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/${global.activeLanguage}/privacy-policy`}>
-                  <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Privacy Policy" : "سياسة خاصة"}
-                  </Nav.Link>
-                </LinkContainer>
               </Nav>
             </Col>
             <Col sm={6} xs={12} md={6} lg>

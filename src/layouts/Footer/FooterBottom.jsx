@@ -6,6 +6,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { Link } from "react-router-dom"
 
 
 function FooterBottom(props) {
@@ -17,10 +18,16 @@ function FooterBottom(props) {
             <p className={props.language === "ar" ? "copyRight text-right" : "copyRight text-left"} >
               {props.language === "ar" ?
                 <p>
-                  الطبع والنشر © <a href="/">المدرسة الأمريكيّة الخليجيّة</a> - ٢٠٢١ | تم الإنشاء بواسطة<a href="https://www.prism-me.com/"> بريزم ديجيتال</a>
+                  الطبع والنشر © <a href="/">المدرسة الأمريكيّة الخليجيّة</a> - ٢٠٢١ | <Link to={`/${props.language}/privacy-policy`}>
+                    سياسة خاصة
+                  </Link> | تم الإنشاء بواسطة<a href="https://www.prism-me.com/"> بريزم ديجيتال</a>
                 </p>
                 : <p>
-                  Copyright By <a href="/">@American Gulf School</a> - 2021 | Powered By <a href="https://www.prism-me.com/"> Prism Digital </a>
+                  Copyright By <a href="/">@American Gulf School</a> - 2021 |
+                  <Link to={`/${props.language}/privacy-policy`}>
+                    Privacy Policy
+                  </Link>
+                  | Powered By <a href="https://www.prism-me.com/"> Prism Digital </a>
                 </p>
               }
             </p>
