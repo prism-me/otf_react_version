@@ -87,6 +87,12 @@ const routes = [
     exact: true,
   },
   {
+    name: "PrivacyPolicy",
+    path: "/en/privacy-policy",
+    isPrivate: false,
+    exact: true,
+  },
+  {
     name: "Sitemap",
     path: "/sitemap",
     isPrivate: false,
