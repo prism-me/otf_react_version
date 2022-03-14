@@ -1,0 +1,53 @@
+.popupdoc{
+  direction: ltr;
+    .modal-content{
+     background: transparent;
+    border: 0;
+    }
+    .modal-body{
+        padding: 0;
+    }
+    .modalIconArabic{
+        transform: rotate(180deg);
+        margin-left: 0 !important;
+        margin-right: 1rem;
+      }
+      .modalIcon{
+        background: $bg-color;
+        color: $white;
+        padding: 1.2rem;
+        border-radius: 100%;
+        margin-right: 2rem;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+}
+
+.popupdocArabic{
+  direction: rtl;
+    .modal-content{
+     background: transparent;
+    border: 0;
+    }
+    .modal-body{
+        padding: 0;
+    }
+    .modalIconArabic{
+      background: $bg-color;
+      color: $white;
+      padding: 1.2rem;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        transform: rotate(180deg);
+        margin-left: 1rem !important;
+      }
+}

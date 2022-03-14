@@ -5,13 +5,18 @@ import BounceLoader from "react-spinners/BounceLoader";
 import Layout from "./layouts/Layout";
 import Navigation from "./navigator/Navigation";
 import ScrollToTop from "./utils/ScrollToTop";
+import PopUp from "./components/Modals/popup/PopUp";
+import { connect } from "react-redux";
 
 
-function App() {
+function App(props) {
   const [loader, setLoader] = useState(true);
+  const [modalShow, setModalShow] = useState(true);
+
   useEffect(() => {
     setLoader(false);
   });
+
 
   return (
     <BrowserRouter>
@@ -29,6 +34,9 @@ function App() {
         </div>
       ) : (
         <>
+          <PopUp show={modalShow} onHide={() => setModalShow(false)}
+            language={props.global?.activeLanguage}
+          />
           <ScrollToTop />
           <Layout>
             <Navigation />
@@ -39,4 +47,17 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    global: state.globalReducer,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
