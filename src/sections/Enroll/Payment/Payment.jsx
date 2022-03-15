@@ -7,7 +7,7 @@ import { constants } from "../../../utils/constants"
 function Payment(props) {
     const [modalShow, setModalShow] = React.useState(false);
     return (
-        <div className="Payment">
+        <div className={props.language === "en" ? "Payment" : "PaymentArabic"}>
             <Container>
                 <div className={"d-flex justify-content-center align-items-center"}>
                     <button className={"FeesButton"}
