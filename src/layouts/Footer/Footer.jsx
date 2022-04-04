@@ -178,8 +178,8 @@ function Footer(props) {
                 </a>
               </p>
               <p>
-                {global.activeLanguage === "en" ? "Working Hours : 7:15 AM - 3:45 PM (Monday - Thursday)" :
-                  "ساعات العمل:  ٧:١٥ صباحاً - : ٤:٠٥ مساء (من الاثنين - إلى الخميس)"}
+                {global.activeLanguage === "en" ? "Working Hours : 8:30 AM - 2:00 PM (Monday - Thursday)" :
+                  "ساعات العمل: ٨:٣٠ صباحاً -  ٢ ظهراً (من الاثنين - إلى الخميس)"}
                 {/* Working Hours : 7:45 AM - 3:45 PM ( Monday - Thursday ) */}
               </p>
             </Col>
