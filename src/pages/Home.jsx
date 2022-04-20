@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
-
-// import HomeHeader from "../sections/Home/HomeHeader";
 import BannerSection from "../sections/Home/banner";
 import AboutSection from "../sections/Home/about";
 import ScheduleSection from "../sections/Home/schedule";
@@ -31,10 +29,6 @@ import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
 import schBg from "../assets/images/OTF/home/health-safetybg.jpg";
 import offerbg from "../assets/images/OTF/home/get-off.jpg";
-
-
-
-
 
 
 const Home = (props) => {
