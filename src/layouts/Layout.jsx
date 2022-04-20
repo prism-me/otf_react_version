@@ -39,7 +39,7 @@ function Layout(props) {
       {props.children}
       <BackToTop />
       <Footer />
-      <BottomTabNavigator activeLanguage={global.activeLanguage} />
+      {/* <BottomTabNavigator activeLanguage={global.activeLanguage} /> */}
     </div>
   );
 }

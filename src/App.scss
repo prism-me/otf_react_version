@@ -3321,8 +3321,16 @@ header {
       .header-sub-text {
         padding: 0 85px;
 
+        @media #{$sm , $md} {
+          padding: 0;
+        }
+
         p {
           padding: 0 95px;
+
+          @media #{$sm , $md} {
+            padding: 0;
+          }
         }
       }
 
