@@ -1,188 +1,153 @@
-import React, { Component } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import HomeHeader from "../sections/Home/HomeHeader";
-import Curriculum from "../sections/Home/Curriculum";
-import Mentors from "../sections/Home/Mentors";
-import CovidSafety from "../sections/Home/CovidSafety";
-import AgsSlider from "../sections/Home/AgsSlider";
-import { API } from "../http/API";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import InfoTabs from "../sections/Home/InfoTabs";
-import OurPrograms from "../sections/Home/OurPrograms";
 import { Helmet } from "react-helmet";
-import { constants } from "../utils/constants";
 
-class Home extends Component {
-  state = {
-    mentorsData: [],
-    expData: [],
-    lifeagsData: [],
-    currentPage: null,
-    content: null,
-    scrollPosition: 0,
-  };
 
-  componentDidMount() {
-    let currentPage = null;
-    window.addEventListener("scroll", this.handleScroll);
-    //add animation on scroll
-    AOS.init({ duration: 2000 });
-    API.get(`/pages`)
-      .then((response) => {
-        if (response.status === 200 || response.status === 201) {
-          currentPage = response.data.data.find((x) => x.slug === "home-page");
-          this.setState({ currentPage });
-          API.get(`/all_sections/${currentPage._id}`)
-            .then((response) => {
-              if (response.data.data) {
-                // debugger;
-                this.setState({
-                  content:
-                    response.data.data[response.data.data?.length - 1]?.content,
-                });
-              }
-            })
-            .catch((err) => console.log(err));
-        }
-      })
-      .catch((err) => console.log(err));
+// import HomeHeader from "../sections/Home/HomeHeader";
+import BannerSection from "../sections/Home/banner";
+import AboutSection from "../sections/Home/about";
+import ScheduleSection from "../sections/Home/schedule";
+import PricingSection from "../sections/Home/pricing";
+import CounterSection from "../sections/Home/counter";
+import TrainerSection from "../sections/Home/trainer";
+import FormatSection from "../sections/Home/format";
+import CalculateSection from "../sections/Home/calculate";
 
-    API.get("/mentors")
-      .then((response) => {
-        this.setState({ mentorsData: response.data.data });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+//images
 
-    API.get("/exp_and_life")
-      .then((response) => {
-        this.setState({
-          lifeagsData: response.data.data.filter(
-            (x) => x.type === "life-at-ags"
-          ),
+import slider1 from "../assets/images/OTF/banner/homeBannerSlider.jpg";
 
-          expData: response.data.data.filter(
-            (x) => x.type === "experience-with-ags"
-          ),
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+import heatl1 from "../assets/images/OTF/icons/heatl1.png"
+import heatl2 from "../assets/images/OTF/icons/heatl2.png"
+import heatl3 from "../assets/images/OTF/icons/heatl3.png"
 
-  // caculate scroll position
-  handleScroll = (event) => {
-    let scroll = window.scrollY;
-    this.setState({ scrollPosition: scroll });
-  };
+import testimonial1 from "../assets/images/OTF/testimonial/testimonial1.png";
+import testimonial2 from "../assets/images/OTF/testimonial/testimonial2.png";
+import testimonial3 from "../assets/images/OTF/testimonial/testimonial3.png";
+import testimonial4 from "../assets/images/OTF/testimonial/testimonial4.png";
+import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
+import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
+import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
-  render() {
-    const { content } = this.state;
-    const { global } = this.props;
-    return (
-      <>
-        <div className='home-page mb-5'>
-          <Helmet>
-            {/* <title>
-              {`AGS | ${
-                global?.activeLanguage === "ar"
-                  ? content?.arabic?.meta_details?.title ||
-                    constants?.site_content?.site_name
-                  : content?.meta_details?.title ||
-                    constants?.site_content?.site_name
-              }`}
-            </title> */}
-            <title>AGS | American Gulf School Sharjah | Education Done Right</title>
-            {/* <title>
-            {`{ this.state.currentPage?.meta_details?.title ||
-              constants?.site_content?.site_name }`}
-          </title> */}
-            <meta
-              name='description'
-              content={
-                global?.activeLanguage === "ar"
-                  ? content?.arabic?.meta_details?.description ||
-                    constants?.site_content?.seo_description
-                  : content?.meta_details?.description ||
-                    constants?.site_content?.seo_description
-              }
-            />
-          </Helmet>
+import schBg from "../assets/images/OTF/home/health-safetybg.jpg";
+import offerbg from "../assets/images/OTF/home/get-off.jpg";
 
-          <HomeHeader
-            banner={
-              global?.activeLanguage === "ar"
-                ? content?.arabic?.banner
-                : content?.banner
-            }
-            bannerImg={content?.banner?.image}
+
+
+
+
+
+const Home = (props) => {
+
+  const sliderData = [
+    {
+      bannerImg: slider1,
+      title: "The Smartest Workout for More Results",
+      detail: "Aliquet nullam cursus mollis donec imperdiet enim viverra. A ac tincidunt mollis sit sed placerat diam bibendum porta. Egestas nisl viverra arcu faucibus.",
+      btn1: "BOOK A FREE CLASS NOW",
+      btn2: "view membership details"
+    },
+    {
+      bannerImg: slider1,
+      title: "The Smartest Workout for More Results",
+      detail: "Aliquet nullam cursus mollis donec imperdiet enim viverra. A ac tincidunt mollis sit sed placerat diam bibendum porta. Egestas nisl viverra arcu faucibus.",
+      btn1: "BOOK A FREE CLASS NOW",
+      btn2: "view membership details"
+    }
+  ];
+
+  const listImg = [
+    heatl1,
+    heatl2,
+    heatl3
+  ];
+
+  const testimonial = [
+    {
+      img: testimonial1,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial2,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial3,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial4,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial5,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial6,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    },
+    {
+      img: testimonial7,
+      title: "Client name example",
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+    }
+  ];
+
+  const { global } = props;
+  return (
+    <>
+      <div>
+        <Helmet>
+          <title>Orange Theory</title>
+          <meta
+            name='description'
+            content="Orange Theory"
           />
+        </Helmet>
 
-          <div data-aos='fade-up'>
-            <InfoTabs
-              expData={this.state.expData}
-              isArabic={global?.activeLanguage === "ar"}
-              language={global?.activeLanguage}
-            />
-          </div>
+        <BannerSection
+          sliderData={sliderData}
+        />
 
-          {this.state.scrollPosition > 440 && (
-            <div data-aos='fade-up'>
-              <Curriculum
-                Curriculum={
-                  global?.activeLanguage === "ar"
-                    ? content?.arabic?.curriculmSection
-                    : content?.curriculmSection
-                }
-                language={global?.activeLanguage}
-              />
-            </div>
-          )}
+        <AboutSection />
 
-          {this.state.scrollPosition > 1100 && (
-            <div data-aos='fade-up'>
-              <Mentors
-                mentors={this.state.mentorsData}
-                isArabic={global?.activeLanguage === "ar"}
-                language={global?.activeLanguage}
-              />
-            </div>
-          )}
+        <ScheduleSection
+          title={"Health and Safety (It's not either/or)"}
+          detail={"As the pandemic continues, it’s incredibly important Orangetheory studios operate with an abundance of caution. We continually review and evaluate our safety and disinfection protocols to align with the latest recommendations and local government mandates."}
+          detail2="The Orangetheory studio design, structured class schedule, block interval training and tight-knit community of franchisees enables us to have a more controlled environment in comparison to other fitness gyms."
+          listImg={listImg}
+          bgImg={schBg}
+        />
 
-          {this.state.scrollPosition > 1640 && (
-            <div data-aos='fade-up'>
-              <OurPrograms language={global?.activeLanguage} />
-            </div>
-          )}
+        <PricingSection />
 
-          {this.state.scrollPosition > 2210 && (
-            <div data-aos='fade-up'>
-              <AgsSlider
-                lifeagsData={this.state.lifeagsData}
-                isArabic={global?.activeLanguage === "ar"}
-                language={global?.activeLanguage}
-              />
-            </div>
-          )}
+        <CounterSection
+          title="Get 10% off during this festive season!"
+          subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+          btntext="BOOK A FREE CLASS NOW"
+          bgImg={offerbg}
 
-          {this.state.scrollPosition > 2760 && (
-            <div data-aos='fade-up'>
-              <CovidSafety
-                Covid={
-                  global?.activeLanguage === "ar"
-                    ? content?.arabic?.covidSection
-                    : content?.covidSection
-                }
-              />
-            </div>
-          )}
-        </div>
-      </>
-    );
-  }
+        />
+
+        <TrainerSection
+          testimonial={testimonial}
+          title="Testimonials"
+        />
+
+        <FormatSection />
+
+        <CalculateSection />
+
+      </div>
+    </>
+  );
 }
 
 const mapStateToProps = (state) => {
