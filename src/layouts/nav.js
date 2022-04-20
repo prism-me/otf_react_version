@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { MENUITEMS } from '../utils/navMenu';
 import { useHistory } from "react-router-dom";
 import ClearIcon from "@material-ui/icons/Clear";
+import { connect } from "react-redux";
+import { types } from "../redux/global/types";
 
-const Nav = () => {
+const Nav = (props) => {
     const [mainmenu, setMainMenu] = useState(MENUITEMS);
     const [sidebar, setSidebar] = useState(false);
 
@@ -101,7 +103,7 @@ const Nav = () => {
                                 : ''}
                             {(menuItem.type === 'link') &&
                                 <a
-                                    href={menuItem.path}
+                                    href={`/${props.global.activeLanguage}/${menuItem.path}`}
                                     className={`${menuItem.active ? 'active' : ''}`}
                                 >
                                     {menuItem.title}
@@ -149,4 +151,22 @@ const Nav = () => {
     )
 }
 
-export default Nav
+const mapStateToProps = (state) => {
+    return {
+        global: state.globalReducer,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setActiveLanguage: (language) =>
+            dispatch({
+                type: types.SET_ACTIVE_LANGUAGE,
+                payload: {
+                    language: language,
+                },
+            }),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);

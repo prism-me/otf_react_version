@@ -1,0 +1,124 @@
+import React from "react";
+import BannerSection from "../sections/Home/banner";
+import ScheduleSection from "../sections/Home/schedule";
+import PricingSection from "../sections/Home/pricing";
+import CounterSection from "../sections/Home/counter";
+import Benefits from "../sections/Membership/benefits";
+import Location from "../sections/Membership/location";
+import Faq from "../sections/About/faq";
+import { connect } from "react-redux";
+import { Helmet } from "react-helmet";
+
+//images
+import slider1 from "../assets/images/OTF/banner/membershipbanner.jpg";
+
+import benefits1 from "../assets/images/OTF/membership/Dumbells.png";
+import benefits2 from "../assets/images/OTF/membership/LAT.png";
+import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
+
+import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
+import getOff from "../assets/images/OTF/home/get-off.jpg";
+
+
+
+
+
+const Memberships = (props) => {
+
+    const sliderData = [
+        {
+            bannerImg: slider1,
+            title: "Let’s talk membership",
+            detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
+            btnm: "Avail one of our membership now",
+            viewbtn: "View membership details"
+        },
+        {
+            bannerImg: slider1,
+            title: "Let’s talk membership",
+            detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
+            btnm: "Avail one of our membership now",
+            viewbtn: "View membership details"
+        }
+    ];
+    const list = [
+        "Free Lunch & Burn intro class",
+        "Free Team-Building Workout",
+        "Preferred Membership Pricing for all employees"
+    ];
+
+    const benefitList = [
+        {
+            img: benefits1,
+            title: "Easy online booking"
+        },
+        {
+            img: benefits2,
+            title: "Nationwide studio access*"
+        },
+        {
+            img: benefits3,
+            title: "Month-to-month memberships"
+        }
+    ]
+
+    const { global } = props;
+    return (
+        <div>
+            <Helmet>
+                <title>
+                    Memberships
+                </title>
+                <meta
+                    name="description"
+                    content="Memberships"
+                />
+            </Helmet>
+            <BannerSection
+                sliderData={sliderData}
+            />
+
+            <Location />
+
+            <PricingSection />
+
+            <ScheduleSection
+                titleM={"Corporate Memberships"}
+                detail={"Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time."}
+                list={list}
+                btnText="Avail now"
+                bgImg={corporateBg}
+            />
+
+            <Benefits
+                benefitList={benefitList}
+            />
+
+            <CounterSection
+                title="Get 10% off during this festive season!"
+                subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                btntext="Book a class now"
+                bgImg={getOff}
+            />
+
+            <Faq />
+
+        </div>
+    );
+}
+
+const mapStateToProps = (state) => {
+    return {
+        showSpinner: state?.globalReducer?.showSpinner,
+        global: state.globalReducer,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    };
+};
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Memberships);

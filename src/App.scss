@@ -31,13 +31,6 @@
 
 // sections **********************
 
-//Academics
-@import "./sections/Academics/academics";
-@import "./sections/Academics/ACTabs/ACTabs.scss";
-@import "./sections/Academics/Accreditation/Accreditation.scss";
-
-//Ags-Portal
-@import "./sections/AGSPortal/ags_portal";
 //Contact Us
 @import "./sections/ContactUs/contact";
 
@@ -47,22 +40,6 @@
 
 // Our team
 @import "./sections/OurTeam/OurTeam.scss";
-
-// Enroll
-@import "sections/Enroll/FAQ/FAQ";
-@import "sections/Enroll/AdmissionProcedure/AdmissionProcedure";
-@import "sections/Enroll/AgeRequirements/AgeRequirements";
-@import "sections/Enroll/Enquiry/Enquiry";
-@import "sections/Enroll/FeesPayments/FeesPayments";
-@import "sections/Enroll/ApplyOnline/ApplyOnline";
-@import "sections/Enroll/Covid/Covid";
-@import "sections/Enroll/AdmissionContact/AdmissionContact";
-@import "sections/Enroll/Payment/Payment";
-@import "sections/Enroll/EnrollTabs/EnrollTabs";
-@import "sections/Enroll/ApplyOnlineForm/ApplyOnline";
-
-//FAQMAIN
-@import "sections/FAQMain/FAQMain/FAQMain";
 
 //PRIMARY SCHOOL
 @import "./sections/Primaryschool/Inclusion/Schoolinclusion";
@@ -210,7 +187,7 @@ p {
 }
 
 ::selection {
-  background-color: $primary;
+  background-color: $black;
   color: $white;
 }
 
@@ -218,7 +195,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   position: relative;
   font-size: 14px;
-  color: $secondary;
+  color: $black;
   overflow-x: hidden;
 
   &.event {
@@ -290,7 +267,7 @@ h1 {
     }
 
     &.theme-color {
-      color: $primary;
+      color: $black;
     }
   }
 }
@@ -1059,7 +1036,7 @@ section {
         &:after {
           content: "";
           position: absolute;
-          border-top: 2px solid $border-light;
+          border-top: 2px solid $black;
           width: 85px;
           transform: translate(0, -50%);
           top: 50%;
@@ -1086,7 +1063,7 @@ section {
       h2 {}
 
       span {
-        color: $primary;
+        color: $black;
       }
     }
 
@@ -1112,7 +1089,7 @@ section {
     &:before {
       content: "";
       position: absolute;
-      border-top: 2px solid $border-light;
+      border-top: 2px solid $black;
       width: 46px;
       transform: translate(0, -50%);
       top: 50%;
@@ -1185,14 +1162,14 @@ section {
             font-size: 27px;
             height: 58px;
             width: 58px;
-            color: $primary;
+            color: $black;
             display: flex;
             border: 2px solid $white;
             background-color: $white;
             border-radius: 50%;
             margin-bottom: 10px;
             transition: all 500ms;
-            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, $primary 50%, $primary 100%);
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, $black 50%, $black 100%);
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 90px 180px;
@@ -1226,8 +1203,8 @@ section {
   &:active {
     transition: 0.5s;
     background-color: $white;
-    border: 2px solid $primary;
-    color: $primary !important;
+    border: 2px solid $black;
+    color: $black !important;
   }
 
   &:focus {
@@ -1236,7 +1213,7 @@ section {
 
   &.primary-btn {
     border: 1px solid white;
-    background-color: $primary;
+    background-color: $black;
 
     &.transparent {
       background-color: transparent;
@@ -1246,22 +1223,22 @@ section {
     &:focus,
     &:active {
       background-color: $white;
-      color: $primary !important;
-      border: 1px solid $primary;
+      color: $black !important;
+      border: 1px solid $black;
     }
   }
 
   &.btn-white {
     transition: 0.5s;
     background-color: $white;
-    border: 2px solid $primary;
-    color: $primary !important;
+    border: 2px solid $black;
+    color: $black !important;
 
     &:hover,
     &:focus,
     &:active {
       transition: 0.5s;
-      background-color: $primary;
+      background-color: $black;
       color: $white !important;
       border: 2px solid $white;
     }
@@ -1377,7 +1354,7 @@ section {
 
       a {
         &.active {
-          color: $primary;
+          color: $black;
         }
       }
 
@@ -1411,7 +1388,7 @@ section {
         i {
           height: 50px;
           width: 50px;
-          background-color: $primary;
+          background-color: $black;
           border-radius: 50px;
           display: flex;
           font-size: 20px;
@@ -1428,8 +1405,8 @@ section {
           i {
             background-position: 0 -90px;
             background-color: $white;
-            color: $primary;
-            border: 1px solid $primary;
+            color: $black;
+            border: 1px solid $black;
           }
         }
       }
@@ -1554,13 +1531,13 @@ section {
 
         .borders {
           transition: all 1s;
-          border-right: 2px dashed $primary;
+          border-right: 2px dashed $black;
         }
 
         h6,
         .e-name {
           transition: all 1s;
-          color: $primary;
+          color: $black;
         }
       }
     }
@@ -1658,7 +1635,7 @@ section {
       margin-bottom: 35px;
 
       .price-feature {
-        color: $light-gray;
+        color: $black;
         margin-bottom: 15px;
 
         &.font-primary {
@@ -1677,7 +1654,7 @@ section {
 
     .feature-icon {
       width: auto !important;
-      color: $primary;
+      color: $black;
       display: inline-block;
       margin-bottom: 10px;
       margin-top: -12px;
@@ -1720,7 +1697,7 @@ section {
           font-weight: 600;
 
           .large {
-            color: $primary;
+            color: $black;
             font-size: 55px;
             font-weight: 400;
 
@@ -2005,7 +1982,7 @@ section {
 
     .btn-default {
       padding: 13px 33px;
-      background-color: $primary;
+      background-color: $black;
 
       &:hover {
         transition: all 0.3s ease;
@@ -2097,14 +2074,14 @@ section {
             span {
               width: 39px;
               height: 5px;
-              background: $primary;
+              background: $black;
               box-shadow: 0 0 4px 1px $shadow-light;
             }
           }
 
           &:hover {
             span {
-              background: $primary;
+              background: $black;
               box-shadow: 0 0 4px 1px $shadow-light;
             }
           }
@@ -2146,7 +2123,7 @@ screenshot section end
 
     .download-center {
       h5 {
-        color: $primary;
+        color: $black;
         text-transform: capitalize;
         margin-bottom: 0;
       }
@@ -2312,7 +2289,7 @@ download section end
   }
 
   .set-border {
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid $black;
     width: 15px;
     margin-bottom: 30px;
     margin-left: 75px;
@@ -2322,7 +2299,7 @@ download section end
     &:before,
     &:after {
       content: "";
-      border-bottom: 2px solid $primary;
+      border-bottom: 2px solid $black;
       position: absolute;
     }
 
@@ -2351,13 +2328,13 @@ download section end
     }
 
     .quality {
-      color: $secondary;
+      color: $black;
       margin-bottom: 10px;
     }
 
     .users {
       font-weight: 600;
-      color: $primary;
+      color: $black;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0;
@@ -2410,7 +2387,7 @@ download section end
 
     &:hover {
       transition: 0.5s;
-      background-color: $primary;
+      background-color: $black;
 
       a {
 
@@ -2661,7 +2638,7 @@ download section end
     .form-group {
       .icon {
         font-size: 30px;
-        color: $primary;
+        color: $black;
         position: absolute;
         left: 50px;
         top: 50%;
@@ -2673,25 +2650,25 @@ download section end
 
         &::-webkit-input-placeholder {
           /* Chrome/Opera/Safari */
-          color: $primary;
+          color: $black;
           opacity: 0.5;
         }
 
         &::-moz-placeholder {
           /* Firefox 19+ */
-          color: $primary;
+          color: $black;
           opacity: 0.5;
         }
 
         &:-ms-input-placeholder {
           /* IE 10+ */
-          color: $primary;
+          color: $black;
           opacity: 0.5;
         }
 
         &:-moz-placeholder {
           /* Firefox 18- */
-          color: $primary;
+          color: $black;
           opacity: 0.5;
         }
       }
@@ -3097,7 +3074,7 @@ body {
           text-transform: uppercase;
 
           a {
-            color: $primary;
+            color: $black;
             font-weight: 500;
           }
         }
@@ -3108,7 +3085,7 @@ body {
           li {
             a {
               i {
-                color: $primary;
+                color: $black;
               }
             }
           }
@@ -3142,7 +3119,7 @@ body {
       ul {
         li {
           a {
-            color: $primary;
+            color: $black;
           }
         }
       }
@@ -4271,7 +4248,7 @@ footer {
     .form-group {
       i {
         &.fa-envelope {
-          color: $primary !important;
+          color: $black !important;
         }
       }
     }
@@ -4652,7 +4629,7 @@ booking section end
 
         .name {
           font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
-          color: $primary;
+          color: $black;
           letter-spacing: 0;
           margin-bottom: 15px;
         }
@@ -4705,7 +4682,7 @@ booking section end
               &:before {
                 width: 39px;
                 height: 5px;
-                background: $primary;
+                background: $black;
                 box-shadow: 0 0 4px 1px $shadow-light;
               }
             }
@@ -5354,8 +5331,8 @@ booking section end
                 height: 62px;
                 width: 62px;
                 color: $white;
-                border: 2px solid $primary;
-                background-color: $primary;
+                border: 2px solid $black;
+                background-color: $black;
               }
 
               &:hover {
@@ -5670,7 +5647,7 @@ booking section end
 
                 &:hover {
                   background-color: white;
-                  color: $primary;
+                  color: $black;
                 }
               }
             }
@@ -5811,7 +5788,7 @@ music css end
   h5 {
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
     margin-bottom: -2px;
-    color: $primary;
+    color: $black;
   }
 
   h6 {
@@ -5822,7 +5799,7 @@ music css end
 
   p {
     font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1920 - 300)));
-    color: $gray8;
+    color: $black;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: -6px;
@@ -5830,7 +5807,7 @@ music css end
 
   a {
     font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
-    color: $primary;
+    color: $black;
 
     &:hover {
       text-decoration: none;
@@ -5904,23 +5881,23 @@ music css end
     height: 94px;
 
     &.radial-bar-primary {
-      background-image: linear-gradient(432deg, $primary 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $primary 50%, $gray13 50%, $gray13);
+      background-image: linear-gradient(432deg, $black 50%, transparent 50%, transparent),
+        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
     }
 
     &.radial-90 {
-      background-image: linear-gradient(399deg, $primary 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $primary 50%, $gray13 50%, $gray13);
+      background-image: linear-gradient(399deg, $black 50%, transparent 50%, transparent),
+        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
     }
 
     &.radial-80 {
-      background-image: linear-gradient(350deg, $primary 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $primary 50%, $gray13 50%, $gray13);
+      background-image: linear-gradient(350deg, $black 50%, transparent 50%, transparent),
+        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
     }
 
     &.radial-70 {
-      background-image: linear-gradient(310deg, $primary 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $primary 50%, $gray13 50%, $gray13);
+      background-image: linear-gradient(310deg, $black 50%, transparent 50%, transparent),
+        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
     }
 
     &:after {
@@ -5930,7 +5907,7 @@ music css end
       left: 0;
       border-radius: 50%;
       text-align: center;
-      color: $primary;
+      color: $black;
       content: attr(data-label);
       background-color: $white;
       z-index: 1;
@@ -6248,7 +6225,7 @@ resume-theme css end
         &.nav-tabs {
           .nav-link {
             &.active {
-              background-color: $primary;
+              background-color: $black;
             }
           }
         }
@@ -6469,7 +6446,7 @@ wedding-theme css end
         &:hover {
           button {
             &:before {
-              color: var(--primary);
+              color: $black;
               opacity: 1;
             }
           }
@@ -6633,7 +6610,7 @@ wedding-theme css end
         }
 
         .month {
-          color: $primary;
+          color: $black;
         }
       }
 
@@ -6956,7 +6933,7 @@ yoga-theme css end
 
       span {
         &:before {
-          border-top: 2px solid $primary;
+          border-top: 2px solid $black;
           width: 24px;
         }
       }
@@ -7159,7 +7136,7 @@ yoga-theme css end
       height: 68px;
       width: 68px;
       border-radius: 100%;
-      background-image: linear-gradient(90deg, $light, $primary);
+      background-image: linear-gradient(90deg, $light, $black);
     }
   }
 
@@ -7227,7 +7204,7 @@ yoga-theme css end
         content: "";
         position: absolute;
         border-radius: 2px;
-        color: $primary;
+        color: $black;
       }
 
       &:before {
@@ -7422,7 +7399,7 @@ yoga-theme css end
           .name {
             font-size: 16px;
             font-weight: 500;
-            color: $secondary;
+            color: $black;
             margin-bottom: 5px;
           }
 
@@ -7433,7 +7410,7 @@ yoga-theme css end
       }
 
       .primary-border {
-        border-bottom: 4px solid $primary;
+        border-bottom: 4px solid $black;
         border-radius: 1px;
         width: 33px;
       }
@@ -7477,7 +7454,7 @@ yoga-theme css end
 
         .img-container {
           .blog-head {
-            color: $primary;
+            color: $black;
             text-transform: none;
             font-weight: 600;
             margin-bottom: 10px;
@@ -7487,7 +7464,7 @@ yoga-theme css end
           i {
             font-size: 16px;
             margin-right: 10px;
-            color: $gray6;
+            color: $black;
           }
 
           .blog-info {
@@ -7594,7 +7571,7 @@ yoga-theme css end
 
     .borders {
       margin-right: 30px;
-      color: $primary;
+      color: $black;
       border-right: 2px solid;
       height: 80px;
     }
@@ -7783,8 +7760,8 @@ agency css end
     .btn {
       &.btn-blog {
         background: white;
-        border: 1px solid $primary;
-        color: $primary;
+        border: 1px solid $black;
+        color: $black;
         font-size: 12px;
         margin-left: -60px;
         border-radius: 0;
@@ -7948,7 +7925,7 @@ counter css end
         }
 
         label {
-          color: $primary;
+          color: $black;
           margin-bottom: 0;
           font-weight: 500;
         }
@@ -8093,7 +8070,7 @@ contact css end
         text-align: center;
 
         .event-time {
-          color: $gray9;
+          color: $black;
           position: relative;
           padding: 8px;
 
@@ -8102,7 +8079,7 @@ contact css end
             height: 30px;
             width: 72px;
             border-radius: 14px;
-            background-color: $primary;
+            background-color: $black;
             color: $white;
           }
 
@@ -8110,7 +8087,7 @@ contact css end
             &:before {
               content: "";
               margin: 18px 0;
-              border-left: 2px dashed $gray9;
+              border-left: 2px dashed $black;
               height: 92px;
               display: inline-block;
               position: absolute;
@@ -8153,7 +8130,7 @@ contact css end
 
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: $primary;
+      background-color: $black;
       padding: 5px;
     }
   }
@@ -8429,7 +8406,7 @@ schedule css end
   &.wedding {
     .testimonial-info {
       .testimonial-para {
-        color: $primary;
+        color: $black;
         font-weight: 200;
       }
     }
@@ -8810,12 +8787,12 @@ tap to top css end
         .owl-dot {
           &.active {
             span {
-              background-color: $primary;
+              background-color: $black;
               width: 95px;
             }
 
             &:before {
-              color: $primary;
+              color: $black;
             }
           }
         }
@@ -8941,7 +8918,7 @@ tap to top css end
               display: none;
               width: 40px;
               height: 5px;
-              background-color: $secondary;
+              background-color: $black;
               position: absolute;
               bottom: -20px;
               left: 0;
@@ -8955,7 +8932,7 @@ tap to top css end
                 height: 5px;
                 width: 10px;
                 content: "";
-                background-color: $secondary;
+                background-color: $black;
                 border-radius: 15px;
               }
 
@@ -10457,7 +10434,7 @@ event css start
   h5,
   h6,
   p {
-    color: $secondary;
+    color: $black;
   }
 
   h1 {
@@ -10550,7 +10527,7 @@ event css start
       position: absolute;
       height: 60px;
       width: 4px;
-      background: $primary;
+      background: $black;
       top: -63px;
       left: 0;
       right: 0;
@@ -10566,7 +10543,7 @@ event css start
       padding: 8px;
       margin: 2px;
       border-radius: 100%;
-      background-color: $primary;
+      background-color: $black;
     }
   }
 
@@ -11240,7 +11217,8 @@ gym css start
 
   .borders-before {
     span:before {
-      border-top: 2px solid $secondary;
+      border-top: 2px solid $black;
+      ;
     }
   }
 
@@ -12117,7 +12095,7 @@ popup css start
     }
 
     .post {
-      color: $primary;
+      color: $black;
       font-weight: 400;
       letter-spacing: 0.5px;
       font-weight: 600;
@@ -16298,8 +16276,8 @@ error css end
         top: 0;
         width: 0;
         height: 0;
-        border-top: 12px solid $primary;
-        border-bottom: 13px solid $primary;
+        border-top: 12px solid $black;
+        border-bottom: 13px solid $black;
         border-right: 7px solid $white;
       }
     }
@@ -17925,7 +17903,7 @@ error css end
 
           &:before,
           &:after {
-            border-color: $primary;
+            border-color: $black;
             opacity: 0.6;
           }
         }
@@ -19362,14 +19340,14 @@ footer {
 
 .color-animated {
   animation: color-change 1s infinite;
-  color: $primary;
+  color: $black;
   margin-left: 10px;
 }
 
 .menu-container {
   @keyframes color-change {
     0% {
-      color: $primary;
+      color: $black;
     }
 
     50% {

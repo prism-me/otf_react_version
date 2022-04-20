@@ -10,8 +10,10 @@ import Faq from "../sections/About/faq";
 import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
 
+//images
+import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
-const About = () => {
+const About = (props) => {
 
     const { global } = props;
     return (
@@ -29,7 +31,7 @@ const About = () => {
                 title="Backed by science"
                 subtitle="You don’t need to be a scientist to understand how spending 12 minutes or more in the Orange Zone gives you more strength, more energy and more life. You just need to be a member."
                 btntext="Book your Free class!"
-                bannerImg="/assets/images/OTF/banner/aboutbanner.jpg"
+                bannerImg={aboutBanner}
             >
 
                 <AbouSection

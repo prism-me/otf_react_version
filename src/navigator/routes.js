@@ -1,18 +1,17 @@
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Academics from "../pages/Academics";
-import AgsPortal from "../pages/AGSPortal";
+import Memberships from "../pages/Memberships";
 import ContactUs from "../pages/ContactUs";
 import StudentCare from "../pages/StudentCare";
 import MiddleSchool from "../pages/MiddleSchool";
 import KinderGarten from "../pages/KinderGarten";
-import Enroll from "../pages/Enroll";
+import Offers from "../pages/Offers";
 import FAQMain from "../pages/FAQMain";
-import OnlineForm from "../pages/OnlineForm";
 import careers from "../pages/Careers";
 import Primaryschool from "../pages/Primaryschool";
 import OurTeam from "../pages/OurTeam";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Workout from "../pages/Workout";
 
 
 export const routes = [
@@ -38,16 +37,16 @@ export const routes = [
     exact: true,
   },
   {
-    name: "Academics",
-    path: "/academics",
-    component: Academics,
+    name: "Memberships",
+    path: "/memberships",
+    component: Memberships,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "AgsPortal",
-    path: "/agsPortal",
-    component: AgsPortal,
+    name: "Workout",
+    path: "/workout",
+    component: Workout,
     isPrivate: false,
     exact: true,
   },
@@ -66,9 +65,9 @@ export const routes = [
     exact: true,
   },
   {
-    name: "Enroll",
-    path: "/Enroll",
-    component: Enroll,
+    name: "Offers",
+    path: "/offers",
+    component: Offers,
     isPrivate: false,
     exact: true,
   },
@@ -76,13 +75,6 @@ export const routes = [
     name: "FAQ",
     path: "/FAQ",
     component: FAQMain,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "OnlineForm",
-    path: "/OnlineForm",
-    component: OnlineForm,
     isPrivate: false,
     exact: true,
   },

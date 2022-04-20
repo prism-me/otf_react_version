@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
+
+//images
+import videoImg from "../../assets/images/OTF/about/videoImg.png";
+import playicon from "../../assets/images/OTF/icons/playicon.png";
+
+
 var settings = {
     dots: true,
     infinite: true,
@@ -74,10 +82,10 @@ const Testimonial = () => {
                     <Col md="6" sm="12">
                         <div className="center-content">
                             <div className="video w-100"
-                                style={{ background: "url('/assets/images/OTF/about/videoImg.png')" }}
+                                style={{ background: `url(${videoImg})` }}
                             >
                                 <a className="button center-content" onClick={toggle}>
-                                    <img alt="video" className="img-fluid" src="/assets/images/OTF/icons/playicon.png" />
+                                    <img alt="video" className="img-fluid" src={playicon} />
                                 </a>
                                 <Modal isOpen={modal} toggle={toggle} centered={true} size="lg">
                                     <ModalHeader toggle={toggle} className="modal-no-header close-up"></ModalHeader>

@@ -1,6 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+//images
+import team1 from "../../assets/images/OTF/team/team1.png";
+import team2 from "../../assets/images/OTF/team/team2.png";
+import team3 from "../../assets/images/OTF/team/team3.png";
+import team4 from "../../assets/images/OTF/team/team4.png";
+
 
 
 var settings = {
@@ -33,27 +42,27 @@ var settings = {
 
 const speaker = [
     {
-        img: "../assets/images/OTF/team/team1.png",
+        img: team1,
         title: "Management Member",
         subtitle: "Designation example"
     },
     {
-        img: "../assets/images/OTF/team/team2.png",
+        img: team2,
         title: "Training Coach ",
         subtitle: "Designation example"
     },
     {
-        img: "../assets/images/OTF/team/team3.png",
+        img: team3,
         title: "Sales Associates",
         subtitle: "Designation example"
     },
     {
-        img: "../assets/images/OTF/team/team4.png",
+        img: team4,
         title: "Management Member",
         subtitle: "Designation example"
     },
     {
-        img: "../assets/images/OTF/team/team4.png",
+        img: team4,
         title: "Management Member",
         subtitle: "Designation example"
     }

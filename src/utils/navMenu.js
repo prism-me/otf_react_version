@@ -1,36 +1,36 @@
 export const MENUITEMS = [
     {
         title: 'About us',
-        path: '/page/about-us',
+        path: 'about',
         type: 'link'
     },
     {
         title: 'Memberships',
-        path: '/page/memberships',
+        path: 'memberships',
         type: 'link'
     },
     {
         title: 'The Workout',
-        path: '/page/workout',
+        path: 'workout',
         type: 'link'
     },
     {
         title: 'Offers',
-        path: '/page/offers',
+        path: 'offers',
         type: 'link'
     },
     {
         title: 'Locations', type: 'sub', children: [
-            { path: '/page/location1', title: 'Location1', type: 'link' },
-            { path: '/page/location2', title: 'Location2', type: 'link' },
-            { path: '/page/location3', title: 'Location3', type: 'link', },
-            { path: '/page/location4', title: 'Location4', type: 'link' },
-            { path: '/page/location5', title: 'Location5', type: 'link' }
+            { path: 'location1', title: 'Location1', type: 'link' },
+            { path: 'location2', title: 'Location2', type: 'link' },
+            { path: 'location3', title: 'Location3', type: 'link', },
+            { path: 'location4', title: 'Location4', type: 'link' },
+            { path: 'location5', title: 'Location5', type: 'link' }
         ],
     },
     {
-        title: 'Support',
-        path: '/page/faq',
+        title: 'Careers',
+        path: 'faq',
         type: 'link'
     },
 ]

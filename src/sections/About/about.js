@@ -1,5 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
+
+//images
+import vision from "../../assets/images/OTF/about/vision.png";
+import mission from "../../assets/images/OTF/about/mission.png";
+import values from "../../assets/images/OTF/about/values.png";
+
+
+
 const About = ({ divId, title, detail, info1title, info1detail, info2title, info2detail, info3title, info3detail }) => (
     <section className="gym format about-detail pb-2" id={divId && divId}>
         <Container>
@@ -29,7 +37,7 @@ const About = ({ divId, title, detail, info1title, info1detail, info2title, info
                             {info1detail}
                         </p>
                     </article>
-                    <img src="/assets/images/OTF/about/mission.png" alt="" />
+                    <img src={mission} alt="" />
                 </Col>
                 <Col sm={4} className="container_foto">
                     <article className="text-left">
@@ -40,7 +48,7 @@ const About = ({ divId, title, detail, info1title, info1detail, info2title, info
                             {info2detail}
                         </p>
                     </article>
-                    <img src="/assets/images/OTF/about/vision.png" alt="" />
+                    <img src={vision} alt="" />
                 </Col>
                 <Col sm={4} className="container_foto">
                     <article className="text-left">
@@ -51,7 +59,7 @@ const About = ({ divId, title, detail, info1title, info1detail, info2title, info
                             {info3detail}
                         </p>
                     </article>
-                    <img src="/assets/images/OTF/about/values.png" alt="" />
+                    <img src={values} alt="" />
                 </Col>
             </Row>
         </Container >
