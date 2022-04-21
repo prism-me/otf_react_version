@@ -9,7 +9,6 @@
 //layouts
 @import "./layouts/Layout.scss";
 @import "./layouts/Navbar/Navbar.scss";
-@import "./layouts/Footer/Footer.scss";
 
 // error404 section
 @import "./sections/Error404/error";
@@ -3935,7 +3934,7 @@ footer {
       line-height: 0;
 
       .footer-social-list {
-        padding: 0 10px;
+        padding: 0 15px;
 
         @media (max-width: 992px) {
           padding: 0 10px;
@@ -13902,7 +13901,7 @@ error css end
           display: inline-block;
 
           i {
-            color: $primary;
+            color: $black;
           }
         }
       }
@@ -20796,6 +20795,17 @@ footer {
 
 .footer2 {
 
+  .DappSection {
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  .mblappspace {
+    @media (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
+  }
 
   .footer-contant {
     .footer-lists {

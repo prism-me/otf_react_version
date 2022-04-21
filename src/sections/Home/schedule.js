@@ -1,10 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
-import scheduleImg from "../../assets/images/OTF/home/health-safty.png";
 
 
-const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2 }) => (
+const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2, coachImg }) => (
     <section className={`gym format rightAnimation bg-schedule ${subtitle && "mt-5"}`} id="schedule"
         style={{ backgroundImage: `url("${bgImg}")` }}
     >
@@ -77,7 +76,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                 </Col>
                 <Col md="6">
                     <div className="text-center center-content">
-                        <img alt="" className="img-fluid format-img" src={scheduleImg} />
+                        <img alt="" className="img-fluid format-img" src={coachImg} />
                     </div>
                 </Col>
             </Row>

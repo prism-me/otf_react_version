@@ -21,6 +21,7 @@ import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
 import coachprofBg from "../assets/images/OTF/workout/coachprofBg.jpg"
+import coachImg from "../assets/images/OTF/workout/coachImg.png"
 import getOff from "../assets/images/OTF/home/get-off.jpg";
 
 
@@ -112,6 +113,7 @@ const Workout = (props) => {
                 detail2={"Fermentum in commodo, massa faucibus velit ut natoque. Ultrices sit varius ut justo nisl, interdum. Tortor, odio egestas erat volutpat. Urna volutpat aliquam leo mauris magna at feugiat accumsan."}
                 btnText="book a class now"
                 bgImg={coachprofBg}
+                coachImg={coachImg}
             />
 
             <TrainerSection

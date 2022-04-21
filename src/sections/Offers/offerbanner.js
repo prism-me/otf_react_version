@@ -32,22 +32,24 @@ const Offerbanner = () => {
                             Orangetheory Fitness is a one-of-a-kind, group high-intensity interval training workout.
                             The result is more energy, visible toning, and extra calorie burn for up to 36 hours.
                         </p>
-                        <h3 className="offer-subtext">Buy 2 Months Membership and
-                            get the 3rd Month for 10dhs only.</h3>
+                        <h3 className="offer-subtext">
+                            Buy 2 Months Membership and
+                            get the 3rd Month for AED10 only.
+                        </h3>
                     </Col>
                     <Col sm={12} md={6} lg={6}>
                         <center>
                             <button className='offerBtn px-5'
                                 onClick={() => setShowModal(true)}
                             >
-                                BOOK A TRIAL CLASS</button>
+                                Book A Trail Class</button>
                             <StartBurning
                                 show={showModal} onHide={() => setShowModal(false)}
                             />
                         </center>
                         <Form className='offer-form'>
                             <h3 className="offer-subtext">
-                                BOOK A TRIAL CLASS</h3>
+                                Book A Trail Class</h3>
                             <FormGroup>
                                 <Input
                                     type="text"

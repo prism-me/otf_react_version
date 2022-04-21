@@ -29,6 +29,8 @@ import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
 import schBg from "../assets/images/OTF/home/health-safetybg.jpg";
 import offerbg from "../assets/images/OTF/home/get-off.jpg";
+import scheduleImg from "../assets/images/OTF/home/health-safty.png";
+
 
 
 const Home = (props) => {
@@ -118,6 +120,8 @@ const Home = (props) => {
           detail2="The Orangetheory studio design, structured class schedule, block interval training and tight-knit community of franchisees enables us to have a more controlled environment in comparison to other fitness gyms."
           listImg={listImg}
           bgImg={schBg}
+          coachImg={scheduleImg}
+
         />
 
         <PricingSection />

@@ -11,6 +11,9 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 //images
 import footerlogo from "../../assets/images/OTF/logo/footer_logo.png"
+import GooglePlay from "../../assets/images/OTF/logo/GooglePlay.png"
+import AppStore from "../../assets/images/OTF/logo/AppStore.png"
+
 
 const Footer = (props) => {
   const { global } = props;
@@ -23,38 +26,42 @@ const Footer = (props) => {
             <Col lg="3" md="3" sm="12" className="set-first">
               <div className="logo-sec">
                 <div className="footer-contant">
-                  <img alt="" className="img-fluid footer-logo" src={footerlogo} />
-                  <p className='mb-2'
-                    style={{ fontSize: "16px" }}
-                  >Follow us on Social Media</p>
-                  <ul className="d-flex footer-social social">
-                    <li className="footer-social-list">
-                      <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
-                        <InstagramIcon />
-                      </a>
-                    </li>
-                    <li className="footer-social-list">
-                      <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
-                        <FacebookIcon />
-                      </a>
-                    </li>
-                    <li className="footer-social-list">
-                      <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHB6rwn1JfoIwAAAYADKMRIRbmDSr01qAQt0NDCj3xmyxOni_Oals07utfzDUhFAPsFqL1Uo6pXz5uaI_6j7n11OuWi6OI229bWFL4oQbuTC8F8tvpELsBNAgd2UFDtJi4LsY0=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Forangetheory-fitness" target={"_blank"}>
-                        <LinkedInIcon />
-                      </a>
-                    </li>
-                    <li className="footer-social-list">
-                      <a href="https://twitter.com/orangetheory" target={"_blank"}>
-                        <TwitterIcon />
-                      </a>
-                    </li>
-                  </ul>
+                  <img alt="" className="img-fluid footer-logo mb-0" src={footerlogo} />
+                  {/* <div className='mt-5'>
+                    <p className='mb-2'
+                      style={{ fontSize: "16px" }}
+                    >Follow us on Social Media</p>
+                    <ul className="d-flex footer-social social">
+                      <li className="footer-social-list">
+                        <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                          <InstagramIcon />
+                        </a>
+                      </li>
+                      <li className="footer-social-list">
+                        <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                          <FacebookIcon />
+                        </a>
+                      </li>
+                      <li className="footer-social-list">
+                        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHB6rwn1JfoIwAAAYADKMRIRbmDSr01qAQt0NDCj3xmyxOni_Oals07utfzDUhFAPsFqL1Uo6pXz5uaI_6j7n11OuWi6OI229bWFL4oQbuTC8F8tvpELsBNAgd2UFDtJi4LsY0=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Forangetheory-fitness" target={"_blank"}>
+                          <LinkedInIcon />
+                        </a>
+                      </li>
+                      <li className="footer-social-list">
+                        <a href="https://twitter.com/orangetheory" target={"_blank"}>
+                          <TwitterIcon />
+                        </a>
+                      </li>
+                    </ul>
+                  </div> */}
                 </div>
               </div>
             </Col>
-            <Col lg="3" md="3" sm="12">
+            <Col lg="3" md="3" sm="12"
+              className='d-flex flex-column justify-content-center align-items-end'
+            >
               <div className="footer-contant">
-                <div>
+                {/* <div>
                   <ul className="footer-lists">
                     <li>
                       <a href="#">Select You Locations</a>
@@ -72,13 +79,28 @@ const Footer = (props) => {
                       <a href={`/${global.activeLanguage}/articles`} className='active'>Articles</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col lg="3" md="3" sm="12">
               <div className="footer-contant">
                 <div>
                   <ul className="footer-lists">
+                    <li>
+                      <a href="#">Select You Locations</a>
+                    </li>
+                    <li>
+                      <a href={`/${global.activeLanguage}/about?#mission`}>Our Mission, Vision, & Values</a>
+                    </li>
+                    <li>
+                      <a href={`/${global.activeLanguage}/press`}>Press</a>
+                    </li>
+                    <li>
+                      <a href="#">Jobs</a>
+                    </li>
+                    <li>
+                      <a href={`/${global.activeLanguage}/articles`} className='active'>Articles</a>
+                    </li>
                     <li>
                       <a href="#">Promotion Terms</a>
                     </li>
@@ -126,6 +148,54 @@ const Footer = (props) => {
                     +9714 340 1040
                   </a>
                 </p>
+              </div>
+            </Col>
+            <Col sm={12} className="d-flex DappSection">
+              <div className="logo-sec">
+                <div className='mr-5 footer-contant mblappspace'>
+                  <p className='mb-2'
+                    style={{ fontSize: "16px" }}
+                  >Follow us on Social Media</p>
+                  <ul className="d-flex footer-social social">
+                    <li className="footer-social-list">
+                      <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                        <InstagramIcon />
+                      </a>
+                    </li>
+                    <li className="footer-social-list">
+                      <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                        <FacebookIcon />
+                      </a>
+                    </li>
+                    <li className="footer-social-list">
+                      <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHB6rwn1JfoIwAAAYADKMRIRbmDSr01qAQt0NDCj3xmyxOni_Oals07utfzDUhFAPsFqL1Uo6pXz5uaI_6j7n11OuWi6OI229bWFL4oQbuTC8F8tvpELsBNAgd2UFDtJi4LsY0=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Forangetheory-fitness" target={"_blank"}>
+                        <LinkedInIcon />
+                      </a>
+                    </li>
+                    <li className="footer-social-list">
+                      <a href="https://twitter.com/orangetheory" target={"_blank"}>
+                        <TwitterIcon />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <p className='mb-2'
+                  style={{ fontSize: "16px" }}
+                >Download Our App</p>
+                <ul className="d-flex footer-social social">
+                  <li className="footer-social-list">
+                    <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                      <img src={GooglePlay} alt="logo" className='mr-3' />
+                    </a>
+                  </li>
+                  <li className="footer-social-list">
+                    <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                      <img src={AppStore} alt="logo" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </Col>
           </Row>

@@ -35,7 +35,7 @@ const Plans = () => {
                         <div className="title title2 title-inner">
                             <div className="main-title">
                                 <h2 className="borders text-center m-b-0 oftHeading">
-                                    <span>plans to meet any need</span>
+                                    <span>Limited Offers</span>
                                 </h2>
                             </div>
                         </div>

@@ -14,9 +14,14 @@ export const MENUITEMS = [
         path: 'workout',
         type: 'link'
     },
+    // {
+    //     title: 'Offers',
+    //     path: 'offers',
+    //     type: 'link'
+    // },
     {
-        title: 'Offers',
-        path: 'offers',
+        title: 'Testimonials',
+        path: '',
         type: 'link'
     },
     {

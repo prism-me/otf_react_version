@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Nav from './nav'
 import { Container, Row, Col } from 'reactstrap'
 import logo from "./../assets/images/OTF/logo/ot_logo.png";
-import { CgMenuLeftAlt } from "react-icons/cg";
+import { Menu } from '@material-ui/icons';
 
 
 
@@ -26,7 +26,7 @@ const Header = props => {
                                 </a>
                                 <div className="responsive-btn">
                                     <a className="toggle-nav" onClick={clickSidebar} >
-                                        <CgMenuLeftAlt className='text-white menuIconstyle' />
+                                        <Menu className='text-white menuIconstyle' />
                                     </a>
                                 </div>
                                 <Nav />

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { AccessTime } from '@material-ui/icons';
+
 
 import { Col, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 
@@ -124,7 +126,7 @@ const DetailWrapper = ({ className, showcaseType }) => {
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                     <h5>Author Example</h5>
-                    <h5 className="pull-right">10<i className="fa fa-heart-o ml-1"></i>, 50<i className="fa fa-comments-o ml-1"></i></h5>
+                    <h5 className="pull-right">10<i className="fa fa-heart ml-1"></i>, 50<i className="fa fa-comments ml-1"></i></h5>
                 </div>
             </div>
             {/* <!-- Comment Sec Start --> */}
@@ -150,8 +152,13 @@ const DetailWrapper = ({ className, showcaseType }) => {
                                         <div className="text-left">
                                             <div className="comment-user"><i className="fa fa-user"></i><h6>That Guy</h6>
                                             </div>
-                                            <div className="comment-date"><i className="fa fa-clock-o"></i><h6> Dec 16,
-                                                2014 </h6></div>
+                                            <div className="comment-date">
+                                                <AccessTime className="mr-1"
+                                                    style={{ fontSize: "16px" }}
+                                                />
+                                                {/* <i className="fa fa-clock-o"></i> */}
+                                                <h6> Dec 16,
+                                                    2014 </h6></div>
                                         </div>
                                         <div className="comment-post">
                                             <p>
@@ -180,7 +187,11 @@ const DetailWrapper = ({ className, showcaseType }) => {
                                                 <i className="fa fa-user"></i><h6> That Guy </h6>
                                             </div>
                                             <div className="comment-date">
-                                                <i className="fa fa-clock-o"></i><h6> Dec 16, 2014</h6>
+                                                {/* <i className="fa fa-clock-o"></i> */}
+                                                <AccessTime className="mr-1"
+                                                    style={{ fontSize: "16px" }}
+                                                />
+                                                <h6> Dec 16, 2014</h6>
                                             </div>
                                         </div>
                                         <div className="comment-post">
@@ -212,7 +223,11 @@ const DetailWrapper = ({ className, showcaseType }) => {
                                                 <i className="fa fa-user"></i><h6> That Guy </h6>
                                             </div>
                                             <div className="comment-date">
-                                                <i className="fa fa-clock-o"></i><h6> Dec 16, 2014</h6>
+                                                {/* <i className="fa fa-clock-o"></i> */}
+                                                <AccessTime className="mr-1"
+                                                    style={{ fontSize: "16px" }}
+                                                />
+                                                <h6> Dec 16, 2014</h6>
                                             </div>
                                         </div>
                                         <div className="comment-post">
@@ -244,8 +259,13 @@ const DetailWrapper = ({ className, showcaseType }) => {
                                         <div className="text-left">
                                             <div className="comment-user"><i className="fa fa-user"></i><h6> That Guy </h6>
                                             </div>
-                                            <div className="comment-date"><i className="fa fa-clock-o"></i><h6> Dec 16,
-                                                2014</h6></div>
+                                            <div className="comment-date">
+                                                {/* <i className="fa fa-clock-o"></i> */}
+                                                <AccessTime className="mr-1"
+                                                    style={{ fontSize: "16px" }}
+                                                />
+                                                <h6> Dec 16,
+                                                    2014</h6></div>
                                         </div>
                                         <div className="comment-post">
                                             <p>

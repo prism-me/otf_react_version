@@ -24,7 +24,7 @@ const StartBurning = (props) => {
                             ></i>
                         </p>
                         <Form className='offer-form'>
-                            <h3 className="offer-subtext">BOOK A TRIAL CLASS</h3>
+                            <h3 className="offer-subtext">Book A Trail Class</h3>
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -36,7 +36,7 @@ const StartBurning = (props) => {
                                 />
                             </FormGroup>
                             <Row form>
-                                <Col md={6}>
+                                <Col sm={6}>
                                     <FormGroup>
                                         <Input
                                             type="email"
@@ -48,7 +48,7 @@ const StartBurning = (props) => {
                                         />
                                     </FormGroup>
                                 </Col>
-                                <Col md={6}>
+                                <Col sm={6}>
                                     <FormGroup>
                                         <Input
                                             type="text"

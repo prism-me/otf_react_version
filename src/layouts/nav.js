@@ -18,7 +18,7 @@ const Nav = (props) => {
 
 
     useEffect(() => {
-        const currentUrl = history.location.pathname;
+        const currentUrl = history.location.pathname.split('/')[2];
         mainmenu.filter(items => {
             if (items.path === currentUrl)
                 setNavActive(items)
@@ -108,6 +108,11 @@ const Nav = (props) => {
                                 >
                                     {menuItem.title}
                                 </a>
+                                // <Link to={`/${props.global.activeLanguage}/${menuItem.path}`}
+                                //     className={`${menuItem.active ? 'active' : ''} navMenuLink`}
+                                // >
+                                //     {menuItem.title}
+                                // </Link>
                             }
                             {menuItem.children &&
                                 <ul

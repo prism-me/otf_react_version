@@ -17,6 +17,7 @@ import benefits2 from "../assets/images/OTF/membership/LAT.png";
 import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
 
 import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
+import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 import getOff from "../assets/images/OTF/home/get-off.jpg";
 
 
@@ -88,6 +89,7 @@ const Memberships = (props) => {
                 list={list}
                 btnText="Avail now"
                 bgImg={corporateBg}
+                coachImg={scheduleImg}
             />
 
             <Benefits
