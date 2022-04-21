@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { AccessTime } from '@material-ui/icons';
+
 
 const CardGridWrapper = ({
     className,
@@ -24,10 +27,12 @@ const CardGridWrapper = ({
                                 <div className="m-b-20">
                                     <div className="center-text">
                                         {blogDate && <>
-                                            <i aria-hidden="true" className="fa fa-clock-o m-r-10"></i>
+                                            <AccessTime className="bloglocIcons" />
+                                            {/* <i class="fa fa-clock m-r-10"></i> */}
                                             <h6 className="m-r-25 font-blog">{blogDate}</h6> </>}
                                         {place && <>
-                                            <i aria-hidden="true" className="fa fa-map-marker m-r-10"></i>
+                                            <LocationOnIcon className="bloglocIcons" />
+                                            {/* <i aria-hidden="true" className="fa fa-map-marker m-r-10"></i> */}
                                             <h6 className="font-blog">{place}</h6> </>}
                                     </div>
                                 </div>

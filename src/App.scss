@@ -7450,7 +7450,8 @@ yoga-theme css end
             padding-top: 0;
           }
 
-          i {
+          i,
+          .bloglocIcons {
             font-size: 16px;
             margin-right: 10px;
             color: $black;
@@ -9428,8 +9429,11 @@ tap to top css end
 
             &:before {
               position: absolute;
-              font: normal normal normal 10px/1 FontAwesome;
-              content: "\F054";
+              // font: normal normal normal 10px/1 FontAwesome;
+              font-family: 'Font Awesome 5 Free';
+              content: '\f105';
+              font-weight: 900;
+              // content: "\F054";
               transition: all 0.5s linear;
               left: 0;
               top: 20px;
@@ -19053,17 +19057,23 @@ header {
       .dropdown {
         &:before {
           position: absolute;
-          font: normal normal normal 14px/1 FontAwesome;
+          // font: normal normal normal 14px/1 FontAwesome;
+          font-family: 'Font Awesome 5 Free';
+          content: '\f105';
+          font-weight: 900;
           right: 18px;
           top: 50%;
           transform: translateY(-50%);
-          content: "\f105";
+          // content: "\f105";
         }
       }
 
       .dropdown {
         &:before {
-          content: "\f0d7";
+          // content: "\f0d7";
+          font-family: 'Font Awesome 5 Free';
+          content: '\f0d7';
+          font-weight: 900;
         }
       }
 
