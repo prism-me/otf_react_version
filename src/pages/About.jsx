@@ -52,7 +52,9 @@ const About = (props) => {
 
                 <CounterSection />
 
-                <Faq />
+                <Faq
+                    language={global?.activeLanguage}
+                />
 
                 <CalculateSection />
             </Layout>

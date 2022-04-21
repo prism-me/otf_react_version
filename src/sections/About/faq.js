@@ -1,8 +1,9 @@
 import React from 'react';
 import { Accordion, AccordionItem } from 'react-light-accordion';
+import { Link } from 'react-router-dom';
 import 'react-light-accordion/demo/css/index.css';
 import { Container, Row, Col } from 'reactstrap'
-const Faq = () => {
+const Faq = ({ language }) => {
 
     const DummyContent = (props) => (
         <div className="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordionoc">
@@ -73,7 +74,15 @@ const Faq = () => {
 
                         }}
                     // onClick={clickbuton}
-                    >read more</button>
+                    >
+                        <Link to={`/${language}/faq`}
+                            style={{
+                                color: "#F58220"
+                            }}
+                        >
+                            read more
+                        </Link>
+                    </button>
                 </center>
             </Container>
         </section>

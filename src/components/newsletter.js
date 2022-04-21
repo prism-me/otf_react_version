@@ -13,7 +13,11 @@ const NewsLetter = ({ }) => {
 
             <Form >
                 <Form.Group>
-                    <InputGroup>
+                    <InputGroup
+                        style={{
+                            boxShadow: "0px 4px 15px rgb(0 0 0 / 14%)"
+                        }}
+                    >
                         <Form.Control
                             type="text"
                             style={{

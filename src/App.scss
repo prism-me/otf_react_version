@@ -20796,8 +20796,12 @@ footer {
 .footer2 {
 
   .DappSection {
+
+    margin-top: 5rem;
+
     @media (max-width: 767px) {
       flex-direction: column;
+      margin-top: 1rem;
     }
   }
 

@@ -103,7 +103,9 @@ const Memberships = (props) => {
                 bgImg={getOff}
             />
 
-            <Faq />
+            <Faq
+                language={global?.activeLanguage}
+            />
 
         </div>
     );
