@@ -7,7 +7,7 @@ import SpeakerSection from "../sections/About/speaker";
 import TestimonialSection from "../sections/About/testimonial";
 import CounterSection from "../sections/About/counter";
 import Faq from "../sections/About/faq";
-import Layout from '../components/common-layout'
+import Layout from '../components/common-layout';
 import CalculateSection from "../sections/Home/calculate";
 
 //images

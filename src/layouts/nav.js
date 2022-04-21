@@ -84,12 +84,12 @@ const Nav = (props) => {
 
     return (
         <div className={`navbar`} id="togglebtn">
-            <div className="responsive-btn text-right">
-                <div className="modalIconStyle">
+            <div className="responsive-btn d-flex justify-content-end align-items-center">
+                <p className="modalIconStyle">
                     <ClearIcon
                         onClick={closeSidebar}
                     />
-                </div>
+                </p>
             </div>
             <ul className="main-menu">
                 {MENUITEMS.map((menuItem, i) => {
@@ -97,7 +97,7 @@ const Nav = (props) => {
                         <li key={i} className={"navItemStyle"}>
 
                             {(menuItem.type === 'sub') ?
-                                <a className="dropdown" href="/page/locations" onClick={() => toggletNavActive(menuItem)}>
+                                <a className="dropdown" href={`/${props.global.activeLanguage}/locations`} onClick={() => toggletNavActive(menuItem)}>
                                     <span>{menuItem.title}</span>
                                 </a>
                                 : ''}

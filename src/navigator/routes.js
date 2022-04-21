@@ -2,13 +2,13 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Memberships from "../pages/Memberships";
 import ContactUs from "../pages/ContactUs";
-import StudentCare from "../pages/StudentCare";
-import MiddleSchool from "../pages/MiddleSchool";
-import KinderGarten from "../pages/KinderGarten";
+import ArticlesDetail from "../pages/ArticlesDetail";
+import Press from "../pages/Press";
+import Locations from "../pages/Locations";
 import Offers from "../pages/Offers";
 import FAQMain from "../pages/FAQMain";
 import careers from "../pages/Careers";
-import Primaryschool from "../pages/Primaryschool";
+import Articles from "../pages/Articles";
 import OurTeam from "../pages/OurTeam";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Workout from "../pages/Workout";
@@ -58,9 +58,9 @@ export const routes = [
     exact: true,
   },
   {
-    name: "StudentCare",
-    path: "/Student-care",
-    component: StudentCare,
+    name: "ArticlesDetail",
+    path: "/articles-detail",
+    component: ArticlesDetail,
     isPrivate: false,
     exact: true,
   },
@@ -86,23 +86,23 @@ export const routes = [
     exact: true,
   },
   {
-    name: "MiddleSchool",
-    path: "/Middle-school",
-    component: MiddleSchool,
+    name: "Press",
+    path: "/press",
+    component: Press,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "Primary-school",
-    path: "/Primary-school",
-    component: Primaryschool,
+    name: "Articles",
+    path: "/articles",
+    component: Articles,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "KinderGarten",
-    path: "/KinderGarten",
-    component: KinderGarten,
+    name: "Locations",
+    path: "/locations",
+    component: Locations,
     isPrivate: false,
     exact: true,
   },

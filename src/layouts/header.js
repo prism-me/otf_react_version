@@ -26,7 +26,7 @@ const Header = props => {
                                 </a>
                                 <div className="responsive-btn">
                                     <a className="toggle-nav" onClick={clickSidebar} >
-                                        <CgMenuLeftAlt className='text-white' />
+                                        <CgMenuLeftAlt className='text-white menuIconstyle' />
                                     </a>
                                 </div>
                                 <Nav />

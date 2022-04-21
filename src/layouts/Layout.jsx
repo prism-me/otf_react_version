@@ -1,17 +1,16 @@
 import React from "react";
-import BottomTabNavigator from "../components/BottomTabNavigator";
+// import BottomTabNavigator from "../components/BottomTabNavigator";
 import Footer from "./Footer";
 import Header from "./header";
-import ClipLoader from "react-spinners/ClipLoader";
 import BackToTop from "../components/BackToTop";
 // import Contactpannel from "../sections/Contactpannel";
 import { types } from "../redux/global/types";
 import "./Layout.scss";
 import { connect } from "react-redux";
-
-
+import { useHistory } from "react-router-dom";
 
 function Layout(props) {
+  const history = useHistory();
 
   const { global } = props;
   return (
@@ -20,18 +19,6 @@ function Layout(props) {
         ? "arabic-direction"
         : "english-direction"
         }`}>
-      <div
-        className={`${props.showSpinner ? "d-flex" : "d-none"
-          } flex-column text-center align-items-center justify-content-center`}
-        style={{
-          position: "absolute",
-          zIndex: 99999,
-          height: "100%",
-          width: "100%",
-          background: "rgba(255,255,255,0.6)",
-        }}>
-        <ClipLoader color={"#1a2c52e6"} loading={true} size={80} />
-      </div>
 
       <Header className="gym nav-lg" />
       {/* <Navbar show={visible} toggleDrawer={(show) => toggleDrawer(show)} cssRoute={history.location.pathname} /> */}
