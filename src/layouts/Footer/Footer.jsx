@@ -64,12 +64,12 @@ const Footer = (props) => {
                     >Download Our App</p>
                     <ul className="d-flex footer-social social">
                       <li className="footer-social-list">
-                        <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                        <a href="https://play.google.com/store?hl=en&gl=US" target={"_blank"}>
                           <img src={GooglePlay} alt="logo" className='mr-3' />
                         </a>
                       </li>
                       <li className="footer-social-list">
-                        <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                        <a href="https://www.apple.com/app-store/" target={"_blank"}>
                           <img src={AppStore} alt="logo" />
                         </a>
                       </li>
@@ -244,12 +244,12 @@ const Footer = (props) => {
                 >Download Our App</p>
                 <ul className="d-flex footer-social social">
                   <li className="footer-social-list">
-                    <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                    <a href="https://play.google.com/store?hl=en&gl=US" target={"_blank"}>
                       <img src={GooglePlay} alt="logo" className='mr-3' />
                     </a>
                   </li>
                   <li className="footer-social-list">
-                    <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                    <a href="https://www.apple.com/app-store/" target={"_blank"}>
                       <img src={AppStore} alt="logo" />
                     </a>
                   </li>
