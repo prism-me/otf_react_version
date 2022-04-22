@@ -28,7 +28,7 @@ const Footer = (props) => {
               <div className="footer-contant">
                 <img alt="" className="img-fluid footer-logo mb-0" src={footerlogo} />
                 <div className="d-flex justify-content-between align-items-start DappSection">
-                  <div className="logo-sec">
+                  {/* <div className="logo-sec">
                     <div className='mblappspace'>
                       <p className='mb-2'
                         style={{ fontSize: "16px" }}
@@ -73,7 +73,7 @@ const Footer = (props) => {
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   {/* </div> */}
 
                   {/* <div className='mt-5'>
@@ -197,7 +197,7 @@ const Footer = (props) => {
                 </p>
               </div>
             </Col>
-            {/* <Col sm={12} className="d-flex DappSection">
+            <Col sm={12} className="d-flex DappSection">
               <div className="logo-sec">
                 <div className='mr-5 footer-contant mblappspace'>
                   <p className='mb-2'
@@ -244,7 +244,7 @@ const Footer = (props) => {
                   </li>
                 </ul>
               </div>
-            </Col> */}
+            </Col>
           </Row>
         </Container>
       </footer>

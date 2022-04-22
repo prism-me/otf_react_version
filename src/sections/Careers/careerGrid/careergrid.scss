@@ -1,0 +1,82 @@
+.career-grid {
+    .my-masonry-grid {
+        display: -webkit-box;
+        /* Not needed if autoprefixing */
+        display: -ms-flexbox;
+        /* Not needed if autoprefixing */
+        display: flex;
+        margin-left: -30px;
+        /* gutter size offset */
+        width: auto;
+    }
+
+    .my-masonry-grid_column {
+        padding-left: 30px;
+        /* gutter size */
+        background-clip: padding-box;
+    }
+
+    /* Style your items */
+    .my-masonry-grid_column>div {
+        /* change div to reference your elements you put in <Masonry> */
+        // background: grey;
+        margin-bottom: 30px;
+    }
+
+    .careerdiv {
+        background: $white;
+        border-radius: 10px;
+        border: 1px solid $orange;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
+        padding: 40px 30px;
+
+        &:hover {
+            // transform: scale(1.03);
+            transform: translateY(-5px);
+        }
+
+        .careerheading {
+            font-size: 25px;
+            font-weight: 700;
+            color: $black;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            @media #{$sm} {
+                font-size: 22px;
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        .careerdetail {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 2rem;
+        }
+
+        .careerbtn {
+            color: $white;
+            padding: 0.5rem 2rem;
+            border: 1px solid $orange;
+            text-transform: uppercase;
+            background: $orange;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+
+            &:hover {
+                background: $white;
+                color: $orange;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}

@@ -33,10 +33,7 @@
 @import "./sections/OurTeam/OurTeam.scss";
 
 //CAREERS
-@import "./sections/Careers/Ourteam/Ourteam";
-@import "./sections/Careers/Positions/Positions";
-@import "./sections/Careers/jointeam/jointeam.scss";
-@import "./sections/Careers/ContentSection/ContentSection.scss";
+@import "./sections/Careers/careerGrid/careergrid.scss";
 
 //CONTACT PANNEL
 @import "./sections/Contactpannel/contactpannel";
@@ -20797,7 +20794,7 @@ footer {
 
   .DappSection {
 
-    margin-top: 5rem;
+    // margin-top: 5rem;
 
     @media (max-width: 767px) {
       flex-direction: column;

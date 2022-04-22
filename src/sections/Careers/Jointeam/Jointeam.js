@@ -1,21 +1,15 @@
 import React from 'react';
 
-const Jointeam = (props) => {
+const Jointeam = () => {
     return (
-        <div className="joinTeam container">
-            <h3 className={"Title"}>
-                {props.joinTeam?.title}
-                {/* JOIN THE TEAM */}
+        <section className="gym format container pb-0">
+            <h3 className="oftHeading">
+                Join Our Team
             </h3>
-            <p className="subTitle"
-                dangerouslySetInnerHTML={{
-                    __html:
-                        props.joinTeam?.description,
-                }}
-            >
-                {/* If you would like to apply for any vacancies and join our team, please send your C.V with a cover letter to <a href="mailto:careers@ags.ae">careers@ags.ae</a> Due to the volume of CVs and job applications received, we are unable to reply to any that are being emailed directly to the school. */}
+            <p className="oftsubHeading text-center">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-        </div>
+        </section>
     );
 };
 
