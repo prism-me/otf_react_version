@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom"
-
+import { HashLink } from "react-router-hash-link";
 import { Container, Row, Col } from 'reactstrap'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -135,10 +135,14 @@ const Footer = (props) => {
                 <div>
                   <ul className="footer-lists">
                     <li>
-                      <Link to="#">Select You Locations</Link>
+                      <HashLink to={`/${global.activeLanguage}/memberships` + "#select-your-location"}>
+                        Select You Locations
+                      </HashLink>
                     </li>
                     <li>
-                      <Link to={`/${global.activeLanguage}/about?#mission`}>Our Mission, Vision, & Values</Link>
+                      <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
+                        Our Mission, Vision, & Values
+                      </HashLink>
                     </li>
                     <li>
                       <Link to={`/${global.activeLanguage}/press`}>Press</Link>
@@ -260,7 +264,7 @@ const Footer = (props) => {
           © <Link className="copyright-text" to="/">Orangetheoryfitness</Link> | <Link className="copyright-text " to={`/${global.activeLanguage}/terms-of-use`}>Terms of use </Link> | <Link className="copyright-text" to={`/${global.activeLanguage}/privacy-policy`}>Privacy Policy</Link> | Designed and Managed by <a className="copyright-text" href="https://www.prism-me.com/" target={"_blank"}>Prism Digital.</a>
         </Container>
       </div>
-    </Fragment>
+    </Fragment >
   )
 }
 
