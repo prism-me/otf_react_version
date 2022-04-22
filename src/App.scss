@@ -18968,6 +18968,22 @@ header {
         color: $black;
       }
 
+      .desktopcreenLocations {
+        display: block;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      .mblscreenLocations {
+        display: none;
+
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+
       a {
         &.active {
           color: $orange;

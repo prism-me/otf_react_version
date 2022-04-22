@@ -97,9 +97,14 @@ const Nav = (props) => {
                         <li key={i} className={"navItemStyle"}>
 
                             {(menuItem.type === 'sub') ?
-                                <a className="dropdown" href={`/${props.global.activeLanguage}/locations`} onClick={() => toggletNavActive(menuItem)}>
-                                    <span>{menuItem.title}</span>
-                                </a>
+                                <>
+                                    <a className="dropdown mblscreenLocations" onClick={() => toggletNavActive(menuItem)}>
+                                        <span>{menuItem.title}</span>
+                                    </a>
+                                    <a className="dropdown desktopcreenLocations" href={`/${props.global.activeLanguage}/locations`} onClick={() => toggletNavActive(menuItem)}>
+                                        <span>{menuItem.title}</span>
+                                    </a>
+                                </>
                                 : ''}
                             {(menuItem.type === 'link') &&
                                 <a
