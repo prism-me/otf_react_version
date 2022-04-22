@@ -20,6 +20,7 @@ const NewsLetter = ({ }) => {
                     >
                         <Form.Control
                             type="text"
+                            placeholder='enter email'
                             style={{
                                 background: '#FFFFFF',
                                 border: "1px solid grey",

@@ -8,18 +8,18 @@ import Layout from '../components/common-layout';
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
-const PrivacyPolicy = (props) => {
+const TermsOfUse = (props) => {
 
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Privacy Policy
+                    Terms Of Use
                 </title>
                 <meta
                     name="description"
-                    content="Privacy Policy"
+                    content="Terms Of Use"
                 />
             </Helmet>
             <Layout
@@ -30,7 +30,7 @@ const PrivacyPolicy = (props) => {
             >
 
                 <PrivacySection
-                    title={"Privacy Policy"}
+                    title={"Terms Of Use"}
                     detail="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 />
 
@@ -53,4 +53,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PrivacyPolicy);
+)(TermsOfUse);

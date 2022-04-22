@@ -24,7 +24,7 @@ const Offerbanner = () => {
         >
             <Container>
                 <Row>
-                    <Col sm={12} md={6} lg={6} className='d-flex flex-column justify-content-center align-items-center'>
+                    <Col sm={12} md={6} lg={6} className='d-flex flex-column justify-content-center align-items-start offerMblDivsize'>
                         <h2 className="offer-text">
                             WORK 1 HOUR. BURN FOR 36
                         </h2>
@@ -90,7 +90,7 @@ const Offerbanner = () => {
                                 <Input type="select" name="select" id="exampleSelect"
                                     className='inputStyle'
                                     required
-                                    style={{ color: "#c6c6c9" }}
+                                    style={{ color: "#495057", width: "100%" }}
                                 >
                                     <option style={{ color: "#495057" }}>Select Location</option>
                                     {location &&

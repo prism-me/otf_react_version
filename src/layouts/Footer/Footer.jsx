@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom"
 
 import { Container, Row, Col } from 'reactstrap'
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -134,25 +135,31 @@ const Footer = (props) => {
                 <div>
                   <ul className="footer-lists">
                     <li>
-                      <a href="#">Select You Locations</a>
+                      <Link to="#">Select You Locations</Link>
                     </li>
                     <li>
-                      <a href={`/${global.activeLanguage}/about?#mission`}>Our Mission, Vision, & Values</a>
+                      <Link to={`/${global.activeLanguage}/about?#mission`}>Our Mission, Vision, & Values</Link>
                     </li>
                     <li>
-                      <a href={`/${global.activeLanguage}/press`}>Press</a>
+                      <Link to={`/${global.activeLanguage}/press`}>Press</Link>
                     </li>
                     <li>
-                      <a href="#">Jobs</a>
+                      <Link to={`/${global.activeLanguage}/offers`}>Offers</Link>
                     </li>
                     <li>
-                      <a href={`/${global.activeLanguage}/articles`} className='active'>Articles</a>
+                      <Link to={`/${global.activeLanguage}/faq`}>FAQ's</Link>
                     </li>
                     <li>
-                      <a href="#">Promotion Terms</a>
+                      <Link to="#">Jobs</Link>
                     </li>
                     <li>
-                      <a href="#">Do not sell my information</a>
+                      <Link to={`/${global.activeLanguage}/articles`} className='active'>Articles</Link>
+                    </li>
+                    <li>
+                      <Link to="#">Promotion Terms</Link>
+                    </li>
+                    <li>
+                      <Link to="#">Do not sell my information</Link>
                     </li>
                   </ul>
                 </div>
@@ -250,7 +257,7 @@ const Footer = (props) => {
       </footer>
       <div className="gym copyright text-center">
         <Container>
-          © <a className="copyright-text" href="/">Orangetheoryfitness</a> | <a className="copyright-text " href="#">Terms of use </a> | <a className="copyright-text" href="#">Privacy Policy</a> | Designed and Managed by <a className="copyright-text" href="https://www.prism-me.com/" target={"_blank"}>Prism Digital.</a>
+          © <Link className="copyright-text" to="/">Orangetheoryfitness</Link> | <Link className="copyright-text " to={`/${global.activeLanguage}/terms-of-use`}>Terms of use </Link> | <Link className="copyright-text" to={`/${global.activeLanguage}/privacy-policy`}>Privacy Policy</Link> | Designed and Managed by <a className="copyright-text" href="https://www.prism-me.com/" target={"_blank"}>Prism Digital.</a>
         </Container>
       </div>
     </Fragment>

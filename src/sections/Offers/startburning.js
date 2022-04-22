@@ -5,6 +5,8 @@ import {
     Input,
     Row, Col, Container
 } from 'reactstrap';
+import ClearIcon from "@material-ui/icons/Clear";
+
 
 const StartBurning = (props) => {
 
@@ -18,10 +20,12 @@ const StartBurning = (props) => {
             <Modal isOpen={props.show} className="sburning">
                 <ModalBody>
                     <Container>
-                        <p className='modalIconWrape'>
-                            <i aria-hidden="true" className="fa fa-close modalIconStyle"
-                                onClick={props.onHide}
-                            ></i>
+                        <p className='modalIconWrape mt-3'>
+                            <span className='modalIconStyle'>
+                                <ClearIcon
+                                    onClick={props.onHide}
+                                />
+                            </span>
                         </p>
                         <Form className='offer-form'>
                             <h3 className="offer-subtext">Book A Trail Class</h3>
@@ -65,7 +69,8 @@ const StartBurning = (props) => {
                                 <Input type="select" name="select" id="exampleSelect"
                                     className='inputStyle'
                                     required
-                                    style={{ color: "#c6c6c9" }}
+                                    style={{ color: "#495057", width: "100%" }}
+
                                 >
                                     <option style={{ color: "#495057" }}>Select Location</option>
                                     {location &&

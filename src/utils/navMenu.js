@@ -21,7 +21,7 @@ export const MENUITEMS = [
     // },
     {
         title: 'Testimonials',
-        path: '',
+        path: 'testimonials',
         type: 'link'
     },
     {

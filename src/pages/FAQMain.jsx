@@ -14,13 +14,6 @@ import bannerImg from "../assets/images/OTF/banner/faqbanner.jpg";
 
 const FAQMain = (props) => {
 
-    useEffect(() => {
-        document.querySelector(".accordion .accordion-item").classList.add("active");
-        return () => {
-            document.querySelector(".accordion .accordion-item").classList.remove("active");
-        }
-    }, []);
-
     const DummyContent1 = (props) => (
         <p>
             {props.answer}

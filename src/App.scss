@@ -38,9 +38,6 @@
 //CONTACT PANNEL
 @import "./sections/Contactpannel/contactpannel";
 
-//Privacy Policy
-@import "./sections/privacy-policy/Privacy.scss";
-
 //Pop up
 @import "./components/Modals/popup/PopUp.scss";
 
@@ -12250,6 +12247,12 @@ breadcrumb-section css start
     }
   }
 
+  .offerMblDivsize {
+    @media #{$sm} {
+      display: block !important;
+    }
+  }
+
   .offer-text {
     font-size: 40px;
     font-weight: 700;
@@ -20794,11 +20797,11 @@ footer {
 
   .DappSection {
 
-    // margin-top: 5rem;
+    margin-top: -5rem;
 
     @media (max-width: 767px) {
       flex-direction: column;
-      margin-top: 1rem;
+      margin-top: 0rem;
     }
   }
 
@@ -21186,7 +21189,7 @@ footer {
       font-size: 20px;
       border-radius: 100%;
       background: $orange;
-      padding: 1rem 1.1rem;
+      padding: 0.3rem 0.5rem 0.5rem 0.5rem;
       color: $white;
     }
   }

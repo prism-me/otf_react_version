@@ -9,8 +9,9 @@ import Offers from "../pages/Offers";
 import FAQMain from "../pages/FAQMain";
 import careers from "../pages/Careers";
 import Articles from "../pages/Articles";
-import OurTeam from "../pages/OurTeam";
+import Testimonials from "../pages/Testimonials";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfUse from "../pages/TermsOfUse";
 import Workout from "../pages/Workout";
 
 
@@ -73,7 +74,7 @@ export const routes = [
   },
   {
     name: "FAQ",
-    path: "/FAQ",
+    path: "/faq",
     component: FAQMain,
     isPrivate: false,
     exact: true,
@@ -107,9 +108,9 @@ export const routes = [
     exact: true,
   },
   {
-    name: "OurTeam",
-    path: "/OurTeam",
-    component: OurTeam,
+    name: "Testimonials",
+    path: "/testimonials",
+    component: Testimonials,
     isPrivate: false,
     exact: true,
   },
@@ -120,4 +121,11 @@ export const routes = [
     isPrivate: false,
     exact: true,
   },
+  {
+    name: "TermsOfUse",
+    path: "/terms-of-use",
+    component: TermsOfUse,
+    isPrivate: false,
+    exact: true,
+  }
 ];
