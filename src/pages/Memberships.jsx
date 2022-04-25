@@ -86,7 +86,7 @@ const Memberships = (props) => {
                 btntext="Avail one of our membership now"
                 bannerImg={banerImg}
             >
-                <Location />
+                {/* <Location /> */}
 
                 <PricingSection />
 

@@ -33,11 +33,12 @@ const CardGridWrapper = ({
                                     <div className="m-b-20">
                                         <div className="center-text">
                                             {blogDate && <>
-                                                <AccessTime className="bloglocIcons" />
+                                                {/* <AccessTime className="bloglocIcons" /> */}
                                                 {/* <i aria-hidden="true" className="fa fa-clock-o m-r-10"></i> */}
-                                                <h6 className="m-r-25 font-blog">{blogDate}</h6> </>}
+                                                {/* <h6 className="m-r-25 font-blog">{blogDate}</h6>  */}
+                                            </>}
                                             {place && <>
-                                                <LocationOnIcon className="bloglocIcons" />
+                                                {/* <LocationOnIcon className="bloglocIcons" /> */}
                                                 {/* <i aria-hidden="true" className="fa fa-map-marker m-r-10"></i> */}
                                                 <h6 className="font-blog">{place}</h6> </>}
                                         </div>

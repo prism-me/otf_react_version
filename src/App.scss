@@ -11056,12 +11056,13 @@ gym css start
         -moz-transition: all .5s ease;
         -o-transition: all .5s ease;
         -ms-transition: all .5s ease;
-        transition: all .5s ease;
+        transition: all .1s ease;
 
         &:hover {
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
           border-radius: 100%;
-          transform: translateY(-10px);
+          // transform: translateY(-10px);
+          animation: scaleDisappear 0.3s;
         }
 
         @media #{$xsm} {
@@ -11122,6 +11123,23 @@ gym css start
     .locationDiv {
       background: $white;
       padding: 1.5rem;
+      cursor: pointer;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      transition: all .5s ease;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+
+        // transform: translateY(-5px);
+        .iconstyelLocation {
+          background: $orange;
+          color: $white;
+        }
+      }
 
       .locationHeading {
         color: $black;
@@ -21356,7 +21374,8 @@ footer {
     &:hover {
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
       border-radius: 100%;
-      transform: translateY(-10px);
+      // transform: translateY(-10px);
+      animation: scaleDisappear 0.3s;
     }
 
     @media #{$xsm} {
