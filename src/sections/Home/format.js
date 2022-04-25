@@ -65,7 +65,7 @@ const Format = () => (
                                     </Col>
                                     <Col sm={10} className={"d-flex flex-column justify-content-center align-items-start formatedetailDiv"} >
                                         <h4 className="formatHeading">{x.title}</h4>
-                                        <p className="p-light formatsubHeading">
+                                        <p className="formatsubHeading">
                                             {x.subtitle}
                                         </p>
                                     </Col>

@@ -22,7 +22,7 @@ var settings = {
     autoplay: true,
     centerMode: true,
     centerPadding: '0',
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     responsive: [
         {
             breakpoint: 490,
@@ -43,28 +43,73 @@ var settings = {
 const speaker = [
     {
         img: team1,
-        title: "Management Member",
-        subtitle: "Designation example"
+        title: "Donna Forbes",
+        subtitle: "Fitness Coach"
     },
     {
         img: team2,
-        title: "Training Coach ",
-        subtitle: "Designation example"
+        title: "Katrina Putnina",
+        subtitle: "Fitness Coach"
     },
     {
         img: team3,
-        title: "Sales Associates",
-        subtitle: "Designation example"
+        title: "Noor Maki",
+        subtitle: "Fitness Coach"
     },
     {
         img: team4,
-        title: "Management Member",
-        subtitle: "Designation example"
+        title: "Fadi Khoury",
+        subtitle: "Fitness Coach"
     },
     {
         img: team4,
-        title: "Management Member",
-        subtitle: "Designation example"
+        title: "Sarah Al Ghafari",
+        subtitle: "Fitness Coach"
+    },
+    {
+        img: team4,
+        title: "Sara Lodhi",
+        subtitle: "Fitness Coach"
+    },
+    {
+        img: team4,
+        title: "Sheila Marie Ollamina",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Shakirah Namusoke",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Karen Joy Masangcay",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Judy Ann Nojor",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Comfort Tumukunde",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Blessie Talon",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Anna Adajar",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Anastacia Leochico",
+        subtitle: "Sales Associate"
     }
 ];
 const Speaker = () => (
@@ -88,7 +133,7 @@ const Speaker = () => (
                                     <div className="text-center">
                                         <div className="team-img">
                                             <img alt="" className="img-fluid" src={x.img} />
-                                            <div className="overlay"></div>
+                                            {/* <div className="overlay"></div>
                                             <div className="social">
                                                 <ul>
                                                     <li>
@@ -112,7 +157,7 @@ const Speaker = () => (
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className="employee">
                                             <h5 className="e-name text-center">{x.title}</h5>

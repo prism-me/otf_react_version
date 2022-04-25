@@ -12,7 +12,7 @@ const Counter = ({ title, subtitle, btntext, bgImg }) => (
                 <h3 className="text-white oftHeading mb-4">
                     {title}
                 </h3>
-                <p className="p-light text-white text-center mb-5 oftsubHeading">
+                <p className="text-white text-center mb-5 oftsubHeading">
                     {subtitle}
                 </p>
                 <a className="otfBtn1" href="#">

@@ -72,12 +72,12 @@ const Testimonial = () => {
             </div>
 
             <Container>
-                <h3 className="oftHeading">
+                <h3 className="oftHeading mb-4">
                     Things we do differently
                 </h3>
-                <p className="p-light oftsubHeading text-center p-padding">
+                {/* <p className="oftsubHeading text-center p-padding">
                     Blandit neque fringilla eget faucibus fringilla euismod. Varius ullamcorper massa tortor, pretium massa justo enim tincidunt praesent. Iaculis lectus lectus ut ac. Cum eu velit venenatis tellus porttitor in. Vitae quis tortor massa dolor porttitor. Nec aliquet urna ut blandit vitae porttitor. Vel sed.
-                </p>
+                </p> */}
                 <Row>
                     <Col md="6" sm="12">
                         <div className="center-content">
@@ -90,7 +90,7 @@ const Testimonial = () => {
                                 <Modal isOpen={modal} toggle={toggle} centered={true} size="lg">
                                     <ModalHeader toggle={toggle} className="modal-no-header close-up"></ModalHeader>
                                     <ModalBody className="iframe-modal">
-                                        <iframe className="mfp-iframe" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/dNIfsv1rKJo?autoplay=1"></iframe>
+                                        <iframe className="mfp-iframe" frameborder="0" allowfullscreen="" src="https://www.facebook.com/watch/?v=1068162367292930"></iframe>
                                     </ModalBody>
                                 </Modal>
                             </div>

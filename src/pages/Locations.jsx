@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
+import Coaching from "../sections/Offers/coaching"
 
 //images
 import bannerImage from "../assets/images/OTF/banner/locationbanner.jpg";
@@ -23,12 +24,14 @@ const Locations = (props) => {
             </Helmet>
             <Layout
                 title="Find us near you!"
-                subtitle="Feugiat vulputate cursus sagittis pulvinar duis non magna cursus. Parturient donec vehicula neque, ut consectetur pretium. Velit et duis a purus vitae vivamus. Aliquet tellus est."
+                // subtitle="Feugiat vulputate cursus sagittis pulvinar duis non magna cursus. Parturient donec vehicula neque, ut consectetur pretium. Velit et duis a purus vitae vivamus. Aliquet tellus est."
                 btntext="Book your session"
                 bannerImg={bannerImage}
             >
                 <CalculateSection />
-
+                <section className="pb-0">
+                    <Coaching />
+                </section>
             </Layout>
         </div>
     );

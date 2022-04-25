@@ -38,7 +38,7 @@ const Press = (props) => {
 
                 <CounterSection
                     title="Follow us on Social Media"
-                    subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                    subtitle="Like and Follow Us to Stay up to Date with the Latest Events from our OTF Community."
                     btntext="Lorem Ipsum"
                     bgImg={pressBg}
                 />

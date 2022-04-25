@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import Documents from './Modals/Documents/Documents';
 const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext }) => {
+
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <section className="agency breadcrumb-section "
             style={{ background: `url(${bannerImg})` }}
@@ -14,7 +18,12 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext }) => {
                                 subtitle &&
                                 <p className="breadcrumb-subtext">{subtitle}</p>
                             }
-                            <button className="breadcrumb-btn">{btntext}</button>
+                            <button className="breadcrumb-btn"
+                                onClick={() => setShowModal(true)}
+                            >{btntext}</button>
+                            <Documents
+                                show={showModal} onHide={() => setShowModal(false)}
+                            />
                             {
                                 promtext &&
                                 <p className='text-white mt-3'><small>{promtext}</small></p>

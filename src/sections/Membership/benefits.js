@@ -23,7 +23,11 @@ const Benefits = ({ benefitList }) => (
         </div>
 
         <Container>
-            <h3 className="oftHeading text-dark">Membership Benefits</h3>
+            <h3 className="oftHeading"
+                style={{
+                    color: "#2E2E2E"
+                }}
+            >Membership Benefits</h3>
             <Row>
                 {benefitList &&
                     benefitList.length > 0 &&
@@ -39,10 +43,11 @@ const Benefits = ({ benefitList }) => (
                                             boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.14)",
                                             width: "110px"
                                         }}
+                                        className="formateImg"
                                     />
                                 </center>
                             </div>
-                            <p className='p-light oftsubHeading text-center my-3'>
+                            <p className='oftsubHeading text-center my-3'>
                                 {
                                     x.title
                                 }
@@ -57,7 +62,7 @@ const Benefits = ({ benefitList }) => (
                 >
                     Avail now
                 </button>
-                <p className='p-light mt-2'><small>*Available once pandemic restrictions are lifted.</small></p>
+                <p className='mt-2'><small>*Available once pandemic restrictions are lifted.</small></p>
             </center>
         </Container>
     </section>

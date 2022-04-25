@@ -23,37 +23,44 @@ const Testimonials = (props) => {
         {
             img: testimonial1,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial2,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial3,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial4,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial5,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial6,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         },
         {
             img: testimonial7,
             title: "Client name example",
-            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+            subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+            rating: "4.0"
         }
     ];
 

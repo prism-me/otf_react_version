@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactStars from "react-rating-stars-component";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,7 +33,11 @@ var settings = {
 const Trainer = ({ testimonial, title }) => (
     <section className="gym trainers">
         <Container className="overflow-hide">
-            <h3 className="oftHeading text-dark mb-0">
+            <h3 className="oftHeading mb-0"
+                style={{
+                    color: "#2E2E2E"
+                }}
+            >
                 {title}
             </h3>
             <Row>
@@ -43,17 +48,33 @@ const Trainer = ({ testimonial, title }) => (
                             testimonial.map((x, i) => (
                                 <div className="item" key={i}>
                                     <img alt="" className="img-fluid" src={x.img} />
-                                    <div className="text-center trainers-info">
-                                        <h4 className=" mb-2">
+                                    <div className="trainers-info">
+                                        <h4 className="mb-2 text-center mt-1">
                                             {
                                                 x.title
                                             }
                                         </h4>
-                                        <p className="p-light text-center">
+                                        <p className="text-center">
                                             {
                                                 x.subtitle
                                             }
                                         </p>
+                                        <p className="d-flex justify-content-center align-items-center">
+                                            <ReactStars
+                                                count={5}
+                                                // onChange={() => { }}
+                                                edit={false}
+                                                size={24}
+                                                isHalf={true}
+                                                value={x.rating}
+                                                emptyIcon={<i className="far fa-star"></i>}
+                                                halfIcon={<i className="fa fa-star-half-alt"></i>}
+                                                fullIcon={<i className="fa fa-star"></i>}
+                                                activeColor="#F8B101"
+                                                classNames="rating_bar text-center"
+                                            />
+                                        </p>
+
                                         {/* <div className="socials-lists">
                                         <ul className="socials-horizontal justify-content-center">
                                             <li>

@@ -25,15 +25,18 @@ var settings = {
 const otfData = [
     {
         img: otbImg,
-        title: "Orange Theory Beat - OTBEAT",
-        detail1: "OTbeat is our exclusive heart rate monitoring technology. Members have the unique experience of seeing real time data during their workout, enabling them to push themselves to new limits. After class, they can then monitor their improvements through emailed results and by using the OTbeat APP.",
-        detail2: "Risus in facilisi sem nulla vitae sagittis eget tellus.Adipiscing cursus duis accumsan, id tellus et blandit lectus.Nibh magna augue tellus, est!"
+        title: "Get Results, Straight from Your Heart.",
+        detail1: "We’ll prove you’re improving. Our OTbeat technology measures your heart rate and performance data in real time so you know your workout is working.",
     },
     {
         img: otbImg,
-        title: "Orange Theory Beat - OTBEAT",
-        detail1: "OTbeat is our exclusive heart rate monitoring technology. Members have the unique experience of seeing real time data during their workout, enabling them to push themselves to new limits. After class, they can then monitor their improvements through emailed results and by using the OTbeat APP.",
-        detail2: "Risus in facilisi sem nulla vitae sagittis eget tellus.Adipiscing cursus duis accumsan, id tellus et blandit lectus.Nibh magna augue tellus, est!"
+        title: "See Results in Real Time.",
+        detail1: "In-studio monitors connect directly with your OTbeat wearable to show your progress and keep you accountable to your level of effort.",
+    },
+    {
+        img: otbImg,
+        title: "Track Performance in the App.",
+        detail1: "You’ll have 24/7 access to your results and fitness data so you can track your performance and set new goals.",
     }
 ]
 const Counter = () => (
@@ -47,18 +50,18 @@ const Counter = () => (
                         >
                             <Container>
                                 <Row>
-                                    <Col md="6">
+                                    <Col md="7">
                                         <h3 className="oftHeading">
                                             {x.title}
                                         </h3>
 
-                                        <p className="p-light oftsubHeading text-white">
+                                        <p className="oftsubHeading text-white">
                                             {x.detail1}
                                         </p>
-                                        <p className="p-light oftsubHeading text-white">
+                                        {/* <p className="oftsubHeading text-white">
                                             {x.detail2}
-                                        </p>
-                                        <ul className="icon-collection">
+                                        </p> */}
+                                        {/* <ul className="icon-collection">
                                             <li className="about-icongym">
                                                 <a className="center-content" href="#">
                                                     <img alt="" className="img-fluid icons" src={heatl1} />
@@ -74,7 +77,7 @@ const Counter = () => (
                                                     <img alt="" className="img-fluid icons" src={heatl3} />
                                                 </a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </Col>
                                 </Row>
                             </Container>

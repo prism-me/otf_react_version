@@ -39,7 +39,7 @@ const Plans = () => {
                                 </h2>
                             </div>
                         </div>
-                        <p className="p-light oftsubHeading">
+                        <p className="oftsubHeading">
                             Ready to change the way you look, the way you feel, and your life? From free trial workout to monthly packages, Orangetheory has a plan perfect for you. By investing in your health today, you’re also investing in a longer, stronger and more vibrant future.
                         </p>
                     </Col>
@@ -56,7 +56,7 @@ const Plans = () => {
                                             <h4 className="plans-text-heading">{item.title}</h4>
                                         </div>
                                         <div className="plans-features">
-                                            <h5 className="plans-feature p-light text-center">{item.feature1}</h5>
+                                            <h5 className="plans-feature text-center">{item.feature1}</h5>
                                             <a className="otfBtn2" href="#">Book offer</a>
                                         </div>
                                     </div>

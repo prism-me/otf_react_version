@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from './nav'
 import { Container, Row, Col } from 'reactstrap'
 import logo from "./../assets/images/OTF/logo/ot_logo.png";
@@ -14,13 +14,28 @@ const Header = props => {
         document.querySelector('.navbar').classList.add('openSidebar')
     }
 
+    const [stickyClass, setStickyClass] = useState('');
+
+    useEffect(() => {
+        window.addEventListener('scroll', stickNavbar);
+        return () => window.removeEventListener('scroll', stickNavbar);
+    }, []);
+
+    const stickNavbar = () => {
+        if (window !== undefined) {
+            let windowHeight = window.scrollY;
+            // window height changed for the demo
+            windowHeight > 250 ? setStickyClass('sticky-nav') : setStickyClass('');
+        }
+    };
+
     return (
         <>
-            <header className={`${props.className || 'app2'} loding-header nav-abs custom-scroll  `}>
+            <header className={`${props.className || 'app2'} loding-header nav-abs custom-scroll`}>
                 <Container>
                     <Row>
                         <Col>
-                            <nav>
+                            <nav className={`${stickyClass}`}>
                                 <a className="m-r-auto" href="/">
                                     <img alt="" className="img-fluid" src={logo} />
                                 </a>

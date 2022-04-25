@@ -137,31 +137,38 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a,
-button {
+h6 {
   font-family: 'klavika-bold', sans-serif;
-}
-
-a {
-  span {
-    font-family: 'klavika-bold', sans-serif;
-  }
+  font-weight: 600;
 }
 
 /**************************
 general font
 *************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
 
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 400;
 }
 
+a,
+button {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 600 !important;
+
+  span {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600 !important;
+  }
+}
 
 p {
   color: $paracolor;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .center-header {
@@ -174,14 +181,14 @@ p {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'proxima-nova', sans-serif;
   // position: relative;
   font-size: 14px;
   color: $black;
   overflow-x: hidden;
 
   &.event {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'proxima-nova', sans-serif;
   }
 }
 
@@ -668,8 +675,8 @@ ul {
 }
 
 .p-light {
-  font-weight: 300;
-  opacity: 0.9;
+  font-weight: 400;
+  opacity: 1;
 }
 
 .form-group {
@@ -1665,7 +1672,10 @@ section {
 
         .feature-text-heading {
           &.bold {
-            font-weight: 700;
+            font-weight: 600;
+            font-style: italic;
+            font-family: 'klavika-bold', sans-serif;
+            font-size: 22px;
           }
         }
       }
@@ -1987,8 +1997,9 @@ section {
           // color: $light-gray;
           color: $black;
           margin-bottom: 20px;
-          font-weight: 600;
-          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400;
+          font-family: 'proxima-nova', sans-serif;
+          font-size: 18px;
         }
       }
     }
@@ -2705,7 +2716,7 @@ download section end
         font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
 
         &::placeholder {
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: 'proxima-nova', sans-serif;
           font-weight: 600;
           letter-spacing: 0.5px;
           font-size: 14px;
@@ -2871,8 +2882,8 @@ body {
   color: $black;
 
   .copyright-text {
-    font-weight: 300;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400 !important;
+    font-family: 'proxima-nova', sans-serif;
     letter-spacing: 1px;
     margin-bottom: 0;
     margin-top: 0;
@@ -3249,10 +3260,10 @@ header {
       h1 {
         text-align: center;
         text-transform: capitalize;
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 48px;
+        font-weight: 600;
+        font-style: italic;
 
-        // font-style: italic;
         @media #{$sm} {
           font-size: 25px;
         }
@@ -3267,6 +3278,7 @@ header {
 
         p {
           padding: 0 95px;
+          font-size: 18px;
 
           @media #{$sm , $md} {
             padding: 0;
@@ -3282,16 +3294,18 @@ header {
         text-transform: uppercase;
         margin-top: 1rem;
         outline: 0;
+        font-weight: 600;
+        font-size: 14px;
       }
 
       .otfBtn1 {
         color: $white;
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 2.5rem;
         border: 1px solid $orange;
         text-transform: uppercase;
         background: $orange;
         border-radius: 50px;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 14px;
 
         &:hover {
@@ -3906,8 +3920,8 @@ footer {
         font-weight: 200;
 
         a {
-          font-weight: 300;
-          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400 !important;
+          font-family: 'proxima-nova', sans-serif;
           color: $black;
 
           &:hover {
@@ -7446,7 +7460,7 @@ yoga-theme css end
           i,
           .bloglocIcons {
             font-size: 16px;
-            margin-right: 10px;
+            margin-right: 5px;
             color: $black;
           }
 
@@ -7600,8 +7614,8 @@ agency css end
 
       p {
         margin-bottom: unset;
-        font-weight: 600;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-family: 'proxima-nova', sans-serif;
         color: $paracolor;
       }
 
@@ -7619,10 +7633,10 @@ agency css end
       }
 
       .font-blog {
-        font-weight: 600;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-family: 'proxima-nova', sans-serif;
         text-transform: none;
-        color: $paracolor;
+        color: $paracolor !important;
       }
 
       .borders-before,
@@ -9196,8 +9210,9 @@ tap to top css end
 
   &.testimonial {
     .oftHeading {
-      font-size: 25px;
-      font-weight: 700;
+      font-size: 44px;
+      font-weight: 600;
+      font-style: italic;
       color: $orange;
       text-align: center;
       margin-bottom: 1rem;
@@ -9217,7 +9232,8 @@ tap to top css end
     }
 
     .oftsubHeading {
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: 400;
       text-align: justify;
       margin-bottom: 2rem;
     }
@@ -9391,8 +9407,9 @@ tap to top css end
 
   &.faq {
     .frequent-text {
-      font-size: 25px;
-      font-weight: 700;
+      font-size: 44px;
+      font-weight: 600;
+      font-style: italic;
       color: $black;
       text-align: center;
       margin-bottom: 2rem;
@@ -9413,11 +9430,11 @@ tap to top css end
           .title {
             margin-bottom: 0;
             background-color: transparent;
-            font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1920 - 300)));
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 600;
+            font-size: 16px;
+            font-family: 'proxima-nova', sans-serif;
+            font-weight: 400;
             position: relative;
-            color: #071828;
+            color: $black;
             padding: 12px 20px;
 
             &:before {
@@ -9429,7 +9446,7 @@ tap to top css end
               // content: "\F054";
               transition: all 0.5s linear;
               left: 0;
-              top: 20px;
+              top: 11px;
               color: $orange;
             }
 
@@ -9441,6 +9458,7 @@ tap to top css end
           .panel {
             p {
               padding: 20px;
+              font-size: 14px;
             }
           }
 
@@ -9456,8 +9474,9 @@ tap to top css end
       }
 
       .frequent-text {
-        font-size: 25px;
-        font-weight: 700;
+        font-size: 44px;
+        font-weight: 600;
+        font-style: italic;
         color: $black;
         text-align: center;
         margin-bottom: 2rem;
@@ -10763,7 +10782,7 @@ event css start
           font-size: 14px;
 
           &::placeholder {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'proxima-nova', sans-serif;
           }
         }
       }
@@ -10924,8 +10943,11 @@ gym css start
   }
 
   .oftHeading {
-    font-size: 25px;
-    font-weight: 700;
+    // font-size: 25px;
+    // font-weight: 700;
+    font-size: 44px;
+    font-weight: 600;
+    font-style: italic;
     color: $orange;
     text-align: center;
     margin-bottom: 2rem;
@@ -10937,18 +10959,20 @@ gym css start
   }
 
   .oftsubHeading {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     text-align: justify;
+
   }
 
   .otfBtn {
     color: $black;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 1px solid $orange;
     text-transform: uppercase;
     background: transparent;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 
     &:hover {
@@ -10964,12 +10988,12 @@ gym css start
 
   .otfBtn1 {
     color: $white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 1px solid $orange;
     text-transform: uppercase;
     background: $orange;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 
     &:hover {
@@ -10985,12 +11009,12 @@ gym css start
 
   .otfBtn2 {
     color: $orange;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 0;
     text-transform: uppercase;
     background: transparent;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 
     &:hover {
@@ -11028,10 +11052,24 @@ gym css start
       }
 
       .formateImg {
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
+
+        &:hover {
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+          border-radius: 100%;
+          transform: translateY(-10px);
+        }
+
         @media #{$xsm} {
           margin-bottom: 2rem;
         }
       }
+
+
 
       .formatHeading {
         color: $white;
@@ -11095,11 +11133,12 @@ gym css start
 
       .locationsubHeading {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
 
         a {
-          font-family: 'Source Sans Pro', sans-serif;
-          font-weight: 600;
+          font-family: 'proxima-nova', sans-serif;
+          font-weight: 400 !important;
+          color: $black;
 
           &:hover {
             color: $orange;
@@ -11793,7 +11832,7 @@ gym css start
         padding: 0.5rem;
 
         img {
-          width: 35px;
+          width: 50px;
         }
       }
 
@@ -12084,8 +12123,7 @@ popup css start
       color: $black;
       font-weight: 400;
       letter-spacing: 0.5px;
-      font-weight: 600;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'proxima-nova', sans-serif;
     }
   }
 }
@@ -12224,8 +12262,9 @@ breadcrumb-section css start
   }
 
   .breadcrumb-text {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
+    font-style: italic;
     color: $white;
     text-align: center;
     margin-bottom: 2rem;
@@ -12237,7 +12276,7 @@ breadcrumb-section css start
 
   .breadcrumb-subtext {
     color: $white;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 2rem;
     max-width: 50%;
@@ -12254,8 +12293,8 @@ breadcrumb-section css start
   }
 
   .offer-text {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
     color: $white;
     margin-bottom: 2rem;
 
@@ -12266,12 +12305,12 @@ breadcrumb-section css start
 
   .offerBtn {
     color: $white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 1px solid $orange;
     text-transform: uppercase;
     background: $orange;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     display: none;
 
@@ -12292,7 +12331,7 @@ breadcrumb-section css start
 
   .offer-subtext {
     color: $white;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 2rem;
 
     @media #{$sm} {
@@ -12332,12 +12371,12 @@ breadcrumb-section css start
 
   .breadcrumb-btn {
     color: $white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 1px solid $orange;
     text-transform: uppercase;
     background: $orange;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 
     &:hover {
@@ -12876,7 +12915,7 @@ blog-section css start
 
         a {
           font-weight: 600;
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: 'proxima-nova', sans-serif;
           color: $black;
           margin-left: 15px;
           transition: all 0.4s;
@@ -12917,12 +12956,12 @@ blog-section css start
       font-weight: 600;
       margin-bottom: 10px;
       font-weight: 600;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'proxima-nova', sans-serif;
     }
 
     .date {
       color: $black;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'proxima-nova', sans-serif;
     }
 
     div {
@@ -17880,6 +17919,9 @@ error css end
       .borders {
         span {
           font-family: 'klavika-bold', sans-serif;
+          font-size: 44px;
+          font-weight: 600;
+          font-style: italic;
 
           @media #{$sm} {
             font-size: 22px;
@@ -18741,19 +18783,56 @@ header {
   &.nav-lg {
     padding: 2rem 1rem;
 
+    .sticky-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $black;
+      width: 100%;
+      padding: 0.5rem 5rem;
+      animation: slide-down 0.7s;
+      box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+
+      @media (max-width: 991px) {
+        padding: 1.2rem 1.5rem !important;
+      }
+
+      @media (min-width: 992px) and (max-width: 1243px) {
+        padding: 0.5rem 3rem;
+      }
+
+    }
+
+    @keyframes slide-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     nav ul li a {
-      font-size: 17px;
+      font-size: 16px;
+
+      @media #{$sm, $md} {
+        font-family: 'proxima-nova', sans-serif !important;
+        font-weight: 500 !important;
+      }
 
       span {
         @media #{$sm, $md} {
-          font-family: 'Source Sans Pro', sans-serif !important;
-          font-weight: 600;
+          font-family: 'proxima-nova', sans-serif !important;
+          font-weight: 500 !important;
         }
       }
 
       @media #{$sm, $md} {
-        font-family: 'Source Sans Pro', sans-serif !important;
-        font-weight: 600;
+        font-family: 'proxima-nova', sans-serif !important;
+        font-weight: 500 !important;
       }
     }
   }
@@ -19030,7 +19109,7 @@ header {
           line-height: 1;
           text-decoration: none;
           display: inline-block;
-          padding: 18px;
+          padding: 15px;
           font-size: 14px;
           text-transform: capitalize;
           transition: all 0.4s ease-in-out;
@@ -20831,8 +20910,9 @@ footer {
     .footer-lists {
       li {
         a {
-          font-family: 'Source Sans Pro', sans-serif;
-          font-size: 16px;
+          font-family: 'proxima-nova', sans-serif;
+          font-size: 14px;
+          font-weight: 400 !important;
 
           &:hover {
             font-weight: bold !important;
@@ -20844,15 +20924,15 @@ footer {
 
   .para-address {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 14px;
 
     strong {
-      font-family: 'klavika-bold', sans-serif;
+      font-family: 'proxima-nova', sans-serif;
     }
 
     .paraIcons {
       color: $orange;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     span {
@@ -20860,9 +20940,9 @@ footer {
     }
 
     a {
-      font-weight: 300;
-      font-size: 16px;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400 !important;
+      font-size: 14px;
+      font-family: 'proxima-nova', sans-serif;
       color: $black;
 
 
@@ -20889,6 +20969,10 @@ footer {
       background-color: rgba(0, 0, 0, 0.75);
       border: 2px solid $orange;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+
+      p {
+        display: block;
+      }
     }
   }
 
@@ -20915,6 +20999,7 @@ footer {
     font-weight: 300;
     color: $white;
     font-size: 15px;
+    display: none;
   }
 
   .container_foto img {
@@ -20952,8 +21037,9 @@ footer {
 
 .plans {
   .oftHeading {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 600;
+    font-style: italic;
     color: $orange;
     text-transform: capitalize;
 
@@ -21020,7 +21106,7 @@ footer {
         text-align: center;
         margin-bottom: 2rem;
         font-weight: 600;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'proxima-nova', sans-serif;
       }
 
     }
@@ -21028,13 +21114,13 @@ footer {
 
   .otfBtn2 {
     color: $black;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2.5rem;
     border: 0;
     text-transform: uppercase;
     background: transparent;
     border: 1px solid $black;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 
     &:hover {
@@ -21049,7 +21135,8 @@ footer {
   }
 
   .oftsubHeading {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -21086,8 +21173,9 @@ footer {
               }
 
               .oftHeading {
-                font-size: 25px;
-                font-weight: 700;
+                font-size: 44px;
+                font-weight: 600;
+                font-style: italic;
                 color: $orange;
                 margin-bottom: 2rem;
 
@@ -21097,7 +21185,8 @@ footer {
               }
 
               .oftsubHeading {
-                font-size: 16px;
+                font-size: 18px;
+                font-weight: 400;
                 text-align: justify;
                 margin-bottom: 2rem;
               }
@@ -21113,7 +21202,7 @@ footer {
                     padding: 0.5rem;
 
                     img {
-                      width: 35px;
+                      width: 50px;
                     }
                   }
 
@@ -21173,8 +21262,9 @@ footer {
   }
 
   .oftHeading {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 600;
+    font-style: italic;
     color: $orange;
     margin-bottom: 2rem;
 
@@ -21184,7 +21274,8 @@ footer {
   }
 
   .oftsubHeading {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     text-align: justify;
     margin-bottom: 2rem;
   }
@@ -21250,6 +21341,26 @@ footer {
       &:focus {
         border: 1px solid $orange;
       }
+    }
+  }
+}
+
+.benefit {
+  .formateImg {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+
+    &:hover {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.14);
+      border-radius: 100%;
+      transform: translateY(-10px);
+    }
+
+    @media #{$xsm} {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -21595,7 +21706,7 @@ footer {
           .accordion-item {
             .title {
               &:before {
-                top: 18px;
+                top: 11px;
               }
             }
           }

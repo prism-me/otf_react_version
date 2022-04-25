@@ -27,12 +27,12 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                 <h4 className='text-white mb-5' style={{ fontSize: "20px" }}>{subtitle}</h4>
                             }
                             <div className="format-sub-text">
-                                <p className="p-light oftsubHeading text-white">
+                                <p className="oftsubHeading text-white">
                                     {detail}
                                 </p>
                                 {
                                     detail2 &&
-                                    <p className="p-light oftsubHeading text-white mt-3">
+                                    <p className="oftsubHeading text-white mt-3">
                                         {detail2}
                                     </p>
                                 }

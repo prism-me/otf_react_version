@@ -33,9 +33,9 @@ export const MENUITEMS = [
             { path: 'location5', title: 'Location5', type: 'link' }
         ],
     },
-    {
-        title: 'Careers',
-        path: 'careers',
-        type: 'link'
-    },
+    // {
+    //     title: 'Careers',
+    //     path: 'careers',
+    //     type: 'link'
+    // },
 ]

@@ -8,9 +8,11 @@ import Location from "../sections/Membership/location";
 import Faq from "../sections/About/faq";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
+import Layout from '../components/common-layout';
+
 
 //images
-import slider1 from "../assets/images/OTF/banner/membershipbanner.jpg";
+import banerImg from "../assets/images/OTF/banner/membershipbanner.jpg";
 
 import benefits1 from "../assets/images/OTF/membership/Dumbells.png";
 import benefits2 from "../assets/images/OTF/membership/LAT.png";
@@ -28,14 +30,14 @@ const Memberships = (props) => {
 
     const sliderData = [
         {
-            bannerImg: slider1,
+            // bannerImg: slider1,
             title: "Let’s talk membership",
             detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
             btnm: "Avail one of our membership now",
             viewbtn: "View membership details"
         },
         {
-            bannerImg: slider1,
+            // bannerImg: slider1,
             title: "Let’s talk membership",
             detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
             btnm: "Avail one of our membership now",
@@ -75,37 +77,43 @@ const Memberships = (props) => {
                     content="Memberships"
                 />
             </Helmet>
-            <BannerSection
+            {/* <BannerSection
                 sliderData={sliderData}
-            />
+            /> */}
+            <Layout
+                title="Let’s talk membership"
+                subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
+                btntext="Avail one of our membership now"
+                bannerImg={banerImg}
+            >
+                <Location />
 
-            <Location />
+                <PricingSection />
 
-            <PricingSection />
+                <ScheduleSection
+                    titleM={"Corporate Memberships"}
+                    detail={"Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time."}
+                    list={list}
+                    btnText="Avail now"
+                    bgImg={corporateBg}
+                    coachImg={scheduleImg}
+                />
 
-            <ScheduleSection
-                titleM={"Corporate Memberships"}
-                detail={"Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time."}
-                list={list}
-                btnText="Avail now"
-                bgImg={corporateBg}
-                coachImg={scheduleImg}
-            />
+                <Benefits
+                    benefitList={benefitList}
+                />
 
-            <Benefits
-                benefitList={benefitList}
-            />
+                <CounterSection
+                    title="Get 10% off during this festive season!"
+                    subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                    btntext="Book a class now"
+                    bgImg={getOff}
+                />
 
-            <CounterSection
-                title="Get 10% off during this festive season!"
-                subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-                btntext="Book a class now"
-                bgImg={getOff}
-            />
-
-            <Faq
-                language={global?.activeLanguage}
-            />
+                <Faq
+                    language={global?.activeLanguage}
+                />
+            </Layout>
 
         </div>
     );

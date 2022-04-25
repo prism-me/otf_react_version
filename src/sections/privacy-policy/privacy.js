@@ -7,7 +7,7 @@ const Privacy = ({ title, detail }) => (
                 <h2 className={"oftHeading"}>
                     {title}
                 </h2>
-                <p className="p-light oftsubHeading">
+                <p className="oftsubHeading">
                     {detail}
                 </p>
             </div>

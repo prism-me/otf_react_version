@@ -39,11 +39,11 @@ const About = (props) => {
                     title="a little about orange theory"
                     detail="Orangetheory is a 1 hour, full body workout, focused on training Endurance, Strength and/or Power. We use Heart Rate Based Interval Training, which burns more calories post workout than a traditional exercise. When wearing our Heart Rate monitors, your real time results are displayed on large screens throughout the studio. Intensity is based on your individual Heart Rate zones, making the workout effective for all fitness levels. To top it off, our fitness coaches to lead the workout to prevent you from over or under training."
                     info1title="Our Mission"
-                    info1detail="Aliquam felis augue non nisl morbi elit. Eu pharetra, scelerisque varius amet vulputate porta vitae. Facilisi."
+                    info1detail="To lead, support and inspire the orange passion in our Franchise partners to achieve superior results while always ensuring that we exemplify a diversified, equitable and inclusive culture."
                     info2title="Our Vision"
-                    info2detail="Vitae quisque facilisis vel aliquam dolor enim ut risus. Diam aliquam faucibus semper habitasse parturient."
+                    info2detail="To be the trusted global leader of innovative heart rate-based interval training."
                     info3title="Our Values"
-                    info3detail="Molestie dui posuere amet, nunc, placerat. Ullamcorper at ultrices lorem malesuada arcu nisi."
+                    info3detail="Passion, integrity, accountability, innovation, commUNITY and opportUNITY for all."
                 />
 
                 <SpeakerSection />

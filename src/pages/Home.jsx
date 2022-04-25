@@ -39,14 +39,12 @@ const Home = (props) => {
     {
       bannerImg: slider1,
       title: "The Smartest Workout for More Results",
-      detail: "Aliquet nullam cursus mollis donec imperdiet enim viverra. A ac tincidunt mollis sit sed placerat diam bibendum porta. Egestas nisl viverra arcu faucibus.",
       btn1: "BOOK A FREE CLASS NOW",
       btn2: "view membership details"
     },
     {
       bannerImg: slider1,
       title: "The Smartest Workout for More Results",
-      detail: "Aliquet nullam cursus mollis donec imperdiet enim viverra. A ac tincidunt mollis sit sed placerat diam bibendum porta. Egestas nisl viverra arcu faucibus.",
       btn1: "BOOK A FREE CLASS NOW",
       btn2: "view membership details"
     }
@@ -62,37 +60,44 @@ const Home = (props) => {
     {
       img: testimonial1,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial2,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial3,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial4,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial5,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial6,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     },
     {
       img: testimonial7,
       title: "Client name example",
-      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit.."
+      subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
+      rating: "4.0"
     }
   ];
 
@@ -112,7 +117,9 @@ const Home = (props) => {
           sliderData={sliderData}
         />
 
-        <AboutSection />
+        <AboutSection
+          language={global?.activeLanguage}
+        />
 
         <ScheduleSection
           title={"Health and Safety (It's not either/or)"}

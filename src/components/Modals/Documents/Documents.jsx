@@ -1,104 +1,98 @@
-import React, { useEffect } from "react";
-import { Modal, Button, Row, Col, Form, Container } from "react-bootstrap";
-import { MdClose } from "react-icons/md";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import React from 'react';
+import {
+    Modal, ModalBody, Form,
+    FormGroup,
+    Input,
+    Row, Col, Container
+} from 'reactstrap';
+import ClearIcon from "@material-ui/icons/Clear";
+
 
 const Documents = (props) => {
+
+    const location = [
+        "Mercato Mall",
+        "Times Square Centre"
+    ]
+
     return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-            // className="Documents"
-            className={
-                props.lang === "ar"
-                    ? "Documents agsModalDirArabic"
-                    : "Documents agsModalDir"
-            }
-            style={{ paddingLeft: "0px" }}
-        >
-            {/* <Container> */}
-            {/* <Row>
-                    <Col sm="auto"> */}
-            <span className={
-                props.lang === "ar"
-                    ? "modalIconArabic modalIcon"
-                    : "modalIcon"} onClick={props.onHide}>
-                <ArrowBackIcon />
-            </span>
-            {/* </Col> */}
-            {/* <Col sm> */}
-            <Modal.Body>
-                <p className={"SubTitle"}
-                    dangerouslySetInnerHTML={{
-                        __html:
-                            props.documentData?.description
-                    }}
-                >
-                </p>
-                {/*<h2 className={"Title"}
+        <>
+            <Modal isOpen={props.show} className="sburning">
+                <ModalBody>
+                    <Container>
+                        <p className='modalIconWrape mt-3'>
+                            <span className='modalIconStyle'
+                                style={{
+                                    padding: "0.6rem 0.7rem 0.7rem 0.7rem"
+                                }}
                             >
-                                Documents to be submitted once a student has been accepted and enrolled:
-                            </h2>
-                            <ul className={"UlStyle"}>
-                                <li>Copy of student’s Emirates ID (both sides)</li>
-                                <li>Copy of student’s Residency Visa</li>
-                                <li>Copy of student’s Immunization Card</li>
-                                <li>Copy of student’s Birth Certificate</li>
-                                <li>Copy of student’s photo</li>
-                                <li>Copy of parent’s passports</li>
-                                <li>Copy of parent’s Emirates ID (both sides)</li>
-                                <li>Copy of parent’s Residency Visa</li>
-                                <li>Copy of Family Card (Emirati students only)</li>
-                                <li>Copy of parent’s photos</li>
-                                <li>Previous school’s Transfer Certificate* (see below) </li>
-                                <li>Acceptance Form</li>
-                                <li>Completion of student’s Medical Form</li>
-                                <li>Completion of student’s Pick-up Authorization Form</li>
-                                <li>Completion of Emergency Contact Form</li>
-                                <li>Completion of Photography/Social Media Permission Form</li>
-                            </ul>
-                            <h2 className={"Title"}> *Transfer Certificate</h2>
-                            <p className={"SubTitle"}>
-                                The Transfer Certificate (TC) is a document required by the UAE Ministry of
-                                Education to register a student in any school in the UAE. The form should be
-                                completed on your child’s current school's letterhead and signed and stamped by
-                                the school. This is done close to the withdrawal date to reflect your child’s last day of
-                                school.
-                            </p>
-                            <p className={"SubTitle"}>
-                                Note: Depending on the school's location (not curriculum), the TC needs the
-                                following attestation:
-                            </p>
-                            <ul className={"UlStyle"}>
-                                <li> United States, Canada, Western Europe, Australia or New Zealand: only the stamp
-                                    and signature of the school</li>
-                                <li>
-                                    Gulf Cooperation Council (GCC) countries: stamp and signature of the school and
-                                    Ministry of Education of the GCC country
-                                </li>
-                                <li>
-                                    All other countries: stamp and signature of the school, the country's Ministry of
-                                    Education and Foreign Affairs, and the UAE Embassy in that country.
-                                </li>
-                            </ul>
-                            <h2 className={"Title"}>
-                                Payment Methods and Bank Details
-                            </h2>
-                            <ul className={"UlStyle"}>
-                                <li>Online payment</li>
-                                <li>Bank Transfer</li>
-                                <li>Debit/Credit Card</li>
-                                <li>Cash</li>
-                                <li>Cheques</li>
-                            </ul> */}
-            </Modal.Body>
-            {/* </Col> */}
-            {/* </Row> */}
-            {/* </Container> */}
-        </Modal>
+                                <ClearIcon
+                                    onClick={props.onHide}
+                                />
+                            </span>
+                        </p>
+                        <Form className='offer-form'>
+                            <h3 className="offer-subtext">Book A Trail Class</h3>
+                            <FormGroup>
+                                <Input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Full name"
+                                    className='inputStyle'
+                                    required
+                                />
+                            </FormGroup>
+                            <Row form>
+                                <Col sm={6}>
+                                    <FormGroup>
+                                        <Input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            placeholder="Email address"
+                                            className='inputStyle'
+                                            required
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col sm={6}>
+                                    <FormGroup>
+                                        <Input
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder="Phone number"
+                                            className='inputStyle'
+                                            required
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <FormGroup>
+                                <Input type="select" name="select" id="exampleSelect"
+                                    className='inputStyle'
+                                    required
+                                    style={{ color: "#495057", width: "100%" }}
+
+                                >
+                                    <option style={{ color: "#495057" }}>Select Location</option>
+                                    {location &&
+                                        location.length > 0 &&
+                                        location.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                        ))
+                                    }
+
+                                </Input>
+                            </FormGroup>
+                            <button className="offerBtn px-5 mt-3">Submit</button>
+                        </Form>
+                    </Container>
+                </ModalBody>
+            </Modal>
+        </>
     );
-};
+}
 
 export default Documents;

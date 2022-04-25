@@ -6,6 +6,9 @@ import { Accordion, AccordionItem } from 'react-light-accordion';
 import 'react-light-accordion/demo/css/index.css';
 import { Container } from 'reactstrap'
 import Layout from '../components/common-layout'
+import CalculateSection from "../sections/Home/calculate";
+
+import Coaching from "../sections/Offers/coaching"
 
 
 //images
@@ -99,7 +102,12 @@ const FAQMain = (props) => {
                         </div>
                     </Container>
                 </section>
-                <Faqform />
+                {/* <Faqform /> */}
+                <CalculateSection />
+                <section className="pb-0">
+                    <Coaching />
+                </section>
+
             </Layout>
         </div>
     );
