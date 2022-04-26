@@ -8,7 +8,7 @@ import { AccessTime } from '@material-ui/icons';
 import { Col, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 
 //images 
-import ArticalDetail from "../assets/images/OTF/articleinner/articaldetail.png";
+import ArticalDetail from "../assets/images/OTF/articleinner/articaldetail.jpg";
 
 import comment1 from "../assets/images/OTF/articleinner/comment1.png";
 import comment2 from "../assets/images/OTF/articleinner/comment2.png";
@@ -119,18 +119,68 @@ const DetailWrapper = ({ className, showcaseType }) => {
                             color: "#2E2E2E"
                         }}
                     >
-                        Lorem Ipsum
+                        Hunkered Down to Keep Coronavirus at Bay? Stay Healthy With 7 Tips to Channel Your Inner Orangetheory Spirit
                     </h3></a>
                 <div className="blog-divider"></div>
                 <div className="blog-description">
                     <p className='oftsubHeading'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        When havoc hits our own personal world, exercise tends to be our lifeboat. We count on it to keep our bodies toned, our spirits high, our minds at ease.
+
+                        Now that our shared world is in the throes of uncertainty and fear, we’d like to continue counting on exercise to sustain us. And, for Orangetheory Fitness members, to continue counting on classmates for camaraderie and sharing.
+
+                        But in keeping with guidelines to slow the spread of the coronavirus, many Orangetheory Fitness studios and other gyms around the country have closed. So how can we stay fit — physically, emotionally, mentally?
+
+                        We’ve come up with 7 ways to do just that.
                     </p>
                     <p className='oftsubHeading'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Keep up your workout with Orangetheory’s daily at-home workouts. If your class is canceled or if you’re not comfortable going to the studio during these precarious times, don’t stop moving.
+                    </p>
+                    <p className='oftsubHeading'>
+                        Natalie Moren works out at OTF in Happy Valley, Ariz. Her elderly parents have compromised immune systems, and she doesn’t want to risk picking up the virus and spreading it to them. So she’s staying away from public places, but not from the workout habit she honed at Orangetheory. For now, she’s working out with weights at home.
+
+                        Orangetheory is now offering workouts you can do at home with household objects. The 30-minute workouts feature coaches from around the world and are meant to be paired with your favorite tunes in the background. They are updated daily on the website and in the mobile app.
+
+                        Keep in touch. Natalie may not be seeing her “amazing OTF tribe” in person, she says, but she’s staying connected with them via Facebook Messenger, “a group we’ve used for years.” You can also follow your local studio’s Facebook page and “gather” there to cheer each other on.
+
+                        Get enough sleep. Most of us don’t get nearly enough shut-eye, which we need to reduce stress, stay healthy, keep our weight in check, help our muscles recover and do all sorts of things we tend to forget.
+                    </p>
+                    <p className='oftsubHeading'>
+                        If you have a tough time sleeping, which is understandable during these trying times, try to nap, a practice the National Sleep Foundation says is very beneficial. Also, click here for tips on getting a good night’s sleep.
+
+                        Breathe. That may sound obvious, but make sure your breathing is through your nose, and that it’s deep (to the count of four on the inhale and the exhale) and slow.
+
+                        “This will bring more oxygen to your heart, lungs and brain,” says Jill Murawski, owner of a yoga studio in Richardson, Tex., whose doors have closed until the coronavirus threat has eased. “Breathing allows you to be present, which instills a calmer mind. When we are stressed, our body releases a stress hormone called cortisol; deep breathing helps reverse this.”
+
+                        Try yoga. “If you can breathe,” Jill says, “you can do yoga. When it comes to anxiety and stress, yoga can be magical. When you’re stressed, tension is stored in the body, making you feel tight and often causing pain. Movement and deep breathing help move tension from the body and calm the nervous system.”
+
+                        Not sure where to start? Try a few of these beginner poses from Yoga Journal.
+                    </p>
+                    <p className='oftsubHeading'>
+
+                        Stock your pantry and fridge. When we’re stressed, we tend to reach for the peanut butter cookies or potato chips or ice cream. But Dallas registered dietitian and culinary nutritionist Robin Plotkin says instead to make sure your food repertoire includes lots of fruits and vegetables — fresh, frozen, freeze-dried and canned.
+
+                        Carrots, potatoes and onions tend to have a longer shelf life, so are good choices.  Make sure your canned goods include those high in protein such as tuna and beans, and that your frozen food includes fish. Pasta is always good to have on hand, as well as cereal, rice, quinoa and peanut butter.
+
+                        One caveat: Don’t get carried away. “People have a tendency to overbuy,” she says. Remember, you are stocking extra food — not hoarding.”
+
+                        Click here for recipes that can be made from ingredients you probably have on hand.
+                    </p>
+                    <p className='oftsubHeading'>
+
+                        Write down your feelings. Putting pen to paper or fingers to keyboard to journal your thoughts and feelings is a powerful coping tool. Plus, when all this is over (which it will be), you can look back and remember what you endured, and how your resilience pulled you through. Click here for more such tips.
+
+                        Look ahead. Remember the situation we’re in won’t last forever. And when it’s time to resume your schedule and your Orangetheory workout, if you’ve followed these guidelines you won’t miss a step.
+
+                        Natalie says that for now, the online connection with her OTF buddies will have to do, but she’s eager to meet up with everyone in person again.
+                    </p>
+                    <p className='oftsubHeading'>
+                        “Orangetheory is my therapy,” she says, “and I can’t wait to get back there.”
                     </p>
                     <div className='d-flex justify-content-between align-items-center'>
-                        <h5>Author Example</h5>
+                        <h5>
+                            <i className="fa fa-user mr-2"></i>
+                            <span>By Leslie Barker</span>
+                        </h5>
                         <h5 className="pull-right">10<i className="fa fa-heart ml-1"></i>, 50<i className="fa fa-comments ml-1"></i></h5>
                     </div>
 
@@ -331,7 +381,7 @@ const DetailWrapper = ({ className, showcaseType }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default DetailWrapper;

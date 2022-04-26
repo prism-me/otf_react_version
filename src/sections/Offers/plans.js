@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Container, Row, Col
 } from 'reactstrap'
@@ -9,7 +9,7 @@ import Premier from "../../assets/images/OTF/icons/Premier.png";
 import PremierW from "../../assets/images/OTF/icons/PremierW.png";
 
 import plan from "../../assets/images/OTF/offer/plan.png"
-
+import Documents from '../../components/Modals/Documents/Documents';
 
 
 const plansData = [
@@ -27,6 +27,8 @@ const plansData = [
     }
 ];
 const Plans = () => {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <section className="plans">
             <Container>
@@ -57,7 +59,12 @@ const Plans = () => {
                                         </div>
                                         <div className="plans-features">
                                             <h5 className="plans-feature text-center">{item.feature1}</h5>
-                                            <a className="otfBtn2" href="#">Book offer</a>
+                                            <button className="otfBtn2"
+                                                onClick={() => setShowModal(true)}
+                                            >Book offer</button>
+                                            <Documents
+                                                show={showModal} onHide={() => setShowModal(false)}
+                                            />
                                         </div>
                                     </div>
                                 </div>

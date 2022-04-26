@@ -86,6 +86,15 @@ const Documents = (props) => {
 
                                 </Input>
                             </FormGroup>
+                            <FormGroup>
+                                <Input type="textarea" name="msg" id="msg"
+                                    placeholder="Message"
+                                    className='inputStyle'
+                                    required
+                                    style={{ resize: "none" }}
+                                    rows="4" cols="50"
+                                />
+                            </FormGroup>
                             <button className="offerBtn px-5 mt-3">Submit</button>
                         </Form>
                     </Container>
