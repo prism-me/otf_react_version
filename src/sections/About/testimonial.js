@@ -90,7 +90,8 @@ const Testimonial = () => {
                                 <Modal isOpen={modal} toggle={toggle} centered={true} size="lg">
                                     <ModalHeader toggle={toggle} className="modal-no-header close-up"></ModalHeader>
                                     <ModalBody className="iframe-modal">
-                                        <iframe className="mfp-iframe" frameborder="0" allowfullscreen="" src="https://www.facebook.com/watch/?v=1068162367292930"></iframe>
+                                        <iframe className="mfp-iframe" frameborder="0" allowfullscreen="true"
+                                            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FOTFDubai%2Fvideos%2F1068162367292930%2F&show_text=false&width=560&t=0"></iframe>
                                     </ModalBody>
                                 </Modal>
                             </div>

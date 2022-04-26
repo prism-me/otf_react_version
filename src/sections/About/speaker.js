@@ -5,12 +5,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //images
-import team1 from "../../assets/images/OTF/team/team1.png";
-import team2 from "../../assets/images/OTF/team/team2.png";
-import team3 from "../../assets/images/OTF/team/team3.png";
-import team4 from "../../assets/images/OTF/team/team4.png";
-
-
+import team1 from "../../assets/images/OTF/team/SheilaMarieOllamina.jpg";
+import team2 from "../../assets/images/OTF/team/ShakirahNamusoke.jpg";
+import team3 from "../../assets/images/OTF/team/KarenJoyMasangcay.jpg";
+import team4 from "../../assets/images/OTF/team/JudyAnnNojor.jpg";
+import team5 from "../../assets/images/OTF/team/ComfortTumukunde.jpg";
+import team6 from "../../assets/images/OTF/team/BlessieTalon.jpg";
+import team7 from "../../assets/images/OTF/team/AnnaAdajar.jpg";
+import team8 from "../../assets/images/OTF/team/AnastaciaLeochico.jpg";
 
 var settings = {
     dots: true,
@@ -43,6 +45,46 @@ var settings = {
 const speaker = [
     {
         img: team1,
+        title: "Sheila Marie Ollamina",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team2,
+        title: "Shakirah Namusoke",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team3,
+        title: "Karen Joy Masangcay",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team4,
+        title: "Judy Ann Nojor",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team5,
+        title: "Comfort Tumukunde",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team6,
+        title: "Blessie Talon",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team7,
+        title: "Anna Adajar",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team8,
+        title: "Anastacia Leochico",
+        subtitle: "Sales Associate"
+    },
+    {
+        img: team1,
         title: "Donna Forbes",
         subtitle: "Fitness Coach"
     },
@@ -62,54 +104,14 @@ const speaker = [
         subtitle: "Fitness Coach"
     },
     {
-        img: team4,
+        img: team5,
         title: "Sarah Al Ghafari",
         subtitle: "Fitness Coach"
     },
     {
-        img: team4,
+        img: team6,
         title: "Sara Lodhi",
         subtitle: "Fitness Coach"
-    },
-    {
-        img: team4,
-        title: "Sheila Marie Ollamina",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Shakirah Namusoke",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Karen Joy Masangcay",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Judy Ann Nojor",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Comfort Tumukunde",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Blessie Talon",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Anna Adajar",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Anastacia Leochico",
-        subtitle: "Sales Associate"
     }
 ];
 const Speaker = () => (

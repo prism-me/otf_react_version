@@ -3,10 +3,13 @@ import Nav from './nav'
 import { Container, Row, Col } from 'reactstrap'
 import logo from "./../assets/images/OTF/logo/ot_logo.png";
 import { Menu } from '@material-ui/icons';
+import { useHistory } from "react-router-dom";
 
 
 
 const Header = props => {
+    const history = useHistory();
+
     const [sidebar, setSidebar] = useState(false);
 
     const clickSidebar = () => {
@@ -31,7 +34,7 @@ const Header = props => {
 
     return (
         <>
-            <header className={`${props.className || 'app2'} loding-header nav-abs custom-scroll`}>
+            <header className={`${props.className || 'app2'} loding-header nav-abs custom-scroll ${history.location.pathname.split('/')[2] === "articles" ? "bg-dark py-2" : ""}`}>
                 <Container>
                     <Row>
                         <Col>

@@ -25,26 +25,28 @@ const Articles = (props) => {
           content="Articles"
         />
       </Helmet>
-      <Layout
+      {/* <Layout
         title="Lorem ipsum"
         subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         btntext="Lorem ipsum dolor"
         bannerImg={articalBanner}
-      >
+      > */}
+      <section className="pb-0">
         <AboutArticles />
+      </section>
 
-        <ArticlesGrid
-          language={global?.activeLanguage}
-        />
+      <ArticlesGrid
+        language={global?.activeLanguage}
+      />
 
-        <CounterSection
-          title="Lorem Ipsum"
-          subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-          btntext="Lorem Ipsum"
-          bgImg={articalBg}
-        />
+      <CounterSection
+        title="Lorem Ipsum"
+        subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+        btntext="Lorem Ipsum"
+        bgImg={articalBg}
+      />
 
-      </Layout>
+      {/* </Layout> */}
     </div>
   );
 }

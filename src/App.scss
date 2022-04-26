@@ -21184,10 +21184,19 @@ footer {
               padding: 0;
 
               .otbBgImg {
-                padding: 100px 0;
+                // padding: 100px 0;
+                height: 500px;
                 background-position: center center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media #{$sm} {
+                  height: 400px;
+
+                }
               }
 
               .oftHeading {
