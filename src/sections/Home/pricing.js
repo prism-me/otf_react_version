@@ -13,6 +13,9 @@ import eliteW from "../../assets/images/OTF/icons/eliteW.png"
 
 import Basic from "../../assets/images/OTF/icons/Basic.png";
 import BasicW from "../../assets/images/OTF/icons/BasicW.png"
+import membership from "../../assets/images/OTF/icons/membership.png"
+
+
 
 var settings = {
     dots: true,
@@ -60,8 +63,8 @@ const PricingResume2 = [
         feature3: ''
     },
     {
-        icon: Basic,
-        iconW: BasicW,
+        icon: membership,
+        iconW: membership,
         title: "Class Packages",
         feature1: "10 Classes",
         feature2: '20 Classes',

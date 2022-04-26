@@ -47,9 +47,9 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                     <ul className="icon-collection">
                                         {listImg.length > 0 && listImg.map((x, i) => (
                                             <li className="about-icongym" key={i}>
-                                                <a className="center-content" href="#">
+                                                <div className="center-content iconDiv">
                                                     <img alt="" className="img-fluid icons" src={x} />
-                                                </a>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>

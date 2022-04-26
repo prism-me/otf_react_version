@@ -1,21 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
+const categories = [
+    "Community",
+    "Events",
+    "Health",
+    "Technology",
+    "Fitness",
+    "Science",
+    "Motivation"
+];
 const Categories = ({ }) => (
     <div>
         <h5 className="blog-title">categories</h5>
         <div className="sidebar-container borders">
             <ul className="sidebar-list">
-                <li className="d-flex">
-                    <Link href="#">
-                        <a>
-                            <i aria-hidden="true" className="fa fa-angle-right m-r-15"></i>
-                            Lorem Ipsum Is Simple
-                        </a>
-                    </Link>
-                </li>
-                <li className="d-flex">
+                {
+                    categories.map((x, i) => (
+                        <li className="d-flex" key={i}>
+                            <Link href="#">
+                                <a>
+                                    <i aria-hidden="true" className="fa fa-angle-right m-r-15"></i>
+                                    {x}
+                                    {/* Lorem Ipsum Is Simple */}
+                                </a>
+                            </Link>
+                        </li>
+                    ))
+                }
+
+                {/* <li className="d-flex">
                     <Link href="#">
                         <a>
                             <i aria-hidden="true" className="fa fa-angle-right m-r-15"></i>
@@ -46,7 +60,7 @@ const Categories = ({ }) => (
                             it's Random
                         </a>
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     </div>
