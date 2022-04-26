@@ -12775,6 +12775,27 @@ breadcrumb-section css end
 blog-section css start
 *************************/
 .blog-sec {
+  .otfBtn1 {
+    color: $white;
+    padding: 0.5rem 2.5rem;
+    border: 1px solid $orange;
+    text-transform: uppercase;
+    background: $orange;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+
+    &:hover {
+      background: $white;
+      color: $orange;
+      border: 1px solid $orange;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
   .blog-list .blog-agency .blog-contain {
     display: flex;
   }
@@ -21020,7 +21041,7 @@ footer {
     display: none;
   }
 
-  .container_foto img {
+  .container_foto .imgStyle {
     width: 100%;
     top: 0;
     left: 0;
@@ -21035,7 +21056,7 @@ footer {
     cursor: pointer;
   }
 
-  .container_foto:hover img {
+  .container_foto:hover .imgStyle {
     opacity: 0.3;
   }
 

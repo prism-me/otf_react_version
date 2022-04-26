@@ -20,7 +20,7 @@ import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
 import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
-import coachprofBg from "../assets/images/OTF/workout/coachprofBg.jpg"
+import coachprofBg from "../assets/images/OTF/membership/corporateBg.jpg"
 import coachImg from "../assets/images/OTF/home/health-safty.png";
 import getOff from "../assets/images/OTF/home/get-off.jpg";
 

@@ -41,6 +41,7 @@ const Press = (props) => {
                     subtitle="Like and Follow Us to Stay up to Date with the Latest Events from our OTF Community."
                     btntext="Lorem Ipsum"
                     bgImg={pressBg}
+                    classname="press"
                 />
 
             </Layout>

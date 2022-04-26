@@ -13,6 +13,11 @@ import team5 from "../../assets/images/OTF/team/ComfortTumukunde.jpg";
 import team6 from "../../assets/images/OTF/team/BlessieTalon.jpg";
 import team7 from "../../assets/images/OTF/team/AnnaAdajar.jpg";
 import team8 from "../../assets/images/OTF/team/AnastaciaLeochico.jpg";
+import team9 from "../../assets/images/OTF/team/donna.png";
+import team10 from "../../assets/images/OTF/team/noor.png";
+import team11 from "../../assets/images/OTF/team/sarah.png";
+
+
 
 var settings = {
     dots: true,
@@ -24,7 +29,7 @@ var settings = {
     autoplay: true,
     centerMode: true,
     centerPadding: '0',
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     responsive: [
         {
             breakpoint: 490,
@@ -84,7 +89,7 @@ const speaker = [
         subtitle: "Sales Associate"
     },
     {
-        img: team1,
+        img: team9,
         title: "Donna Forbes",
         subtitle: "Fitness Coach"
     },
@@ -94,7 +99,7 @@ const speaker = [
         subtitle: "Fitness Coach"
     },
     {
-        img: team3,
+        img: team10,
         title: "Noor Maki",
         subtitle: "Fitness Coach"
     },
@@ -104,7 +109,7 @@ const speaker = [
         subtitle: "Fitness Coach"
     },
     {
-        img: team5,
+        img: team11,
         title: "Sarah Al Ghafari",
         subtitle: "Fitness Coach"
     },

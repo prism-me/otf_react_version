@@ -43,7 +43,7 @@ const CardGridWrapper = ({
                                                 <h6 className="font-blog">{place}</h6> </>}
                                         </div>
                                     </div>
-                                    <h5 className="blog-head font-600">{title}</h5>
+                                    <h5 className="blog-head font-600 mt-3">{title}</h5>
                                     {description.length > MAX_LENGTH ?
                                         (
                                             <p className="para2">

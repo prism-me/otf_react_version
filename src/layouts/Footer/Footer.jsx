@@ -130,9 +130,9 @@ const Footer = (props) => {
                 <div>
                   <ul className="footer-lists">
                     <li>
-                      <HashLink to={`/${global.activeLanguage}/memberships` + "#select-your-location"}>
+                      <Link to={`/${global.activeLanguage}/locations`}>
                         Select You Locations
-                      </HashLink>
+                      </Link>
                     </li>
                     <li>
                       <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
