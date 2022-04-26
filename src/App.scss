@@ -233,7 +233,7 @@ h4 {
 h5,
 h6,
 p {
-  color: $secondary;
+  color: $black;
 }
 
 h1 {
@@ -288,7 +288,7 @@ h6 {
 
 p {
   font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
-  color: $secondary;
+  color: $black;
   font-weight: 400;
   margin-top: -7px;
   margin-bottom: -4px;
@@ -297,7 +297,7 @@ p {
 
 a {
   font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)));
-  color: $secondary;
+  color: $black;
 
   &:hover {
     text-decoration: none;
@@ -326,7 +326,7 @@ ul {
 .custom-scroll {
   ::-webkit-scrollbar {
     width: 8px;
-    background-color: $gray13;
+    background-color: $black;
     border-radius: 25px;
   }
 
@@ -345,7 +345,7 @@ ul {
   letter-spacing: 1px;
   font-size: 10px;
   margin-left: 0;
-  color: $secondary;
+  color: $black;
   line-height: 1;
   text-transform: capitalize;
 
@@ -890,7 +890,7 @@ ul {
 }
 
 .font-secondary {
-  color: $secondary !important;
+  color: $black !important;
 }
 
 .set-abs {
@@ -1496,11 +1496,11 @@ section {
         h6 {
           line-height: 30px;
           transition: all 1s;
-          color: $secondary;
+          color: $black;
         }
 
         .e-name {
-          color: $secondary;
+          color: $black;
           text-transform: uppercase;
           margin-bottom: 5px;
         }
@@ -1860,7 +1860,7 @@ section {
 
         .price-feature,
         .price {
-          color: $gray2;
+          color: $black;
         }
 
         .price-value {
@@ -1943,7 +1943,7 @@ section {
       }
 
       .price-features .price-feature {
-        color: $gray3;
+        color: $black;
         margin-bottom: 15px;
       }
     }
@@ -2514,7 +2514,7 @@ download section end
         border-radius: 15px;
 
         .feature-text {
-          color: $secondary;
+          color: $black;
           letter-spacing: 0;
         }
 
@@ -2585,25 +2585,25 @@ download section end
 
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: $gray4;
+        color: $black;
         opacity: 0.5;
       }
 
       &::-moz-placeholder {
         /* Firefox 19+ */
-        color: $gray4;
+        color: $black;
         opacity: 0.5;
       }
 
       &:-ms-input-placeholder {
         /* IE 10+ */
-        color: $gray4;
+        color: $black;
         opacity: 0.5;
       }
 
       &:-moz-placeholder {
         /* Firefox 18- */
-        color: $gray4;
+        color: $black;
         opacity: 0.5;
       }
     }
@@ -2828,7 +2828,7 @@ body {
     a {
       &.menu-item {
         transition: 0.6s;
-        color: $gray;
+        color: $black;
         font-weight: 400;
       }
     }
@@ -4488,7 +4488,7 @@ booking section end
   h5,
   h6,
   p {
-    color: $secondary;
+    color: $black;
   }
 
   .btn {
@@ -4505,7 +4505,7 @@ booking section end
 
   h2 {
     font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1920 - 300)));
-    color: $secondary;
+    color: $black;
     margin-top: -1px;
     margin-bottom: -14px;
   }
@@ -4532,7 +4532,7 @@ booking section end
 
   p {
     margin-bottom: -3px;
-    color: $gray5;
+    color: $black;
   }
 
   .title {
@@ -4705,7 +4705,7 @@ booking section end
 
       .price-features {
         .price-feature {
-          color: $secondary;
+          color: $black;
           margin-bottom: 15px;
           font-weight: 400;
         }
@@ -5141,7 +5141,7 @@ booking section end
   h5,
   h6,
   p {
-    color: $secondary;
+    color: $black;
   }
 
   h1 {
@@ -5268,7 +5268,7 @@ booking section end
   .overlay-box {
     position: relative;
     overflow: hidden;
-    background-color: $black2;
+    background-color: $black;
     border-radius: 8px;
 
     &:after {
@@ -5755,7 +5755,7 @@ music css end
 
   h6,
   p {
-    color: $secondary;
+    color: $black;
   }
 
   h1 {
@@ -5849,7 +5849,7 @@ music css end
 
   &.about {
     .color-light {
-      color: $gray5;
+      color: $black;
     }
 
     .border-container {
@@ -5878,22 +5878,22 @@ music css end
 
     &.radial-bar-primary {
       background-image: linear-gradient(432deg, $black 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
+        linear-gradient(270deg, $black 50%, $black 50%, $black);
     }
 
     &.radial-90 {
       background-image: linear-gradient(399deg, $black 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
+        linear-gradient(270deg, $black 50%, $black 50%, $black);
     }
 
     &.radial-80 {
       background-image: linear-gradient(350deg, $black 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
+        linear-gradient(270deg, $black 50%, $black 50%, $black);
     }
 
     &.radial-70 {
       background-image: linear-gradient(310deg, $black 50%, transparent 50%, transparent),
-        linear-gradient(270deg, $black 50%, $gray13 50%, $gray13);
+        linear-gradient(270deg, $black 50%, $black 50%, $black);
     }
 
     &:after {
@@ -6546,7 +6546,7 @@ wedding-theme css end
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 15px;
-    color: $gray10;
+    color: $black;
     text-shadow: 0 1px rgba(255, 255, 255, 0.6);
   }
 
@@ -6881,7 +6881,7 @@ yoga-theme css end
   }
 
   p {
-    color: $secondary;
+    color: $black;
   }
 
   h1 {
@@ -7468,7 +7468,7 @@ yoga-theme css end
             padding: 28px;
 
             .font-blog {
-              color: $gray6;
+              color: $black;
             }
           }
         }
@@ -7500,7 +7500,7 @@ yoga-theme css end
     padding: 0;
     margin-bottom: 30px;
     letter-spacing: 0;
-    color: $gray7;
+    color: $black;
   }
 
   &footer {
@@ -8014,7 +8014,7 @@ contact css end
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      color: $gray9;
+      color: $black;
       font-size: 25px;
 
       &.fa-angle-left {
@@ -8056,7 +8056,7 @@ contact css end
         }
 
         .schedule-description {
-          color: $gray8;
+          color: $black;
           font-size: 150%;
           letter-spacing: 0;
           margin-bottom: -4px;
@@ -8098,12 +8098,12 @@ contact css end
         .border-container {
           .border-dashed {
             margin: 8px 0;
-            border-left: 2px dashed $gray9;
+            border-left: 2px dashed $black;
             height: 55px;
             display: inline-block;
 
             &.active {
-              border-left: 2px dashed $secondary;
+              border-left: 2px dashed $black;
             }
           }
         }
@@ -8461,7 +8461,7 @@ tap to top css end
   h5,
   h6,
   p {
-    color: $secondary;
+    color: $black;
   }
 
   h1 {
@@ -8662,7 +8662,7 @@ tap to top css end
           hr {
             height: 1px;
             width: 75px;
-            background-color: $secondary;
+            background-color: $black;
             text-align: left;
             margin: 0;
             margin-bottom: 15px;
@@ -8878,7 +8878,7 @@ tap to top css end
           .nav-link {
             padding: 0 55px;
             position: relative;
-            color: $secondary;
+            color: $black;
 
             img {
               filter: brightness(0) invert(0);
@@ -8887,7 +8887,7 @@ tap to top css end
 
             h6 {
               margin-top: 15px;
-              color: $secondary;
+              color: $black;
               opacity: 0.5;
               letter-spacing: unset;
             }
@@ -8901,7 +8901,7 @@ tap to top css end
               }
 
               h6 {
-                color: $secondary;
+                color: $black;
                 margin-bottom: 0;
                 opacity: 1;
               }
@@ -8966,7 +8966,7 @@ tap to top css end
   }
 
   &.pricing {
-    background-color: $secondary;
+    background-color: $black;
     // background-image: url("/assets/images/saas1/banner-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -9048,11 +9048,11 @@ tap to top css end
     }
 
     .btn-default.btn-white {
-      border: 2px solid $secondary;
-      color: $secondary !important;
+      border: 2px solid $black;
+      color: $black !important;
 
       &:hover {
-        background-color: $secondary;
+        background-color: $black;
         color: $white !important;
       }
     }
@@ -9165,13 +9165,13 @@ tap to top css end
         }
 
         .btn-theme {
-          background-color: $secondary;
-          border: 1px solid $secondary;
+          background-color: $black;
+          border: 1px solid $black;
           padding: 12px 25px;
 
           &:hover {
-            border: 1px solid $secondary;
-            color: $secondary !important;
+            border: 1px solid $black;
+            color: $black !important;
             background-color: $white;
           }
         }
@@ -9334,7 +9334,7 @@ tap to top css end
   }
 
   &.subscribe {
-    background-color: $secondary;
+    background-color: $black;
     // background-image: url("/assets/images/saas1/banner-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -9488,7 +9488,7 @@ tap to top css end
 
       h6 {
         font-weight: normal;
-        color: $secondary;
+        color: $black;
         line-height: 1.8;
 
         &.link {
@@ -9521,7 +9521,7 @@ tap to top css end
       }
 
       a {
-        color: $secondary;
+        color: $black;
       }
 
       h5 {
@@ -9562,7 +9562,7 @@ tap to top css end
   }
 
   &.blog {
-    background-color: $secondary;
+    background-color: $black;
     // background-image: url("/assets/images/saas1/banner-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -9593,16 +9593,16 @@ tap to top css end
 
         h3 {
           font-size: 18px;
-          color: $secondary;
+          color: $black;
         }
 
         .dte {
           font-size: 12px;
-          color: $gray5;
+          color: $black;
         }
 
         p {
-          color: $secondary;
+          color: $black;
         }
       }
 
@@ -9618,14 +9618,14 @@ tap to top css end
         font-size: 32px;
         position: absolute;
         top: 40%;
-        color: $secondary;
+        color: $black;
         cursor: pointer;
       }
     }
   }
 
   &.footer2 {
-    // background-color: $secondary;
+    // background-color: $black;
     border: 1px solid $orange;
 
     .logo-sec {
@@ -9779,7 +9779,7 @@ saas1 css end
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
     margin-top: 0;
     margin-bottom: -3px;
-    color: $gray14;
+    color: $black;
   }
 
   &.header {
@@ -9832,7 +9832,7 @@ saas1 css end
 
     .sub-title {
       .sub-title-para {
-        color: $secondary;
+        color: $black;
       }
     }
   }
@@ -10381,14 +10381,14 @@ wedding css start
     .nav {
       .nav-item {
         .nav-link {
-          color: $gray15;
+          color: $black;
           font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
           padding: 0 25px;
           line-height: 2.2;
           letter-spacing: 1px;
 
           &.active {
-            background-color: var(--primary);
+            background-color: $black;
             color: $white;
           }
         }
@@ -11267,7 +11267,7 @@ gym css start
 
   &.pricing {
     .btn-default {
-      background-color: $secondary;
+      background-color: $black;
 
       &:hover {
         background-color: $white;
@@ -11883,7 +11883,7 @@ popup css start
 
 .login-modal {
   p {
-    color: $gray9;
+    color: $black;
   }
 
   .btn-default {
@@ -11895,7 +11895,7 @@ popup css start
   }
 
   .modal-header {
-    background: $light;
+    background: $black;
     padding: 0;
   }
 
@@ -11928,20 +11928,20 @@ popup css start
 
       &:-ms-input-placeholder {
         /* IE 10+ */
-        color: $primary;
+        color: $black;
         opacity: 0.7;
       }
 
       &:-moz-placeholder {
         /* Firefox 18- */
-        color: $primary;
+        color: $black;
         opacity: 0.7;
       }
     }
 
     label {
       font-weight: 500;
-      color: $gray15;
+      color: $black;
     }
   }
 
@@ -11959,10 +11959,10 @@ popup css start
       background-color: transparent;
       font-size: 16px;
       font-weight: 600;
-      color: $gray8;
+      color: $black;
 
       &.active {
-        color: $primary;
+        color: $black;
         border-bottom: 2px solid;
         border-radius: 0;
       }
@@ -13328,7 +13328,7 @@ error css start
   .launch-text,
   .launch-text2 {
     text-transform: uppercase;
-    color: $gray8;
+    color: $black;
   }
 
   .launch-text {
@@ -13352,7 +13352,7 @@ error css start
 
   .count {
     text-align: center;
-    border-right: 1px solid $gray15;
+    border-right: 1px solid $black;
     height: 35px;
     display: flex;
     align-items: center;
@@ -13427,7 +13427,7 @@ error css end
         padding: 0 25px;
 
         >a {
-          color: $gray15;
+          color: $black;
           font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
           line-height: 2.2;
           letter-spacing: 1px;
@@ -13435,13 +13435,13 @@ error css end
           &:hover,
           &:focus {
             text-decoration: none;
-            color: $primary;
+            color: $black;
             outline: none;
           }
         }
 
         &.active {
-          background-color: $primary;
+          background-color: $black;
 
           a {
             color: $white;
@@ -13663,7 +13663,7 @@ error css end
         text-align: center;
 
         h6 {
-          color: $gray15;
+          color: $black;
           padding-top: 0;
           line-height: normal;
           margin-top: 0;
@@ -13687,7 +13687,7 @@ error css end
 
           i {
             padding: 7px;
-            color: $gray15;
+            color: $black;
           }
         }
 
@@ -13697,7 +13697,7 @@ error css end
             margin: 5px 0;
             background-color: rgba($white, 0.8);
             padding: 7px;
-            color: $gray15;
+            color: $black;
             opacity: 0;
             display: flex;
             align-items: center;
@@ -13756,7 +13756,7 @@ error css end
     }
 
     .head-sub-text {
-      color: $gray;
+      color: $black;
     }
   }
 
@@ -13836,7 +13836,7 @@ error css end
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    color: $gray;
+    color: $black;
     padding: 0 80px;
     margin-top: 15px;
   }
@@ -13950,7 +13950,7 @@ error css end
     h6 {
       margin-top: 15px;
       font-weight: 500;
-      color: $gray15;
+      color: $black;
     }
 
     .blog-head {
@@ -13965,7 +13965,7 @@ error css end
 
       p {
         font-weight: 400;
-        color: $gray15;
+        color: $black;
         margin-bottom: 25px;
         letter-spacing: 0;
       }
@@ -14058,13 +14058,13 @@ error css end
             .right {
               float: right;
               padding: 5px 10px 0;
-              color: $gray15;
+              color: $black;
               text-transform: capitalize;
               font-weight: 300;
               margin-bottom: -3px;
 
               &:hover {
-                color: $primary;
+                color: $black;
               }
             }
 
@@ -14079,7 +14079,7 @@ error css end
                 right: 0;
                 top: 0;
                 padding: 10px 20px;
-                background-color: $gray;
+                background-color: $black;
                 font-weight: 500;
               }
 
@@ -14092,7 +14092,7 @@ error css end
                   margin: 0;
                   line-height: 0;
                   font-weight: 500;
-                  color: $gray15;
+                  color: $black;
                 }
 
                 i {
@@ -14110,7 +14110,7 @@ error css end
                 h6 {
                   margin: 0;
                   line-height: 0;
-                  color: $gray15;
+                  color: $black;
                   font-weight: 500;
                 }
 
@@ -14126,7 +14126,7 @@ error css end
                 margin-bottom: 0;
                 padding: 15px 0 0 0;
                 font-weight: 300;
-                color: $gray15;
+                color: $black;
                 text-align: justify;
                 letter-spacing: 0;
               }
@@ -14147,7 +14147,7 @@ error css end
   position: relative;
 
   .title {
-    color: $gray15;
+    color: $black;
     text-align: center;
     text-transform: uppercase;
     margin-top: 50px;
@@ -14169,7 +14169,7 @@ error css end
       width: 100%;
       height: 36px;
       border-width: 0 0 2px 0;
-      border-color: $gray15;
+      border-color: $black;
       font-size: 14px;
       line-height: 26px;
       font-weight: 400;
@@ -14193,7 +14193,7 @@ error css end
       font-size: 14px;
       line-height: 26px;
       font-weight: 400;
-      color: $gray;
+      color: $black;
       cursor: text;
       transition: transform 0.2s ease-in-out;
     }
@@ -14227,7 +14227,7 @@ error css end
     line-height: 21px;
 
     .link {
-      color: $gray;
+      color: $black;
       text-decoration: none;
 
       &:hover {
@@ -14239,7 +14239,7 @@ error css end
   &.map_form {
     .map_text {
       padding: 60px 30px;
-      background-color: $gray;
+      background-color: $black;
       color: $white;
       background-size: cover;
       background-repeat: no-repeat;
@@ -14260,7 +14260,7 @@ error css end
       .title {
         margin-top: 0;
         text-align: unset;
-        color: $gray15;
+        color: $black;
         font-weight: 600;
       }
 
@@ -14268,13 +14268,13 @@ error css end
         .contect-title {
           h3 {
             margin-bottom: 16px;
-            color: $gray15;
+            color: $black;
           }
         }
 
         .contant-text {
           ul {
-            color: $gray15;
+            color: $black;
 
             li {
               display: flex;
@@ -14609,14 +14609,14 @@ error css end
       td {
         min-width: 210px;
         vertical-align: middle;
-        color: $gray;
+        color: $black;
         border-top: 0;
         border-bottom: 1px solid $lighten-white;
         text-align: center;
 
         a,
         p {
-          color: $gray;
+          color: $black;
           font-weight: 400;
           font-size: 14px;
           text-transform: capitalize;
@@ -14729,7 +14729,7 @@ error css end
 
       p {
         margin-bottom: 10px;
-        color: $gray9;
+        color: $black;
       }
 
       .btn-solid,
@@ -14804,7 +14804,7 @@ error css end
       margin-bottom: 25px;
 
       h3 {
-        color: $gray;
+        color: $black;
         font-weight: 700;
         margin-bottom: 30px;
         margin-top: 30px;
@@ -14813,7 +14813,7 @@ error css end
       .field-label {
         line-height: 24px;
         text-transform: capitalize;
-        color: $gray10;
+        color: $black;
         margin-bottom: 10px;
         font-weight: 700;
 
@@ -14825,7 +14825,7 @@ error css end
       }
 
       label {
-        color: $gray;
+        color: $black;
       }
     }
 
@@ -14875,7 +14875,7 @@ error css end
       padding: 0;
       font-size: 16px;
       cursor: pointer;
-      color: $gray;
+      color: $black;
     }
   }
 
@@ -14918,7 +14918,7 @@ error css end
       position: relative;
       display: block;
       font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1920 - 300)));
-      color: $gray;
+      color: $black;
       line-height: 20px;
       margin-bottom: 20px;
 
@@ -14943,7 +14943,7 @@ error css end
       display: inline-block;
       font-size: 16px;
       font-weight: 600;
-      color: $gray10;
+      color: $black;
       line-height: 20px;
       margin-bottom: 20px;
       width: 100%;
@@ -14965,7 +14965,7 @@ error css end
         font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1920 - 300)));
         line-height: 32px;
         padding-left: 5px;
-        color: $gray;
+        color: $black;
         font-weight: 500;
       }
 
@@ -14988,7 +14988,7 @@ error css end
       position: relative;
       display: block;
       font-weight: 400;
-      color: $gray10;
+      color: $black;
       line-height: 20px;
       margin-bottom: 10px;
       font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1920 - 300)));
@@ -15005,7 +15005,7 @@ error css end
         float: right;
         font-size: 15px;
         line-height: 20px;
-        color: $gray;
+        color: $black;
         font-weight: 400;
         width: 35%;
         display: block;
@@ -15037,7 +15037,7 @@ error css end
           position: relative;
           padding-left: 30px;
           text-transform: capitalize;
-          color: $gray;
+          color: $black;
           cursor: pointer;
           font-weight: 500;
           font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1920 - 300)));
@@ -15058,7 +15058,7 @@ error css end
             font-size: 15px;
             line-height: 25px;
             font-weight: 300;
-            color: $gray16;
+            color: $black;
             margin-top: 10px;
           }
 
@@ -15190,7 +15190,7 @@ error css end
           line-height: 18px;
 
           a {
-            color: $gray;
+            color: $black;
             padding-bottom: 10px;
           }
 
@@ -15264,7 +15264,7 @@ error css end
       border-radius: 50%;
       margin-right: 5px;
       cursor: pointer;
-      border: 1px solid $gray;
+      border: 1px solid $black;
     }
 
     .color-1 {
@@ -15861,11 +15861,11 @@ error css end
       }
 
       ::-webkit-scrollbar-thumb {
-        background: $gray;
+        background: $black;
       }
 
       ::-webkit-scrollbar-thumb:hover {
-        background: $gray;
+        background: $black;
       }
 
       .sidebar-popup {
@@ -15909,7 +15909,7 @@ error css end
         z-index: 9;
         top: 75px;
         left: 0;
-        border: 1px solid $gray;
+        border: 1px solid $black;
         box-shadow: 0 0 5px $border-white;
         min-width: 330px;
 
@@ -16182,7 +16182,7 @@ error css end
 
       .nav-item {
         .nav-link {
-          color: $gray17;
+          color: $black;
           text-align: center;
           padding: 0 15px 20px 15px;
           text-transform: uppercase;
@@ -16357,7 +16357,7 @@ error css end
       top: 15px;
       position: absolute;
       right: 10px;
-      color: $gray10;
+      color: $black;
       font-weight: 600;
       text-transform: capitalize;
       opacity: 0;
@@ -16401,7 +16401,7 @@ error css end
       }
 
       h6 {
-        color: $gray10;
+        color: $black;
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: capitalize;
@@ -16437,7 +16437,7 @@ error css end
       background-color: transparent;
       border: 0;
       border: 1px solid $white5;
-      color: $gray;
+      color: $black;
       cursor: pointer;
       padding-left: 12px;
       font-size: 12px;
@@ -16553,7 +16553,7 @@ error css end
     margin-bottom: 7px;
 
     del {
-      color: $gray;
+      color: $black;
     }
 
     span {
@@ -16786,8 +16786,8 @@ error css end
     text-transform: uppercase;
     display: block;
     padding: 10px 0;
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
     width: 100%;
     color: $primary;
   }
@@ -16800,7 +16800,7 @@ error css end
   vertical-align: middle;
 
   .img-block {
-    background-color: $gray;
+    background-color: $black;
     position: relative;
     overflow: hidden;
 
@@ -16912,7 +16912,7 @@ error css end
       }
 
       i {
-        color: $gray11;
+        color: $black;
         font-size: 18px;
         padding-left: 8px;
         padding-right: 8px;
@@ -17012,7 +17012,7 @@ error css end
     }
 
     i {
-      color: $gray11;
+      color: $black;
       font-size: 16px;
       padding-right: 7px;
       padding-left: 7px;
@@ -17030,7 +17030,7 @@ error css end
     opacity: 0;
 
     i {
-      color: $gray11;
+      color: $black;
       font-size: 18px;
       display: flex;
       padding-top: 8px;
@@ -17300,7 +17300,7 @@ error css end
     padding-bottom: 5px;
 
     i {
-      color: $gray12;
+      color: $black;
 
       &:nth-child(-n + 3) {
         color: $yellow2;
@@ -17407,7 +17407,7 @@ error css end
       letter-spacing: 0;
       line-height: 22px;
       font-size: 14px;
-      color: $gray18;
+      color: $black;
     }
 
     dl {
@@ -17428,7 +17428,7 @@ error css end
 
       h3 {
         text-transform: capitalize;
-        color: $gray19;
+        color: $black;
         margin-bottom: 0;
         font-weight: 400;
         font-size: 20px;
@@ -17436,7 +17436,7 @@ error css end
 
       span {
         display: block;
-        color: $gray;
+        color: $black;
         margin-top: 5px;
 
         h1 {
@@ -17444,7 +17444,7 @@ error css end
         }
 
         code {
-          color: $gray;
+          color: $black;
         }
       }
     }
@@ -17613,7 +17613,7 @@ error css end
 
     p {
       font-size: 14px;
-      color: $gray;
+      color: $black;
       line-height: 2;
       margin-bottom: 1rem;
     }
@@ -17814,22 +17814,22 @@ error css end
 
     &.primary-btn {
       &.secondary {
-        background: $secondary;
+        background: $black;
 
         &:hover {
           background: transparent;
-          color: $secondary !important;
-          border-color: $secondary;
+          color: $black !important;
+          border-color: $black;
         }
 
         &.btn-white {
-          color: $secondary !important;
-          border-color: $secondary !important;
+          color: $black !important;
+          border-color: $black !important;
           background: $white;
 
           &:hover {
             color: $white !important;
-            background: $secondary;
+            background: $black;
           }
         }
       }
@@ -18141,7 +18141,7 @@ error css end
     .right-side {
       padding: 0 20px;
       transform: translateX(50%);
-      color: $gray8;
+      color: $black;
     }
   }
 
@@ -18631,7 +18631,7 @@ error css end
           }
 
           .song-sub-text {
-            color: $gray;
+            color: $black;
           }
         }
       }
@@ -18644,7 +18644,7 @@ error css end
     .jp-details,
     .jp-playlist {
       width: 100%;
-      border-top: 1px solid $gray8;
+      border-top: 1px solid $black;
     }
 
     .side-player {
@@ -18958,7 +18958,7 @@ header {
                   h5 {
                     text-transform: capitalize;
                     margin-bottom: 0;
-                    color: $gray;
+                    color: $black;
 
                     span {
                       float: right;
@@ -18994,7 +18994,7 @@ header {
                 top: 10px;
 
                 i {
-                  color: $gray12;
+                  color: $black;
                 }
               }
 
@@ -20451,7 +20451,7 @@ footer {
     align-items: center;
 
     h1 {
-      color: $gray10;
+      color: $black;
       margin-bottom: 30px;
       font-weight: 600;
     }
@@ -20529,7 +20529,7 @@ footer {
 }
 
 .ecommerce-footer {
-  background-color: $gray17;
+  background-color: $black;
   padding-bottom: 0;
 
   .sub-footer {
@@ -20571,14 +20571,14 @@ footer {
         }
 
         a {
-          color: $gray12;
+          color: $black;
         }
       }
     }
 
     .contact-list {
       li {
-        color: $gray12;
+        color: $black;
         padding-left: 25px;
         position: relative;
 
@@ -20597,7 +20597,7 @@ footer {
         display: inline-block;
         height: 35px;
         width: 35px;
-        background-color: $gray13;
+        background-color: $black;
         text-align: center;
         line-height: 2.6;
         margin-top: 20px;
@@ -20613,7 +20613,7 @@ footer {
   }
 
   p {
-    color: $gray12;
+    color: $black;
   }
 
   .footer-mobile-title {
@@ -20751,14 +20751,14 @@ footer {
 
       .react-tabs__tab {
         padding: 3px 25px;
-        color: $gray15;
+        color: $black;
         font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
         line-height: 2.1;
         letter-spacing: 1px;
         cursor: pointer;
 
         &.react-tabs__tab--selected {
-          background-color: $gray4;
+          background-color: $black;
           color: $white;
           border-radius: 0;
         }
@@ -20809,7 +20809,7 @@ footer {
           display: inline-block;
 
           &.active {
-            background-color: $gray4;
+            background-color: $black;
           }
         }
       }
@@ -21144,7 +21144,7 @@ footer {
         font-size: 16px;
         text-align: center;
         margin-bottom: 2rem;
-        font-weight: 600;
+        font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
       }
 

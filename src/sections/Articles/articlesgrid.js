@@ -221,7 +221,7 @@ const Articlesgrid = ({ language }) => {
         }
     ];
 
-    const [loadItems, setLoadItems] = useState(10);
+    const [loadItems, setLoadItems] = useState(8);
 
 
     return (
@@ -249,7 +249,7 @@ const Articlesgrid = ({ language }) => {
                     </Col>
                 </Row>
                 {
-                    BlogsList.length >= 10 && loadItems != BlogsList.length &&
+                    BlogsList.length >= 8 && loadItems != BlogsList.length &&
                     <center>
                         <button className='otfBtn1 mt-4' onClick={() => setLoadItems(BlogsList.length)}>
                             Load More

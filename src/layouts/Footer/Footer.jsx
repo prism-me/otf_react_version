@@ -61,12 +61,12 @@ const Footer = (props) => {
                   <ul className="d-flex footer-social social">
                     <li className="footer-social-list">
                       <a href="https://play.google.com/store?hl=en&gl=US" target={"_blank"}>
-                        <img src={GooglePlay} alt="logo" className='mr-3' />
+                        <img src={GooglePlay} alt="logo" style={{ width: "130px" }} className='mr-3' />
                       </a>
                     </li>
                     <li className="footer-social-list">
                       <a href="https://www.apple.com/app-store/" target={"_blank"}>
-                        <img src={AppStore} alt="logo" />
+                        <img src={AppStore} alt="logo" style={{ width: "130px" }} />
                       </a>
                     </li>
                   </ul>
