@@ -83,7 +83,7 @@ const Memberships = (props) => {
             <Layout
                 title="Let’s talk membership"
                 subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
-                btntext="Avail one of our membership now"
+                btntext="AVAIL MEMBERSHIP PACKAGES"
                 bannerImg={banerImg}
             >
                 {/* <Location /> */}
@@ -105,8 +105,8 @@ const Memberships = (props) => {
 
                 <CounterSection
                     title="Get 10% off during this festive season!"
-                    subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-                    btntext="Book a class now"
+                    // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                    btntext="BECOME A MEMBER TODAY"
                     bgImg={getOff}
                 />
 

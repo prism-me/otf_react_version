@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 const Aboutarticles = () => (
     <section className="gym format about-detail pb-0">
         <Container>
-            <h3 className="oftHeading text-center">
+            <h3 className="oftHeading text-center mb-3">
                 Articles
             </h3>
             {/* <Row>

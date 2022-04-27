@@ -20,9 +20,13 @@ const Counter = ({ title, subtitle, btntext, bgImg, classname }) => {
                     <h3 className="text-white oftHeading mb-4">
                         {title}
                     </h3>
-                    <p className={`text-white text-center ${classname ? "mb-4" : "mb-5"} oftsubHeading`}>
-                        {subtitle}
-                    </p>
+                    {
+                        subtitle &&
+                        <p className={`text-white text-center ${classname ? "mb-4" : "mb-5"} oftsubHeading`}>
+                            {subtitle}
+                        </p>
+                    }
+
                     {
                         classname &&
                         <ul className="d-flex justify-content-center align-items-center mb-5">
@@ -56,6 +60,7 @@ const Counter = ({ title, subtitle, btntext, bgImg, classname }) => {
                     </button>
                     <Documents
                         show={showModal} onHide={() => setShowModal(false)}
+                        title={btntext}
                     />
                 </div>
             </Container>

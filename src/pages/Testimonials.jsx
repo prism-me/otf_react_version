@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import TrainerSection from "../sections/Home/trainer";
 import Layout from '../components/common-layout';
+import CounterSection from "../sections/Home/counter";
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
@@ -15,6 +16,8 @@ import testimonial4 from "../assets/images/OTF/testimonial/testimonial4.png";
 import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
 import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
+
+import offerbg from "../assets/images/OTF/home/get-off.jpg";
 
 
 const Testimonials = (props) => {
@@ -88,6 +91,13 @@ const Testimonials = (props) => {
                     title="Testimonials"
                 />
 
+                <CounterSection
+                    title="Get 10% off during this festive season!"
+                    subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                    btntext="BOOK A FREE CLASS NOW"
+                    bgImg={offerbg}
+
+                />
             </Layout>
         </div>
     );

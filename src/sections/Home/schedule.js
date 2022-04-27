@@ -42,7 +42,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                     }
 
                                 </div>
-                                {
+                                {/* {
                                     listImg &&
                                     <ul className="icon-collection">
                                         {listImg.length > 0 && listImg.map((x, i) => (
@@ -53,7 +53,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                             </li>
                                         ))}
                                     </ul>
-                                }
+                                } */}
 
                                 {
                                     list &&
@@ -78,6 +78,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                         </button>
                                         <Documents
                                             show={showModal} onHide={() => setShowModal(false)}
+                                            title="AVAIL MEMBERSHIP PACKAGES"
                                         />
                                     </>
                                 }

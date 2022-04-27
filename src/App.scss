@@ -128,8 +128,8 @@ headings font
 
 
 @font-face {
-  font-family: "klavika-bold";
-  src: url("./assets/fonts/klavika/klavika-bold.otf");
+  font-family: "klavika";
+  src: url("./assets/fonts/klavika/klavika-medium.otf");
 }
 
 h1,
@@ -138,7 +138,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'klavika-bold', sans-serif;
+  font-family: 'klavika', sans-serif;
   font-weight: 600;
 }
 
@@ -167,7 +167,7 @@ button {
 
 p {
   color: $paracolor;
-  font-size: 18px;
+  font-size: $sub-fonts;
   font-weight: 400;
 }
 
@@ -1674,7 +1674,7 @@ section {
           &.bold {
             font-weight: 600;
             font-style: italic;
-            font-family: 'klavika-bold', sans-serif;
+            font-family: 'klavika', sans-serif;
             font-size: 22px;
           }
         }
@@ -1999,7 +1999,7 @@ section {
           margin-bottom: 20px;
           font-weight: 400;
           font-family: 'proxima-nova', sans-serif;
-          font-size: 18px;
+          font-size: $sub-fonts;
         }
       }
     }
@@ -2569,7 +2569,7 @@ download section end
 
   .form-group {
     width: 100%;
-    font-size: 18px;
+    font-size: $sub-fonts;
     margin-bottom: 0;
 
     input,
@@ -2579,7 +2579,7 @@ download section end
       height: auto;
       border-radius: 50px;
       border: 1px solid $lighten-white2;
-      font-size: 18px;
+      font-size: $sub-fonts;
       box-shadow: none;
       margin: 0;
 
@@ -3179,7 +3179,7 @@ header {
   }
 
   .header-top-line {
-    font-size: 18px;
+    font-size: $sub-fonts;
     color: $white;
     margin-bottom: 40px;
     text-transform: capitalize;
@@ -3253,16 +3253,23 @@ header {
       // background-image: url("/assets/images/hedaer-images/h3-bg.jpg");
     }
 
+    &.gym-headerBg {
+      height: 765px;
+    }
+
     &.gym-header {
       // background-image: url("/assets/images/gym/header.jpg");
       background-position: top;
 
       h1 {
         text-align: center;
+        font-family: 'klavika', sans-serif;
         text-transform: capitalize;
-        font-size: 48px;
+        font-size: 60px;
         font-weight: 600;
         font-style: italic;
+        letter-spacing: 1px;
+        line-height: 64px;
 
         @media #{$sm} {
           font-size: 25px;
@@ -3278,7 +3285,7 @@ header {
 
         p {
           padding: 0 95px;
-          font-size: 18px;
+          font-size: $sub-fonts;
 
           @media #{$sm , $md} {
             padding: 0;
@@ -4446,7 +4453,7 @@ booking section end
 
   h1,
   h2 {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   h3,
@@ -4624,7 +4631,7 @@ booking section end
         }
 
         .name {
-          font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1920 - 300)));
+          font-size: 16px;
           color: $black;
           letter-spacing: 0;
           margin-bottom: 15px;
@@ -4632,11 +4639,13 @@ booking section end
 
         .post {
           margin-bottom: 15px;
+          font-size: $sub-fonts;
 
         }
 
         .team-para {
           letter-spacing: 0;
+          font-size: $sub-fonts;
         }
       }
     }
@@ -5958,7 +5967,7 @@ resume-theme css end
   h6,
   li,
   a {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   h1 {
@@ -6129,7 +6138,7 @@ resume-theme css end
       }
 
       .place {
-        font-size: 35px;
+        font-size: $main-fonts;
         font-weight: 400;
       }
 
@@ -8452,7 +8461,7 @@ tap to top css end
   h6,
   li,
   a {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   h2,
@@ -9210,7 +9219,7 @@ tap to top css end
 
   &.testimonial {
     .oftHeading {
-      font-size: 44px;
+      font-size: $main-fonts;
       font-weight: 600;
       font-style: italic;
       color: $orange;
@@ -9232,7 +9241,7 @@ tap to top css end
     }
 
     .oftsubHeading {
-      font-size: 18px;
+      font-size: $sub-fonts;
       font-weight: 400;
       text-align: justify;
       margin-bottom: 2rem;
@@ -9251,7 +9260,7 @@ tap to top css end
       }
 
       .testimonialsubheading {
-        font-size: 15px;
+        font-size: $sub-fonts;
         text-align: justify;
       }
     }
@@ -9407,7 +9416,7 @@ tap to top css end
 
   &.faq {
     .frequent-text {
-      font-size: 44px;
+      font-size: $main-fonts;
       font-weight: 600;
       font-style: italic;
       color: $black;
@@ -9430,7 +9439,7 @@ tap to top css end
           .title {
             margin-bottom: 0;
             background-color: transparent;
-            font-size: 16px;
+            font-size: $sub-fonts;
             font-family: 'proxima-nova', sans-serif;
             font-weight: 400;
             position: relative;
@@ -9458,7 +9467,7 @@ tap to top css end
           .panel {
             p {
               padding: 20px;
-              font-size: 14px;
+              font-size: $sub-fonts;
             }
           }
 
@@ -9474,7 +9483,7 @@ tap to top css end
       }
 
       .frequent-text {
-        font-size: 44px;
+        font-size: $main-fonts;
         font-weight: 600;
         font-style: italic;
         color: $black;
@@ -9516,7 +9525,7 @@ tap to top css end
       }
 
       .card-body {
-        font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1920 - 300)));
+        font-size: $sub-fonts;
         padding-left: 15px;
       }
 
@@ -9735,7 +9744,7 @@ saas1 css end
   h6,
   li,
   a {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   nav {
@@ -10945,7 +10954,7 @@ gym css start
   .oftHeading {
     // font-size: 25px;
     // font-weight: 700;
-    font-size: 44px;
+    font-size: $main-fonts;
     font-weight: 600;
     font-style: italic;
     color: $orange;
@@ -10959,7 +10968,7 @@ gym css start
   }
 
   .oftsubHeading {
-    font-size: 18px;
+    font-size: $sub-fonts;
     font-weight: 400;
     text-align: justify;
 
@@ -11150,7 +11159,7 @@ gym css start
       }
 
       .locationsubHeading {
-        font-size: 16px;
+        font-size: $sub-fonts;
         font-weight: 400;
 
         a {
@@ -11365,7 +11374,45 @@ gym css start
     }
   }
 
+  .team-slider {
 
+    .slick-dots {
+      position: relative;
+      bottom: 0;
+      margin-top: 10px;
+
+      li {
+        width: auto;
+        height: auto;
+
+        +li {
+          margin-left: 15px;
+        }
+
+        button {
+          width: auto;
+          height: auto;
+          padding: 0;
+
+          &:before {
+            font-size: 12px;
+            margin-top: -9px;
+            opacity: 1 !important;
+          }
+        }
+
+        &.slick-active,
+        &:hover {
+          button {
+            &:before {
+              color: $orange;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .trainers-slider {
 
@@ -12280,7 +12327,7 @@ breadcrumb-section css start
   }
 
   .breadcrumb-text {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 600;
     font-style: italic;
     color: $white;
@@ -12294,7 +12341,7 @@ breadcrumb-section css start
 
   .breadcrumb-subtext {
     color: $white;
-    font-size: 18px;
+    font-size: 19px;
     text-align: center;
     margin-bottom: 2rem;
     max-width: 50%;
@@ -12339,7 +12386,7 @@ breadcrumb-section css start
     &:hover {
       background: $white;
       color: $orange;
-      border: 1px solid $white;
+      border: 1px solid $orange;
     }
 
     &:focus {
@@ -17957,8 +18004,8 @@ error css end
     &.title-inner {
       .borders {
         span {
-          font-family: 'klavika-bold', sans-serif;
-          font-size: 44px;
+          font-family: 'klavika', sans-serif;
+          font-size: $main-fonts;
           font-weight: 600;
           font-style: italic;
 
@@ -18423,7 +18470,7 @@ error css end
   p,
   li,
   a {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   h1 {
@@ -18493,7 +18540,7 @@ error css end
   p,
   li,
   a {
-    font-family: 'klavika-bold', sans-serif;
+    font-family: 'klavika', sans-serif;
   }
 
   h1,
@@ -21011,6 +21058,7 @@ footer {
 
       p {
         display: block;
+        font-size: $sub-fonts;
       }
     }
   }
@@ -21029,15 +21077,15 @@ footer {
 
   .container_foto h2 {
     color: $white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     margin-bottom: 1rem;
   }
 
   .container_foto p {
-    font-weight: 300;
+    font-weight: 400;
     color: $white;
-    font-size: 15px;
+    font-size: $sub-fonts;
     display: none;
   }
 
@@ -21076,7 +21124,7 @@ footer {
 
 .plans {
   .oftHeading {
-    font-size: 44px;
+    font-size: $main-fonts;
     font-weight: 600;
     font-style: italic;
     color: $orange;
@@ -21221,7 +21269,7 @@ footer {
               }
 
               .oftHeading {
-                font-size: 44px;
+                font-size: $main-fonts;
                 font-weight: 600;
                 font-style: italic;
                 color: $orange;
@@ -21233,7 +21281,7 @@ footer {
               }
 
               .oftsubHeading {
-                font-size: 18px;
+                font-size: $sub-fonts;
                 font-weight: 400;
                 text-align: justify;
                 margin-bottom: 2rem;
@@ -21310,7 +21358,7 @@ footer {
   }
 
   .oftHeading {
-    font-size: 44px;
+    font-size: $main-fonts;
     font-weight: 600;
     font-style: italic;
     color: $orange;
@@ -21322,7 +21370,7 @@ footer {
   }
 
   .oftsubHeading {
-    font-size: 18px;
+    font-size: $sub-fonts;
     font-weight: 400;
     text-align: justify;
     margin-bottom: 2rem;
@@ -21374,9 +21422,25 @@ footer {
     }
 
     .offer-subtext {
+      font-size: $main-fonts;
+      font-weight: 600;
+      font-style: italic;
       color: $black;
-      font-size: 22px;
       margin-bottom: 2rem;
+
+      @media #{$sm} {
+        font-size: 22px;
+      }
+
+      // color: $black;
+      // font-size: 22px;
+      // margin-bottom: 2rem;
+    }
+
+    .offer-detailtext {
+      font-size: 14px;
+      font-weight: 400;
+      color: $black;
     }
 
     .inputStyle {
@@ -27140,7 +27204,7 @@ footer {
 
   .portfolio-metro {
     h1 {
-      font-size: 35px;
+      font-size: $main-fonts;
       margin-bottom: 0;
     }
   }
@@ -29152,7 +29216,7 @@ footer {
 
           .banner-text {
             &.small {
-              font-size: 35px;
+              font-size: $main-fonts;
             }
           }
         }
@@ -31544,7 +31608,7 @@ footer {
 
           .banner-text {
             &.small {
-              font-size: 35px;
+              font-size: $main-fonts;
             }
           }
         }
@@ -32823,7 +32887,7 @@ footer {
           margin-bottom: 5px;
 
           .banner-text {
-            font-size: 35px;
+            font-size: $main-fonts;
           }
 
           .banner-text {

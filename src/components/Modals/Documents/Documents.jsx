@@ -13,7 +13,14 @@ const Documents = (props) => {
     const location = [
         "Mercato Mall",
         "Times Square Centre"
-    ]
+    ];
+
+    const membershiplist = [
+        "Orange Premier",
+        "Orange Elite",
+        "Orange Basic",
+        "Class Packages"
+    ];
 
     return (
         <>
@@ -32,7 +39,10 @@ const Documents = (props) => {
                             </span>
                         </p>
                         <Form className='offer-form'>
-                            <h3 className="offer-subtext">Book A Trail Class</h3>
+                            <h3 className="offer-subtext">
+                                {props.title}
+                                {/* Book A Trial Class */}
+                            </h3>
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -80,6 +90,23 @@ const Documents = (props) => {
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                        ))
+                                    }
+
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Input type="select" name="select" id="exampleSelect"
+                                    className='inputStyle'
+                                    required
+                                    style={{ color: "#495057", width: "100%" }}
+
+                                >
+                                    <option style={{ color: "#495057" }}>Select Membership Package</option>
+                                    {membershiplist &&
+                                        membershiplist.length > 0 &&
+                                        membershiplist.map((x) => (
                                             <option style={{ color: "#495057" }} key={x}>{x}</option>
                                         ))
                                     }

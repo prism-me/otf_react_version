@@ -26,7 +26,9 @@ const Footer = (props) => {
           <Row>
             <Col lg="4" md="4" sm="12" className="set-first">
               <div className="footer-contant">
-                <img alt="" className="img-fluid footer-logo mb-0" src={footerlogo} />
+                <img alt="" className="img-fluid footer-logo mb-0"
+                  style={{ marginTop: "-1.5rem" }}
+                  src={footerlogo} />
                 <div className="logo-sec my-4">
                   <p className='mb-3'
                     style={{ fontSize: "14px" }}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
-import BannerSection from "../sections/Home/banner";
+import BannerSection from "../sections/Home/homebanner";
 import AboutSection from "../sections/Home/about";
 import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
@@ -12,8 +12,6 @@ import FormatSection from "../sections/Home/format";
 import CalculateSection from "../sections/Home/calculate";
 
 //images
-
-import slider1 from "../assets/images/OTF/banner/homeBannerSlider.jpg";
 
 import heatl1 from "../assets/images/OTF/icons/heatl1.png"
 import heatl2 from "../assets/images/OTF/icons/heatl2.png"
@@ -34,21 +32,6 @@ import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 
 
 const Home = (props) => {
-
-  const sliderData = [
-    {
-      bannerImg: slider1,
-      title: "The Smartest Workout for More Results",
-      btn1: "BOOK A FREE CLASS NOW",
-      btn2: "view membership details"
-    },
-    {
-      bannerImg: slider1,
-      title: "The Smartest Workout for More Results",
-      btn1: "BOOK A FREE CLASS NOW",
-      btn2: "view membership details"
-    }
-  ];
 
   const listImg = [
     heatl1,
@@ -113,9 +96,7 @@ const Home = (props) => {
           />
         </Helmet>
 
-        <BannerSection
-          sliderData={sliderData}
-        />
+        <BannerSection />
 
         <AboutSection
           language={global?.activeLanguage}
@@ -135,8 +116,8 @@ const Home = (props) => {
 
         <CounterSection
           title="Get 10% off during this festive season!"
-          subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-          btntext="BOOK A FREE CLASS NOW"
+          // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+          btntext="BECOME A MEMBER TODAY"
           bgImg={offerbg}
 
         />

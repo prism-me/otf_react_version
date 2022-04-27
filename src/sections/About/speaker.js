@@ -13,10 +13,6 @@ import team5 from "../../assets/images/OTF/team/ComfortTumukunde.jpg";
 import team6 from "../../assets/images/OTF/team/BlessieTalon.jpg";
 import team7 from "../../assets/images/OTF/team/AnnaAdajar.jpg";
 import team8 from "../../assets/images/OTF/team/AnastaciaLeochico.jpg";
-import team9 from "../../assets/images/OTF/team/donna.png";
-import team10 from "../../assets/images/OTF/team/noor.png";
-import team11 from "../../assets/images/OTF/team/sarah.png";
-
 
 
 var settings = {
@@ -87,36 +83,6 @@ const speaker = [
         img: team8,
         title: "Anastacia Leochico",
         subtitle: "Sales Associate"
-    },
-    {
-        img: team9,
-        title: "Donna Forbes",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team2,
-        title: "Katrina Putnina",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team10,
-        title: "Noor Maki",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team4,
-        title: "Fadi Khoury",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team11,
-        title: "Sarah Al Ghafari",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team6,
-        title: "Sara Lodhi",
-        subtitle: "Fitness Coach"
     }
 ];
 const Speaker = () => (

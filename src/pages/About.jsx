@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import AbouSection from "../sections/About/about";
 import SpeakerSection from "../sections/About/speaker";
+import FitnessCoach from "../sections/About/fitnesscoach";
 import TestimonialSection from "../sections/About/testimonial";
 import CounterSection from "../sections/About/counter";
 import Faq from "../sections/About/faq";
@@ -45,6 +46,7 @@ const About = (props) => {
                     info3title="Our Values"
                     info3detail="Passion, integrity, accountability, innovation, commUNITY and opportUNITY for all."
                 />
+                <FitnessCoach />
 
                 <SpeakerSection />
 

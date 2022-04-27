@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import ClearIcon from "@material-ui/icons/Clear";
 import { connect } from "react-redux";
 import { types } from "../redux/global/types";
-import Documents from '../components/Modals/Documents/Documents';
+import ApplyNow from '../components/Modals/ApplyNow/ApplyNow';
 
 const Nav = (props) => {
     const [showModal, setShowModal] = useState(false);
@@ -164,8 +164,9 @@ const Nav = (props) => {
                     }}
                     onClick={() => setShowModal(true)}
                 >Free Class</button>
-                    <Documents
+                    <ApplyNow
                         show={showModal} onHide={() => setShowModal(false)}
+                        title={"Free Class"}
                     />
                 </li>
             </ul>

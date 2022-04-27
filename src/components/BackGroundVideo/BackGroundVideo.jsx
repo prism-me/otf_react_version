@@ -1,21 +1,17 @@
-import React, { useEffect } from 'react';
-import header_bg from "./../../assets/images/agsbanners/homepageBanner.png";
-// import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-// import StopIcon from "@material-ui/icons/Stop";
+import React from 'react';
 
-const BackGroundVideo = ({ videoSource, children, blur, videoRef, bannerImg }) => {
+const BackGroundVideo = ({ videoSource, children, blur, videoRef }) => {
 
     return (
         <div className={"BackgroundDiv"}>
             {/*<div className='container'>*/}
             <video
                 // style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-                // autoPlay="autoplay"
+                autoPlay="autoplay"
                 loop="loop"
-                // muted
+                muted
                 // ref={video}
                 id={"video-id"}
-                poster={bannerImg}
                 className='video' >
                 {/* TODO make it accept multiple media types */}
                 <source src={videoSource} type="video/mp4" />

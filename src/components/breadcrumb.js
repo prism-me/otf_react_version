@@ -23,6 +23,7 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext }) => {
                             >{btntext}</button>
                             <Documents
                                 show={showModal} onHide={() => setShowModal(false)}
+                                title="AVAIL MEMBERSHIP PACKAGES"
                             />
                             {
                                 promtext &&

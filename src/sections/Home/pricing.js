@@ -121,6 +121,7 @@ const Pricing = () => {
                                                         </span></button>
                                                     <Documents
                                                         show={showModal} onHide={() => setShowModal(false)}
+                                                        title="AVAIL MEMBERSHIP PACKAGES"
                                                     />
                                                 </div>
                                             </div>

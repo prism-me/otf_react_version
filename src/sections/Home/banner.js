@@ -29,6 +29,9 @@ const Banner = ({ sliderData }) => {
                                 <div className="gym-header bg"
                                     style={{ backgroundImage: `url(${x.bannerImg})` }}
                                 >
+                                    <video autoplay nocontrols loop>
+                                        <source src="https://pixabay.com/en/videos/download/video-6782_source.mp4" type="video/mp4" />
+                                    </video>
                                     <Container>
                                         <Row>
                                             <Col md="10" className="offset-md-1">
