@@ -104,10 +104,11 @@ const Workout = (props) => {
             /> */}
 
             <Layout
-                title="Get Results You Can Change and Feel!"
+                title="Get Results You Can See and Feel"
                 // subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
                 btntext="Book your free class with us!"
                 bannerImg={banerImg}
+                freeform="freeclass"
             >
 
                 <AbouSection
@@ -130,6 +131,7 @@ const Workout = (props) => {
                     btnText="book a class now"
                     bgImg={coachprofBg}
                     coachImg={coachImg}
+                    freeform="freeclass"
                 />
 
                 <TrainerSection

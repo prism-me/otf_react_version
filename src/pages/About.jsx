@@ -33,6 +33,7 @@ const About = (props) => {
                 subtitle="You don’t need to be a scientist to understand how spending 12 minutes or more in the Orange Zone gives you more strength, more energy and more life. You just need to be a member."
                 btntext="Book your Free class!"
                 bannerImg={aboutBanner}
+                freeform="freeclass"
             >
 
                 <AbouSection

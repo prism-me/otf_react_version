@@ -62,6 +62,7 @@ const FAQMain = (props) => {
                 btntext="book a free class now"
                 promtext="*Promotion Terms. Limited Time Offer."
                 bannerImg={bannerImg}
+                freeform="freeclass"
             >
                 <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">
 

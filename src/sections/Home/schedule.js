@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
+import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
 
 
-
-const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2, coachImg }) => {
+const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2, coachImg, freeform }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -76,10 +76,21 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                         >
                                             {btnText}
                                         </button>
-                                        <Documents
-                                            show={showModal} onHide={() => setShowModal(false)}
-                                            title="AVAIL MEMBERSHIP PACKAGES"
-                                        />
+                                        {
+                                            freeform &&
+                                            <ApplyNow
+                                                show={showModal} onHide={() => setShowModal(false)}
+                                                title={"Free Class"}
+                                            />
+                                        }
+                                        {
+                                            !freeform &&
+                                            <Documents
+                                                show={showModal} onHide={() => setShowModal(false)}
+                                                title="AVAIL MEMBERSHIP PACKAGES"
+                                            />
+                                        }
+
                                     </>
                                 }
 

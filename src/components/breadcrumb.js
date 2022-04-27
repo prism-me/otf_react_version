@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from './Modals/Documents/Documents';
-const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext }) => {
+import ApplyNow from './Modals/ApplyNow/ApplyNow';
+
+const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform }) => {
 
     const [showModal, setShowModal] = useState(false);
 
@@ -21,10 +23,21 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext }) => {
                             <button className="breadcrumb-btn"
                                 onClick={() => setShowModal(true)}
                             >{btntext}</button>
-                            <Documents
-                                show={showModal} onHide={() => setShowModal(false)}
-                                title="AVAIL MEMBERSHIP PACKAGES"
-                            />
+                            {
+                                freeform &&
+                                <ApplyNow
+                                    show={showModal} onHide={() => setShowModal(false)}
+                                    title={"Free Class"}
+                                />
+                            }
+                            {
+                                !freeform &&
+                                <Documents
+                                    show={showModal} onHide={() => setShowModal(false)}
+                                    title="AVAIL MEMBERSHIP PACKAGES"
+                                />
+                            }
+
                             {
                                 promtext &&
                                 <p className='text-white mt-3'><small>{promtext}</small></p>
