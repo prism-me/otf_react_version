@@ -8,7 +8,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <section className={`gym format rightAnimation bg-schedule ${subtitle && "mt-5"}`} id="schedule"
+        <section className={`gym format rightAnimation bg-schedule`} id="schedule"
             style={{ backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("${bgImg}")` }}
         >
             <div className="animated-bg"><i></i><i></i><i></i></div>

@@ -41,7 +41,7 @@
         }
 
         .careerheading {
-            font-size: 25px;
+            font-size: $main-fonts;
             font-weight: 700;
             color: $black;
             text-align: center;
@@ -54,7 +54,7 @@
         }
 
         .careerdetail {
-            font-size: 16px;
+            font-size: $sub-fonts;
             text-align: justify;
             margin-bottom: 2rem;
         }

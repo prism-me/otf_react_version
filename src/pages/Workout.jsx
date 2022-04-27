@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
-import AbouSection from "../sections/About/about";
+import WorkGrid from "../sections/Workout/workgrid";
 // import BannerSection from "../sections/Home/banner";
 import ScheduleSection from "../sections/Home/schedule";
 import CounterSection from "../sections/Home/counter";
@@ -111,17 +111,7 @@ const Workout = (props) => {
                 freeform="freeclass"
             >
 
-                <AbouSection
-                    className="workout"
-                    title="What Happens in class"
-                    // detail="Magna eu pulvinar donec id. Vestibulum, egestas orci, volutpat vitae rhoncus facilisi. Id tristique consequat turpis lobortis elit nisl est sit et. Nisl, egestas condimentum sed id. Nulla dui cras enim massa, senectus etiam tortor massa quam. Fringilla vel, placerat eros eget tortor, aliquam orci. Ut condimentum est sed accumsan id. Eget enim interdum id interdum eu, dictum. Sollicitudin nisl tempus non fusce nisl euismod neque. Ut ultricies tincidunt massa rutrum nisi vestibulum, nisi eleifend. Integer egestas aliquam magna sollicitudin pulvinar sed."
-                    info1title="01. Rowing"
-                    info1detail="Every stroke on the rower activates 85% of your body’s muscles to help you improve endurance, strength and power."
-                    info2title="02. Cardio"
-                    info2detail="Whether you walk, jog or run, you’ll go at your own pace based on your fitness level. We also have bikes and striders available as alternates to the treadmill."
-                    info3title="03. Strength Training"
-                    info3detail="Our weight and floor exercises change daily so you can focus on different muscles. Your coach can provide options for any movement if you have injuries or limitations."
-                />
+                <WorkGrid />
 
                 <ScheduleSection
                     titleM={"Coach Professionalism"}
