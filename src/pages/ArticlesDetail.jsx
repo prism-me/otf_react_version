@@ -35,9 +35,9 @@ const ArticlesDetail = (props) => {
                 <ArticlesInner />
 
                 <CounterSection
-                    title="Lorem Ipsum"
-                    subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-                    btntext="Lorem Ipsum"
+                    title="Get 10% off during this festive season!"
+                    // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
+                    btntext="BECOME A MEMBER TODAY"
                     bgImg={articalBg}
                 />
 

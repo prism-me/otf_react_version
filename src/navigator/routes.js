@@ -60,7 +60,7 @@ export const routes = [
   },
   {
     name: "ArticlesDetail",
-    path: "/articles-detail",
+    path: "/article/:id",
     component: ArticlesDetail,
     isPrivate: false,
     exact: true,

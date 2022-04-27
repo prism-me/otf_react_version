@@ -113,7 +113,7 @@ const Documents = (props) => {
 
                                 </Input>
                             </FormGroup>
-                            <FormGroup>
+                            {/* <FormGroup>
                                 <Input type="textarea" name="msg" id="msg"
                                     placeholder="Message"
                                     className='inputStyle'
@@ -121,7 +121,7 @@ const Documents = (props) => {
                                     style={{ resize: "none" }}
                                     rows="4" cols="50"
                                 />
-                            </FormGroup>
+                            </FormGroup> */}
                             <button className="offerBtn px-5 mt-3">Submit</button>
                         </Form>
                     </Container>

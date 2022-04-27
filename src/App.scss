@@ -7461,7 +7461,8 @@ yoga-theme css end
           .blog-head {
             color: $black;
             text-transform: none;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 500;
             margin-bottom: 10px;
             padding-top: 0;
           }
@@ -7622,6 +7623,7 @@ agency css end
       bottom: 0;
 
       p {
+        font-size: $sub-fonts;
         margin-bottom: unset;
         font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
@@ -7642,6 +7644,7 @@ agency css end
       }
 
       .font-blog {
+        font-size: $sub-fonts;
         font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
         text-transform: none;
@@ -13038,8 +13041,8 @@ blog-section css start
     margin-bottom: 20px;
 
     .post-head {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: $sub-fonts;
+      font-weight: 500;
       margin-bottom: 10px;
       font-weight: 600;
       font-family: 'proxima-nova', sans-serif;
@@ -14001,13 +14004,13 @@ error css end
     }
 
     .blog-head {
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 22px;
       margin-top: 10px;
     }
 
     .blog-description {
-      border-bottom: 1px solid $orange;
+      // border-bottom: 1px solid $orange;
       padding-bottom: 20px;
 
       p {
@@ -21427,6 +21430,7 @@ footer {
       font-style: italic;
       color: $black;
       margin-bottom: 2rem;
+      text-align: center;
 
       @media #{$sm} {
         font-size: 22px;

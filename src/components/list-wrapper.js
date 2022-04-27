@@ -54,7 +54,7 @@ const CardGridWrapper = ({
                                     }
 
                                     <div className="btn-bottom m-t-20">
-                                        <Link to={`/${language}/${readUrl}`} >
+                                        <Link to={`/${language}/${readUrl}/${title}`} >
                                             <button
                                                 style={{
                                                     background: "transparent",

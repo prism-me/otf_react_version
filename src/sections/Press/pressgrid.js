@@ -5,7 +5,7 @@ import CardWrapper from "../../components/grid-wrapper"
 import Categories from "../../components/categories"
 import PopularPosts from "../../components/popularpost"
 import NewsLetter from "../../components/newsletter"
-import Instagram from "../../components/instagram"
+// import Instagram from "../../components/instagram"
 
 //images 
 import pressimg from "../../assets/images/OTF/press/pressimg.png"
@@ -131,7 +131,7 @@ const Pressgrid = () => (
                         <Categories />
                         <PopularPosts />
                         <NewsLetter />
-                        <Instagram />
+                        {/* <Instagram /> */}
                     </div>
                 </Col>
             </Row>

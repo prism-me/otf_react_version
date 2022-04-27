@@ -4,7 +4,7 @@ import DetailSecion from '../../components/detail-wrapper'
 import Categories from "../../components/categories"
 import PopularPosts from "../../components/popularpost"
 import NewsLetter from "../../components/newsletter"
-import Instagram from "../../components/instagram"
+// import Instagram from "../../components/instagram"
 
 const ArticlesInner = () => (
     <section className="agency gym blog-sec blog-sidebar single_blog_item">
@@ -19,7 +19,7 @@ const ArticlesInner = () => (
                         <Categories />
                         <PopularPosts />
                         <NewsLetter />
-                        <Instagram />
+                        {/* <Instagram /> */}
                     </div>
                 </Col>
             </Row>
