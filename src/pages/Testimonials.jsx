@@ -18,6 +18,7 @@ import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
 import offerbg from "../assets/images/OTF/home/get-off.jpg";
+import VideotesTimonial from "../sections/Testimonial/videotestimonial";
 
 
 const Testimonials = (props) => {
@@ -25,12 +26,14 @@ const Testimonials = (props) => {
     const testimonial = [
         {
             img: testimonial1,
+            video_link: "https://youtu.be/p2Qt1ZPqAks",
             title: "Client name example",
             subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
             rating: "4.0"
         },
         {
             img: testimonial2,
+            video_link: "https://youtu.be/PMgZQ-ptgSc",
             title: "Client name example",
             subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
             rating: "4.0"
@@ -38,17 +41,20 @@ const Testimonials = (props) => {
         {
             img: testimonial3,
             title: "Client name example",
+            video_link: "https://youtu.be/7hMweKkfH00",
             subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
             rating: "4.0"
         },
         {
             img: testimonial4,
+            video_link: "https://youtu.be/7hMweKkfH00",
             title: "Client name example",
             subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
             rating: "4.0"
         },
         {
             img: testimonial5,
+            video_link: "https://youtu.be/V116D_ABgts",
             title: "Client name example",
             subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
             rating: "4.0"
@@ -91,6 +97,9 @@ const Testimonials = (props) => {
                     title="Testimonials"
                 />
 
+                <VideotesTimonial
+                    testimonial={testimonial}
+                />
                 <CounterSection
                     title="Get 10% off during this festive season!"
                     subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."

@@ -25,6 +25,7 @@
 @import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
+@import "./sections/Testimonial//AgsSlider.scss";
 
 //Contact Us
 @import "./sections/ContactUs/contact";
@@ -10514,7 +10515,7 @@ event css start
 
   .btn {
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
-    padding: 14px 30px;
+    padding: 20px;
   }
 
   ul {
