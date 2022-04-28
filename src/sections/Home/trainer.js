@@ -201,7 +201,7 @@ const Trainer = ({ testimonial, title }) => (
                                                 {x.title}
                                             </h5>
                                             <h6 className="post">
-                                                A Month Ago
+                                                {x.date}
                                             </h6>
                                             <p className="team-para">
                                                 {x.subtitle}
