@@ -42,7 +42,12 @@ const WorkGrid = () => (
                 <Row>
                     <Col sm={6}>
                         {/* <img src={mission} alt="" className='img-fluid' /> */}
-                        <video controls autoplay>
+                        <video
+                            nocontrols
+                            autoPlay="autoplay"
+                            loop="loop"
+                            muted
+                            style={{ width: "100%", height: "100%" }}>
                             <source src={Rowing} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -79,7 +84,12 @@ const WorkGrid = () => (
                         </p>
                     </Col>
                     <Col sm={6}>
-                        <video controls autoplay>
+                        <video
+                            nocontrols
+                            autoPlay="autoplay"
+                            loop="loop"
+                            muted
+                            style={{ width: "100%", height: "100%" }}>
                             <source src={Cardio} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -98,7 +108,11 @@ const WorkGrid = () => (
                     <Col sm={6}>
                         {/* <img src={values} alt="" className='img-fluid' />
                          */}
-                        <video controls autoplay>
+                        <video nocontrols
+                            autoPlay="autoplay"
+                            loop="loop"
+                            muted
+                            style={{ width: "100%", height: "100%" }}>
                             <source src={strenth} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
