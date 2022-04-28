@@ -41,7 +41,7 @@ const HomeBanner = ({ language }) => {
     const [showModal, setShowModal] = useState(false);
     const [showCModal, setCShowModal] = useState(false);
 
-    const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920.mp4";
+    const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";
 
     return (
         <section className="gym header" id="home">
