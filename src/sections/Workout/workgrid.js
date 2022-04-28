@@ -6,9 +6,9 @@ import vision from "../../assets/images/OTF/about/vision.png";
 import mission from "../../assets/images/OTF/about/mission.png";
 import values from "../../assets/images/OTF/about/values.png";
 
-import Rowing from "../../assets/images/OTF/about/rowing.mp4";
-import Cardio from "../../assets/images/OTF/about/cardio.mp4";
-import strenth from "../../assets/images/OTF/about/stregth.png";
+import Rowing from "../../assets/images/OTF/workout/rowing.mp4";
+import Cardio from "../../assets/images/OTF/workout/cardio.mp4";
+import strenth from "../../assets/images/OTF/workout/stregth.mp4";
 
 const WorkGrid = () => (
     <>

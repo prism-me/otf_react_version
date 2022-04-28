@@ -31,7 +31,7 @@ const Articles = (props) => {
         btntext="Lorem ipsum dolor"
         bannerImg={articalBanner}
       > */}
-      <section className="pb-0">
+      <section className="pb-0 pt-3">
         <AboutArticles />
       </section>
 
