@@ -11055,8 +11055,8 @@ gym css start
     .bgFeature {
       border: 8px solid $orange;
       backdrop-filter: blur(4px);
-      padding: 4rem 0 3rem 3rem;
-      margin: 0 2rem;
+      padding: 3rem 2rem 2rem 2rem;
+      // margin: 0 2rem;
 
       @media #{$xsm} {
         margin: 0 1rem;

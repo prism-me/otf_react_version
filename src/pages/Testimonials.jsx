@@ -30,7 +30,7 @@ const Testimonials = (props) => {
         },
         {
             img: testimonial2,
-            video_link: "https://youtu.be/p2Qt1ZPqAks",
+            video_link: "https://youtu.be/50BqPjjYmNY",
         },
         {
             img: testimonial3,
@@ -38,7 +38,7 @@ const Testimonials = (props) => {
         },
         {
             img: testimonial4,
-            video_link: "https://youtu.be/7hMweKkfH00",
+            video_link: "https://youtu.be/U2FSsk-BSbc",
         },
         {
             img: testimonial5,
@@ -52,7 +52,7 @@ const Testimonials = (props) => {
             title: "Mac Pinto",
             date: "2 years ago",
             subtitle: "LOVE the concept and execution. Coaches are super nice, and the owner is always there to offer advice or help. I wasn't fit enough to keep up, but no judgement, they were very understanding about it, encouraging even. Burned a ton of calories and had fun doing it, isn't that what we're all looking for?",
-            rating: "4.5"
+            rating: "5.0"
         },
         {
             img: testimonial2,
@@ -66,7 +66,7 @@ const Testimonials = (props) => {
             title: "natasha mufleh",
             date: "3 years ago",
             subtitle: "Obsessed!!! All the coaches I have trained with at otf dubai are amazing!! The last class I attended was wit Samia, and it was by far the best OTF class I have ever done! I have never earned as many splat points. She is extremely encouraging, makes sure to correct form, radiates positive energy, and her music is the best playlist ever!! I can’t wait to be back.",
-            rating: "4.5"
+            rating: "5.0"
         },
         {
             img: testimonial4,

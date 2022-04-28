@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import aboutImg from "../../assets/images/OTF/home/warrior-2-pose.png";
 
 const About = ({ language }) => (
-    <section className="gym format" id="about">
+    <section className="gym format pt-4 pb-3" id="about"
+    >
         <div className="animated-bg"><i></i><i></i><i></i></div>
 
         <Container>
@@ -16,7 +17,7 @@ const About = ({ language }) => (
                         <img alt="" className="img-fluid format-img mb-3" src={aboutImg} />
                     </div>
                 </Col>
-                <Col md="6">
+                <Col md="7">
                     <div className="center-text">
                         <div>
                             <div className="format-sub-text">

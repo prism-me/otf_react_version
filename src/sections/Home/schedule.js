@@ -19,7 +19,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                     <h3 className="oftHeading">{title}</h3>
                 }
                 <Row>
-                    <Col md="6">
+                    <Col md="7">
                         <div className="center-text">
                             <div>
                                 {
@@ -97,7 +97,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                             </div>
                         </div>
                     </Col>
-                    <Col md="6">
+                    <Col md="5">
                         <div className="text-center center-content">
                             <img alt="" className="img-fluid format-img" src={coachImg} />
                         </div>

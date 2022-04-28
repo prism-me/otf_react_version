@@ -52,7 +52,7 @@ const Format = () => (
     >
         <div className="animated-bg"><i></i><i></i><i></i></div>
 
-        <Container fluid>
+        <Container>
             <div className='bgFeature'>
                 <Row>
                     {featureData &&
