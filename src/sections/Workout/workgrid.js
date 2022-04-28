@@ -46,7 +46,7 @@ const WorkGrid = () => (
                     What Happens in class
                 </h3>
                 <Row>
-                    <Col sm={6}>
+                    <Col sm={6} className="mblscreenworkoutgridbottomspace">
                         <Row
                             style={{ borderBottom: "0.5rem solid #F58220" }}
                         >
@@ -62,10 +62,10 @@ const WorkGrid = () => (
                                 </video>
                             </Col>
                             <Col sm={6} className="p-0">
-                                <img src={rowing1} alt="" className='img-fluid' />
+                                <img src={rowing1} alt="" className='img-fluid mblscreenworkoutgridspace' />
                             </Col>
                             <Col sm={6} className="p-0">
-                                <img src={rowing2} alt="" className='img-fluid' />
+                                <img src={rowing2} alt="" className='img-fluid mblscreenworkoutgridspace' />
                             </Col>
                         </Row>
                         {/* <img src={mission} alt="" className='img-fluid' /> */}
@@ -91,7 +91,7 @@ const WorkGrid = () => (
 
             <Container>
                 <Row>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pr-5">
+                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pr-5 mblscreenworkoutgridbottomspace">
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >02</h2>
@@ -122,7 +122,7 @@ const WorkGrid = () => (
                                     <Col sm={12}
                                         style={{ padding: "0 0 0 0" }}
                                     >
-                                        <img src={cardio1} alt="" className='img-fluid'
+                                        <img src={cardio1} alt="" className='img-fluid mblscreenworkoutgridspace'
                                             style={{ height: "189px" }}
 
                                         />
@@ -130,7 +130,7 @@ const WorkGrid = () => (
                                     <Col sm={12}
                                         style={{ padding: "0 0 0 0" }}
                                     >
-                                        <img src={cardio2} alt="" className='img-fluid'
+                                        <img src={cardio2} alt="" className='img-fluid mblscreenworkoutgridspace'
                                             style={{ height: "189px" }}
                                         />
                                     </Col>
@@ -149,7 +149,7 @@ const WorkGrid = () => (
         >
             <Container>
                 <Row>
-                    <Col sm={6}>
+                    <Col sm={6} className="mblscreenworkoutgridbottomspace">
                         {/* <img src={values} alt="" className='img-fluid' />
                          */}
                         <Row
@@ -166,10 +166,10 @@ const WorkGrid = () => (
                                 </video>
                             </Col>
                             <Col sm={6} className="p-0">
-                                <img src={strength1} alt="" className='img-fluid' />
+                                <img src={strength1} alt="" className='img-fluid mblscreenworkoutgridspace' />
                             </Col>
                             <Col sm={6} className="p-0">
-                                <img src={strength2} alt="" className='img-fluid' />
+                                <img src={strength2} alt="" className='img-fluid mblscreenworkoutgridspace' />
                             </Col>
                         </Row>
                     </Col>

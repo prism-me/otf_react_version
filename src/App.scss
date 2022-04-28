@@ -21549,17 +21549,17 @@ footer {
   }
 }
 
-.homebannerVideo {
 
-  min-width: 100%;
-  min-height: 100%;
+.mblscreenworkoutgridspace {
+  @media #{$sm, $md} {
+    width: 100% !important;
+  }
 }
 
-.homebannercontent {
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
+.mblscreenworkoutgridbottomspace {
+  @media #{$sm, $md} {
+    margin-bottom: 2rem !important;
+  }
 }
 
 /**=====================
