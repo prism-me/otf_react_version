@@ -27,10 +27,11 @@ const Press = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Lorem ipsum"
-                subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                btntext="Lorem ipsum dolor"
+                title="Press"
+                // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 bannerImg={pressBanner}
+                btntext="Book your Free class!"
+                freeform="freeclass"
             >
                 <AboutPress />
 

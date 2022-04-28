@@ -6,6 +6,10 @@ import vision from "../../assets/images/OTF/about/vision.png";
 import mission from "../../assets/images/OTF/about/mission.png";
 import values from "../../assets/images/OTF/about/values.png";
 
+import Rowing from "../../assets/images/OTF/about/rowing.mp4";
+import Cardio from "../../assets/images/OTF/about/cardio.mp4";
+import strenth from "../../assets/images/OTF/about/stregth.png";
+
 const WorkGrid = () => (
     <>
         <section className="gym format about-detail rightAnimation"
@@ -37,7 +41,11 @@ const WorkGrid = () => (
                 </h3>
                 <Row>
                     <Col sm={6}>
-                        <img src={mission} alt="" className='img-fluid' />
+                        {/* <img src={mission} alt="" className='img-fluid' /> */}
+                        <video controls autoplay>
+                            <source src={Rowing} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </Col>
                     <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
                         <h2 className="oftHeading"
@@ -71,7 +79,11 @@ const WorkGrid = () => (
                         </p>
                     </Col>
                     <Col sm={6}>
-                        <img src={vision} alt="" className='img-fluid' />
+                        <video controls autoplay>
+                            <source src={Cardio} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        {/* <img src={vision} alt="" className='img-fluid' /> */}
                     </Col>
                 </Row>
             </Container >
@@ -84,7 +96,12 @@ const WorkGrid = () => (
             <Container>
                 <Row>
                     <Col sm={6}>
-                        <img src={values} alt="" className='img-fluid' />
+                        {/* <img src={values} alt="" className='img-fluid' />
+                         */}
+                        <video controls autoplay>
+                            <source src={strenth} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </Col>
                     <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
                         <h2 className="oftHeading"
