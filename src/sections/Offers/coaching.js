@@ -30,10 +30,10 @@ const Coaching = () => {
                     className="coach-container"
                     style={{ backgroundImage: `url(${sciencebakedbg})` }}
                 >
-                    <Col sm={6}>
+                    <Col sm={5}>
                         <img src={sciencebaked} className='img-fluid mb-3' alt={"img"} />
                     </Col>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-center">
+                    <Col sm={7} className="d-flex flex-column justify-content-center align-items-center">
                         <Container>
                             <h4 className="oftHeading">Science-Backed</h4>
                             <p className="oftsubHeading text-white">
@@ -59,7 +59,7 @@ const Coaching = () => {
                     className="coach-container"
                     style={{ backgroundImage: `url(${coachinspirebg})` }}
                 >
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-center">
+                    <Col sm={7} className="d-flex flex-column justify-content-center align-items-center">
                         <Container>
                             <h4 className="oftHeading">Coach-Inspired</h4>
                             <p className="oftsubHeading text-white">
@@ -67,7 +67,7 @@ const Coaching = () => {
                             </p>
                         </Container>
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={5}>
                         <img src={coachinsp} className='img-fluid' alt={"img"} />
                     </Col>
                 </Row>

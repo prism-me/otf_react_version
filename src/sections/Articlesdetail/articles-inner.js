@@ -11,7 +11,7 @@ const ArticlesInner = () => (
         <Container>
             <Row>
                 <DetailSecion
-                    className="col-lg-9 order-lg-2"
+                    className="col-lg-9 order-lg-2 detailArtpadding"
                     showcaseType="Image"
                 />
                 <Col lg="3">

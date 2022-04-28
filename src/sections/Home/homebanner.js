@@ -15,7 +15,7 @@ var settings = {
     infinite: true,
     speed: 1000,
     arrows: false,
-    // autoplay: false,
+    autoplay: false,
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -43,13 +43,13 @@ const HomeBanner = ({ language }) => {
 
     const [autoplay, setAutoplay] = useState({ ...settings.autoplay });
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setTimeout(() => {
-            setAutoplay(true);
-        }, 2000);
+    //     setTimeout(() => {
+    //         setAutoplay(true);
+    //     }, 2000);
 
-    }, []);
+    // }, []);
 
 
     const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";

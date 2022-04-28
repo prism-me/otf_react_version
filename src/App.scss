@@ -21434,10 +21434,15 @@ footer {
   }
 
   .coach-container {
-    padding: 3.5rem 1rem;
+    padding: 3.5rem 7rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media #{$sm , $md} {
+      padding: 3.5rem 1rem;
+
+    }
   }
 }
 
@@ -21536,7 +21541,13 @@ footer {
   }
 }
 
+.detailArtpadding {
+  padding-left: 4rem;
 
+  @media #{$sm, $md} {
+    padding-left: 1rem;
+  }
+}
 
 /**=====================
      63. Responsive CSS Start

@@ -71,7 +71,7 @@ const WorkGrid = () => (
                         {/* <img src={mission} alt="" className='img-fluid' /> */}
 
                     </Col>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
+                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pl-5">
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >01</h2>
@@ -91,7 +91,7 @@ const WorkGrid = () => (
 
             <Container>
                 <Row>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
+                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pr-5">
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >02</h2>
@@ -112,7 +112,7 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%", height: "100%" }}>
+                                    style={{ width: "100%" }}>
                                     <source src={Cardio} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -122,12 +122,17 @@ const WorkGrid = () => (
                                     <Col sm={12}
                                         style={{ padding: "0 0 0 0" }}
                                     >
-                                        <img src={cardio1} alt="" className='img-fluid' />
+                                        <img src={cardio1} alt="" className='img-fluid'
+                                            style={{ height: "189px" }}
+
+                                        />
                                     </Col>
                                     <Col sm={12}
                                         style={{ padding: "0 0 0 0" }}
                                     >
-                                        <img src={cardio2} alt="" className='img-fluid' />
+                                        <img src={cardio2} alt="" className='img-fluid'
+                                            style={{ height: "189px" }}
+                                        />
                                     </Col>
                                 </Row>
                             </Col>
@@ -168,7 +173,7 @@ const WorkGrid = () => (
                             </Col>
                         </Row>
                     </Col>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
+                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pl-5">
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >03</h2>
