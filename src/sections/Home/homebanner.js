@@ -57,7 +57,7 @@ const HomeBanner = ({ language }) => {
     return (
         <section className="gym header" id="home">
             <div className="header5-content">
-                <Slider className="default-dots gym-slider" id="gym-slider" {...settings} autoplay={autoplay}>
+                <Slider className="default-dots gym-slider" id="gym-slider" {...settings} autoplay={false}>
                     <div className="item">
                         <BackGroundVideo
                             videoSource={videoSource}

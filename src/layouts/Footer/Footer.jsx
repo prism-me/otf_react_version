@@ -160,7 +160,7 @@ const Footer = (props) => {
                       <Link to={`/${global.activeLanguage}/articles`} className='active'>Articles</Link>
                     </li>
                     <li>
-                      <Link to="#">Promotion Terms</Link>
+                      <Link to={`/${global.activeLanguage}/promotion-terms`}>Promotion Terms</Link>
                     </li>
                     <li>
                       <Link to="#">Do not sell my information</Link>

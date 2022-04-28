@@ -23,15 +23,15 @@ const TermsOfUse = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Lorem ipsum"
-                subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                btntext="Lorem ipsum dolor"
+                title="Terms Of Use"
+                // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                // btntext="Lorem ipsum dolor"
                 bannerImg={aboutBanner}
             >
 
                 <PrivacySection
                     title={"Terms Of Use"}
-                    detail="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    detail="These terms of use (the “Terms”) are a legal contract between you and Ultimate Fitness Group, LLC d/b/a Orangetheory Fitness (“Company”, “we” or “us”) and are applicable to the services available on or through the Company’s websites located at the urls: www.orangetheory.com and www.orangetheory.com/en-us/athome/, as well as the Company’s mobile applications (collectively, the “Site”, where applicable).  By accessing any area of the Site, you agree to be legally bound to and to abide by the Terms.  If you do not agree with any of the Terms, do not access or otherwise use the Site. Note:  These terms contain a dispute resolution and arbitration provision, including class action waiver that affects your rights under the Terms and with respect to disputes you may have with the Company.  You may opt out of the binding individual arbitration and class action waiver as provided below."
                 />
 
             </Layout>

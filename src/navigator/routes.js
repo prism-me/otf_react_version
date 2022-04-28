@@ -13,6 +13,8 @@ import Testimonials from "../pages/Testimonials";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
 import Workout from "../pages/Workout";
+import PromotionTerms from "../pages/PromotionTerms";
+
 
 
 export const routes = [
@@ -127,5 +129,13 @@ export const routes = [
     component: TermsOfUse,
     isPrivate: false,
     exact: true,
+  },
+  {
+    name: "PromotionTerms",
+    path: "/promotion-terms",
+    component: PromotionTerms,
+    isPrivate: false,
+    exact: true,
   }
+
 ];

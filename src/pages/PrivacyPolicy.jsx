@@ -23,15 +23,15 @@ const PrivacyPolicy = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Lorem ipsum"
-                subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                btntext="Lorem ipsum dolor"
+                title="Privacy Policy"
+                // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                // btntext="Lorem ipsum dolor"
                 bannerImg={aboutBanner}
             >
 
                 <PrivacySection
-                    title={"Privacy Policy"}
-                    detail="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    title={"ULTIMATE FITNESS GROUP Privacy Policy"}
+                    detail="Ultimate Fitness Group, LLC d/b/a Orangetheory® Fitness (“Ultimate,” “we,” “us,” or “our”) values your privacy. In this Privacy Policy (“Policy”), we describe how we collect, use, and disclose information we obtain about visitors to our website, www.orangetheory.com  (the “Site”), users of our mobile applications (the “App” or “Apps”), visitors to Orangetheory® Fitness studios (whether owned by Ultimate or one of our franchisees), and the services available through our Site and App, and how we use and disclose that information. This Policy does not apply to a franchisee’s collection, use, and disclosure of your information, except as described in this policy with regard to data sharing and change of a franchisee. By visiting the Site, using or downloading the App, or using any of our services, you acknowledge that your personal information will be handled as described in this Policy. Your use of our Site, App, or services, and any dispute over privacy, is subject to this Policy and our Terms of Use, including its applicable limitations on damages and the resolution of disputes. The Terms of Use are incorporated by reference into this Policy."
                 />
 
             </Layout>
