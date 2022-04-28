@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import aboutImg from "../../assets/images/OTF/home/warrior-2-pose.png";
 
 const About = ({ language }) => (
-    <section className="gym format pt-4 pb-3" id="about"
+    <section className="gym format" id="about"
     >
         <div className="animated-bg"><i></i><i></i><i></i></div>
 

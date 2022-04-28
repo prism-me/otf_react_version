@@ -76,7 +76,8 @@ const Pricing = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <section className="gym pricing set-relative" id="plan">
+        <section className="gym pricing set-relative"
+            id="plan">
             <Container>
                 <Row>
                     <Col md="10" className="offset-md-1">
