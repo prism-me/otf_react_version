@@ -212,10 +212,10 @@ const DetailWrapper = ({ className, showcaseType }) => {
                     </p>
                 </div>
             </div>
-            <a href="https://www.facebook.com/OrangetheoryFitness/" className="mr-3" target={"_blank"}>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" className="mr-3" target={"_blank"}>
                 <FacebookIcon />
             </a>
-            <a href="https://twitter.com/orangetheory" target={"_blank"}>
+            <a href="https://twitter.com/share?url=" target={"_blank"}>
                 <TwitterIcon />
             </a>
         </div >
