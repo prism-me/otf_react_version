@@ -3256,6 +3256,22 @@ header {
 
     &.gym-headerBg {
       height: 100%;
+
+      @media #{$sm} {
+        height: 375px;
+      }
+
+      @media #{$md} {
+        height: 650px;
+      }
+
+      @media #{$lg} {
+        height: 530px;
+      }
+
+      @media #{$xl} {
+        height: 600px;
+      }
     }
 
     &.gym-header {
