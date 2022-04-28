@@ -121,11 +121,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
+
+import googleIcon from "../../assets/images/OTF/icons/googleIcon.png"
+
 var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    arrows: false,
+    arrows: true,
     swipeToSlide: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -163,23 +166,37 @@ const Trainer = ({ testimonial, title }) => (
                             testimonial.map((x, i) => (
                                 <div className="item">
                                     <div className="team-container">
-                                        <img alt="" className="img-fluid members" src={x.img} />
-                                        <p className="d-flex justify-content-center align-items-center mb-2">
-                                            <ReactStars
-                                                count={5}
-                                                // onChange={() => { }}
-                                                edit={false}
-                                                size={24}
-                                                isHalf={true}
-                                                value={x.rating}
-                                                emptyIcon={<i className="far fa-star"></i>}
-                                                halfIcon={<i className="fa fa-star-half-alt"></i>}
-                                                fullIcon={<i className="fa fa-star"></i>}
-                                                activeColor="#F8B101"
-                                                classNames="rating_bar text-center"
-                                            />
-                                        </p>
-                                        <div className="text-center">
+                                        <div
+                                            style={{
+                                                background: "#2E2E2E",
+                                                borderTopLeftRadius: "5px",
+                                                borderTopRightRadius: "5px",
+                                                padding: " 25px 30px"
+                                            }}
+                                        >
+                                            <img alt="" className="img-fluid members" src={x.img} />
+                                            <p className="d-flex justify-content-center align-items-center mb-2">
+                                                <ReactStars
+                                                    count={5}
+                                                    // onChange={() => { }}
+                                                    edit={false}
+                                                    size={24}
+                                                    isHalf={true}
+                                                    value={x.rating}
+                                                    emptyIcon={<i className="far fa-star"></i>}
+                                                    halfIcon={<i className="fa fa-star-half-alt"></i>}
+                                                    fullIcon={<i className="fa fa-star"></i>}
+                                                    activeColor="#F8B101"
+                                                    classNames="rating_bar text-center"
+                                                />
+                                            </p>
+                                        </div>
+
+                                        <div className="text-center"
+                                            style={{
+                                                padding: " 25px 30px"
+                                            }}
+                                        >
                                             <h5 className="name">
                                                 {x.title}
                                             </h5>
@@ -189,6 +206,16 @@ const Trainer = ({ testimonial, title }) => (
                                             <p className="team-para">
                                                 {x.subtitle}
                                             </p>
+                                            <center>
+                                                <img src={googleIcon}
+                                                    className="mt-5 mb-2"
+                                                    style={{
+                                                        width: "60px"
+                                                    }} alt="googleIcon" />
+                                            </center>
+                                            <p className="team-para">
+                                                Verified Reviews
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +224,7 @@ const Trainer = ({ testimonial, title }) => (
                 </Col>
             </Row>
         </Container>
-    </section>
+    </section >
 )
 
 

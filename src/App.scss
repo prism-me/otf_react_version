@@ -3255,7 +3255,7 @@ header {
     }
 
     &.gym-headerBg {
-      height: 765px;
+      height: 100%;
     }
 
     &.gym-header {
@@ -4615,12 +4615,16 @@ booking section end
       }
 
       .team-container {
-        padding: 25px 30px;
-        border: 1px solid $light-white;
+        // padding: 25px 30px;
+        border: 1px solid $orange;
         box-shadow: 0 0 10px 5px rgba(253, 248, 247, 0.69);
         border-radius: 10px;
         margin: 5px;
         background: $white;
+
+        @media #{$sm, $md} {
+          padding: 0 !important;
+        }
 
         .members {
           width: 80px !important;
@@ -11379,6 +11383,51 @@ gym css start
   }
 
   .team-slider {
+    .slick-arrow {
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        // background: rgba($black, 0.1);
+        background: $white;
+        border: 1px solid $black;
+      }
+    }
+
+    .slick-next {
+      right: -25px;
+
+      &:before {
+        // padding: 20px 18px 20px 20px;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        font-weight: 900;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        background: $white;
+
+      }
+    }
+
+    .slick-prev {
+      left: -25px;
+      z-index: 1;
+
+      &:before {
+        background: $white;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f053';
+        font-weight: 900;
+        // padding: 20px 20px 20px 18px;
+      }
+    }
+
 
     .slick-dots {
       position: relative;

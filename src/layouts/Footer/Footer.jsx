@@ -35,12 +35,12 @@ const Footer = (props) => {
                   >Follow us on Social Media</p>
                   <ul className="d-flex footer-social social">
                     <li className="footer-social-list">
-                      <a href="https://www.instagram.com/orangetheory/" target={"_blank"}>
+                      <a href="https://www.instagram.com/otfdubai/" target={"_blank"}>
                         <InstagramIcon />
                       </a>
                     </li>
                     <li className="footer-social-list">
-                      <a href="https://www.facebook.com/OrangetheoryFitness/" target={"_blank"}>
+                      <a href="https://www.facebook.com/OTFDubai" target={"_blank"}>
                         <FacebookIcon />
                       </a>
                     </li>
@@ -133,13 +133,16 @@ const Footer = (props) => {
                   <ul className="footer-lists">
                     <li>
                       <Link to={`/${global.activeLanguage}/locations`}>
-                        Select You Locations
+                        Select Your Locations
                       </Link>
                     </li>
                     <li>
-                      <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
+                      {/* <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
                         Our Mission, Vision, & Values
-                      </HashLink>
+                      </HashLink> */}
+                      <Link to={`/${global.activeLanguage}/about`}>
+                        Our Mission, Vision, & Values
+                      </Link>
                     </li>
                     <li>
                       <Link to={`/${global.activeLanguage}/press`}>Press</Link>
@@ -199,8 +202,8 @@ const Footer = (props) => {
                 </p>
                 <p className="para-address mt-2">
                   <PhoneIcon className="mr-2 paraIcons" />
-                  <a href='tel:+9714 340 1040'>
-                    +9714 340 1040
+                  <a href='tel:+9714 324 4424'>
+                    +9714 324 4424
                   </a>
                 </p>
               </div>

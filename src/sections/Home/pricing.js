@@ -119,16 +119,16 @@ const Pricing = () => {
                                                         >
                                                             join now
                                                         </span></button>
-                                                    <Documents
-                                                        show={showModal} onHide={() => setShowModal(false)}
-                                                        title="AVAIL MEMBERSHIP PACKAGES"
-                                                    />
                                                 </div>
                                             </div>
                                         </div>
                                     )
                                 })}
                         </Slider>
+                        <Documents
+                            show={showModal} onHide={() => setShowModal(false)}
+                            title="Become a Member Today"
+                        />
                     </Col>
                 </Row>
             </Container>

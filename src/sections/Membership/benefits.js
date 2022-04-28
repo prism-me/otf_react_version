@@ -69,7 +69,7 @@ const Benefits = ({ benefitList }) => {
                     </button>
                     <Documents
                         show={showModal} onHide={() => setShowModal(false)}
-                        title="AVAIL MEMBERSHIP PACKAGES"
+                        title="Become a Member Today"
                     />
                     <p className='mt-2'><small>*Available once pandemic restrictions are lifted.</small></p>
                 </center>

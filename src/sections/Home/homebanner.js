@@ -37,11 +37,11 @@ const sliderData = [
     }
 ];
 
-const HomeBanner = () => {
+const HomeBanner = ({ language }) => {
     const [showModal, setShowModal] = useState(false);
     const [showCModal, setCShowModal] = useState(false);
 
-    const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_250422_12SECS_V1%20(1).mp4";
+    const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920.mp4";
 
     return (
         <section className="gym header" id="home">
@@ -66,15 +66,15 @@ const HomeBanner = () => {
                                                         {/* {
                                                             x.btn1 && */}
                                                         <li>
-                                                            <a className=" btn btn-default"
-                                                                onClick={() => setShowModal(true)}
+                                                            <a className=" btn btn-default" href={`/${language}/memberships`}
+                                                            // onClick={() => setShowModal(true)}
                                                             >
                                                                 VIEW MEMBERSHIP PACKAGES
                                                             </a>
-                                                            <Documents
+                                                            {/* <Documents
                                                                 show={showModal} onHide={() => setShowModal(false)}
                                                                 title={"VIEW MEMBERSHIP PACKAGES"}
-                                                            />
+                                                            /> */}
                                                         </li>
                                                         {/* } */}
 
@@ -111,9 +111,6 @@ const HomeBanner = () => {
                                                             >
                                                                 BOOK A FREE CLASS NOW
                                                             </a>
-                                                            <ApplyNow
-                                                                show={showCModal} onHide={() => setCShowModal(false)}
-                                                            />
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -125,6 +122,9 @@ const HomeBanner = () => {
                         </div>
                     </div>
                 </Slider>
+                <ApplyNow
+                    show={showCModal} onHide={() => setCShowModal(false)}
+                />
 
                 {/* <Slider className="default-dots gym-slider" id="gym-slider" {...settings}>
                     {sliderData &&

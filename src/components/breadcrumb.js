@@ -34,7 +34,7 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform })
                                 !freeform &&
                                 <Documents
                                     show={showModal} onHide={() => setShowModal(false)}
-                                    title="AVAIL MEMBERSHIP PACKAGES"
+                                    title="Become a Member Today"
                                 />
                             }
 

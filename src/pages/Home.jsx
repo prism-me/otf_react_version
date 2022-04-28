@@ -96,7 +96,9 @@ const Home = (props) => {
           />
         </Helmet>
 
-        <BannerSection />
+        <BannerSection
+          language={global?.activeLanguage}
+        />
 
         <AboutSection
           language={global?.activeLanguage}

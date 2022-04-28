@@ -60,7 +60,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                     <ul className='text-white pl-4' style={{ listStyle: "circle" }}>
                                         {list.length > 0 && list.map((x, i) => (
                                             <li key={i}
-                                                style={{ fontSize: "16px", fontWeight: "300", textAlign: "left" }}
+                                                style={{ fontSize: "14px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}
                                             >
                                                 {x}
                                             </li>
@@ -87,7 +87,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                             !freeform &&
                                             <Documents
                                                 show={showModal} onHide={() => setShowModal(false)}
-                                                title="AVAIL MEMBERSHIP PACKAGES"
+                                                title="Become a Member Today"
                                             />
                                         }
 

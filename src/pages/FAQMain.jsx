@@ -58,7 +58,7 @@ const FAQMain = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Try Us For Free.Yes, Free!"
+                title="Try Us For Free. Yes, Free!"
                 btntext="book a free class now"
                 promtext="*Promotion Terms. Limited Time Offer."
                 bannerImg={bannerImg}

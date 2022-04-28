@@ -83,7 +83,7 @@ const Memberships = (props) => {
             <Layout
                 title="Let’s talk membership"
                 subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
-                btntext="AVAIL MEMBERSHIP PACKAGES"
+                btntext="Become a Member Today"
                 bannerImg={banerImg}
             >
                 {/* <Location /> */}
