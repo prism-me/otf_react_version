@@ -40,7 +40,7 @@ const Press = (props) => {
                 <CounterSection
                     title="Follow us on Social Media"
                     subtitle="Like and Follow Us to Stay up to Date with the Latest Events from our OTF Community."
-                    btntext="Lorem Ipsum"
+                    btntext="BECOME A MEMBER TODAY"
                     bgImg={pressBg}
                     classname="press"
                 />
