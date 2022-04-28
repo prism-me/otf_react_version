@@ -2,9 +2,15 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
 
 //images
-import vision from "../../assets/images/OTF/about/vision.png";
-import mission from "../../assets/images/OTF/about/mission.png";
-import values from "../../assets/images/OTF/about/values.png";
+import rowing1 from "../../assets/images/OTF/workout/rowing1.jpg";
+import rowing2 from "../../assets/images/OTF/workout/rowing2.jpg";
+import strength1 from "../../assets/images/OTF/workout/strength1.jpg";
+import strength2 from "../../assets/images/OTF/workout/strength2.jpg";
+
+import cardio1 from "../../assets/images/OTF/workout/cardio1.jpg";
+import cardio2 from "../../assets/images/OTF/workout/cardio2.jpg";
+
+
 
 import Rowing from "../../assets/images/OTF/workout/rowing.mp4";
 import Cardio from "../../assets/images/OTF/workout/cardio.mp4";
@@ -41,16 +47,29 @@ const WorkGrid = () => (
                 </h3>
                 <Row>
                     <Col sm={6}>
+                        <Row
+                            style={{ borderBottom: "0.5rem solid #F58220" }}
+                        >
+                            <Col sm={12} className="p-0">
+                                <video
+                                    nocontrols
+                                    autoPlay="autoplay"
+                                    loop="loop"
+                                    muted
+                                    style={{ width: "100%", height: "100%" }}>
+                                    <source src={Rowing} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Col>
+                            <Col sm={6} className="p-0">
+                                <img src={rowing1} alt="" className='img-fluid' />
+                            </Col>
+                            <Col sm={6} className="p-0">
+                                <img src={rowing2} alt="" className='img-fluid' />
+                            </Col>
+                        </Row>
                         {/* <img src={mission} alt="" className='img-fluid' /> */}
-                        <video
-                            nocontrols
-                            autoPlay="autoplay"
-                            loop="loop"
-                            muted
-                            style={{ width: "100%", height: "100%" }}>
-                            <source src={Rowing} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+
                     </Col>
                     <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
                         <h2 className="oftHeading"
@@ -84,15 +103,35 @@ const WorkGrid = () => (
                         </p>
                     </Col>
                     <Col sm={6}>
-                        <video
-                            nocontrols
-                            autoPlay="autoplay"
-                            loop="loop"
-                            muted
-                            style={{ width: "100%", height: "100%" }}>
-                            <source src={Cardio} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <Row
+                            style={{ borderBottom: "0.5rem solid #F58220" }}
+                        >
+                            <Col sm={6} className="p-0">
+                                <video
+                                    nocontrols
+                                    autoPlay="autoplay"
+                                    loop="loop"
+                                    muted
+                                    style={{ width: "100%", height: "100%" }}>
+                                    <source src={Cardio} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Col>
+                            <Col sm={6} className="p-0">
+                                <Row>
+                                    <Col sm={12}
+                                        style={{ padding: "0 0 0 0" }}
+                                    >
+                                        <img src={cardio1} alt="" className='img-fluid' />
+                                    </Col>
+                                    <Col sm={12}
+                                        style={{ padding: "0 0 0 0" }}
+                                    >
+                                        <img src={cardio2} alt="" className='img-fluid' />
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
                         {/* <img src={vision} alt="" className='img-fluid' /> */}
                     </Col>
                 </Row>
@@ -108,14 +147,26 @@ const WorkGrid = () => (
                     <Col sm={6}>
                         {/* <img src={values} alt="" className='img-fluid' />
                          */}
-                        <video nocontrols
-                            autoPlay="autoplay"
-                            loop="loop"
-                            muted
-                            style={{ width: "100%", height: "100%" }}>
-                            <source src={strenth} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <Row
+                            style={{ borderBottom: "0.5rem solid #F58220" }}
+                        >
+                            <Col sm={12} className="p-0">
+                                <video nocontrols
+                                    autoPlay="autoplay"
+                                    loop="loop"
+                                    muted
+                                    style={{ width: "100%", height: "100%" }}>
+                                    <source src={strenth} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Col>
+                            <Col sm={6} className="p-0">
+                                <img src={strength1} alt="" className='img-fluid' />
+                            </Col>
+                            <Col sm={6} className="p-0">
+                                <img src={strength2} alt="" className='img-fluid' />
+                            </Col>
+                        </Row>
                     </Col>
                     <Col sm={6} className="d-flex flex-column justify-content-center align-items-start">
                         <h2 className="oftHeading"

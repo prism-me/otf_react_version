@@ -42,7 +42,6 @@ const Home = (props) => {
   const testimonial = [
     {
       img: testimonial1,
-      video_link: "https://youtu.be/p2Qt1ZPqAks",
       title: "Mac Pinto",
       date: "2 years ago",
       subtitle: "LOVE the concept and execution. Coaches are super nice, and the owner is always there to offer advice or help. I wasn't fit enough to keep up, but no judgement, they were very understanding about it, encouraging even. Burned a ton of calories and had fun doing it, isn't that what we're all looking for?",
@@ -50,7 +49,6 @@ const Home = (props) => {
     },
     {
       img: testimonial2,
-      video_link: "https://youtu.be/p2Qt1ZPqAks",
       title: "Jet Li",
       date: "3 years ago",
       subtitle: "Great session especially if you like tracking stats and getting your body into the splat zone.Good support from Felipe frontdesk Great Energy from Pattie the instructor Facility has got a nice orange 🍊 lighting so feels like you are in a club and burn calories at a great pace.",
@@ -59,36 +57,17 @@ const Home = (props) => {
     {
       img: testimonial3,
       title: "natasha mufleh",
-      video_link: "https://youtu.be/7hMweKkfH00",
+      date: "3 years ago",
       subtitle: "Obsessed!!! All the coaches I have trained with at otf dubai are amazing!! The last class I attended was wit Samia, and it was by far the best OTF class I have ever done! I have never earned as many splat points. She is extremely encouraging, makes sure to correct form, radiates positive energy, and her music is the best playlist ever!! I can’t wait to be back.",
       rating: "4.5"
     },
-    // {
-    //     img: testimonial4,
-    //     video_link: "https://youtu.be/7hMweKkfH00",
-    //     title: "Client name example",
-    //     subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
-    //     rating: "4.0"
-    // },
-    // {
-    //     img: testimonial5,
-    //     video_link: "https://youtu.be/V116D_ABgts",
-    //     title: "Client name example",
-    //     subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
-    //     rating: "4.0"
-    // },
-    // {
-    //     img: testimonial6,
-    //     title: "Client name example",
-    //     subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
-    //     rating: "4.0"
-    // },
-    // {
-    //     img: testimonial7,
-    //     title: "Client name example",
-    //     subtitle: "Lorem ipsum dolor amit set lorem ipsum dolor amit..",
-    //     rating: "4.0"
-    // }
+    {
+      img: testimonial4,
+      title: "Adam D",
+      date: "a years ago",
+      rating: "5.0",
+      subtitle: "A great gym in a great location. Located centrally at Times Square Mall there is plenty of parking (3hrs free). The studio offers only classes which consist of approximately 20mins rowing, 20min workout, 20mins cardio. Each class is unique and structured differently.The trainers there are handpicked, certified and will always motivate you to reach your full potential."
+    }
   ];
 
   const { global } = props;

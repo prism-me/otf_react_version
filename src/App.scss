@@ -4616,6 +4616,7 @@ booking section end
 
       .team-container {
         // padding: 25px 30px;
+        height: 600px;
         border: 1px solid $orange;
         box-shadow: 0 0 10px 5px rgba(253, 248, 247, 0.69);
         border-radius: 10px;
@@ -4624,6 +4625,7 @@ booking section end
 
         @media #{$sm, $md} {
           padding: 0 !important;
+          height: auto;
         }
 
         .members {
@@ -18930,7 +18932,7 @@ header {
       left: 0;
       background: $black;
       width: 100%;
-      padding: 0.5rem 5rem;
+      padding: 0.5rem 7rem;
       animation: slide-down 0.7s;
       box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
 

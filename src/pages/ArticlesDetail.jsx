@@ -29,7 +29,7 @@ const ArticlesDetail = (props) => {
                 title={"Hunkered Down To Keep Coronavirus At Bay? Stay Healthy With 7 Tips To Channel Your Inner Orangetheory Spirit"}
                 // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 bannerImg={articlesBanner}
-                btntext="Book your Free class!"
+                // btntext="Book your Free class!"
                 freeform="freeclass"
             >
 

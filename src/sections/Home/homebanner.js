@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,9 +13,9 @@ import slider1 from "../../assets/images/OTF/banner/homeBannerSlider.jpg";
 var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -41,12 +41,23 @@ const HomeBanner = ({ language }) => {
     const [showModal, setShowModal] = useState(false);
     const [showCModal, setCShowModal] = useState(false);
 
+    const [autoplay, setAutoplay] = useState({ ...settings.autoplay });
+
+    useEffect(() => {
+
+        setTimeout(() => {
+            setAutoplay(true);
+        }, 2000);
+
+    }, []);
+
+
     const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";
 
     return (
         <section className="gym header" id="home">
             <div className="header5-content">
-                <Slider className="default-dots gym-slider" id="gym-slider" {...settings}>
+                <Slider className="default-dots gym-slider" id="gym-slider" {...settings} autoplay={autoplay}>
                     <div className="item">
                         <BackGroundVideo
                             videoSource={videoSource}

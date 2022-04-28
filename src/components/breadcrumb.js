@@ -20,9 +20,13 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform })
                                 subtitle &&
                                 <p className="breadcrumb-subtext">{subtitle}</p>
                             }
-                            <button className="breadcrumb-btn"
-                                onClick={() => setShowModal(true)}
-                            >{btntext}</button>
+                            {
+                                btntext &&
+                                <button className="breadcrumb-btn"
+                                    onClick={() => setShowModal(true)}
+                                >{btntext}</button>
+                            }
+
                             {
                                 freeform &&
                                 <ApplyNow

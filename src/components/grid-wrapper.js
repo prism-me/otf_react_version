@@ -26,18 +26,14 @@ const CardGridWrapper = ({
                             <div className="blog-info">
                                 <div className="m-b-20">
                                     <div className="center-text">
-                                        {blogDate && <>
-                                            <AccessTime className="bloglocIcons" />
-                                            {/* <i class="fa fa-clock m-r-10"></i> */}
-                                            <h6 className="m-r-25 font-blog">{blogDate}</h6> </>}
+                                        {/* {blogDate && <>
+                                            <h6 className="m-r-25 font-blog">{blogDate}</h6> </>} */}
                                         {place && <>
-                                            <LocationOnIcon className="bloglocIcons" />
-                                            {/* <i aria-hidden="true" className="fa fa-map-marker m-r-10"></i> */}
-                                            <h6 className="font-blog">{place}</h6> </>}
+                                            <h6 className="font-blog mb-1">{place}</h6> </>}
                                     </div>
                                 </div>
                                 <h5 className="blog-head font-600">{title}</h5>
-                                {description.length > MAX_LENGTH ?
+                                {description && description.length > MAX_LENGTH ?
                                     (
                                         <p className="para2">
                                             {`${description.substring(0, MAX_LENGTH)} .....`}

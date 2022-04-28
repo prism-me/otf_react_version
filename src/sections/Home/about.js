@@ -11,7 +11,7 @@ const About = ({ language }) => (
         <Container>
             <h3 className="oftHeading">What happens in class doesn’t stay in class?</h3>
             <Row>
-                <Col md="6">
+                <Col md="5">
                     <div className="text-center center-content">
                         <img alt="" className="img-fluid format-img mb-3" src={aboutImg} />
                     </div>
