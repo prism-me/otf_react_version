@@ -17,6 +17,14 @@ import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
 import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
 
+import vt1 from "../assets/images/OTF/testimonial/vt1.jpg";
+import vt2 from "../assets/images/OTF/testimonial/vt2.jpg";
+import vt3 from "../assets/images/OTF/testimonial/vt3.jpg";
+import vt4 from "../assets/images/OTF/testimonial/vt4.jpg";
+import vt5 from "../assets/images/OTF/testimonial/vt5.jpg";
+
+
+
 import offerbg from "../assets/images/OTF/home/get-off.jpg";
 import VideotesTimonial from "../sections/Testimonial/videotestimonial";
 
@@ -25,23 +33,23 @@ const Testimonials = (props) => {
 
     const videotestimonial = [
         {
-            img: testimonial1,
+            img: vt5,
             video_link: "https://youtu.be/p2Qt1ZPqAks",
         },
         {
-            img: testimonial2,
+            img: vt4,
             video_link: "https://youtu.be/50BqPjjYmNY",
         },
         {
-            img: testimonial3,
+            img: vt3,
             video_link: "https://youtu.be/7hMweKkfH00",
         },
         {
-            img: testimonial4,
+            img: vt2,
             video_link: "https://youtu.be/U2FSsk-BSbc",
         },
         {
-            img: testimonial5,
+            img: vt1,
             video_link: "https://youtu.be/V116D_ABgts",
         }
     ];
