@@ -1,10 +1,18 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import $ from 'jquery';
 
 import locationbg from "../../assets/images/OTF/home/locationbg.jpg";
 
 import PhoneIcon from '@material-ui/icons/Phone';
 
+
+$(document).ready(function () {
+    $('.locationDiv').click(function () {
+        $('.locationDiv.active').removeClass("active");
+        $(this).addClass("active");
+    });
+});
 
 const Calculate = () => {
     const [mshow, setMShow] = React.useState(false);
@@ -27,7 +35,7 @@ const Calculate = () => {
                         <div className={"p-5 mx-5 mb-4 calLocationspacing"}>
                             <h3 className="text-left oftHeading">Our Locations</h3>
                             <Container>
-                                <Row className={"locationDiv mb-3"}
+                                <Row className={"locationDiv mb-3 active"}
                                     onClick={showMSection}
                                 >
                                     <Col sm={8}>
