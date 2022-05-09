@@ -60,7 +60,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%", height: "100%" }}>
+                                    style={{
+                                        width: "100%", height: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={Rowing} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -116,7 +120,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%" }}>
+                                    style={{
+                                        width: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={Cardio} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -164,7 +172,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%", height: "100%" }}>
+                                    style={{
+                                        width: "100%", height: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={strenth} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>

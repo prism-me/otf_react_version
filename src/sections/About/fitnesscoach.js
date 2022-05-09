@@ -72,7 +72,7 @@ const speaker = [
     },
 ];
 const FitnessCoach = () => (
-    <section className="event speaker set-relative pb-2" id="speaker">
+    <section className="event speaker set-relative pb-2" id="fitnesscoach">
         <Container>
             <Row>
                 <Col xs="12">

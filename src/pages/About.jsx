@@ -5,9 +5,9 @@ import { Helmet } from "react-helmet";
 import AbouSection from "../sections/About/about";
 import SpeakerSection from "../sections/About/speaker";
 import FitnessCoach from "../sections/About/fitnesscoach";
-import TestimonialSection from "../sections/About/testimonial";
+// import TestimonialSection from "../sections/About/testimonial";
 import CounterSection from "../sections/About/counter";
-import Faq from "../sections/About/faq";
+// import Faq from "../sections/About/faq";
 import Layout from '../components/common-layout';
 // import CalculateSection from "../sections/Home/calculate";
 
@@ -75,13 +75,11 @@ const About = (props) => {
 
                 <SpeakerSection />
 
-                <TestimonialSection />
+                {/* <TestimonialSection /> */}
 
-                <CounterSection />
-
-                <Faq
+                {/* <Faq
                     language={global?.activeLanguage}
-                />
+                /> */}
 
                 {/* <CalculateSection /> */}
             </Layout>

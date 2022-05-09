@@ -1,0 +1,95 @@
+.TabPanel {
+
+  padding-bottom: 2.5rem;
+
+  &:last-child {
+    margin-right: 0rem;
+  }
+
+  .TabButton {
+    padding: 0.5rem 2.5rem;
+    border: 1px solid $orange;
+    text-transform: uppercase;
+    background: $white;
+    color: $orange;
+    border: 1px solid $orange;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 1rem;
+
+    &:hover,
+    &.active,
+    &:focus {
+      background: $orange;
+      color: $white;
+      border: 1px solid $orange;
+      outline: 0;
+    }
+
+    // background: $white;
+    // border: 1px solid $bg-color;
+    // border-radius: 100px;
+    // color: $primary-color;
+    // width: 210px;
+    // font-size: 16px;
+    // display: inline-block;
+    // margin: 1rem;
+    // font-weight: 500;
+
+    // &:focus,
+    // &.active,
+    // &:hover {
+    //   background: $bg-color;
+    //   color: $white;
+    // }
+
+    // @media #{$lg} {
+    //   width: 158px;
+    //   font-size: 13px;
+    // }
+  }
+
+  .buttons-flex {
+    display: block;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .TabStyle {
+    color: $white;
+  }
+
+  .MuiAppBar-colorPrimary {
+    background: $white;
+  }
+
+  .MuiPaper-elevation4 {
+    box-shadow: none;
+  }
+
+  .MuiTab-root {
+    border-radius: 100px;
+    border: 1px solid $primary-color;
+    width: 360px;
+  }
+
+  .PrivateTabIndicator-colorPrimary-12 {
+    //background-color: $white;
+    display: none;
+  }
+
+  .MuiTabScrollButton-root {
+    display: none;
+
+    @media #{$sm,$md} {
+      display: block;
+      color: $primary-color;
+    }
+  }
+
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: $white;
+    background: $bg-color;
+  }
+}

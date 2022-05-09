@@ -16,7 +16,7 @@ import benefits2 from "../assets/images/OTF/membership/LAT.png";
 import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
 
 import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
-import scheduleImg from "../assets/images/OTF/home/health-safty.png";
+// import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 import getOff from "../assets/images/OTF/home/get-off.jpg";
 
 
@@ -66,14 +66,14 @@ const Memberships = (props) => {
 
                 <PricingSection />
 
-                <ScheduleSection
+                {/* <ScheduleSection
                     titleM={"Corporate Memberships"}
                     detail={"Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time."}
                     // list={list}
                     btnText="join now"
                     bgImg={corporateBg}
                     coachImg={scheduleImg}
-                />
+                /> */}
 
                 <Benefits
                     benefitList={benefitList}

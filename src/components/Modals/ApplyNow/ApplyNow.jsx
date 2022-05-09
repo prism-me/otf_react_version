@@ -52,7 +52,7 @@ const ApplyNow = (props) => {
               <p className='mt-3 mb-2 offer-detailtext'>
                 Find Your Location
               </p>
-              <FormGroup>
+              {/* <FormGroup>
                 <Input
                   type="text"
                   name="zipcode"
@@ -61,6 +61,23 @@ const ApplyNow = (props) => {
                   className='inputStyle'
                   required
                 />
+              </FormGroup> */}
+              <FormGroup>
+                <Input type="select" name="select" id="exampleSelect"
+                  className='inputStyle'
+                  required
+                  style={{ color: "#495057", width: "100%" }}
+
+                >
+                  <option style={{ color: "#495057" }}>Select Location</option>
+                  {location &&
+                    location.length > 0 &&
+                    location.map((x) => (
+                      <option style={{ color: "#495057" }} key={x}>{x}</option>
+                    ))
+                  }
+
+                </Input>
               </FormGroup>
               <Row form>
                 <Col sm={6}>

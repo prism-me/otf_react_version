@@ -25,7 +25,10 @@
 @import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
-@import "./sections/Testimonial//AgsSlider.scss";
+@import "./sections/Testimonial/AgsSlider.scss";
+
+@import "./sections/Testimonial/Tabs/TabPanel.scss";
+
 
 //Contact Us
 @import "./sections/ContactUs/contact";

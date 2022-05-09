@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet";
 
 import TrainerSection from "../sections/Home/trainer";
 import Layout from '../components/common-layout';
-import CounterSection from "../sections/Home/counter";
+// import CounterSection from "../sections/Home/counter";
+
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
@@ -114,13 +115,13 @@ const Testimonials = (props) => {
                     testimonial={videotestimonial}
                     title="Videos"
                 />
-                <CounterSection
+                {/* <CounterSection
                     title="Get 10% off during this festive season!"
                     subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
                     btntext="BOOK A FREE CLASS NOW"
                     bgImg={offerbg}
 
-                />
+                /> */}
             </Layout>
         </div>
     );

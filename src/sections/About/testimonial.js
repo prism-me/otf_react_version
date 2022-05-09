@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
 
@@ -10,46 +7,12 @@ import videoImg from "../../assets/images/OTF/about/videoImg.png";
 import playicon from "../../assets/images/OTF/icons/playicon.png";
 
 
-var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    swipeToSlide: true,
-    arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-};
-
 const Testimonial = () => {
     const [modal, setModal] = useState();
     const toggle = () => {
         setModal(!modal)
     }
 
-
-    const videoData = [
-        {
-            title: "More than a gym",
-            detail1: "Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.",
-            detail2: "MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live."
-        },
-        {
-            title: "More than a gym",
-            detail1: "Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.",
-            detail2: "MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live."
-        },
-        {
-            title: "More than a gym",
-            detail1: "Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.",
-            detail2: "MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live."
-        },
-        {
-            title: "More than a gym",
-            detail1: "Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.",
-            detail2: "MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live."
-        }
-    ]
     return (
         <section className="saas1 testimonial rightAnimation videos testimonial-bg">
 
@@ -98,26 +61,16 @@ const Testimonial = () => {
                         </div>
                     </Col>
                     <Col md="6">
-                        <div className="testimonial-slider">
-                            <Slider {...settings}>
-                                {videoData.length > 0 &&
-                                    videoData.map((x, i) => (
-                                        <div className="item" key={i}>
-                                            <div className="testimonial">
-                                                <h3 className="testimonialheading">
-                                                    {x.title}
-                                                </h3>
-                                                <p className="testimonialsubheading mb-2">
-                                                    {x.detail1}
-                                                </p>
-                                                <p className="testimonialsubheading">
-                                                    {x.detail2}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))
-                                }
-                            </Slider>
+                        <div className="testimonial">
+                            <h3 className="testimonialheading">
+                                More than a gym
+                            </h3>
+                            <p className="testimonialsubheading mb-2">
+                                Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.
+                            </p>
+                            <p className="testimonialsubheading">
+                                MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live.
+                            </p>
                         </div>
                     </Col>
                 </Row>

@@ -6,6 +6,8 @@ import ModalVideo from 'react-modal-video'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Tabs from "./Tabs";
+
 
 var settings = {
     dots: true,
@@ -45,6 +47,7 @@ const VideotesTimonial = ({ testimonial, title }) => {
             >
                 {title}
             </h3>
+            <Tabs />
             <Container>
                 <Row className='align-items-center justify-content-center'>
                     {/* <Slider className="owl-carousel owl-theme trainers-slider" id="trainers-slider" {...settings}> */}

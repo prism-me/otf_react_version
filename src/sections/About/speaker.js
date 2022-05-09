@@ -86,7 +86,7 @@ const speaker = [
     }
 ];
 const Speaker = () => (
-    <section className="event speaker set-relative pb-2" id="speaker">
+    <section className="event speaker set-relative" id="speaker">
         <Container>
             <Row>
                 <Col xs="12">

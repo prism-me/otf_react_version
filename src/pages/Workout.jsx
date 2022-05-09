@@ -4,8 +4,10 @@ import { Helmet } from "react-helmet";
 
 import WorkGrid from "../sections/Workout/workgrid";
 import ScheduleSection from "../sections/Home/schedule";
-import CounterSection from "../sections/Home/counter";
+// import CounterSection from "../sections/Home/counter";
+import CounterSection from "../sections/About/counter";
 import TrainerSection from "../sections/Home/trainer";
+import Coaching from "../sections/Offers/coaching"
 import Layout from '../components/common-layout';
 
 //images
@@ -89,23 +91,31 @@ const Workout = (props) => {
                     subtitle={"Our Coaches Are More than Just Coaches."}
                     detail={"As you take in the energy of our group workout, you’ll also get the attention and inspiration that comes from our experienced personal training coaches. They’re full of the life they promise and always pushing you forward with tough love."}
                     // detail2={"Fermentum in commodo, massa faucibus velit ut natoque. Ultrices sit varius ut justo nisl, interdum. Tortor, odio egestas erat volutpat. Urna volutpat aliquam leo mauris magna at feugiat accumsan."}
-                    // btnText="book a class now"
+                    btnfitnessText="Know Our Fitness Experts"
                     bgImg={coachprofBg}
                     coachImg={coachImg}
                     freeform="freeclass"
+                    language={global.activeLanguage}
                 />
+
+                <CounterSection />
+
+                <section className="pb-0">
+                    <Coaching />
+                </section>
 
                 <TrainerSection
                     testimonial={testimonial}
                     title="What Our Members Are Saying About"
                 />
 
-                <CounterSection
+
+                {/* <CounterSection
                     title="Get 10% off during this festive season!"
                     // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
                     btntext="BECOME A MEMBER TODAY"
                     bgImg={getOff}
-                />
+                /> */}
 
             </Layout>
         </div>

@@ -69,14 +69,22 @@ const PricingResume2 = [
         feature1: "10 Classes",
         feature2: '20 Classes',
         feature3: '30 Classes'
-    }
+    },
+    {
+        icon: Basic,
+        iconW: BasicW,
+        title: "Corporate Memberships",
+        feature1: "Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time.",
+        feature2: '',
+        feature3: ''
+    },
 ];
 
 const Pricing = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <section className="gym pricing set-relative"
+        <section className="gym pricing set-relative pb-0"
             id="membership_packages">
             <Container>
                 <Row>
@@ -93,13 +101,13 @@ const Pricing = () => {
                         </p>
                     </Col>
                     <Col lg="12" md="8" className="offset-md-2 offset-lg-0">
-                        <Row>
+                        <Row className="justify-content-center">
                             {/* <Slider className="pricing-slider price-margin" {...settings}> */}
                             {PricingResume2 &&
                                 PricingResume2.length > 0
                                 && PricingResume2.map((item, i) => {
                                     return (
-                                        <Col sm={12} lg="3" md="6" key={i} className="p-2">
+                                        <Col sm={12} lg="4" md="6" key={i} className="p-2">
                                             <div className="price-container hover-overlay shadows bg-white text-center">
                                                 <div className="price-feature-container set-relative">
                                                     <div className="feature-text">
@@ -110,7 +118,7 @@ const Pricing = () => {
                                                         <h4 className="feature-text-heading text-center bold text-uppercase font-primary">{item.title}</h4>
                                                         <hr className="set-border" />
                                                     </div>
-                                                    <div className="price-features font-primary">
+                                                    <div className="price-features font-primary px-4">
                                                         <h5 className="price-feature text-center mb-1">{item.feature1}</h5>
                                                         <h5 className={`price-feature text-center ${item.feature3 && "mb-1"} `}>{item.feature2}</h5>
                                                         {

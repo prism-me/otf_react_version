@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
 import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
+import { HashLink } from "react-router-hash-link";
 
 
-const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2, coachImg, freeform }) => {
+const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgImg, subtitle, detail2, coachImg, freeform, btnfitnessText }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -91,6 +92,17 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                             />
                                         }
 
+                                    </>
+                                }
+
+                                {
+                                    btnfitnessText &&
+                                    <>
+                                        <HashLink to={`/${language}/about` + "#fitnesscoach"}
+                                            className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-2"}`}
+                                        >
+                                            {btnfitnessText}
+                                        </HashLink>
                                     </>
                                 }
 
