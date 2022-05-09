@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
@@ -8,8 +8,26 @@ import Layout from '../components/common-layout';
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
+import { API } from "../http/API"
 
 const Careers = (props) => {
+
+  // careers API 
+  const [careersData, setCareersData] = useState([]);
+
+  const getAllCareers = () => {
+    API.get('/careers').then(response => {
+      const allcareers = response.data?.data;
+      setCareersData(allcareers);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
+  useEffect(() => {
+    getAllCareers();
+  }, []);
 
   const { global } = props;
   return (
@@ -32,7 +50,11 @@ const Careers = (props) => {
 
         <Jointeam />
 
-        <CareersGrid />
+        <CareersGrid
+          careersData={careersData}
+          language={global?.activeLanguage}
+          isArabic={global?.activeLanguage === "ar"}
+        />
 
       </Layout>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import Masonry from 'react-masonry-css'
 
@@ -12,34 +12,7 @@ const breakpointColumnsObj = {
     500: 1
 };
 
-const Careergrid = () => {
-
-    const careersData = [
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            title: "Lorem Ipsum",
-            description: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-    ]
+const Careergrid = ({ careersData, isArabic }) => {
 
     return (
         <section className='gym rightAnimation career-grid'>
@@ -73,10 +46,20 @@ const Careergrid = () => {
 
                                 <div className='careerdiv'>
                                     <h2 className='careerheading'>
-                                        {x?.title}
+                                        {
+                                            isArabic
+                                                ? x?.arabic?.designation
+                                                : x?.designation
+                                        }
                                     </h2>
-                                    <p className='careerdetail'>
-                                        {x?.description}
+                                    <p className='careerdetail'
+                                        dangerouslySetInnerHTML={{
+                                            __html:
+                                                isArabic
+                                                    ? x?.arabic?.description
+                                                    : x?.description
+                                        }}
+                                    >
                                     </p>
                                     <center>
                                         <a href="mailto:info@otf.com" className='careerbtn'>
