@@ -77,7 +77,7 @@ const Pricing = () => {
 
     return (
         <section className="gym pricing set-relative"
-            id="plan">
+            id="membership_packages">
             <Container>
                 <Row>
                     <Col md="10" className="offset-md-1">
@@ -85,15 +85,21 @@ const Pricing = () => {
                             style={{
                                 color: "#2E2E2E"
                             }}
-                        >Let’s talk memberships</h2>
+                        >Become a Member</h2>
+                        <p className="oftsubHeading text-center mb-5">
+                            It only takes a minute in our studio to understand it’s not a competition – it’s a
+                            community. Check out our membership options and contact your local studio
+                            to find the right fit for you.
+                        </p>
                     </Col>
                     <Col lg="12" md="8" className="offset-md-2 offset-lg-0">
-                        <Slider className="pricing-slider price-margin" {...settings}>
+                        <Row>
+                            {/* <Slider className="pricing-slider price-margin" {...settings}> */}
                             {PricingResume2 &&
                                 PricingResume2.length > 0
                                 && PricingResume2.map((item, i) => {
                                     return (
-                                        <div className="item" key={i}>
+                                        <Col sm={12} lg="3" md="6" key={i} className="p-2">
                                             <div className="price-container hover-overlay shadows bg-white text-center">
                                                 <div className="price-feature-container set-relative">
                                                     <div className="feature-text">
@@ -122,16 +128,27 @@ const Pricing = () => {
                                                         </span></button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Col>
                                     )
                                 })}
-                        </Slider>
+                        </Row>
+                        {/* </Slider> */}
                         <Documents
                             show={showModal} onHide={() => setShowModal(false)}
                             title="Become a Member Today"
                         />
                     </Col>
                 </Row>
+                <center>
+                    {/* <p className='oftsubHeading mt-2 text-center'>
+                    Contact front desk for more details.
+                </p> */}
+                    <button className='otfBtn1 mt-4'
+                        style={{ border: "1px solid #F58220" }}
+                    >
+                        Contact front desk for more details.
+                    </button>
+                </center>
             </Container>
         </section>
     )

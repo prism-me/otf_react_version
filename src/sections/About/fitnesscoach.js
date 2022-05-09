@@ -43,7 +43,7 @@ const speaker = [
     {
         img: team1,
         title: "Donna Forbes",
-        subtitle: "Fitness Coach"
+        subtitle: "Head Coach"
     },
     {
         img: team2,
@@ -79,7 +79,7 @@ const FitnessCoach = () => (
                     <div className="title title2 title-inner">
                         <div className="main-title">
                             <h2 className="font-primary borders text-center m-b-0">
-                                <span>Our Fitness Experts</span>
+                                <span>Our Certified Fitness Coaches</span>
                             </h2>
                         </div>
                     </div>

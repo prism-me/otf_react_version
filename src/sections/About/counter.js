@@ -29,12 +29,12 @@ const otfData = [
     {
         img: otbImg1,
         title: "Get Results, Straight from Your Heart.",
-        detail1: "We’ll prove you’re improving. Our OTbeat technology measures your heart rate and performance data in real time so you know your workout is working.",
+        detail1: "Our workout is based on OTBeat Heart Rate technology that measures your heart rate and performance data in real time.",
     },
     {
         img: otbImg2,
         title: "See Results in Real Time.",
-        detail1: "In-studio monitors connect directly with your OTbeat wearable to show your progress and keep you accountable to your level of effort.",
+        detail1: "In-studio monitors connect directly with your  OTBurn wearable to show your progress and keep you accountable to your level of effort.",
     },
     {
         img: otbImg3,

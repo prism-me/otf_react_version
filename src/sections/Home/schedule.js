@@ -71,7 +71,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                 {
                                     btnText &&
                                     <>
-                                        <button className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-5"}`}
+                                        <button className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-2"}`}
                                             onClick={() => setShowModal(true)}
                                         >
                                             {btnText}

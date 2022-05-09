@@ -891,7 +891,7 @@ ul {
 }
 
 .font-secondary {
-  color: $black !important;
+  color: $black  !important;
 }
 
 .set-abs {
@@ -1184,7 +1184,7 @@ section {
   border: 2px solid;
   text-transform: capitalize;
   border-radius: 50px;
-  color: $white !important;
+  color: $white  !important;
   transition: 0.5s;
   letter-spacing: 0;
 
@@ -1194,7 +1194,7 @@ section {
     transition: 0.5s;
     background-color: $white;
     border: 2px solid $black;
-    color: $black !important;
+    color: $black  !important;
   }
 
   &:focus {
@@ -1213,7 +1213,7 @@ section {
     &:focus,
     &:active {
       background-color: $white;
-      color: $black !important;
+      color: $black  !important;
       border: 1px solid $black;
     }
   }
@@ -1222,14 +1222,14 @@ section {
     transition: 0.5s;
     background-color: $white;
     border: 2px solid $black;
-    color: $black !important;
+    color: $black  !important;
 
     &:hover,
     &:focus,
     &:active {
       transition: 0.5s;
       background-color: $black;
-      color: $white !important;
+      color: $white  !important;
       border: 2px solid $white;
     }
 
@@ -1264,7 +1264,7 @@ section {
     &:focus,
     &:active {
       transition: all 0.4s ease-in-out;
-      color: $white !important;
+      color: $white  !important;
       background-position: 100% 0;
     }
   }
@@ -1668,7 +1668,7 @@ section {
         hr {
           margin-bottom: 2rem;
           margin-top: 1.6rem;
-          border-top: 1px solid #f4f4f4;
+          border-top: 1px solid #dddddd;
         }
 
         .feature-text-heading {
@@ -1719,7 +1719,7 @@ section {
         // background-size: cover;
         // background-position: center;
         // background-repeat: no-repeat;
-        background: $orange !important;
+        background: $orange  !important;
         transform: scale(1.1);
         transition: 0.5s;
 
@@ -1729,7 +1729,7 @@ section {
 
         .price-feature-container {
           .otfBtn2 {
-            background: $white !important;
+            background: $white  !important;
           }
 
           .feature-text {
@@ -1743,7 +1743,7 @@ section {
             }
 
             .feature-text-heading {
-              color: $white !important;
+              color: $white  !important;
             }
 
             .set-border {
@@ -1908,7 +1908,7 @@ section {
   &.app2 {
     .price-container {
       .price-feature-container {
-        padding: 50px 0 50px 0;
+        padding: 30px 0 30px 0;
       }
 
       &.shadows {
@@ -1933,7 +1933,7 @@ section {
   &.resume {
     .price-container {
       .price-feature-container {
-        padding: 50px 0 50px 0;
+        padding: 30px 0 30px 0;
 
         .price-value {
           .price {
@@ -1988,6 +1988,11 @@ section {
     .price-container {
       border-radius: 30px !important;
       border: 1px solid $orange;
+      height: 95%;
+
+      @media #{$sm} {
+        height: 100%;
+      }
 
       &.shadows {
         border-radius: 4px;
@@ -2878,7 +2883,7 @@ body {
 *************************/
 .copyright {
   padding: 18px 0;
-  background: $orange !important;
+  background: $orange  !important;
   font-weight: 300;
   color: $black;
 
@@ -4251,31 +4256,31 @@ footer {
     h6,
     p,
     a {
-      color: $white !important;
+      color: $white  !important;
       opacity: 0.8;
     }
 
     li {
-      color: $white !important;
+      color: $white  !important;
     }
 
     i {
       &.white {
-        color: $white !important;
+        color: $white  !important;
       }
     }
 
     .form-group {
       i {
         &.fa-envelope {
-          color: $black !important;
+          color: $black  !important;
         }
       }
     }
 
     &.resume {
       i {
-        color: $white !important;
+        color: $white  !important;
       }
     }
   }
@@ -4292,7 +4297,7 @@ footer {
     p,
     a,
     li {
-      color: $black !important;
+      color: $black  !important;
     }
 
     &.event {
@@ -4632,7 +4637,7 @@ booking section end
 
       .team-container {
         // padding: 25px 30px;
-        height: 600px;
+        height: 700px;
         border: 1px solid $orange;
         box-shadow: 0 0 10px 5px rgba(253, 248, 247, 0.69);
         border-radius: 10px;
@@ -4642,6 +4647,11 @@ booking section end
         @media #{$sm, $md} {
           padding: 0 !important;
           height: auto;
+        }
+
+        @media #{$lg} {
+          padding: 0 !important;
+          height: 720px;
         }
 
         .members {
@@ -5654,7 +5664,7 @@ booking section end
         margin-top: 5px;
 
         &:hover {
-          background-color: $white !important;
+          background-color: $white  !important;
           color: $music-dark-bg;
         }
       }
@@ -6436,7 +6446,7 @@ wedding-theme css end
               >div {
                 .item {
                   img {
-                    box-shadow: 0 0 10px 0 $white10 !important;
+                    box-shadow: 0 0 10px 0 $white10  !important;
                   }
                 }
               }
@@ -7671,7 +7681,7 @@ agency css end
         font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
         text-transform: none;
-        color: $paracolor !important;
+        color: $paracolor  !important;
       }
 
       .borders-before,
@@ -8647,7 +8657,7 @@ tap to top css end
 
     .btn-default {
       background-color: $primary;
-      color: $white !important;
+      color: $white  !important;
       padding: 10px 15px;
       text-transform: uppercase;
       border: 1px solid $primary;
@@ -9009,7 +9019,7 @@ tap to top css end
     .title {
       .main-title {
         h2 {
-          color: $white !important;
+          color: $white  !important;
         }
       }
 
@@ -9020,7 +9030,7 @@ tap to top css end
 
               &:after,
               &:before {
-                border-color: $white !important;
+                border-color: $white  !important;
               }
             }
           }
@@ -9084,11 +9094,11 @@ tap to top css end
 
     .btn-default.btn-white {
       border: 2px solid $black;
-      color: $black !important;
+      color: $black  !important;
 
       &:hover {
         background-color: $black;
-        color: $white !important;
+        color: $white  !important;
       }
     }
 
@@ -9206,7 +9216,7 @@ tap to top css end
 
           &:hover {
             border: 1px solid $black;
-            color: $black !important;
+            color: $black  !important;
             background-color: $white;
           }
         }
@@ -9739,7 +9749,7 @@ header {
   &.ecommerce {
     .responsive-btn {
       i {
-        color: $black !important;
+        color: $black  !important;
         cursor: pointer;
         line-height: 2;
       }
@@ -10039,7 +10049,7 @@ saas1 css end
 
         .owl-dot {
           span {
-            background: $white !important;
+            background: $white  !important;
           }
 
           &.active {
@@ -11324,7 +11334,7 @@ gym css start
                 opacity: 1;
                 transform: scale(1.1);
                 transition: 0.5s;
-                background: $orange !important;
+                background: $orange  !important;
 
                 .font-primary {
                   color: $white;
@@ -11332,7 +11342,7 @@ gym css start
 
                 .price-feature-container {
                   .otfBtn2 {
-                    background: $white !important;
+                    background: $white  !important;
                   }
 
                   .feature-text {
@@ -11346,7 +11356,7 @@ gym css start
                     }
 
                     .feature-text-heading {
-                      color: $white !important;
+                      color: $white  !important;
                     }
 
                     .set-border {
@@ -11426,7 +11436,6 @@ gym css start
         border-radius: 100%;
         color: $black;
         background: $white;
-
       }
     }
 
@@ -11501,7 +11510,7 @@ gym css start
               >div {
                 .item {
                   img {
-                    box-shadow: 0 0 10px 0 $white10 !important;
+                    box-shadow: 0 0 10px 0 $white10  !important;
                   }
                 }
               }
@@ -11601,7 +11610,7 @@ gym css start
 
     &:hover {
       background: $orange;
-      color: $white !important;
+      color: $white  !important;
       border: 1px solid $orange;
     }
   }
@@ -12585,7 +12594,7 @@ breadcrumb-section css start
       }
 
       &:before {
-        color: $white !important;
+        color: $white  !important;
       }
     }
 
@@ -16542,7 +16551,7 @@ error css end
 
     span {
       button {
-        background: $white !important;
+        background: $white  !important;
         border: 1px solid $white5;
       }
     }
@@ -17741,7 +17750,7 @@ error css end
 }
 
 .bg-light-inner {
-  background: $light-inner !important;
+  background: $light-inner  !important;
 }
 
 .bg-gradient-color {
@@ -17919,7 +17928,7 @@ error css end
   }
 
   &:nth-child(even) {
-    background: $light-inner !important;
+    background: $light-inner  !important;
   }
 }
 
@@ -17938,17 +17947,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $black !important;
+          color: $black  !important;
           border-color: $black;
         }
 
         &.btn-white {
-          color: $black !important;
-          border-color: $black !important;
+          color: $black  !important;
+          border-color: $black  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $black;
           }
         }
@@ -17959,17 +17968,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $success !important;
+          color: $success  !important;
           border-color: $success;
         }
 
         &.btn-white {
-          color: $success !important;
-          border-color: $success !important;
+          color: $success  !important;
+          border-color: $success  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $success;
           }
         }
@@ -17980,17 +17989,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $blue6 !important;
+          color: $blue6  !important;
           border-color: $blue6;
         }
 
         &.btn-white {
-          color: $blue6 !important;
-          border-color: $blue6 !important;
+          color: $blue6  !important;
+          border-color: $blue6  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $blue6;
           }
         }
@@ -18001,17 +18010,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $yellow4 !important;
+          color: $yellow4  !important;
           border-color: $yellow4;
         }
 
         &.btn-white {
-          color: $yellow4 !important;
-          border-color: $yellow4 !important;
+          color: $yellow4  !important;
+          border-color: $yellow4  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $yellow4;
           }
         }
@@ -18022,17 +18031,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $red3 !important;
+          color: $red3  !important;
           border-color: $red3;
         }
 
         &.btn-white {
-          color: $red3 !important;
-          border-color: $red3 !important;
+          color: $red3  !important;
+          border-color: $red3  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $red3;
           }
         }
@@ -18043,17 +18052,17 @@ error css end
 
         &:hover {
           background: transparent;
-          color: $yellow5 !important;
+          color: $yellow5  !important;
           border-color: $yellow5;
         }
 
         &.btn-white {
-          color: $yellow5 !important;
-          border-color: $yellow5 !important;
+          color: $yellow5  !important;
+          border-color: $yellow5  !important;
           background: $white;
 
           &:hover {
-            color: $white !important;
+            color: $white  !important;
             background: $yellow5;
           }
         }
@@ -18066,7 +18075,7 @@ error css end
   span {
     &.white-border {
       &:before {
-        border-color: $white !important;
+        border-color: $white  !important;
       }
     }
   }
@@ -18160,7 +18169,7 @@ error css end
       transform: unset !important;
 
       &.active {
-        background-color: $white !important;
+        background-color: $white  !important;
       }
     }
   }
@@ -18676,7 +18685,7 @@ error css end
       left: 0;
       top: 0;
       font-size: 20px;
-      color: $white !important;
+      color: $white  !important;
       opacity: 0.8;
       background: transparent;
       border: none;
@@ -18999,7 +19008,7 @@ header {
   &.resume,
   &.dark {
     .responsive-btn i {
-      color: $black !important;
+      color: $black  !important;
     }
   }
 
@@ -19011,7 +19020,7 @@ header {
 
   &.wedding {
     .responsive-btn i {
-      color: $primary !important;
+      color: $primary  !important;
     }
   }
 
@@ -19184,7 +19193,7 @@ header {
 
     .menuIconstyle {
       font-size: calc(25px + (25 - 22) * ((100vw - 300px) / (1920 - 300)));
-      color: $white !important;
+      color: $white  !important;
     }
   }
 
@@ -19229,12 +19238,12 @@ header {
         }
 
         &:hover {
-          color: $orange !important;
+          color: $orange  !important;
         }
 
         @media (min-width: 991px) and (max-width: 1199px) {
           font-size: 12px !important;
-          padding: 12px !important;
+          padding: 7px !important;
         }
       }
     }
@@ -19268,7 +19277,7 @@ header {
           line-height: 1;
           text-decoration: none;
           display: inline-block;
-          padding: 15px;
+          padding: 10px;
           font-size: 14px;
           text-transform: capitalize;
           transition: all 0.4s ease-in-out;
@@ -20938,7 +20947,7 @@ footer {
 }
 
 #nprogress .bar {
-  background: $primary !important;
+  background: $primary  !important;
 }
 
 // masonary
@@ -21306,7 +21315,7 @@ footer {
 
       &:after,
       &:before {
-        border-color: $orange !important;
+        border-color: $orange  !important;
       }
     }
   }
@@ -26816,7 +26825,7 @@ footer {
       font-size: 13px;
       color: black;
       border-bottom: 1px solid $lighten-white2;
-      background: $lighten-white !important;
+      background: $lighten-white  !important;
       margin-bottom: 0;
     }
 
@@ -27292,7 +27301,7 @@ footer {
         .responsive-btn {
           a {
             i {
-              color: $white !important;
+              color: $white  !important;
             }
           }
         }
@@ -32240,7 +32249,7 @@ footer {
         }
 
         .product-page-per-view {
-          border-right: 1px solid $round-border !important;
+          border-right: 1px solid $round-border  !important;
           border-bottom: 1px solid $round-border;
         }
       }

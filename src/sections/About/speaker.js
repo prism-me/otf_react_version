@@ -47,7 +47,7 @@ const speaker = [
     {
         img: team1,
         title: "Sheila Marie Ollamina",
-        subtitle: "Sales Associate"
+        subtitle: "Asst. Studio Manager"
     },
     {
         img: team2,
@@ -77,12 +77,12 @@ const speaker = [
     {
         img: team7,
         title: "Anna Adajar",
-        subtitle: "Sales Associate"
+        subtitle: "Asst. Studio Manager"
     },
     {
         img: team8,
         title: "Anastacia Leochico",
-        subtitle: "Sales Associate"
+        subtitle: "Studio Manager"
     }
 ];
 const Speaker = () => (

@@ -13,7 +13,7 @@ const ApplyNow = (props) => {
 
   const location = [
     "Mercato Mall",
-    "Times Square Centre"
+    "Times Square Center"
   ];
 
   const membershiplist = [
@@ -47,7 +47,7 @@ const ApplyNow = (props) => {
                 Experience our workout for free. Please fill out the form and a member of the team will be in touch.
               </p>
               <p className='mt-3 offer-detailtext'>
-                All fields are mandatory unless indicated as optional.
+                * All fields are mandatory
               </p>
               <p className='mt-3 mb-2 offer-detailtext'>
                 Find Your Location
@@ -117,24 +117,14 @@ const ApplyNow = (props) => {
                   <Input type="checkbox"
                     className='inputStyle'
                   />{' '}
-                  Yes! I’d like to get updates and offers from Orangetheory Fitness & my local studio by text.
-                  <p className='mt-2 offer-detailtext'>
-                    <a href="#"><u>Display and Edit Communications Preferences</u></a>
-                  </p>
+                  Yes I’d like to get updates and
+                  offers from Orangetheory Fitness
+                  by text.
                 </Label>
               </FormGroup>
-
-              <button className="offerBtn px-5 mt-4">Submit</button>
-              <p className='mt-3'>
-                <small>
-                  *Certain restrictions apply. See full <a href="#">
-                    <u>
-                      <small>
-                        Promotion Terms.
-                      </small>
-                    </u></a>
-                </small>
-              </p>
+              <button className="offerBtn px-5 mt-4"
+                style={{ border: "1px solid #F58220" }}
+              >Submit</button>
             </Form>
           </Container>
         </ModalBody>

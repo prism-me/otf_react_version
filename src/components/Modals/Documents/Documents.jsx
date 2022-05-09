@@ -12,7 +12,7 @@ const Documents = (props) => {
 
     const location = [
         "Mercato Mall",
-        "Times Square Centre"
+        "Times Square Center"
     ];
 
     const membershiplist = [

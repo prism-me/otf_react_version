@@ -71,7 +71,7 @@ const Benefits = ({ benefitList }) => {
                         show={showModal} onHide={() => setShowModal(false)}
                         title="Become a Member Today"
                     />
-                    <p className='mt-2'><small>*Available once pandemic restrictions are lifted.</small></p>
+                    {/* <p className='mt-2'><small>*Available once pandemic restrictions are lifted.</small></p> */}
                 </center>
             </Container>
         </section>

@@ -98,9 +98,9 @@ const Testimonials = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Our Customer Stories"
+                title="What Our Members Are Saying About"
                 subtitle="Let's work towards a better version of ourselves - together."
-                btntext="Book your Free class!"
+                // btntext="Book your Free class!"
                 bannerImg={aboutBanner}
                 freeform="freeclass"
             >

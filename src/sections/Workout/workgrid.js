@@ -42,8 +42,12 @@ const WorkGrid = () => (
             </div>
 
             <Container>
-                <h3 className="oftHeading text-center mb-5">
-                    What Happens in class
+                <h3 className="oftHeading text-center mb-5"
+                    style={{
+                        color: "#2E2E2E"
+                    }}
+                >
+                    Your OTF Workout
                 </h3>
                 <Row>
                     <Col sm={6} className="mblscreenworkoutgridbottomspace">
