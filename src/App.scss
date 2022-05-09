@@ -11211,6 +11211,7 @@ gym css start
           font-family: 'proxima-nova', sans-serif;
           font-weight: 400 !important;
           color: $black;
+          font-size: $sub-fonts;
 
           &:hover {
             color: $orange;
@@ -12430,7 +12431,7 @@ breadcrumb-section css start
 
   .breadcrumb-subtext {
     color: $white;
-    font-size: 19px;
+    font-size: $bannersubtext-font;
     text-align: center;
     margin-bottom: 2rem;
     max-width: 50%;
@@ -12497,7 +12498,7 @@ breadcrumb-section css start
 
   .offer-detail {
     color: $white;
-    font-size: 19px;
+    font-size: $bannersubtext-font;
     margin-bottom: 2rem;
   }
 
