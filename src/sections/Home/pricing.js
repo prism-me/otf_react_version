@@ -107,7 +107,7 @@ const Pricing = () => {
                                 PricingResume2.length > 0
                                 && PricingResume2.map((item, i) => {
                                     return (
-                                        <Col sm={12} lg="4" md="6" key={i} className="p-2">
+                                        <Col sm={12} lg="4" md="6" key={i} className="pb-3">
                                             <div className="price-container hover-overlay shadows bg-white text-center">
                                                 <div className="price-feature-container set-relative">
                                                     <div className="feature-text">
