@@ -19,7 +19,8 @@ const Documents = (props) => {
         "Orange Premier",
         "Orange Elite",
         "Orange Basic",
-        "Class Packages"
+        "Class Packages",
+        "Corporate Memberships"
     ];
 
     return (

@@ -7,46 +7,37 @@
     display: block;
     margin-top: 56px;
     z-index: 100;
+
     .MuiBottomNavigation-root {
       justify-content: space-around;
       align-items: center;
       width: 100%;
       position: fixed;
       bottom: 0;
-      background: $bg-color;
+      background: $white;
       z-index: 1500;
-      box-shadow: 0px -4px 6px -2px $bg-color;
-      //a {
-      //  // display: flex;
-      //  // flex-direction: column;
-      //  text-align: center;
-      //  color: $heading-color;
-      //  font-weight: 600;
-      //  .tab-icon {
-      //    font-size: 24px;
-      //    font-weight: 600;
-      //  }
-      //  p {
-      //    margin-bottom: 0;
-      //  }
-      //}
-      .BNButton{
-        background: $bg-color;
+      box-shadow: 0px -4px 6px -2px lightgray;
+
+      .BNButton {
+        background: $orange;
         border: 1px solid white;
         color: $white;
         font-size: 12px;
-        padding: 0.2rem 1rem;
+        padding: 0.5rem 1rem;
         border-radius: 60px;
-        &:hover{
-          border: 1px solid $bg-color;
+
+        &:hover {
+          border: 1px solid $orange;
           background: $white;
-          color: $primary-color;
+          color: $orange;
         }
-        .iconSize{
+
+        .iconSize {
           font-size: 16px;
           margin-right: 0.2rem;
         }
-        .iconSizeArabic{
+
+        .iconSizeArabic {
           font-size: 16px;
           margin-left: 0.3rem;
         }

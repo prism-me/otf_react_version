@@ -21,7 +21,7 @@ var settings = {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 5,
     autoplay: true,
     centerMode: true,
     centerPadding: '0',
@@ -81,7 +81,7 @@ const speaker = [
     },
     {
         img: team8,
-        title: "Anastacia Leochico",
+        title: "Annie Leochico",
         subtitle: "Studio Manager"
     }
 ];

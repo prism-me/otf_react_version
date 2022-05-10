@@ -11,32 +11,32 @@ import team3 from "../../assets/images/OTF/team/sarah.png";
 import dummy from "../../assets/images/OTF/team/imageplace.jpg";
 
 
-// var settings = {
-//     dots: true,
-//     arrows: false,
-//     infinite: true,
-//     speed: 500,
-//     arrows: false,
-//     slidesToShow: 4,
-//     autoplay: true,
-//     centerMode: true,
-//     centerPadding: '0',
-//     slidesToScroll: 1,
-//     responsive: [
-//         {
-//             breakpoint: 490,
-//             settings: { slidesToShow: 1 }
-//         },
-//         {
-//             breakpoint: 767,
-//             settings: { slidesToShow: 2 }
-//         },
-//         {
-//             breakpoint: 991,
-//             settings: { slidesToShow: 3 }
-//         }
-//     ]
-// };
+var settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 6,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: '0',
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 490,
+            settings: { slidesToShow: 1 }
+        },
+        {
+            breakpoint: 767,
+            settings: { slidesToShow: 2 }
+        },
+        {
+            breakpoint: 991,
+            settings: { slidesToShow: 3 }
+        }
+    ]
+};
 
 
 const speaker = [
@@ -85,26 +85,26 @@ const FitnessCoach = () => (
                     </div>
                 </Col>
                 <Col xs="12" className="speker-container">
-                    {/* <Slider className="speaker-slider " {...settings}> */}
-                    <Row>
+                    <Slider className="speaker-slider " {...settings}>
                         {speaker.length > 0 &&
                             speaker.map((x, i) => (
-                                <Col sm={2} key={i}>
-                                    <div className="text-center mb-2">
-                                        <div className="team-img">
-                                            <img alt="" className="img-fluid" src={x.img} />
+                                <div className="item" key={i}>
+                                    <div className="text-center mb-3">
+                                        <div className="team-img team-img-wrapper">
+                                            <img alt="" className="img-fluid imagestyle" src={x.img} />
+                                            <div className="middle">
+                                                <div className="text">Lorem Ipsum</div>
+                                            </div>
                                         </div>
                                         <div className="employee">
                                             <h5 className="e-name text-center">{x.title}</h5>
                                             <h6 className="post text-center ">{x.subtitle}</h6>
                                         </div>
                                     </div>
-                                </Col>
+                                </div>
                             ))
                         }
-                    </Row>
-
-                    {/* </Slider> */}
+                    </Slider>
                 </Col>
             </Row>
         </Container>

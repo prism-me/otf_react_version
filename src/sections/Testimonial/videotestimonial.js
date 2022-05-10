@@ -6,7 +6,6 @@ import ModalVideo from 'react-modal-video'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Tabs from "./Tabs";
 
 
 var settings = {
@@ -38,8 +37,10 @@ const VideotesTimonial = ({ testimonial, title }) => {
     const [openVideo, setOpenVideo] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const [loadItems, setLoadItems] = useState(4);
+
     return (
-        <section className="event gym team-sec speaker set-relative pt-0  AgsSlider" id="speaker">
+        <section className="event gym team-sec speaker set-relative AgsSlider" id="speaker">
             <h3 className="oftHeading"
                 style={{
                     color: "#2E2E2E"
@@ -47,11 +48,10 @@ const VideotesTimonial = ({ testimonial, title }) => {
             >
                 {title}
             </h3>
-            <Tabs />
             <Container>
                 <Row className='align-items-center justify-content-center'>
                     {/* <Slider className="owl-carousel owl-theme trainers-slider" id="trainers-slider" {...settings}> */}
-                    {testimonial.slice(0, 5).map((data, i) => {
+                    {testimonial.slice(0, loadItems).map((data, i) => {
                         return (
                             <Col sm={4} className="speker-container" key={i}>
                                 {/* <div className="item pt-0" key={i} > */}
@@ -130,6 +130,17 @@ const VideotesTimonial = ({ testimonial, title }) => {
                 videoId={testimonial[currentIndex]?.video_link?.split("/")[3]}
                 onClose={() => setOpenVideo(false)}
             />
+
+            {
+                testimonial.length >= 4 && loadItems != testimonial.length &&
+                <center>
+                    <button className='otfBtn1 mt-5'
+                        style={{ border: "1px solid #F58220" }}
+                        onClick={() => setLoadItems(testimonial.length)}>
+                        View More
+                    </button>
+                </center>
+            }
         </section>
     )
 }

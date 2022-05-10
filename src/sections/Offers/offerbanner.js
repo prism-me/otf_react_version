@@ -12,7 +12,7 @@ import bannerImg from "../../assets/images/OTF/banner/offerbanner.jpg"
 
 const location = [
     "Mercato Mall",
-    "Times Square Centre"
+    "Times Square Center"
 ]
 const Offerbanner = () => {
 
@@ -42,14 +42,14 @@ const Offerbanner = () => {
                             <button className='offerBtn px-5'
                                 onClick={() => setShowModal(true)}
                             >
-                                Book A Trail Class</button>
+                                Book An Intro Class</button>
                             <StartBurning
                                 show={showModal} onHide={() => setShowModal(false)}
                             />
                         </center>
                         <Form className='offer-form'>
                             <h3 className="offer-subtext">
-                                Book A Trail Class</h3>
+                                Book An Intro Class</h3>
                             <FormGroup>
                                 <Input
                                     type="text"

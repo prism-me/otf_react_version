@@ -151,11 +151,12 @@ const Pricing = () => {
                     {/* <p className='oftsubHeading mt-2 text-center'>
                     Contact front desk for more details.
                 </p> */}
-                    <button className='otfBtn1 mt-4'
-                        style={{ border: "1px solid #F58220" }}
+                    <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1'
+                        style={{ border: "1px solid #F58220", color: "#F58220" }}
                     >
-                        Contact front desk for more details.
-                    </button>
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Reach out to us
+                    </a>
                 </center>
             </Container>
         </section>

@@ -12,7 +12,7 @@ const StartBurning = (props) => {
 
     const location = [
         "Mercato Mall",
-        "Times Square Centre"
+        "Times Square Center"
     ]
 
     return (
@@ -28,7 +28,7 @@ const StartBurning = (props) => {
                             </span>
                         </p>
                         <Form className='offer-form'>
-                            <h3 className="offer-subtext">Book A Trail Class</h3>
+                            <h3 className="offer-subtext">Book An Intro Class</h3>
                             <FormGroup>
                                 <Input
                                     type="text"

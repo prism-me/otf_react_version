@@ -12,7 +12,7 @@ import Layout from '../components/common-layout';
 
 //images
 
-import banerImg from "../assets/images/OTF/banner/workoutbanner.jpg"
+import banerImg from "../assets/images/OTF/banner/aboutbanner.jpg"
 
 import testimonial1 from "../assets/images/OTF/testimonial/testimonial1.png";
 import testimonial2 from "../assets/images/OTF/testimonial/testimonial2.png";
@@ -76,9 +76,12 @@ const Workout = (props) => {
             </Helmet>
 
             <Layout
-                title="Get Results You Can See and Feel"
-                // subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
-                btntext="Book your free class with us!"
+                title="Backed by science"
+                subtitle="OTF Workout is backed by science, 
+                spending 12 minutes in Orange Zone 
+                gives you more strength, energy and 
+                more life. Join us now!"
+                // btntext="Book your free class with us!"
                 bannerImg={banerImg}
                 freeform="freeclass"
             >

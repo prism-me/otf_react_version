@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
 import TrainerSection from "../sections/Home/trainer";
+import Testimonial from "../sections/Testimonial/trainer";
+
 import Layout from '../components/common-layout';
 // import CounterSection from "../sections/Home/counter";
 
@@ -17,6 +19,11 @@ import testimonial4 from "../assets/images/OTF/testimonial/testimonial4.png";
 import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
 import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
 import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
+
+import kathryn from "../assets/images/OTF/testimonial/kathryn.jpg";
+import eugene from "../assets/images/OTF/testimonial/eugene.jpg";
+import deb from "../assets/images/OTF/testimonial/deb.jpg";
+import carissa from "../assets/images/OTF/testimonial/carissa.jpg";
 
 import vt1 from "../assets/images/OTF/testimonial/vt1.jpg";
 import vt2 from "../assets/images/OTF/testimonial/vt2.jpg";
@@ -86,6 +93,33 @@ const Testimonials = (props) => {
         }
     ];
 
+    const membersay = [
+        {
+            img: kathryn,
+            cat: "The Studio",
+            title: "Kathryn W",
+            subtitle: "I was afraid I was not going to be able to keep up. But I couldn’t have been more wrong. Everyone at the studio was encouraging. I loved the coaches, and the workout was so fun.",
+        },
+        {
+            img: eugene,
+            cat: "The First Class",
+            title: "Eugene",
+            subtitle: "I was super nervous and scared, but once I completed the class, I was hooked immediately!"
+        },
+        {
+            img: deb,
+            cat: "The Community",
+            title: "Carissa C",
+            subtitle: "I was never an athlete. OTF has given me the ability to push myself individually, yet still feel like I am part of a team."
+        },
+        {
+            img: carissa,
+            cat: "The Workout ",
+            title: "Deb A",
+            subtitle: "The workouts are so fast-paced that I don’t have time to think about the stress of my day, and for 60 minutes my mind is clear."
+        }
+    ];
+
     const { global } = props;
     return (
         <div>
@@ -111,6 +145,10 @@ const Testimonials = (props) => {
                     title="Testimonials"
                 />
 
+                <Testimonial
+                    testimonial={membersay}
+                    title="What Our Members Are Saying About:"
+                />
                 <VideotesTimonial
                     testimonial={videotestimonial}
                     title="Videos"

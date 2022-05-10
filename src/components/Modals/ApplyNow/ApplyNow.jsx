@@ -16,13 +16,6 @@ const ApplyNow = (props) => {
     "Times Square Center"
   ];
 
-  const membershiplist = [
-    "Orange Premier",
-    "Orange Elite",
-    "Orange Basic",
-    "Class Packages"
-  ];
-
   return (
     <>
       <Modal isOpen={props.show} className="sburning">
