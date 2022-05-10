@@ -22,7 +22,7 @@ const About = ({ language }) => (
                         <div>
                             <div className="format-sub-text">
                                 <p className="oftsubHeading"
-                                    style={{ fontSize: "14px" }}
+                                // style={{ fontSize: "14px" }}
                                 >
                                     Orangetheory is a heart-rate based HIIT total-body group workout that combines science, coaching and technology to guarantee maximum results from the inside out. It’s designed to charge your metabolism for MORE caloric afterburn, MORE results, and MORE confidence, all to deliver you MORE LIFE.  Orangetheory is more than a gym because the work you do here in our studio will make all the difference out there in your world.
                                 </p>

@@ -61,7 +61,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                                     <ul className='text-white pl-4' style={{ listStyle: "circle" }}>
                                         {list.length > 0 && list.map((x, i) => (
                                             <li key={i}
-                                                style={{ fontSize: "14px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}
+                                                style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}
                                             >
                                                 {x}
                                             </li>
