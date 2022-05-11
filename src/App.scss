@@ -1808,6 +1808,10 @@ section {
           .price-features {
             .price-feature {
               color: $white;
+
+              p {
+                color: $white;
+              }
             }
           }
 
@@ -2061,6 +2065,15 @@ section {
           font-family: 'proxima-nova', sans-serif;
           font-size: $sub-fonts;
           line-height: inherit;
+
+          p {
+            color: $black;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-family: 'proxima-nova', sans-serif;
+            font-size: $sub-fonts;
+            line-height: inherit;
+          }
         }
       }
     }
