@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import Faqform from "../sections/FAQMain/faqform";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { Accordion, AccordionItem } from 'react-light-accordion';
@@ -9,42 +8,41 @@ import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
 
 import Coaching from "../sections/Offers/coaching"
-
+import { API } from "../http/API"
 
 //images
 
 import bannerImg from "../assets/images/OTF/banner/faqbanner.jpg";
 
-const FAQMain = (props) => {
+const Faq = (props) => {
 
     const DummyContent1 = (props) => (
-        <p>
-            {props.answer}
+        <p
+            className="p-0"
+            dangerouslySetInnerHTML={{
+                __html: props.answer
+            }}
+        >
         </p>
     );
 
-    const faqData = [
-        {
-            question: "How early should I arrive for my first Orangetheory class?",
-            answer: "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is. No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
-        },
-        {
-            question: "I haven't worked out in a long time? Can I still do the workout?",
-            answer: "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is. No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
-        },
-        {
-            question: "I have issues with (part of the body). Can I still do your workout?",
-            answer: "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is. No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
-        },
-        {
-            question: "What do the 5 zones mean, and why is the Orange zone so important?",
-            answer: "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is. No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
-        },
-        {
-            question: "What equipment do you use at Orangetheory?",
-            answer: "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is. No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
-        }
-    ];
+    // faq API 
+    const [faqsData, setFaqsData] = useState([]);
+
+    const getAllFaqs = () => {
+        API.get('/faqs').then(response => {
+            const allfaqs = response?.data?.data;
+            setFaqsData(allfaqs);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getAllFaqs();
+    }, []);
+
     const { global } = props;
     return (
         <div >
@@ -90,11 +88,14 @@ const FAQMain = (props) => {
                             <div>
                                 <h3 className="frequent-text">Frequently Asked Questions</h3>
                                 <Accordion atomic={true}>
-                                    {faqData &&
-                                        faqData.length > 0 &&
-                                        faqData.map((x, i) => (
-                                            <AccordionItem className="card-header bg-primary" title={x.question} key={i} >
-                                                <DummyContent1 answer={x.answer} />
+                                    {
+                                        faqsData?.map((x, i) => (
+                                            <AccordionItem className="card-header bg-primary" title={global?.activeLanguage === "ar"
+                                                ? x?.arabic?.question
+                                                : x?.question} key={i} >
+                                                <DummyContent1 answer={global?.activeLanguage === "ar"
+                                                    ? x?.arabic?.answer
+                                                    : x?.answer} />
                                             </AccordionItem>
                                         ))
                                     }
@@ -103,8 +104,9 @@ const FAQMain = (props) => {
                         </div>
                     </Container>
                 </section>
-                {/* <Faqform /> */}
+
                 <CalculateSection />
+
                 <section className="pb-0">
                     <Coaching />
                 </section>
@@ -127,5 +129,5 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(FAQMain);
+)(Faq);
 

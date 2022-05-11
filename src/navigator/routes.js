@@ -6,7 +6,7 @@ import ArticlesDetail from "../pages/ArticlesDetail";
 import Press from "../pages/Press";
 import Locations from "../pages/Locations";
 import Offers from "../pages/Offers";
-import FAQMain from "../pages/FAQMain";
+import Faq from "../pages/Faq";
 import careers from "../pages/Careers";
 import Articles from "../pages/Articles";
 import Testimonials from "../pages/Testimonials";
@@ -77,7 +77,7 @@ export const routes = [
   {
     name: "FAQ",
     path: "/faq",
-    component: FAQMain,
+    component: Faq,
     isPrivate: false,
     exact: true,
   },
