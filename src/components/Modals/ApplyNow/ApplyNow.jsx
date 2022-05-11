@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Modal, ModalBody, Form,
   FormGroup,
@@ -8,13 +8,50 @@ import {
 } from 'reactstrap';
 import ClearIcon from "@material-ui/icons/Clear";
 
+import { API } from "../../../http/API"
+import { Alert } from "react-bootstrap"
+
 
 const ApplyNow = (props) => {
+
+  const defaultState = {
+    location: "",
+    first_name: "",
+    last_name: "",
+    phone: "",
+    email: "",
+    type: "book_class_form"
+  };
 
   const location = [
     "Mercato Mall",
     "Times Square Center"
   ];
+
+  const [formValues, setFormValues] = useState(defaultState);
+  const [isValid, setIsValid] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let updatedData = { ...formValues };
+    API.post("/enquiries", updatedData)
+      .then((response) => {
+        if (response.status === 200 || response.status === 201) {
+          setIsValid(true)
+          setFormValues({ ...defaultState });
+        }
+      })
+      .catch((err) => {
+        alert("Something went wrong.");
+        console.log(err);
+      });
+  }
+  const handleChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <>
@@ -32,7 +69,17 @@ const ApplyNow = (props) => {
                 />
               </span>
             </p>
-            <Form className='offer-form'>
+            {isValid &&
+              <Alert variant="success"
+                onClose={() => {
+                  setIsValid(false);
+                }}
+                dismissible
+              >
+                Data Submitted Successfuly!
+              </Alert>
+            }
+            <Form className='offer-form' onSubmit={handleSubmit}>
               <h3 className="offer-subtext mb-0">
                 Free Intro Class*
               </h3>
@@ -56,17 +103,20 @@ const ApplyNow = (props) => {
                 />
               </FormGroup> */}
               <FormGroup>
-                <Input type="select" name="select" id="exampleSelect"
+                <Input type="select" name="location"
+                  value={formValues.location}
+                  onChange={handleChange}
+                  id="exampleSelect"
                   className='inputStyle'
                   required
                   style={{ color: "#495057", width: "100%" }}
 
                 >
-                  <option style={{ color: "#495057" }}>Select Location</option>
+                  <option style={{ color: "#495057" }} value="">Select Location</option>
                   {location &&
                     location.length > 0 &&
                     location.map((x) => (
-                      <option style={{ color: "#495057" }} key={x}>{x}</option>
+                      <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
                     ))
                   }
 
@@ -79,6 +129,8 @@ const ApplyNow = (props) => {
                       type="text"
                       name="first_name"
                       id="first_name"
+                      value={formValues.first_name}
+                      onChange={handleChange}
                       placeholder="First Name"
                       className='inputStyle'
                       required
@@ -91,6 +143,8 @@ const ApplyNow = (props) => {
                       type="text"
                       name="last_name"
                       id="last_name"
+                      value={formValues.last_name}
+                      onChange={handleChange}
                       placeholder="Last Name"
                       className='inputStyle'
                       required
@@ -103,6 +157,8 @@ const ApplyNow = (props) => {
                       type="text"
                       name="phone"
                       id="phone"
+                      value={formValues.phone}
+                      onChange={handleChange}
                       placeholder="Phone Number"
                       className='inputStyle'
                       required
@@ -115,6 +171,8 @@ const ApplyNow = (props) => {
                       type="email"
                       name="email"
                       id="email"
+                      value={formValues.email}
+                      onChange={handleChange}
                       placeholder="Email"
                       className='inputStyle'
                       required

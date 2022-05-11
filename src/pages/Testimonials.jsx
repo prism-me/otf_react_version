@@ -8,6 +8,8 @@ import Testimonial from "../sections/Testimonial/trainer";
 import Layout from '../components/common-layout';
 // import CounterSection from "../sections/Home/counter";
 
+import { API } from "../http/API"
+
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";

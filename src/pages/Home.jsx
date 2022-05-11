@@ -12,6 +12,8 @@ import TrainerSection from "../sections/Home/trainer";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
 
+import { API } from "../http/API";
+
 
 //images
 

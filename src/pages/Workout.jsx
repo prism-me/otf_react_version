@@ -31,37 +31,22 @@ import About from "../sections/Workout/about";
 
 const Workout = (props) => {
 
+    // testimonial API 
+    const [testimonialData, setTestimonialData] = useState([]);
 
-    const testimonial = [
-        {
-            img: testimonial1,
-            title: "Mac Pinto",
-            date: "2 years ago",
-            subtitle: "LOVE the concept and execution. Coaches are super nice, and the owner is always there to offer advice or help. I wasn't fit enough to keep up, but no judgement, they were very understanding about it, encouraging even. Burned a ton of calories and had fun doing it, isn't that what we're all looking for?",
-            rating: "5.0"
-        },
-        {
-            img: testimonial2,
-            title: "Jet Li",
-            date: "3 years ago",
-            subtitle: "Great session especially if you like tracking stats and getting your body into the splat zone.Good support from Felipe frontdesk Great Energy from Pattie the instructor Facility has got a nice orange 🍊 lighting so feels like you are in a club and burn calories at a great pace.",
-            rating: "5.0"
-        },
-        {
-            img: testimonial3,
-            title: "natasha mufleh",
-            date: "3 years ago",
-            subtitle: "Obsessed!!! All the coaches I have trained with at otf dubai are amazing!! The last class I attended was wit Samia, and it was by far the best OTF class I have ever done! I have never earned as many splat points. She is extremely encouraging, makes sure to correct form, radiates positive energy, and her music is the best playlist ever!! I can’t wait to be back.",
-            rating: "5.0"
-        },
-        {
-            img: testimonial4,
-            title: "Adam D",
-            date: "a years ago",
-            rating: "5.0",
-            subtitle: "A great gym in a great location. Located centrally at Times Square Mall there is plenty of parking (3hrs free). The studio offers only classes which consist of approximately 20mins rowing, 20min workout, 20mins cardio. Each class is unique and structured differently.The trainers there are handpicked, certified and will always motivate you to reach your full potential."
-        }
-    ];
+    const getAllTestimonial = () => {
+        API.get('/testimonials').then(response => {
+            const alltestimonial = response.data?.data;
+            setTestimonialData(alltestimonial);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getAllTestimonial();
+    }, []);
 
     const { global } = props;
     return (
