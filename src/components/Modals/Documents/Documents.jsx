@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Modal, ModalBody, Form,
     FormGroup,
@@ -6,9 +6,19 @@ import {
     Row, Col, Container
 } from 'reactstrap';
 import ClearIcon from "@material-ui/icons/Clear";
-
+import { API } from "../../../http/API"
+import { Alert } from "react-bootstrap"
 
 const Documents = (props) => {
+
+    const defaultState = {
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        membership_package: "",
+        type: "membership_form"
+    };
 
     const location = [
         "Mercato Mall",
@@ -22,6 +32,34 @@ const Documents = (props) => {
         "Class Packages",
         "Corporate Memberships"
     ];
+
+    const [formValues, setFormValues] = useState(defaultState);
+    const [isValid, setIsValid] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let updatedData = { ...formValues };
+        setLoading(true);
+        API.post("/enquiries", updatedData)
+            .then((response) => {
+                if (response.status === 200 || response.status === 201) {
+                    setLoading(false);
+                    setIsValid(true)
+                    setFormValues({ ...defaultState });
+                }
+            })
+            .catch((err) => {
+                alert("Something went wrong.");
+                console.log(err);
+            });
+    }
+    const handleChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <>
@@ -39,10 +77,20 @@ const Documents = (props) => {
                                 />
                             </span>
                         </p>
-                        <Form className='offer-form'>
+                        {isValid &&
+                            <Alert variant="success"
+                                onClose={() => {
+                                    setIsValid(false);
+                                }}
+                                dismissible
+                                className='mt-5'
+                            >
+                                Data Submitted Successfuly!
+                            </Alert>
+                        }
+                        <Form className='offer-form' onSubmit={handleSubmit}>
                             <h3 className="offer-subtext">
                                 {props.title}
-                                {/* Book A Trial Class */}
                             </h3>
                             <FormGroup>
                                 <Input
@@ -50,6 +98,8 @@ const Documents = (props) => {
                                     name="name"
                                     id="name"
                                     placeholder="Full name"
+                                    value={formValues.name}
+                                    onChange={handleChange}
                                     className='inputStyle'
                                     required
                                 />
@@ -61,6 +111,8 @@ const Documents = (props) => {
                                             type="email"
                                             name="email"
                                             id="email"
+                                            value={formValues.email}
+                                            onChange={handleChange}
                                             placeholder="Email address"
                                             className='inputStyle'
                                             required
@@ -73,6 +125,8 @@ const Documents = (props) => {
                                             type="text"
                                             name="phone"
                                             id="phone"
+                                            value={formValues.phone}
+                                            onChange={handleChange}
                                             placeholder="Phone number"
                                             className='inputStyle'
                                             required
@@ -84,14 +138,16 @@ const Documents = (props) => {
                                 <Input type="select" name="location" id="exampleSelect"
                                     className='inputStyle'
                                     required
+                                    value={formValues.location}
+                                    onChange={handleChange}
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }}>Select Location</option>
+                                    <option style={{ color: "#495057" }} value="">Select Location</option>
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
                                         ))
                                     }
 
@@ -101,29 +157,38 @@ const Documents = (props) => {
                                 <Input type="select" name="membership_package" id="exampleSelect"
                                     className='inputStyle'
                                     required
+                                    value={formValues.membership_package}
+                                    onChange={handleChange}
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }}>Select Membership Package</option>
+                                    <option style={{ color: "#495057" }} value="">Select Membership Package</option>
                                     {membershiplist &&
                                         membershiplist.length > 0 &&
                                         membershiplist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
                                         ))
                                     }
 
                                 </Input>
                             </FormGroup>
-                            {/* <FormGroup>
-                                <Input type="textarea" name="msg" id="msg"
-                                    placeholder="Message"
-                                    className='inputStyle'
-                                    required
-                                    style={{ resize: "none" }}
-                                    rows="4" cols="50"
-                                />
-                            </FormGroup> */}
-                            <button className="offerBtn px-5 mt-3">Submit</button>
+                            {
+                                loading ?
+                                    <div className="loader"
+                                        style={{
+                                            borderTopColor: "#2E2E2E",
+                                            borderRightColor: "#2E2E2E",
+                                            borderBottomColor: "#2E2E2E",
+                                            borderLeftColor: "#F58220",
+                                            width: "sm" ? "6em" : "md" ? "10em" : "10em",
+                                            height: "sm" ? "6em" : "md" ? "10em" : "10em",
+                                        }}
+                                    />
+                                    :
+                                    <button className="offerBtn px-5 mt-3"
+                                        style={{ border: "1px solid #F58220" }}
+                                    >Submit</button>
+                            }
                         </Form>
                     </Container>
                 </ModalBody>

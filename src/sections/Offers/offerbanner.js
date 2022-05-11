@@ -6,6 +6,8 @@ import {
     Input,
 } from 'reactstrap'
 import StartBurning from './startburning';
+import { API } from "../../http/API"
+import { Alert } from "react-bootstrap"
 
 //images
 import bannerImg from "../../assets/images/OTF/banner/offerbanner.jpg"
@@ -21,6 +23,43 @@ const offerlist = [
 ];
 
 const Offerbanner = () => {
+
+    const defaultState = {
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        offer_list: "",
+        type: "book_offer_form"
+    };
+
+    const [formValues, setFormValues] = useState(defaultState);
+    const [isValid, setIsValid] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let updatedData = { ...formValues };
+        setLoading(true);
+        API.post("/enquiries", updatedData)
+            .then((response) => {
+                if (response.status === 200 || response.status === 201) {
+                    setLoading(false);
+                    setIsValid(true)
+                    setFormValues({ ...defaultState });
+                }
+            })
+            .catch((err) => {
+                alert("Something went wrong.");
+                console.log(err);
+            });
+    }
+    const handleChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    }
 
     const [showModal, setShowModal] = useState(false);
 
@@ -54,7 +93,19 @@ const Offerbanner = () => {
                                 title="Book An Intro Class"
                             />
                         </center>
-                        <Form className='offer-form'>
+
+                        {isValid &&
+                            <Alert variant="success"
+                                onClose={() => {
+                                    setIsValid(false);
+                                }}
+                                dismissible
+                            >
+                                Data Submitted Successfuly!
+                            </Alert>
+                        }
+
+                        <Form className='offer-form' onSubmit={handleSubmit}>
                             <h3 className="offer-subtext">
                                 Book An Intro Class</h3>
                             <FormGroup>
@@ -62,6 +113,8 @@ const Offerbanner = () => {
                                     type="text"
                                     name="name"
                                     id="name"
+                                    value={formValues.name}
+                                    onChange={handleChange}
                                     placeholder="Full name"
                                     className='inputStyle'
                                     required
@@ -74,6 +127,8 @@ const Offerbanner = () => {
                                             type="email"
                                             name="email"
                                             id="email"
+                                            value={formValues.email}
+                                            onChange={handleChange}
                                             placeholder="Email address"
                                             className='inputStyle'
                                             required
@@ -86,6 +141,8 @@ const Offerbanner = () => {
                                             type="text"
                                             name="phone"
                                             id="phone"
+                                            value={formValues.phone}
+                                            onChange={handleChange}
                                             placeholder="Phone number"
                                             className='inputStyle'
                                             required
@@ -94,16 +151,18 @@ const Offerbanner = () => {
                                 </Col>
                             </Row>
                             <FormGroup>
-                                <Input type="select" name="select" id="exampleSelect"
+                                <Input type="select" name="location" id="exampleSelect"
                                     className='inputStyle'
                                     required
+                                    value={formValues.location}
+                                    onChange={handleChange}
                                     style={{ color: "#495057", width: "100%" }}
                                 >
-                                    <option style={{ color: "#495057" }}>Select Location</option>
+                                    <option style={{ color: "#495057" }} value="">Select Location</option>
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
                                         ))
                                     }
 
@@ -113,20 +172,36 @@ const Offerbanner = () => {
                                 <Input type="select" name="offer_list" id="exampleSelect"
                                     className='inputStyle'
                                     required
+                                    value={formValues.offer_list}
+                                    onChange={handleChange}
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }}>Select Offer</option>
+                                    <option style={{ color: "#495057" }} value="">Select Offer</option>
                                     {offerlist &&
                                         offerlist.length > 0 &&
                                         offerlist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
                                         ))
                                     }
 
                                 </Input>
                             </FormGroup>
-                            <button className="breadcrumb-btn px-5 mt-3">Submit</button>
+                            {
+                                loading ?
+                                    <div className="loader"
+                                        style={{
+                                            borderTopColor: "#2E2E2E",
+                                            borderRightColor: "#2E2E2E",
+                                            borderBottomColor: "#2E2E2E",
+                                            borderLeftColor: "#F58220",
+                                            width: "sm" ? "6em" : "md" ? "10em" : "10em",
+                                            height: "sm" ? "6em" : "md" ? "10em" : "10em",
+                                        }}
+                                    />
+                                    :
+                                    <button className="breadcrumb-btn px-5 mt-3">Submit</button>
+                            }
                         </Form>
                     </Col>
                 </Row>

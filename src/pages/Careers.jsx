@@ -42,9 +42,9 @@ const Careers = (props) => {
         />
       </Helmet>
       <Layout
-        title="Lorem ipsum"
+        title="Careers"
         subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        btntext="Lorem ipsum dolor"
+        // btntext="Lorem ipsum dolor"
         bannerImg={aboutBanner}
       >
 

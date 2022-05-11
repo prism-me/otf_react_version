@@ -20,6 +20,7 @@ const ApplyNow = (props) => {
     last_name: "",
     phone: "",
     email: "",
+    get_updates: "",
     type: "book_class_form"
   };
 
@@ -30,13 +31,16 @@ const ApplyNow = (props) => {
 
   const [formValues, setFormValues] = useState(defaultState);
   const [isValid, setIsValid] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let updatedData = { ...formValues };
+    setLoading(true);
     API.post("/enquiries", updatedData)
       .then((response) => {
         if (response.status === 200 || response.status === 201) {
+          setLoading(false);
           setIsValid(true)
           setFormValues({ ...defaultState });
         }
@@ -75,6 +79,7 @@ const ApplyNow = (props) => {
                   setIsValid(false);
                 }}
                 dismissible
+                className='mt-5'
               >
                 Data Submitted Successfuly!
               </Alert>
@@ -184,15 +189,36 @@ const ApplyNow = (props) => {
                 <Label check>
                   <Input type="checkbox"
                     className='inputStyle'
-                  />{' '}
+                    value="Yes I’d like to get updates and
+                    offers from Orangetheory Fitness
+                    by text."
+                    id="get_updates"
+                    onClick={handleChange}
+                    name="get_updates"
+                  />
                   Yes I’d like to get updates and
                   offers from Orangetheory Fitness
                   by text.
                 </Label>
               </FormGroup>
-              <button className="offerBtn px-5 mt-4"
-                style={{ border: "1px solid #F58220" }}
-              >Submit</button>
+              {
+                loading ?
+                  <div className="loader"
+                    style={{
+                      borderTopColor: "#2E2E2E",
+                      borderRightColor: "#2E2E2E",
+                      borderBottomColor: "#2E2E2E",
+                      borderLeftColor: "#F58220",
+                      width: "sm" ? "6em" : "md" ? "10em" : "10em",
+                      height: "sm" ? "6em" : "md" ? "10em" : "10em",
+                    }}
+                  />
+                  :
+                  <button className="offerBtn px-5 mt-4"
+                    style={{ border: "1px solid #F58220" }}
+                  >Submit</button>
+              }
+
             </Form>
           </Container>
         </ModalBody>
