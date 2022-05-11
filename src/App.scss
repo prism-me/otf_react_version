@@ -25,7 +25,10 @@
 @import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
-@import "./sections/Testimonial//AgsSlider.scss";
+@import "./sections/Testimonial/AgsSlider.scss";
+
+@import "./sections/Testimonial/Tabs/TabPanel.scss";
+
 
 //Contact Us
 @import "./sections/ContactUs/contact";
@@ -1668,7 +1671,7 @@ section {
         hr {
           margin-bottom: 2rem;
           margin-top: 1.6rem;
-          border-top: 1px solid #f4f4f4;
+          border-top: 1px solid #dddddd;
         }
 
         .feature-text-heading {
@@ -1720,8 +1723,9 @@ section {
         // background-position: center;
         // background-repeat: no-repeat;
         background: $orange  !important;
-        transform: scale(1.1);
-        transition: 0.5s;
+        // transform: scale(1.1);
+        // transition: 0.5s;
+        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.14));
 
         .font-primary {
           color: $white;
@@ -1908,7 +1912,7 @@ section {
   &.app2 {
     .price-container {
       .price-feature-container {
-        padding: 50px 0 50px 0;
+        padding: 30px 0 30px 0;
       }
 
       &.shadows {
@@ -1933,7 +1937,7 @@ section {
   &.resume {
     .price-container {
       .price-feature-container {
-        padding: 50px 0 50px 0;
+        padding: 30px 0 30px 0;
 
         .price-value {
           .price {
@@ -1988,6 +1992,11 @@ section {
     .price-container {
       border-radius: 30px !important;
       border: 1px solid $orange;
+      height: 95%;
+
+      @media #{$sm} {
+        height: 100%;
+      }
 
       &.shadows {
         border-radius: 4px;
@@ -2001,6 +2010,7 @@ section {
           font-weight: 400;
           font-family: 'proxima-nova', sans-serif;
           font-size: $sub-fonts;
+          line-height: inherit;
         }
       }
     }
@@ -3981,6 +3991,30 @@ footer {
           padding-right: 0;
         }
 
+        .instahover {
+          &:hover {
+            color: #C13584;
+          }
+        }
+
+        .fbhover {
+          &:hover {
+            color: #4267B2;
+          }
+        }
+
+        .linkhover {
+          &:hover {
+            color: #0072b1;
+          }
+        }
+
+        .twithover {
+          &:hover {
+            color: #00acee;
+          }
+        }
+
         a {
           color: $black;
 
@@ -3992,9 +4026,9 @@ footer {
             }
           }
 
-          &:hover {
-            color: $orange;
-          }
+          // &:hover {
+          //   color: $orange;
+          // }
         }
       }
     }
@@ -4146,7 +4180,7 @@ footer {
         line-height: initial;
 
         &:hover {
-          color: $orange
+          color: $orange;
         }
       }
 
@@ -4156,6 +4190,7 @@ footer {
         }
       }
     }
+
 
     &.contacts {
       li {
@@ -4616,6 +4651,67 @@ booking section end
     }
   }
 
+  &.membersaysabout {
+    .membersaysabout-slider {
+      .slick-list {
+        .slick-track {
+          .slick-slide {
+            >div {
+              .item {
+                padding: 0 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .membersaysabout-container {
+        padding: 25px 30px;
+        height: 500px;
+        border-radius: 10px;
+        margin: 5px;
+        background: $white;
+
+        @media #{$sm, $md} {
+          padding: 1rem !important;
+          height: auto;
+        }
+
+        @media #{$lg} {
+          padding: 1rem !important;
+          height: 520px;
+        }
+
+        .members {
+          width: 80px !important;
+          margin: 0 auto;
+          border: 2px solid $white;
+          border-radius: 100%;
+          filter: drop-shadow(0 0 5px $white2);
+          margin-bottom: 20px;
+        }
+
+        .name {
+          font-size: 20px;
+          color: #6f767b;
+          letter-spacing: 0;
+          margin-bottom: 15px;
+        }
+
+        .post {
+          margin-bottom: 15px;
+          font-size: $sub-fonts;
+
+        }
+
+        .membersaysabout-para {
+          letter-spacing: 0;
+          font-size: $sub-fonts;
+        }
+      }
+    }
+  }
+
   &.team {
     .team-slider {
       .slick-list {
@@ -4632,7 +4728,7 @@ booking section end
 
       .team-container {
         // padding: 25px 30px;
-        height: 600px;
+        height: 700px;
         border: 1px solid $orange;
         box-shadow: 0 0 10px 5px rgba(253, 248, 247, 0.69);
         border-radius: 10px;
@@ -4642,6 +4738,11 @@ booking section end
         @media #{$sm, $md} {
           padding: 0 !important;
           height: auto;
+        }
+
+        @media #{$lg} {
+          padding: 0 !important;
+          height: 720px;
         }
 
         .members {
@@ -11121,6 +11222,13 @@ gym css start
   }
 
   &.bg-location {
+    .mapstylembl {
+
+      @media #{$sm} {
+        height: 300px !important;
+      }
+    }
+
     .BGImgLocation {
       // background-image: url("/assets/images/gym/calculat-bg.jpg");
       background-repeat: no-repeat;
@@ -11201,6 +11309,7 @@ gym css start
           font-family: 'proxima-nova', sans-serif;
           font-weight: 400 !important;
           color: $black;
+          font-size: $sub-fonts;
 
           &:hover {
             color: $orange;
@@ -11409,6 +11518,90 @@ gym css start
     }
   }
 
+  .membersaysabout-slider {
+    .slick-arrow {
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        // background: rgba($black, 0.1);
+        background: $white;
+        border: 1px solid $black;
+      }
+    }
+
+    .slick-next {
+      right: -25px;
+
+      &:before {
+        // padding: 20px 18px 20px 20px;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        font-weight: 900;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        background: $white;
+      }
+    }
+
+    .slick-prev {
+      left: -25px;
+      z-index: 1;
+
+      &:before {
+        background: $white;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f053';
+        font-weight: 900;
+        // padding: 20px 20px 20px 18px;
+      }
+    }
+
+
+    .slick-dots {
+      position: relative;
+      bottom: 0;
+      margin-top: 10px;
+
+      li {
+        width: auto;
+        height: auto;
+
+        +li {
+          margin-left: 15px;
+        }
+
+        button {
+          width: auto;
+          height: auto;
+          padding: 0;
+
+          &:before {
+            font-size: 12px;
+            margin-top: -9px;
+            opacity: 1 !important;
+          }
+        }
+
+        &.slick-active,
+        &:hover {
+          button {
+            &:before {
+              color: $orange;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .team-slider {
     .slick-arrow {
       width: auto;
@@ -11435,7 +11628,6 @@ gym css start
         border-radius: 100%;
         color: $black;
         background: $white;
-
       }
     }
 
@@ -12358,9 +12550,9 @@ breadcrumb-section css start
 
 .breadcrumb-section {
   // background: url("/assets/images/inner-page/breadcrumb.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   background-blend-mode: overlay;
   padding: 230px 0;
 
@@ -12421,10 +12613,14 @@ breadcrumb-section css start
 
   .breadcrumb-subtext {
     color: $white;
-    font-size: 19px;
+    font-size: $bannersubtext-font;
     text-align: center;
     margin-bottom: 2rem;
     max-width: 50%;
+
+    @media #{$sm} {
+      font-size: 16px;
+    }
 
     @media (max-width: 767px) {
       max-width: 100%;
@@ -12488,8 +12684,12 @@ breadcrumb-section css start
 
   .offer-detail {
     color: $white;
-    font-size: 19px;
+    font-size: $bannersubtext-font;
     margin-bottom: 2rem;
+
+    @media #{$sm} {
+      font-size: 16px;
+    }
   }
 
   .offer-form {
@@ -19243,7 +19443,7 @@ header {
 
         @media (min-width: 991px) and (max-width: 1199px) {
           font-size: 12px !important;
-          padding: 12px !important;
+          padding: 7px !important;
         }
       }
     }
@@ -19277,7 +19477,7 @@ header {
           line-height: 1;
           text-decoration: none;
           display: inline-block;
-          padding: 15px;
+          padding: 10px;
           font-size: 14px;
           text-transform: capitalize;
           transition: all 0.4s ease-in-out;
@@ -21058,6 +21258,19 @@ footer {
 
 .footer2 {
 
+
+  // .mblfootersocial {
+  //   @media #{$sm} {
+  //     justify-content: flex-start !important;
+  //   }
+  // }
+
+  // .socialText {
+  //   @media #{$sm} {
+  //     text-align: left !important;
+  //   }
+  // }
+
   .DappSection {
 
     margin-top: -5rem;
@@ -21065,6 +21278,18 @@ footer {
     @media (max-width: 767px) {
       flex-direction: column;
       margin-top: 0rem;
+    }
+  }
+
+  .footer-para {
+    @media #{$sm, $md} {
+      margin-top: 1rem;
+    }
+  }
+
+  .logo-sec {
+    @media #{$md} {
+      margin-top: 1rem;
     }
   }
 
@@ -21076,6 +21301,7 @@ footer {
 
   .footer-contant {
     .footer-lists {
+
       li {
         a {
           font-family: 'proxima-nova', sans-serif;
@@ -21584,6 +21810,52 @@ footer {
 .mblscreenworkoutgridbottomspace {
   @media #{$sm, $md} {
     margin-bottom: 2rem !important;
+  }
+}
+
+.team-img-wrapper {
+  position: relative;
+
+  .imagestyle {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #f583209c;
+
+    .text {
+      color: white;
+      font-size: $sub-fonts;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+  &:hover .imagestyle {
+    opacity: 0.3;
+  }
+
+  &:hover .middle {
+    opacity: 1;
   }
 }
 
@@ -30668,7 +30940,7 @@ footer {
 
   .breadcrumb-section {
     .breadcrumb-text {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 
@@ -32551,7 +32823,7 @@ footer {
     padding: 50px 0;
 
     .breadcrumb-text {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 }

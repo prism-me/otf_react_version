@@ -42,8 +42,12 @@ const WorkGrid = () => (
             </div>
 
             <Container>
-                <h3 className="oftHeading text-center mb-5">
-                    What Happens in class
+                <h3 className="oftHeading text-center mb-5"
+                    style={{
+                        color: "#2E2E2E"
+                    }}
+                >
+                    Your OTF Workout
                 </h3>
                 <Row>
                     <Col sm={6} className="mblscreenworkoutgridbottomspace">
@@ -56,7 +60,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%", height: "100%" }}>
+                                    style={{
+                                        width: "100%", height: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={Rowing} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -112,7 +120,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%" }}>
+                                    style={{
+                                        width: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={Cardio} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -160,7 +172,11 @@ const WorkGrid = () => (
                                     autoPlay="autoplay"
                                     loop="loop"
                                     muted
-                                    style={{ width: "100%", height: "100%" }}>
+                                    style={{
+                                        width: "100%", height: "100%",
+                                        objectPosition: "center",
+                                        objectFit: "cover"
+                                    }}>
                                     <source src={strenth} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>

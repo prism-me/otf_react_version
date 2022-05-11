@@ -13,14 +13,7 @@ const ApplyNow = (props) => {
 
   const location = [
     "Mercato Mall",
-    "Times Square Centre"
-  ];
-
-  const membershiplist = [
-    "Orange Premier",
-    "Orange Elite",
-    "Orange Basic",
-    "Class Packages"
+    "Times Square Center"
   ];
 
   return (
@@ -47,12 +40,12 @@ const ApplyNow = (props) => {
                 Experience our workout for free. Please fill out the form and a member of the team will be in touch.
               </p>
               <p className='mt-3 offer-detailtext'>
-                All fields are mandatory unless indicated as optional.
+                * All fields are mandatory
               </p>
               <p className='mt-3 mb-2 offer-detailtext'>
                 Find Your Location
               </p>
-              <FormGroup>
+              {/* <FormGroup>
                 <Input
                   type="text"
                   name="zipcode"
@@ -61,14 +54,31 @@ const ApplyNow = (props) => {
                   className='inputStyle'
                   required
                 />
+              </FormGroup> */}
+              <FormGroup>
+                <Input type="select" name="select" id="exampleSelect"
+                  className='inputStyle'
+                  required
+                  style={{ color: "#495057", width: "100%" }}
+
+                >
+                  <option style={{ color: "#495057" }}>Select Location</option>
+                  {location &&
+                    location.length > 0 &&
+                    location.map((x) => (
+                      <option style={{ color: "#495057" }} key={x}>{x}</option>
+                    ))
+                  }
+
+                </Input>
               </FormGroup>
               <Row form>
                 <Col sm={6}>
                   <FormGroup>
                     <Input
                       type="text"
-                      name="fname"
-                      id="fname"
+                      name="first_name"
+                      id="first_name"
                       placeholder="First Name"
                       className='inputStyle'
                       required
@@ -79,8 +89,8 @@ const ApplyNow = (props) => {
                   <FormGroup>
                     <Input
                       type="text"
-                      name="lname"
-                      id="lname"
+                      name="last_name"
+                      id="last_name"
                       placeholder="Last Name"
                       className='inputStyle'
                       required
@@ -117,24 +127,14 @@ const ApplyNow = (props) => {
                   <Input type="checkbox"
                     className='inputStyle'
                   />{' '}
-                  Yes! I’d like to get updates and offers from Orangetheory Fitness & my local studio by text.
-                  <p className='mt-2 offer-detailtext'>
-                    <a href="#"><u>Display and Edit Communications Preferences</u></a>
-                  </p>
+                  Yes I’d like to get updates and
+                  offers from Orangetheory Fitness
+                  by text.
                 </Label>
               </FormGroup>
-
-              <button className="offerBtn px-5 mt-4">Submit</button>
-              <p className='mt-3'>
-                <small>
-                  *Certain restrictions apply. See full <a href="#">
-                    <u>
-                      <small>
-                        Promotion Terms.
-                      </small>
-                    </u></a>
-                </small>
-              </p>
+              <button className="offerBtn px-5 mt-4"
+                style={{ border: "1px solid #F58220" }}
+              >Submit</button>
             </Form>
           </Container>
         </ModalBody>

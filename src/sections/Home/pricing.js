@@ -69,15 +69,23 @@ const PricingResume2 = [
         feature1: "10 Classes",
         feature2: '20 Classes',
         feature3: '30 Classes'
-    }
+    },
+    {
+        icon: Basic,
+        iconW: BasicW,
+        title: "Corporate Memberships",
+        feature1: "Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time.",
+        feature2: '',
+        feature3: ''
+    },
 ];
 
 const Pricing = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <section className="gym pricing set-relative"
-            id="plan">
+        <section className="gym pricing set-relative pb-0"
+            id="membership_packages">
             <Container>
                 <Row>
                     <Col md="10" className="offset-md-1">
@@ -85,15 +93,21 @@ const Pricing = () => {
                             style={{
                                 color: "#2E2E2E"
                             }}
-                        >Let’s talk memberships</h2>
+                        >Become a Member</h2>
+                        <p className="oftsubHeading text-center mb-5">
+                            It only takes a minute in our studio to understand it’s not a competition – it’s a
+                            community. Check out our membership options and contact your local studio
+                            to find the right fit for you.
+                        </p>
                     </Col>
                     <Col lg="12" md="8" className="offset-md-2 offset-lg-0">
-                        <Slider className="pricing-slider price-margin" {...settings}>
+                        <Row className="justify-content-center">
+                            {/* <Slider className="pricing-slider price-margin" {...settings}> */}
                             {PricingResume2 &&
                                 PricingResume2.length > 0
                                 && PricingResume2.map((item, i) => {
                                     return (
-                                        <div className="item" key={i}>
+                                        <Col sm={12} lg="4" md="6" key={i} className="pb-3">
                                             <div className="price-container hover-overlay shadows bg-white text-center">
                                                 <div className="price-feature-container set-relative">
                                                     <div className="feature-text">
@@ -104,7 +118,7 @@ const Pricing = () => {
                                                         <h4 className="feature-text-heading text-center bold text-uppercase font-primary">{item.title}</h4>
                                                         <hr className="set-border" />
                                                     </div>
-                                                    <div className="price-features font-primary">
+                                                    <div className="price-features font-primary px-4">
                                                         <h5 className="price-feature text-center mb-1">{item.feature1}</h5>
                                                         <h5 className={`price-feature text-center ${item.feature3 && "mb-1"} `}>{item.feature2}</h5>
                                                         {
@@ -122,16 +136,28 @@ const Pricing = () => {
                                                         </span></button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Col>
                                     )
                                 })}
-                        </Slider>
+                        </Row>
+                        {/* </Slider> */}
                         <Documents
                             show={showModal} onHide={() => setShowModal(false)}
                             title="Become a Member Today"
                         />
                     </Col>
                 </Row>
+                <center>
+                    {/* <p className='oftsubHeading mt-2 text-center'>
+                    Contact front desk for more details.
+                </p> */}
+                    <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1'
+                        style={{ border: "1px solid #F58220", color: "#F58220" }}
+                    >
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Reach out to us
+                    </a>
+                </center>
             </Container>
         </section>
     )

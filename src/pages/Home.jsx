@@ -8,9 +8,10 @@ import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
 import CounterSection from "../sections/Home/counter";
 import TrainerSection from "../sections/Home/trainer";
-import FormatSection from "../sections/Home/format";
+// import FormatSection from "../sections/Home/format";
 import CalculateSection from "../sections/Home/calculate";
-import { API } from "../http/API"
+import TestimonialSection from "../sections/About/testimonial";
+
 
 //images
 
@@ -66,6 +67,8 @@ const Home = (props) => {
           language={global?.activeLanguage}
         />
 
+        <TestimonialSection />
+
         <AboutSection
           language={global?.activeLanguage}
         />
@@ -80,7 +83,9 @@ const Home = (props) => {
 
         />
 
-        <PricingSection />
+        <section className="pt-0">
+          <PricingSection />
+        </section>
 
         <CounterSection
           title="Get 10% off during this festive season!"
@@ -97,7 +102,7 @@ const Home = (props) => {
           title="Testimonials"
         />
 
-        <FormatSection />
+        {/* <FormatSection /> */}
 
         <CalculateSection />
 

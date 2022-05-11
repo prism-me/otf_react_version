@@ -1,11 +1,8 @@
 import React from "react";
-import BannerSection from "../sections/Home/banner";
-import ScheduleSection from "../sections/Home/schedule";
+// import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
-import CounterSection from "../sections/Home/counter";
+// import CounterSection from "../sections/Home/counter";
 import Benefits from "../sections/Membership/benefits";
-import Location from "../sections/Membership/location";
-import Faq from "../sections/About/faq";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
@@ -18,32 +15,16 @@ import benefits1 from "../assets/images/OTF/membership/Dumbells.png";
 import benefits2 from "../assets/images/OTF/membership/LAT.png";
 import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
 
-import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
-import scheduleImg from "../assets/images/OTF/home/health-safty.png";
-import getOff from "../assets/images/OTF/home/get-off.jpg";
+// import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
+// import scheduleImg from "../assets/images/OTF/home/health-safty.png";
+// import getOff from "../assets/images/OTF/home/get-off.jpg";
+import GetApp from "../sections/Membership/getapp";
 
 
 
 
 
 const Memberships = (props) => {
-
-    const sliderData = [
-        {
-            // bannerImg: slider1,
-            title: "Let’s talk membership",
-            detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
-            btnm: "Avail one of our membership now",
-            viewbtn: "View membership details"
-        },
-        {
-            // bannerImg: slider1,
-            title: "Let’s talk membership",
-            detail: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
-            btnm: "Avail one of our membership now",
-            viewbtn: "View membership details"
-        }
-    ];
     const list = [
         "Free Lunch & Burn intro class",
         "Free Team-Building Workout",
@@ -57,7 +38,7 @@ const Memberships = (props) => {
         },
         {
             img: benefits2,
-            title: "Nationwide studio access*"
+            title: "Nationwide studio access"
         },
         {
             img: benefits3,
@@ -77,42 +58,36 @@ const Memberships = (props) => {
                     content="Memberships"
                 />
             </Helmet>
-            {/* <BannerSection
-                sliderData={sliderData}
-            /> */}
             <Layout
-                title="Let’s talk membership"
+                title="Let’s Talk Fitness Memberships"
                 subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
-                btntext="Become a Member Today"
+                // btntext="Become a Member Today"
                 bannerImg={banerImg}
             >
-                {/* <Location /> */}
 
                 <PricingSection />
 
-                <ScheduleSection
+                {/* <ScheduleSection
                     titleM={"Corporate Memberships"}
                     detail={"Orangetheory Fitness is more than just a workout. It's an employee-engaging, productivity-elevating experience designed to give your company More Bottom Line and give your employees More Life, one class at a time."}
-                    list={list}
-                    btnText="Avail now"
+                    // list={list}
+                    btnText="join now"
                     bgImg={corporateBg}
                     coachImg={scheduleImg}
-                />
+                /> */}
 
                 <Benefits
                     benefitList={benefitList}
                 />
 
-                <CounterSection
+                <GetApp />
+
+                {/* <CounterSection
                     title="Get 10% off during this festive season!"
                     // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
                     btntext="BECOME A MEMBER TODAY"
                     bgImg={getOff}
-                />
-
-                <Faq
-                    language={global?.activeLanguage}
-                />
+                /> */}
             </Layout>
 
         </div>

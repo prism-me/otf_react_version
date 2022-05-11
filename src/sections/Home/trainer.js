@@ -47,11 +47,11 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                         {testimonial &&
                             testimonial.length > 0 &&
                             testimonial.map((x, i) => (
-                                <div className="item">
+                                <div className="item" key={i}>
                                     <div className="team-container">
                                         <div
                                             style={{
-                                                background: "#2E2E2E",
+                                                background: "#6F767B",
                                                 borderTopLeftRadius: "5px",
                                                 borderTopRightRadius: "5px",
                                                 padding: " 25px 30px"
@@ -69,7 +69,7 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                                                     emptyIcon={<i className="far fa-star"></i>}
                                                     halfIcon={<i className="fa fa-star-half-alt"></i>}
                                                     fullIcon={<i className="fa fa-star"></i>}
-                                                    activeColor="#F8B101"
+                                                    activeColor="#F58220"
                                                     classNames="rating_bar text-center"
                                                 />
                                             </p>

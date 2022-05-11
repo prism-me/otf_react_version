@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
 import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
+import { HashLink } from "react-router-hash-link";
 
 import BackGroundVideo from "../../components/BackGroundVideo/BackGroundVideo";
 
@@ -77,11 +78,14 @@ const HomeBanner = ({ language }) => {
                                                         {/* {
                                                             x.btn1 && */}
                                                         <li>
-                                                            <a className=" btn btn-default" href={`/${language}/memberships`}
+                                                            <HashLink to={`/${language}/memberships` + "#membership_packages"} className=" btn btn-default">
+                                                                VIEW MEMBERSHIP PACKAGES
+                                                            </HashLink>
+                                                            {/* <a className=" btn btn-default" href={`/${language}/memberships`}
                                                             // onClick={() => setShowModal(true)}
                                                             >
                                                                 VIEW MEMBERSHIP PACKAGES
-                                                            </a>
+                                                            </a> */}
                                                             {/* <Documents
                                                                 show={showModal} onHide={() => setShowModal(false)}
                                                                 title={"VIEW MEMBERSHIP PACKAGES"}
@@ -114,7 +118,7 @@ const HomeBanner = ({ language }) => {
                                                         The Smartest Workout for More Results
                                                     </h1>
                                                 </div>
-                                                <div className="link-horizontal">
+                                                {/* <div className="link-horizontal">
                                                     <ul className="justify-content-center">
                                                         <li>
                                                             <a className=" btn btn-default"
@@ -124,7 +128,7 @@ const HomeBanner = ({ language }) => {
                                                             </a>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </Col>

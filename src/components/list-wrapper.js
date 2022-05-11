@@ -53,7 +53,7 @@ const CardGridWrapper = ({
                                         <p className="para2">{description}</p>
                                     }
 
-                                    <div className="btn-bottom m-t-20">
+                                    {/* <div className="btn-bottom m-t-20">
                                         <Link to={`/${language}/${readUrl}/${title}`} >
                                             <button
                                                 style={{
@@ -66,7 +66,7 @@ const CardGridWrapper = ({
                                                     outline: "0"
                                                 }}
                                             >read more</button></Link>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

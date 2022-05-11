@@ -5,11 +5,11 @@ import { Helmet } from "react-helmet";
 import AbouSection from "../sections/About/about";
 import SpeakerSection from "../sections/About/speaker";
 import FitnessCoach from "../sections/About/fitnesscoach";
-import TestimonialSection from "../sections/About/testimonial";
+// import TestimonialSection from "../sections/About/testimonial";
 import CounterSection from "../sections/About/counter";
-import Faq from "../sections/About/faq";
+// import Faq from "../sections/About/faq";
 import Layout from '../components/common-layout';
-import CalculateSection from "../sections/Home/calculate";
+// import CalculateSection from "../sections/Home/calculate";
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
@@ -30,36 +30,58 @@ const About = (props) => {
             </Helmet>
             <Layout
                 title="Backed by science"
-                subtitle="You don’t need to be a scientist to understand how spending 12 minutes or more in the Orange Zone gives you more strength, more energy and more life. You just need to be a member."
-                btntext="Book your Free class!"
+                subtitle="OTF Workout is backed by science, 
+                spending 12 minutes in Orange Zone 
+                gives you more strength, energy and 
+                more life. Join us now!"
+                // btntext="Book your Free class!"
                 bannerImg={aboutBanner}
                 freeform="freeclass"
             >
 
                 <AbouSection
                     divId="mission"
-                    title="a little about orange theory"
-                    detail="Orangetheory is a 1 hour, full body workout, focused on training Endurance, Strength and/or Power. We use Heart Rate Based Interval Training, which burns more calories post workout than a traditional exercise. When wearing our Heart Rate monitors, your real time results are displayed on large screens throughout the studio. Intensity is based on your individual Heart Rate zones, making the workout effective for all fitness levels. To top it off, our fitness coaches to lead the workout to prevent you from over or under training."
+                    title="About Orangetheory"
+                    detail="Orangetheory is a 1-hour full body 
+                    workout, focused on training 
+                    Endurance, Strength and Power. Our 
+                    class is based on Heart Rate Based 
+                    Interval Training that burns more 
+                    calories post workout than a 
+                    traditional exercise. Our Heart Rate 
+                    monitors provides you real time 
+                    results. Intensity is based on your 
+                    individual Heart Rate making the 
+                    workout effective for all fitness 
+                    levels. Our certified fitness coaches 
+                    will guide you to make sure you are 
+                    not over or under training"
                     info1title="Our Mission"
-                    info1detail="To lead, support and inspire the orange passion in our Franchise partners to achieve superior results while always ensuring that we exemplify a diversified, equitable and inclusive culture."
+                    info1detail="To lead, support & inspire the Orange 
+                    Passion to achieve superior results 
+                    while always ensuring that we 
+                    exemplify a diversified, equitable & 
+                    inclusive culture."
                     info2title="Our Vision"
-                    info2detail="To be the trusted global leader of innovative heart rate-based interval training."
+                    info2detail="To be the trusted global leader of 
+                    innovative Heart Rate-Based interval 
+                    training."
                     info3title="Our Values"
-                    info3detail="Passion, integrity, accountability, innovation, commUNITY and opportUNITY for all."
+                    info3detail="Passion, Integrity, Accountability, 
+                    Innovation, Community and 
+                    Opportunity for all."
                 />
                 <FitnessCoach />
 
                 <SpeakerSection />
 
-                <TestimonialSection />
+                {/* <TestimonialSection /> */}
 
-                <CounterSection />
-
-                <Faq
+                {/* <Faq
                     language={global?.activeLanguage}
-                />
+                /> */}
 
-                <CalculateSection />
+                {/* <CalculateSection /> */}
             </Layout>
         </div>
     );

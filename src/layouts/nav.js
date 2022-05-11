@@ -163,7 +163,7 @@ const Nav = (props) => {
                         padding: "0.5rem 1.5rem"
                     }}
                     onClick={() => setShowModal(true)}
-                >Free Class</button>
+                >BOOK YOUR FREE CLASS!</button>
                     <ApplyNow
                         show={showModal} onHide={() => setShowModal(false)}
                         title={"Free Class"}

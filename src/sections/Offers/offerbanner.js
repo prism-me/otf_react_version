@@ -12,8 +12,14 @@ import bannerImg from "../../assets/images/OTF/banner/offerbanner.jpg"
 
 const location = [
     "Mercato Mall",
-    "Times Square Centre"
-]
+    "Times Square Center"
+];
+
+const offerlist = [
+    "March 1 Offer",
+    "March 2 Offer"
+];
+
 const Offerbanner = () => {
 
     const [showModal, setShowModal] = useState(false);
@@ -42,14 +48,15 @@ const Offerbanner = () => {
                             <button className='offerBtn px-5'
                                 onClick={() => setShowModal(true)}
                             >
-                                Book A Trail Class</button>
+                                Book An Intro Class</button>
                             <StartBurning
                                 show={showModal} onHide={() => setShowModal(false)}
+                                title="Book An Intro Class"
                             />
                         </center>
                         <Form className='offer-form'>
                             <h3 className="offer-subtext">
-                                Book A Trail Class</h3>
+                                Book An Intro Class</h3>
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -96,6 +103,23 @@ const Offerbanner = () => {
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                        ))
+                                    }
+
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Input type="select" name="offer_list" id="exampleSelect"
+                                    className='inputStyle'
+                                    required
+                                    style={{ color: "#495057", width: "100%" }}
+
+                                >
+                                    <option style={{ color: "#495057" }}>Select Offer</option>
+                                    {offerlist &&
+                                        offerlist.length > 0 &&
+                                        offerlist.map((x) => (
                                             <option style={{ color: "#495057" }} key={x}>{x}</option>
                                         ))
                                     }

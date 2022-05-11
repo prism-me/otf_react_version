@@ -21,7 +21,7 @@ var settings = {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 5,
     autoplay: true,
     centerMode: true,
     centerPadding: '0',
@@ -47,7 +47,7 @@ const speaker = [
     {
         img: team1,
         title: "Sheila Marie Ollamina",
-        subtitle: "Sales Associate"
+        subtitle: "Asst. Studio Manager"
     },
     {
         img: team2,
@@ -77,16 +77,16 @@ const speaker = [
     {
         img: team7,
         title: "Anna Adajar",
-        subtitle: "Sales Associate"
+        subtitle: "Asst. Studio Manager"
     },
     {
         img: team8,
-        title: "Anastacia Leochico",
-        subtitle: "Sales Associate"
+        title: "Annie Leochico",
+        subtitle: "Studio Manager"
     }
 ];
 const Speaker = () => (
-    <section className="event speaker set-relative pb-2" id="speaker">
+    <section className="event speaker set-relative" id="speaker">
         <Container>
             <Row>
                 <Col xs="12">

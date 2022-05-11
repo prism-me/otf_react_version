@@ -1,5 +1,5 @@
 import React from "react";
-// import BottomTabNavigator from "../components/BottomTabNavigator";
+import BottomTabNavigator from "../components/BottomTabNavigator";
 import Footer from "./Footer";
 import Header from "./header";
 import BackToTop from "../components/BackToTop";
@@ -26,7 +26,7 @@ function Layout(props) {
       {props.children}
       <BackToTop />
       <Footer />
-      {/* <BottomTabNavigator activeLanguage={global.activeLanguage} /> */}
+      <BottomTabNavigator activeLanguage={global.activeLanguage} />
     </div>
   );
 }

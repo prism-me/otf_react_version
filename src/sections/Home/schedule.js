@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
 import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
+import { HashLink } from "react-router-hash-link";
 
 
-const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtitle, detail2, coachImg, freeform }) => {
+const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgImg, subtitle, detail2, coachImg, freeform, btnfitnessText }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -60,7 +61,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                     <ul className='text-white pl-4' style={{ listStyle: "circle" }}>
                                         {list.length > 0 && list.map((x, i) => (
                                             <li key={i}
-                                                style={{ fontSize: "14px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}
+                                                style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}
                                             >
                                                 {x}
                                             </li>
@@ -71,7 +72,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                 {
                                     btnText &&
                                     <>
-                                        <button className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-5"}`}
+                                        <button className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-2"}`}
                                             onClick={() => setShowModal(true)}
                                         >
                                             {btnText}
@@ -91,6 +92,17 @@ const Schedule = ({ titleM, title, detail, list, listImg, btnText, bgImg, subtit
                                             />
                                         }
 
+                                    </>
+                                }
+
+                                {
+                                    btnfitnessText &&
+                                    <>
+                                        <HashLink to={`/${language}/about` + "#fitnesscoach"}
+                                            className={`otfBtn1 px-5 ${subtitle ? "mt-2" : " mt-2"}`}
+                                        >
+                                            {btnfitnessText}
+                                        </HashLink>
                                     </>
                                 }
 
