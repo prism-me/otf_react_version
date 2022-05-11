@@ -29,6 +29,19 @@ import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 
 const Home = (props) => {
 
+  // memberships API 
+  const [membershipsData, setMembershipsData] = useState([]);
+
+  const getAllMemberships = () => {
+    API.get('/memberships').then(response => {
+      const allmemberships = response.data?.data;
+      setMembershipsData(allmemberships);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
   // testimonial API 
   const [testimonialData, setTestimonialData] = useState([]);
 
@@ -44,6 +57,7 @@ const Home = (props) => {
 
   useEffect(() => {
     getAllTestimonial();
+    getAllMemberships();
   }, []);
 
   const listImg = [
@@ -86,7 +100,11 @@ const Home = (props) => {
         />
 
         <section className="pt-0">
-          <PricingSection />
+          <PricingSection
+            membershipsData={membershipsData}
+            language={global?.activeLanguage}
+            isArabic={global?.activeLanguage === "ar"}
+          />
         </section>
 
         <CounterSection

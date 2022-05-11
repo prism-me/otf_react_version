@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
 // import CounterSection from "../sections/Home/counter";
@@ -6,6 +6,7 @@ import Benefits from "../sections/Membership/benefits";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
+import { API } from "../http/API"
 
 
 //images
@@ -19,9 +20,6 @@ import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
 // import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 // import getOff from "../assets/images/OTF/home/get-off.jpg";
 import GetApp from "../sections/Membership/getapp";
-
-
-
 
 
 const Memberships = (props) => {
@@ -44,7 +42,24 @@ const Memberships = (props) => {
             img: benefits3,
             title: "Month-to-month memberships"
         }
-    ]
+    ];
+
+    // memberships API 
+    const [membershipsData, setMembershipsData] = useState([]);
+
+    const getAllMemberships = () => {
+        API.get('/memberships').then(response => {
+            const allmemberships = response.data?.data;
+            setMembershipsData(allmemberships);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getAllMemberships();
+    }, []);
 
     const { global } = props;
     return (
@@ -65,7 +80,11 @@ const Memberships = (props) => {
                 bannerImg={banerImg}
             >
 
-                <PricingSection />
+                <PricingSection
+                    membershipsData={membershipsData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
                 {/* <ScheduleSection
                     titleM={"Corporate Memberships"}
