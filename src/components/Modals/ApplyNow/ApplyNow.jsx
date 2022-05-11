@@ -77,8 +77,8 @@ const ApplyNow = (props) => {
                   <FormGroup>
                     <Input
                       type="text"
-                      name="fname"
-                      id="fname"
+                      name="first_name"
+                      id="first_name"
                       placeholder="First Name"
                       className='inputStyle'
                       required
@@ -89,8 +89,8 @@ const ApplyNow = (props) => {
                   <FormGroup>
                     <Input
                       type="text"
-                      name="lname"
-                      id="lname"
+                      name="last_name"
+                      id="last_name"
                       placeholder="Last Name"
                       className='inputStyle'
                       required

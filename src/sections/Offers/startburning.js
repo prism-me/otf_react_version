@@ -13,7 +13,11 @@ const StartBurning = (props) => {
     const location = [
         "Mercato Mall",
         "Times Square Center"
-    ]
+    ];
+    const offerlist = [
+        "March 1 Offer",
+        "March 2 Offer"
+    ];
 
     return (
         <>
@@ -28,7 +32,9 @@ const StartBurning = (props) => {
                             </span>
                         </p>
                         <Form className='offer-form'>
-                            <h3 className="offer-subtext">Book An Intro Class</h3>
+                            <h3 className="offer-subtext">
+                                {props.title}
+                            </h3>
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -66,7 +72,7 @@ const StartBurning = (props) => {
                                 </Col>
                             </Row>
                             <FormGroup>
-                                <Input type="select" name="select" id="exampleSelect"
+                                <Input type="select" name="location" id="exampleSelect"
                                     className='inputStyle'
                                     required
                                     style={{ color: "#495057", width: "100%" }}
@@ -76,6 +82,23 @@ const StartBurning = (props) => {
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x}>{x}</option>
+                                        ))
+                                    }
+
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Input type="select" name="offer_list" id="exampleSelect"
+                                    className='inputStyle'
+                                    required
+                                    style={{ color: "#495057", width: "100%" }}
+
+                                >
+                                    <option style={{ color: "#495057" }}>Select Offer</option>
+                                    {offerlist &&
+                                        offerlist.length > 0 &&
+                                        offerlist.map((x) => (
                                             <option style={{ color: "#495057" }} key={x}>{x}</option>
                                         ))
                                     }

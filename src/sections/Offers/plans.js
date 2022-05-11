@@ -9,7 +9,7 @@ import Premier from "../../assets/images/OTF/icons/Premier.png";
 import PremierW from "../../assets/images/OTF/icons/PremierW.png";
 
 import plan from "../../assets/images/OTF/offer/plan.png"
-import Documents from '../../components/Modals/Documents/Documents';
+import BookOffer from '../Offers/startburning';
 
 
 const plansData = [
@@ -62,8 +62,9 @@ const Plans = () => {
                                             <button className="otfBtn2"
                                                 onClick={() => setShowModal(true)}
                                             >Book offer</button>
-                                            <Documents
+                                            <BookOffer
                                                 show={showModal} onHide={() => setShowModal(false)}
+                                                title={"Book Offer"}
                                             />
                                         </div>
                                     </div>

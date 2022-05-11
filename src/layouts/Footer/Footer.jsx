@@ -32,7 +32,7 @@ const Footer = (props) => {
                 {/* <div className="logo-sec my-4">
                   <p className='mb-3'
                     style={{ fontSize: "14px" }}
-                  >Follow us on Social Media</p>
+                  >Follow Us On</p>
                   <ul className="d-flex footer-social social">
                     <li className="footer-social-list">
                       <a href="https://www.instagram.com/otfdubai/" target={"_blank"}>
@@ -121,7 +121,7 @@ const Footer = (props) => {
               <div className="logo-sec mb-3">
                 <p className='mb-3 text-center socialText'
                   style={{ fontSize: "14px" }}
-                >Follow us on Social Media</p>
+                >Follow Us On</p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
                     <a href="https://www.instagram.com/otfdubai/" className='instahover' target={"_blank"}>
@@ -151,12 +151,12 @@ const Footer = (props) => {
                 >Download Our App</p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
-                    <a href="https://play.google.com/store?hl=en&gl=US" target={"_blank"}>
+                    <a href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN" target={"_blank"}>
                       <img src={GooglePlay} alt="logo" className='mr-3' />
                     </a>
                   </li>
                   <li className="footer-social-list">
-                    <a href="https://www.apple.com/app-store/" target={"_blank"}>
+                    <a href="https://apps.apple.com/us/app/orangetheory-fitness/id1424351827" target={"_blank"}>
                       <img src={AppStore} alt="logo" />
                     </a>
                   </li>

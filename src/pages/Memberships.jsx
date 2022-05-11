@@ -1,7 +1,7 @@
 import React from "react";
-import ScheduleSection from "../sections/Home/schedule";
+// import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
-import CounterSection from "../sections/Home/counter";
+// import CounterSection from "../sections/Home/counter";
 import Benefits from "../sections/Membership/benefits";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
@@ -15,9 +15,10 @@ import benefits1 from "../assets/images/OTF/membership/Dumbells.png";
 import benefits2 from "../assets/images/OTF/membership/LAT.png";
 import benefits3 from "../assets/images/OTF/membership/Threadmill.png";
 
-import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
+// import corporateBg from "../assets/images/OTF/membership/corporateBg.jpg";
 // import scheduleImg from "../assets/images/OTF/home/health-safty.png";
-import getOff from "../assets/images/OTF/home/get-off.jpg";
+// import getOff from "../assets/images/OTF/home/get-off.jpg";
+import GetApp from "../sections/Membership/getapp";
 
 
 
@@ -79,12 +80,14 @@ const Memberships = (props) => {
                     benefitList={benefitList}
                 />
 
-                <CounterSection
+                <GetApp />
+
+                {/* <CounterSection
                     title="Get 10% off during this festive season!"
                     // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
                     btntext="BECOME A MEMBER TODAY"
                     bgImg={getOff}
-                />
+                /> */}
             </Layout>
 
         </div>

@@ -81,7 +81,7 @@ const Documents = (props) => {
                                 </Col>
                             </Row>
                             <FormGroup>
-                                <Input type="select" name="select" id="exampleSelect"
+                                <Input type="select" name="location" id="exampleSelect"
                                     className='inputStyle'
                                     required
                                     style={{ color: "#495057", width: "100%" }}
@@ -98,7 +98,7 @@ const Documents = (props) => {
                                 </Input>
                             </FormGroup>
                             <FormGroup>
-                                <Input type="select" name="select" id="exampleSelect"
+                                <Input type="select" name="membership_package" id="exampleSelect"
                                     className='inputStyle'
                                     required
                                     style={{ color: "#495057", width: "100%" }}
