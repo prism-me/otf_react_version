@@ -5,14 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //images
-import team1 from "../../assets/images/OTF/team/SheilaMarieOllamina.jpg";
-import team2 from "../../assets/images/OTF/team/ShakirahNamusoke.jpg";
-import team3 from "../../assets/images/OTF/team/KarenJoyMasangcay.jpg";
-import team4 from "../../assets/images/OTF/team/JudyAnnNojor.jpg";
-import team5 from "../../assets/images/OTF/team/ComfortTumukunde.jpg";
-import team6 from "../../assets/images/OTF/team/BlessieTalon.jpg";
-import team7 from "../../assets/images/OTF/team/AnnaAdajar.jpg";
-import team8 from "../../assets/images/OTF/team/AnastaciaLeochico.jpg";
 
 
 var settings = {
@@ -42,50 +34,7 @@ var settings = {
     ]
 };
 
-
-const speaker = [
-    {
-        img: team1,
-        title: "Sheila Marie Ollamina",
-        subtitle: "Asst. Studio Manager"
-    },
-    {
-        img: team2,
-        title: "Shakirah Namusoke",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team3,
-        title: "Karen Joy Masangcay",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team4,
-        title: "Judy Ann Nojor",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team5,
-        title: "Comfort Tumukunde",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team6,
-        title: "Blessie Talon",
-        subtitle: "Sales Associate"
-    },
-    {
-        img: team7,
-        title: "Anna Adajar",
-        subtitle: "Asst. Studio Manager"
-    },
-    {
-        img: team8,
-        title: "Annie Leochico",
-        subtitle: "Studio Manager"
-    }
-];
-const Speaker = () => (
+const Speaker = ({ teamsData, language, isArabic }) => (
     <section className="event speaker set-relative" id="speaker">
         <Container>
             <Row>
@@ -100,13 +49,12 @@ const Speaker = () => (
                 </Col>
                 <Col xs="12" className="speker-container">
                     <Slider className="speaker-slider " {...settings}>
-                        {speaker.length > 0 &&
-                            speaker.map((x, i) => (
-                                <div className="item" key={i}>
-                                    <div className="text-center">
-                                        <div className="team-img">
-                                            <img alt="" className="img-fluid" src={x.img} />
-                                            {/* <div className="overlay"></div>
+                        {teamsData?.map((x, i) => (
+                            <div className="item" key={i}>
+                                <div className="text-center">
+                                    <div className="team-img">
+                                        <img alt="" className="img-fluid" src={x.img} />
+                                        {/* <div className="overlay"></div>
                                             <div className="social">
                                                 <ul>
                                                     <li>
@@ -131,14 +79,26 @@ const Speaker = () => (
                                                     </li>
                                                 </ul>
                                             </div> */}
-                                        </div>
-                                        <div className="employee">
-                                            <h5 className="e-name text-center">{x.title}</h5>
-                                            <h6 className="post text-center ">{x.subtitle}</h6>
-                                        </div>
+                                    </div>
+                                    <div className="employee">
+                                        <h5 className="e-name text-center">
+                                            {
+                                                isArabic
+                                                    ? x?.arabic?.name
+                                                    : x?.name
+                                            }
+                                        </h5>
+                                        <h6 className="post text-center ">
+                                            {
+                                                isArabic
+                                                    ? x?.arabic?.designation
+                                                    : x?.designation
+                                            }
+                                        </h6>
                                     </div>
                                 </div>
-                            ))
+                            </div>
+                        ))
                         }
                     </Slider>
                 </Col>

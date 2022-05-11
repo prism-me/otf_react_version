@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
@@ -10,11 +10,35 @@ import CounterSection from "../sections/About/counter";
 // import Faq from "../sections/About/faq";
 import Layout from '../components/common-layout';
 // import CalculateSection from "../sections/Home/calculate";
+import { API } from "../http/API"
+
 
 //images
 import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const About = (props) => {
+
+    // teams API 
+    const [teamsData, setTeamsData] = useState([]);
+    const [coachData, setCoachData] = useState([]);
+
+    const getAllTeams = () => {
+        API.get('/teams').then(response => {
+            const allteams = response.data?.data?.filter(x => x.type === "our_team");
+            const allcoaches = response.data?.data?.filter(x => x.type === "our_coaches");
+
+            setTeamsData(allteams);
+            setCoachData(allcoaches);
+
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getAllTeams();
+    }, []);
 
     const { global } = props;
     return (
@@ -71,9 +95,17 @@ const About = (props) => {
                     Innovation, Community and 
                     Opportunity for all."
                 />
-                <FitnessCoach />
+                <FitnessCoach
+                    coachData={coachData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
-                <SpeakerSection />
+                <SpeakerSection
+                    teamsData={teamsData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
                 {/* <TestimonialSection /> */}
 

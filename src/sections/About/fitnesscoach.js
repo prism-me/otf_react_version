@@ -5,9 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //images
-import team1 from "../../assets/images/OTF/team/donna.png";
-import team2 from "../../assets/images/OTF/team/noor.png";
-import team3 from "../../assets/images/OTF/team/sarah.png";
 import dummy from "../../assets/images/OTF/team/imageplace.jpg";
 
 
@@ -38,40 +35,7 @@ var settings = {
     ]
 };
 
-
-const speaker = [
-    {
-        img: team1,
-        title: "Donna Forbes",
-        subtitle: "Head Coach"
-    },
-    {
-        img: team2,
-        title: "Noor Maki",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: team3,
-        title: "Sarah Al Ghafari",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: dummy,
-        title: "Katrina Putnina",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: dummy,
-        title: "Sara Lodhi",
-        subtitle: "Fitness Coach"
-    },
-    {
-        img: dummy,
-        title: "Fadi Khoury",
-        subtitle: "Fitness Coach"
-    },
-];
-const FitnessCoach = () => (
+const FitnessCoach = ({ coachData, language, isArabic }) => (
     <section className="event speaker set-relative pb-2" id="fitnesscoach">
         <Container>
             <Row>
@@ -86,23 +50,39 @@ const FitnessCoach = () => (
                 </Col>
                 <Col xs="12" className="speker-container">
                     <Slider className="speaker-slider " {...settings}>
-                        {speaker.length > 0 &&
-                            speaker.map((x, i) => (
-                                <div className="item" key={i}>
-                                    <div className="text-center mb-3">
-                                        <div className="team-img team-img-wrapper">
-                                            <img alt="" className="img-fluid imagestyle" src={x.img} />
-                                            <div className="middle">
-                                                <div className="text">Lorem Ipsum</div>
-                                            </div>
-                                        </div>
-                                        <div className="employee">
-                                            <h5 className="e-name text-center">{x.title}</h5>
-                                            <h6 className="post text-center ">{x.subtitle}</h6>
+                        {coachData?.map((x, i) => (
+                            <div className="item" key={i}>
+                                <div className="text-center mb-3">
+                                    <div className="team-img team-img-wrapper">
+                                        {
+                                            x.img === null ?
+                                                <img alt="" className="img-fluid imagestyle" src={dummy} />
+                                                :
+                                                <img alt="" className="img-fluid imagestyle" src={x.img} />
+                                        }
+                                        <div className="middle">
+                                            <div className="text">Lorem Ipsum</div>
                                         </div>
                                     </div>
+                                    <div className="employee">
+                                        <h5 className="e-name text-center">
+                                            {
+                                                isArabic
+                                                    ? x?.arabic?.name
+                                                    : x?.name
+                                            }
+                                        </h5>
+                                        <h6 className="post text-center">
+                                            {
+                                                isArabic
+                                                    ? x?.arabic?.designation
+                                                    : x?.designation
+                                            }
+                                        </h6>
+                                    </div>
                                 </div>
-                            ))
+                            </div>
+                        ))
                         }
                     </Slider>
                 </Col>
