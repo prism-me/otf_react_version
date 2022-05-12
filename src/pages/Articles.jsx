@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
 
 //images
-import articalBanner from "../assets/images/OTF/banner/articlesbanner.jpg";
+// import articalBanner from "../assets/images/OTF/banner/articlesbanner.jpg";
 import articalBg from "../assets/images/OTF/articles/articalbg.jpg";
 
 

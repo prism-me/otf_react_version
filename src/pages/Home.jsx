@@ -29,6 +29,12 @@ import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 
 const Home = (props) => {
 
+  useEffect(() => {
+    getAllTestimonial();
+    getAllMemberships();
+    getAllLocations();
+  }, []);
+
   // memberships API 
   const [membershipsData, setMembershipsData] = useState([]);
 
@@ -55,10 +61,19 @@ const Home = (props) => {
       })
   }
 
-  useEffect(() => {
-    getAllTestimonial();
-    getAllMemberships();
-  }, []);
+  // locations API 
+  const [locationsData, setLocationsData] = useState([]);
+
+  const getAllLocations = () => {
+    API.get('/locations').then(response => {
+      const alllocations = response.data?.data;
+      console.log("locationsData", response.data?.data)
+      setLocationsData(alllocations);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   const listImg = [
     heatl1,
@@ -124,7 +139,11 @@ const Home = (props) => {
 
         {/* <FormatSection /> */}
 
-        <CalculateSection />
+        <CalculateSection
+          locationsData={locationsData}
+          language={global?.activeLanguage}
+          isArabic={global?.activeLanguage === "ar"}
+        />
 
       </div>
     </>

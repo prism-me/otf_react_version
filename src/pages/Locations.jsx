@@ -11,21 +11,23 @@ import bannerImage from "../assets/images/OTF/banner/locationbanner.jpg";
 const Locations = (props) => {
 
     // locations API 
+
+    useEffect(() => {
+        getAllLocations();
+    }, []);
+
     const [locationsData, setLocationsData] = useState([]);
 
     const getAllLocations = () => {
         API.get('/locations').then(response => {
             const alllocations = response.data?.data;
+            console.log("locationsData", response.data?.data)
             setLocationsData(alllocations);
         })
             .catch(err => {
                 console.log(err)
             })
     }
-
-    useEffect(() => {
-        getAllLocations();
-    }, []);
 
     const { global } = props;
     return (

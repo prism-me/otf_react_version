@@ -14,9 +14,14 @@ import { API } from "../http/API"
 
 
 //images
-import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
+// import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const About = (props) => {
+
+    useEffect(() => {
+        getAllTeams();
+        getPagesData();
+    }, []);
 
     // teams API 
     const [teamsData, setTeamsData] = useState([]);
@@ -35,12 +40,6 @@ const About = (props) => {
                 console.log(err)
             })
     }
-
-    useEffect(() => {
-        getAllTeams();
-        getPagesData();
-    }, []);
-
 
     // contact page API
     const [content, setContent] = useState([]);

@@ -23,6 +23,11 @@ import GetApp from "../sections/Membership/getapp";
 
 
 const Memberships = (props) => {
+
+    useEffect(() => {
+        getAllMemberships();
+    }, []);
+
     const list = [
         "Free Lunch & Burn intro class",
         "Free Team-Building Workout",
@@ -56,10 +61,6 @@ const Memberships = (props) => {
                 console.log(err)
             })
     }
-
-    useEffect(() => {
-        getAllMemberships();
-    }, []);
 
     const { global } = props;
     return (

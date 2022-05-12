@@ -12,6 +12,10 @@ import { API } from "../http/API"
 
 const Careers = (props) => {
 
+  useEffect(() => {
+    getAllCareers();
+  }, []);
+
   // careers API 
   const [careersData, setCareersData] = useState([]);
 
@@ -24,10 +28,6 @@ const Careers = (props) => {
         console.log(err)
       })
   }
-
-  useEffect(() => {
-    getAllCareers();
-  }, []);
 
   const { global } = props;
   return (

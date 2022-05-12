@@ -16,6 +16,11 @@ import bannerImg from "../assets/images/OTF/banner/faqbanner.jpg";
 
 const Faq = (props) => {
 
+    useEffect(() => {
+        getAllFaqs();
+        getAllLocations();
+    }, []);
+
     const DummyContent1 = (props) => (
         <p
             className="p-0"
@@ -39,9 +44,19 @@ const Faq = (props) => {
             })
     }
 
-    useEffect(() => {
-        getAllFaqs();
-    }, []);
+    // locations API 
+    const [locationsData, setLocationsData] = useState([]);
+
+    const getAllLocations = () => {
+        API.get('/locations').then(response => {
+            const alllocations = response.data?.data;
+            console.log("locationsData", response.data?.data)
+            setLocationsData(alllocations);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
     const { global } = props;
     return (
@@ -105,7 +120,11 @@ const Faq = (props) => {
                     </Container>
                 </section>
 
-                <CalculateSection />
+                <CalculateSection
+                    locationsData={locationsData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
                 <section className="pb-0">
                     <Coaching />

@@ -23,6 +23,10 @@ import About from "../sections/Workout/about";
 
 const Workout = (props) => {
 
+    useEffect(() => {
+        getAllTestimonial();
+    }, []);
+
     // testimonial API 
     const [testimonialData, setTestimonialData] = useState([]);
 
@@ -35,10 +39,6 @@ const Workout = (props) => {
                 console.log(err)
             })
     }
-
-    useEffect(() => {
-        getAllTestimonial();
-    }, []);
 
     const { global } = props;
     return (

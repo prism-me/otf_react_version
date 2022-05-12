@@ -17,6 +17,10 @@ import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const Testimonials = (props) => {
 
+    useEffect(() => {
+        getAllTestimonial();
+    }, []);
+
     // testimonial API 
     const [testimonialData, setTestimonialData] = useState([]);
     const [memberreviewData, setMemberReviewData] = useState([]);
@@ -37,10 +41,6 @@ const Testimonials = (props) => {
                 console.log(err)
             })
     }
-
-    useEffect(() => {
-        getAllTestimonial();
-    }, []);
 
     const { global } = props;
     return (
