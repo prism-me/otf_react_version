@@ -71,10 +71,22 @@ const Trainer = ({ memberreviewData, title, language, isArabic }) => (
                                             }}
                                         >
                                         </p>
+                                        {
+                                            x.img === null ?
+                                                <center>
+                                                    <div className="avatarStyle">
+                                                        <span>{
+                                                            isArabic
+                                                                ? x?.arabic?.name.charAt(0)
+                                                                : x?.name.charAt(0)
+                                                        }</span>
+                                                    </div>
+                                                </center>
+                                                : <center>
+                                                    <img alt="" className="img-fluid members mt-5 mb-2" src={x.img} />
+                                                </center>
+                                        }
 
-                                        <center>
-                                            <img alt="" className="img-fluid members mt-5 mb-2" src={x.img} />
-                                        </center>
                                         <h5 className="name"
                                             style={{
                                                 color: "#2E2E2E"

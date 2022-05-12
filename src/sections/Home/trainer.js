@@ -4,8 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
-import { Avatar } from "@agney/react-avatar";
-
 
 import googleIcon from "../../assets/images/OTF/icons/googleIcon.png"
 
@@ -61,10 +59,15 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                                         >
                                             {
                                                 x.img === null ?
-                                                    <Avatar
-                                                        src="https://gravatar.com/avatar/7c4ff521986b4ff8d29440beec01972d?s=400&d=robohash&r=x"
-                                                        text="CM"
-                                                    />
+                                                    <center>
+                                                        <div className="avatarStyle">
+                                                            <span>{
+                                                                isArabic
+                                                                    ? x?.arabic?.name.charAt(0)
+                                                                    : x?.name.charAt(0)
+                                                            }</span>
+                                                        </div>
+                                                    </center>
                                                     : <img alt="" className="img-fluid members" src={x.img} />
                                             }
 

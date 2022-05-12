@@ -4782,6 +4782,23 @@ booking section end
 
   &.team {
     .team-slider {
+
+      .avatarStyle {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        color: $white;
+        background: $orange;
+        border: 5px solid #FFFFFF;
+        filter: drop-shadow(0 0 5px #dbdbdb);
+        margin-bottom: 1.5rem;
+        font-size: $sub-fonts;
+      }
+
       .slick-list {
         .slick-track {
           .slick-slide {
@@ -4838,6 +4855,11 @@ booking section end
         .team-para {
           letter-spacing: 0;
           font-size: $sub-fonts;
+
+          p {
+            letter-spacing: 0;
+            font-size: $sub-fonts;
+          }
         }
       }
     }
@@ -11587,6 +11609,23 @@ gym css start
   }
 
   .membersaysabout-slider {
+
+    .avatarStyle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      color: $white;
+      background: $orange;
+      border: 5px solid #FFFFFF;
+      filter: drop-shadow(0 0 5px #dbdbdb);
+      margin-bottom: 1.5rem;
+      font-size: $sub-fonts;
+      text-transform: uppercase;
+    }
+
     .slick-arrow {
       width: auto;
       height: auto;
