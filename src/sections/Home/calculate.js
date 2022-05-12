@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 });
 
-const Calculate = () => {
+const Calculate = ({ locationsData, language, isArabic }) => {
     const [mshow, setMShow] = React.useState(false);
     const [tshow, setTShow] = React.useState(false);
     const showTSection = () => {

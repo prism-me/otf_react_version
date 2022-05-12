@@ -47,7 +47,7 @@ const Home = (props) => {
 
   const getAllTestimonial = () => {
     API.get('/testimonials').then(response => {
-      const alltestimonial = response.data?.data;
+      const alltestimonial = response.data?.data?.filter(x => x.type === "testimonial");
       setTestimonialData(alltestimonial);
     })
       .catch(err => {

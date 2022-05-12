@@ -15,17 +15,9 @@ import { API } from "../http/API"
 
 import banerImg from "../assets/images/OTF/banner/aboutbanner.jpg"
 
-import testimonial1 from "../assets/images/OTF/testimonial/testimonial1.png";
-import testimonial2 from "../assets/images/OTF/testimonial/testimonial2.png";
-import testimonial3 from "../assets/images/OTF/testimonial/testimonial3.png";
-import testimonial4 from "../assets/images/OTF/testimonial/testimonial4.png";
-import testimonial5 from "../assets/images/OTF/testimonial/testimonial5.png";
-import testimonial6 from "../assets/images/OTF/testimonial/testimonial6.png";
-import testimonial7 from "../assets/images/OTF/testimonial/testimonial7.png";
-
 import coachprofBg from "../assets/images/OTF/membership/corporateBg.jpg"
 import coachImg from "../assets/images/OTF/workout/coachImg.png";
-import getOff from "../assets/images/OTF/home/get-off.jpg";
+// import getOff from "../assets/images/OTF/home/get-off.jpg";
 import About from "../sections/Workout/about";
 
 
@@ -36,7 +28,7 @@ const Workout = (props) => {
 
     const getAllTestimonial = () => {
         API.get('/testimonials').then(response => {
-            const alltestimonial = response.data?.data;
+            const alltestimonial = response.data?.data?.filter(x => x.type === "testimonial");
             setTestimonialData(alltestimonial);
         })
             .catch(err => {

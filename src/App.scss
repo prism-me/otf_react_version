@@ -4770,6 +4770,11 @@ booking section end
         .membersaysabout-para {
           letter-spacing: 0;
           font-size: $sub-fonts;
+
+          p {
+            letter-spacing: 0;
+            font-size: $sub-fonts;
+          }
         }
       }
     }

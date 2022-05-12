@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
+import { Avatar } from "@agney/react-avatar";
+
 
 import googleIcon from "../../assets/images/OTF/icons/googleIcon.png"
 
@@ -57,7 +59,15 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                                                 padding: " 25px 30px"
                                             }}
                                         >
-                                            <img alt="" className="img-fluid members" src={x.img} />
+                                            {
+                                                x.img === null ?
+                                                    <Avatar
+                                                        src="https://gravatar.com/avatar/7c4ff521986b4ff8d29440beec01972d?s=400&d=robohash&r=x"
+                                                        text="CM"
+                                                    />
+                                                    : <img alt="" className="img-fluid members" src={x.img} />
+                                            }
+
                                             <p className="d-flex justify-content-center align-items-center mb-2">
                                                 <ReactStars
                                                     count={5}

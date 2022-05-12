@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
+import { API } from "../http/API"
 
 //images
 import bannerImage from "../assets/images/OTF/banner/locationbanner.jpg";
 
 const Locations = (props) => {
+
+    // locations API 
+    const [locationsData, setLocationsData] = useState([]);
+
+    const getAllLocations = () => {
+        API.get('/locations').then(response => {
+            const alllocations = response.data?.data;
+            setLocationsData(alllocations);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getAllLocations();
+    }, []);
 
     const { global } = props;
     return (
@@ -27,7 +45,11 @@ const Locations = (props) => {
                 // btntext="Book your session"
                 bannerImg={bannerImage}
             >
-                <CalculateSection />
+                <CalculateSection
+                    locationsData={locationsData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
             </Layout>
         </div>
     );
