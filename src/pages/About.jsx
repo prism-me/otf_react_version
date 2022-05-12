@@ -38,7 +38,29 @@ const About = (props) => {
 
     useEffect(() => {
         getAllTeams();
+        getPagesData();
     }, []);
+
+
+    // contact page API
+    const [content, setContent] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "about-us"
+                    );
+                    API.get(`/all-sections/${currentPage._id}`)
+                        .then((response) => {
+                            setContent(response.data?.data[response.data.data?.length - 1]?.content);
+                        })
+                }
+            })
+            .catch((err) => console.log(err));
+    }
 
     const { global } = props;
     return (
@@ -53,47 +75,47 @@ const About = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Backed by science"
-                subtitle="OTF Workout is backed by science, 
-                spending 12 minutes in Orange Zone 
-                gives you more strength, energy and 
-                more life. Join us now!"
+                title={
+                    global?.activeLanguage === "ar"
+                        ? content?.arabic?.banner?.title
+                        : content?.banner?.title
+                }
+                subtitle={
+                    global?.activeLanguage === "ar"
+                        ? content?.arabic?.banner?.subtitle
+                        : content?.banner?.subtitle
+                }
                 // btntext="Book your Free class!"
-                bannerImg={aboutBanner}
+                bannerImg={content?.banner?.banner_image}
                 freeform="freeclass"
             >
 
                 <AbouSection
-                    divId="mission"
-                    title="About Orangetheory"
-                    detail="Orangetheory is a 1-hour full body 
-                    workout, focused on training 
-                    Endurance, Strength and Power. Our 
-                    class is based on Heart Rate Based 
-                    Interval Training that burns more 
-                    calories post workout than a 
-                    traditional exercise. Our Heart Rate 
-                    monitors provides you real time 
-                    results. Intensity is based on your 
-                    individual Heart Rate making the 
-                    workout effective for all fitness 
-                    levels. Our certified fitness coaches 
-                    will guide you to make sure you are 
-                    not over or under training"
-                    info1title="Our Mission"
-                    info1detail="To lead, support & inspire the Orange 
-                    Passion to achieve superior results 
-                    while always ensuring that we 
-                    exemplify a diversified, equitable & 
-                    inclusive culture."
-                    info2title="Our Vision"
-                    info2detail="To be the trusted global leader of 
-                    innovative Heart Rate-Based interval 
-                    training."
-                    info3title="Our Values"
-                    info3detail="Passion, Integrity, Accountability, 
-                    Innovation, Community and 
-                    Opportunity for all."
+                    language={global?.activeLanguage}
+                    intoSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.intro
+                            : content?.intro
+                    }
+                    missionSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.section1
+                            : content?.section1
+                    }
+                    missionImg={content?.section1?.featured_image}
+                    visionSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.section2
+                            : content?.section2
+                    }
+                    visionImg={content?.section2?.featured_image}
+                    valueSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.section3
+                            : content?.section3
+                    }
+                    valueImg={content?.section3?.featured_image}
+
                 />
                 <FitnessCoach
                     coachData={coachData}

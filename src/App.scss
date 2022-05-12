@@ -4793,7 +4793,7 @@ booking section end
         border-radius: 100%;
         color: $white;
         background: $orange;
-        border: 5px solid #FFFFFF;
+        border: 2px solid #FFFFFF;
         filter: drop-shadow(0 0 5px #dbdbdb);
         margin-bottom: 1.5rem;
         font-size: $sub-fonts;
@@ -4833,7 +4833,7 @@ booking section end
         .members {
           width: 80px !important;
           margin: 0 auto;
-          border: 5px solid $white;
+          border: 2px solid $white;
           border-radius: 100%;
           filter: drop-shadow(0 0 5px $white2);
           margin-bottom: 20px;
@@ -9462,6 +9462,13 @@ tap to top css end
       font-weight: 400;
       text-align: justify;
       margin-bottom: 2rem;
+
+      p {
+        font-size: $sub-fonts;
+        font-weight: 400;
+        text-align: justify;
+        margin-bottom: 2rem;
+      }
     }
 
     .testimonial {
@@ -11189,6 +11196,14 @@ gym css start
     font-weight: 400;
     text-align: justify;
 
+    p {
+      font-size: $sub-fonts;
+      font-weight: 400;
+      text-align: justify;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
   }
 
   .otfBtn {
@@ -11619,7 +11634,7 @@ gym css start
       border-radius: 100%;
       color: $white;
       background: $orange;
-      border: 5px solid #FFFFFF;
+      border: 2px solid #FFFFFF;
       filter: drop-shadow(0 0 5px #dbdbdb);
       margin-bottom: 1.5rem;
       font-size: $sub-fonts;
@@ -21641,6 +21656,13 @@ footer {
     font-weight: 400;
     text-align: center;
     margin-bottom: 2rem;
+
+    p {
+      font-size: $sub-fonts;
+      font-weight: 400;
+      text-align: justify;
+      margin-bottom: 2rem;
+    }
   }
 
   .borders {
@@ -21700,6 +21722,13 @@ footer {
                 font-weight: 400;
                 text-align: justify;
                 margin-bottom: 2rem;
+
+                p {
+                  font-size: $sub-fonts;
+                  font-weight: 400;
+                  text-align: justify;
+                  margin-bottom: 2rem;
+                }
               }
 
               .icon-collection {
@@ -21789,6 +21818,13 @@ footer {
     font-weight: 400;
     text-align: justify;
     margin-bottom: 2rem;
+
+    p {
+      font-size: $sub-fonts;
+      font-weight: 400;
+      text-align: justify;
+      margin-bottom: 2rem;
+    }
   }
 
   .coach-container {
