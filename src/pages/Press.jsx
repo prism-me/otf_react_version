@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
-import AboutPress from "../sections/Press/aboutpress";
+// import AboutPress from "../sections/Press/aboutpress";
 import PressGrid from "../sections/Press/pressgrid";
 import CounterSection from "../sections/Home/counter";
 import Layout from '../components/common-layout';
+import { API } from "../http/API"
 
 //images
 import pressBanner from "../assets/images/OTF/banner/pressbanner.jpg";
@@ -13,6 +14,23 @@ import pressBg from "../assets/images/OTF/press/pressbg.jpg";
 
 
 const Press = (props) => {
+
+    useEffect(() => {
+        getAllPress();
+    }, []);
+
+    // articles API 
+    const [pressData, setPressData] = useState([]);
+
+    const getAllPress = () => {
+        API.get('/blogs').then(response => {
+            const allpress = response.data?.data;
+            setPressData(allpress);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
     const { global } = props;
     return (
@@ -35,7 +53,11 @@ const Press = (props) => {
             >
                 {/* <AboutPress /> */}
 
-                <PressGrid />
+                <PressGrid
+                    language={global?.activeLanguage}
+                    pressData={pressData}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
                 <CounterSection
                     title="Follow us on Social Media"

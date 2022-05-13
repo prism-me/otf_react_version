@@ -18,7 +18,7 @@ const Articles = (props) => {
     getAllArticles();
   }, []);
 
-  // careers API 
+  // articles API 
   const [articlesData, setArticlesData] = useState([]);
 
   const getAllArticles = () => {

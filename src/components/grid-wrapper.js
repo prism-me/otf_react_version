@@ -43,7 +43,7 @@ const CardGridWrapper = ({
                                 }
 
                                 <div className="btn-bottom m-t-20">
-                                    <Link href={readUrl} >
+                                    <a href={readUrl} target="_blank">
                                         <button
                                             style={{
                                                 background: "transparent",
@@ -55,7 +55,7 @@ const CardGridWrapper = ({
                                                 outline: "0"
                                             }}
                                         >read more</button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>

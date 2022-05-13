@@ -43,7 +43,7 @@ const Articlesgrid = ({ language, articlesData, isArabic }) => {
                                         language={language}
                                     />
                                 ) :
-                                '!! No Blogs Found'}
+                                '!! No Articles Found'}
                         </Row>
                     </Col>
                 </Row>

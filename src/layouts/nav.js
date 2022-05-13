@@ -6,6 +6,8 @@ import ClearIcon from "@material-ui/icons/Clear";
 import { connect } from "react-redux";
 import { types } from "../redux/global/types";
 import ApplyNow from '../components/Modals/ApplyNow/ApplyNow';
+import { Dropdown } from "react-bootstrap";
+
 
 const Nav = (props) => {
     const [showModal, setShowModal] = useState(false);
@@ -169,6 +171,36 @@ const Nav = (props) => {
                         title={"Free Class"}
                     />
                 </li>
+                {/* <div
+                    className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
+                >
+
+                    <Dropdown>
+                        <Dropdown.Toggle
+                            variant=" btn-sm"
+                        >
+                            {props.global.activeLanguage === "en" ? "Language" : "اللغة"}
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item as="button"
+                                className={props.global.activeLanguage === "en" ? "active" : ""}
+                            >
+                                <div onClick={() => {
+                                    props.setActiveLanguage("en");
+                                }}>
+                                    {props.global.activeLanguage === "en" ? "English" : "English"}
+                                </div>
+                            </Dropdown.Item>
+                            <Dropdown.Item as="button" className={props.global.activeLanguage === "ar" ? "active" : ""}>
+                                <div onClick={() => {
+                                    props.setActiveLanguage("ar");
+                                }}>
+                                    {props.global.activeLanguage === "en" ? "العربية" : "العربية"}
+                                </div>
+                            </Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div> */}
             </ul>
         </div>
     )
