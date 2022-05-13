@@ -28,7 +28,7 @@ const CardGridWrapper = ({
                     </Col>
                     <Col xl="9" lg="8" md="6" className="p-0">
                         <div className="img-container center-content">
-                            <div className="center-content">
+                            <div className="center-content align-items-start">
                                 <div className="blog-info">
                                     <div className="m-b-20">
                                         <div className="center-text">
