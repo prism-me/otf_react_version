@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ArticlesInner from "../sections/Articlesdetail/articles-inner";
 import CounterSection from "../sections/Home/counter";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
+import { API } from '../http/API';
+import { useParams } from "react-router-dom";
 
 //images
 import articlesBanner from "../assets/images/OTF/banner/articlesbanner.jpg";
@@ -11,6 +13,26 @@ import articalBg from "../assets/images/OTF/articles/articalbg.jpg";
 
 
 const ArticlesDetail = (props) => {
+
+    // single data get API Integration
+    const [singleArticleData, setSingleArticleData] = useState([]);
+
+    const { id } = useParams();
+
+    const getSingleArticle = () => {
+        API.get(`/articles/${id}`).then(response => {
+            const singleArticle = response.data?.data;
+            setSingleArticleData(singleArticle);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        getSingleArticle();
+    }, []);
+
 
     const { global } = props;
     return (
@@ -26,14 +48,18 @@ const ArticlesDetail = (props) => {
             </Helmet>
             <Layout
                 // title="Lorem ipsum"
-                title={"Hunkered Down To Keep Coronavirus At Bay? Stay Healthy With 7 Tips To Channel Your Inner Orangetheory Spirit"}
+                title={global?.activeLanguage === "ar" ? singleArticleData?.arabic?.title : singleArticleData?.title}
                 // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 bannerImg={articlesBanner}
                 // btntext="Book your Free class!"
                 freeform="freeclass"
             >
 
-                <ArticlesInner />
+                <ArticlesInner
+                    singleArticleData={singleArticleData}
+                    language={global?.activeLanguage}
+                    isArabic={global?.activeLanguage === "ar"}
+                />
 
                 <CounterSection
                     title="Get 10% off during this festive season!"

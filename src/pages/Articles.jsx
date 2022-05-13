@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AboutArticles from "../sections/Articles/aboutarticles";
 import ArticlesGrid from "../sections/Articles/articlesgrid";
 import CounterSection from "../sections/Home/counter";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
-import Layout from '../components/common-layout';
+// import Layout from '../components/common-layout';
+import { API } from "../http/API"
 
 //images
 // import articalBanner from "../assets/images/OTF/banner/articlesbanner.jpg";
@@ -12,6 +13,23 @@ import articalBg from "../assets/images/OTF/articles/articalbg.jpg";
 
 
 const Articles = (props) => {
+
+  useEffect(() => {
+    getAllArticles();
+  }, []);
+
+  // careers API 
+  const [articlesData, setArticlesData] = useState([]);
+
+  const getAllArticles = () => {
+    API.get('/articles').then(response => {
+      const allarticles = response.data?.data;
+      setArticlesData(allarticles);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   const { global } = props;
   return (
@@ -37,6 +55,8 @@ const Articles = (props) => {
 
       <ArticlesGrid
         language={global?.activeLanguage}
+        articlesData={articlesData}
+        isArabic={global?.activeLanguage === "ar"}
       />
 
       <CounterSection

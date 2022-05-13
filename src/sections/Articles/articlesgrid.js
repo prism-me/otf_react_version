@@ -24,7 +24,7 @@ import art16 from "../../assets/images/OTF/articles/movement.jpg";
 
 
 
-const Articlesgrid = ({ language }) => {
+const Articlesgrid = ({ language, articlesData, isArabic }) => {
 
     const BlogsList = [
         {
@@ -230,17 +230,27 @@ const Articlesgrid = ({ language }) => {
                 <Row className="pl-0 pr-0">
                     <Col lg="12">
                         <Row className="split m-0">
-                            {BlogsList.length > 0 ?
-                                BlogsList.slice(0, loadItems).map((item, index) =>
+                            {articlesData.length > 0 ?
+                                articlesData.slice(0, loadItems).map((item, index) =>
                                     <CardWrapper
                                         key={`grid-no-sidebar-${index}`}
                                         className="col-12 blog-sec blog-list "
-                                        image={item.image}
-                                        blogDate={item.createdAt}
-                                        place={item.place}
-                                        title={item.title}
-                                        description={item.description}
-                                        readUrl={item.readUrl}
+                                        image={item.featured_img}
+                                        blogDate={item.created_at}
+                                        place={
+                                            isArabic
+                                                ? item?.arabic?.category
+                                                : item?.category
+                                        }
+                                        title={
+                                            isArabic
+                                                ? item?.arabic?.title
+                                                : item?.title
+                                        }
+                                        description={isArabic
+                                            ? item?.arabic?.short_description
+                                            : item?.short_description}
+                                        readUrl={`article/${item.slug}`}
                                         language={language}
                                     />
                                 ) :

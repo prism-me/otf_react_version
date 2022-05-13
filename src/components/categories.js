@@ -2,13 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const categories = [
-    "Community",
-    "Events",
-    "Health",
-    "Technology",
-    "Fitness",
-    "Science",
-    "Motivation"
+    {
+        label: "Community",
+        value: "community"
+    },
+    {
+        label: "Events",
+        value: "events"
+    },
+    {
+        label: "Health",
+        value: "health"
+    },
+    {
+        label: "Technology",
+        value: "technology"
+    },
+    {
+        label: "Fitness",
+        value: "fitness"
+    },
+    {
+        label: "Science",
+        value: "science"
+    },
+    {
+        label: "Motivation",
+        value: "motivation"
+    }
 ];
 const Categories = ({ }) => (
     <div>
@@ -21,7 +42,7 @@ const Categories = ({ }) => (
                             <Link href="#">
                                 <a>
                                     <i aria-hidden="true" className="fa fa-angle-right m-r-15"></i>
-                                    {x}
+                                    {x.label}
                                     {/* Lorem Ipsum Is Simple */}
                                 </a>
                             </Link>

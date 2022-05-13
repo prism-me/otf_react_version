@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import { AccessTime } from '@material-ui/icons';
+// import LocationOnIcon from '@material-ui/icons/LocationOn';
+// import { AccessTime } from '@material-ui/icons';
 
 const CardGridWrapper = ({
     className,
@@ -46,15 +46,25 @@ const CardGridWrapper = ({
                                     <h5 className="blog-head font-600 mt-3">{title}</h5>
                                     {description.length > MAX_LENGTH ?
                                         (
-                                            <p className="para2">
-                                                {`${description.substring(0, MAX_LENGTH)} .....`}
+                                            <p className="para2"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: `${description.substring(0, MAX_LENGTH)} .....`
+                                                }}
+                                            >
+                                                {/* {`${description.substring(0, MAX_LENGTH)} .....`} */}
                                             </p>
                                         ) :
-                                        <p className="para2">{description}</p>
+                                        <p className="para2"
+                                            dangerouslySetInnerHTML={{
+                                                __html: description
+                                            }}
+                                        >
+                                            {/* {description} */}
+                                        </p>
                                     }
 
                                     {/* <div className="btn-bottom m-t-20">
-                                        <Link to={`/${language}/${readUrl}/${title}`} >
+                                        <Link to={`/${language}/${readUrl}`} >
                                             <button
                                                 style={{
                                                     background: "transparent",

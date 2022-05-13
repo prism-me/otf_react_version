@@ -7861,7 +7861,7 @@ agency css end
         font-size: $sub-fonts;
         font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
-        text-transform: none;
+        text-transform: capitalize;
         color: $paracolor  !important;
       }
 
@@ -14424,6 +14424,7 @@ error css end
         color: $black;
         margin-bottom: 25px;
         letter-spacing: 0;
+        text-align: justify;
       }
 
       h5 {
