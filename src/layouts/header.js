@@ -6,7 +6,6 @@ import { Menu } from '@material-ui/icons';
 import { useHistory } from "react-router-dom";
 
 
-
 const Header = props => {
     const history = useHistory();
 
@@ -39,7 +38,7 @@ const Header = props => {
                     <Row>
                         <Col>
                             <nav className={`${stickyClass}`}>
-                                <a className="m-r-auto" href="/">
+                                <a className={`${props?.activeLanguage === "en" ? 'm-r-auto' : 'ml-auto'}`} href="/">
                                     <img alt="" className="img-fluid" src={logo} />
                                 </a>
                                 <div className="responsive-btn">

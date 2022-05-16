@@ -6,7 +6,7 @@ const Jointeam = () => {
     return (
         <section className="gym format container pb-0">
             <Row>
-                <Col md="8" className="offset-md-2">
+                <Col md="12">
                     <div className="center-text">
                         <div className="text-center">
                             <div className="format-head-text">

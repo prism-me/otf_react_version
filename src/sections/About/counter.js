@@ -42,7 +42,7 @@ const otfData = [
         detail1: "You’ll have 24/7 access to your results and fitness data so you can track your performance and set new goals.",
     }
 ]
-const Counter = () => (
+const Counter = ({ language }) => (
     <section className="OTbeatStyle p-0">
         <Slider className="default-dots otbeat-slider" id="gym-slider" {...settings}>
             {otfData.length > 0 &&
@@ -58,7 +58,7 @@ const Counter = () => (
                                             {x.title}
                                         </h3>
 
-                                        <p className="oftsubHeading text-white">
+                                        <p className={`oftsubHeading text-white ${language === "ar" ? "text-right" : "text-left"}`}>
                                             {x.detail1}
                                         </p>
                                         {/* <p className="oftsubHeading text-white">

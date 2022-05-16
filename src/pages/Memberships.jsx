@@ -100,7 +100,9 @@ const Memberships = (props) => {
                     benefitList={benefitList}
                 />
 
-                <GetApp />
+                <GetApp
+                    language={global?.activeLanguage}
+                />
 
                 {/* <CounterSection
                     title="Get 10% off during this festive season!"

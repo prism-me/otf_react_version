@@ -152,7 +152,7 @@ const Footer = (props) => {
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
                     <a href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN" target={"_blank"}>
-                      <img src={GooglePlay} alt="logo" className='mr-3' />
+                      <img src={GooglePlay} alt="logo" className={`${global.activeLanguage === "en" ? 'mr-3' : 'ml-3'}`} />
                     </a>
                   </li>
                   <li className="footer-social-list">

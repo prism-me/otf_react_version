@@ -26,7 +26,7 @@ const Calculate = ({ locationsData, language, isArabic }) => {
                         style={{ backgroundImage: `url(${locationbg})` }}
                     >
                         <div className={"p-5 mx-5 mb-4 calLocationspacing"}>
-                            <h3 className="text-left oftHeading">Our Locations</h3>
+                            <h3 className={`${language === "ar" ? "text-right" : 'text-left'} oftHeading `}>Our Locations</h3>
                             <Container>
                                 {
                                     locationsData?.map((x, i) => (

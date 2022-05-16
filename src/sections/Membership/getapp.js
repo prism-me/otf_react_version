@@ -15,7 +15,7 @@ const GetApp = ({ language }) => (
                 <Col md="6">
                     <div className="center-text justify-content-center">
                         <div>
-                            <h3 className="oftHeading text-left"
+                            <h3 className={`${language === "ar" ? "text-right" : 'text-left'} oftHeading `}
                                 style={{
                                     color: "#2E2E2E"
                                 }}
@@ -44,7 +44,7 @@ const GetApp = ({ language }) => (
                                 <ul className="d-flex footer-social social mt-4">
                                     <li className="footer-social-list">
                                         <a href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN" target={"_blank"}>
-                                            <img src={GooglePlay} alt="logo" className='mr-3' />
+                                            <img src={GooglePlay} alt="logo" className={`${language === "ar" ? "ml-3" : 'mr-3'}`} />
                                         </a>
                                     </li>
                                     <li className="footer-social-list">

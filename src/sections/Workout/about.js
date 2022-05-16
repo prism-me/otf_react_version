@@ -19,7 +19,7 @@ const About = ({ language }) => (
                 <Col md="6">
                     <div className="center-text">
                         <div>
-                            <h3 className="oftHeading text-left"
+                            <h3 className={`${language === "ar" ? "text-right" : 'text-left'} oftHeading `}
                                 style={{
                                     color: "#2E2E2E"
                                 }}

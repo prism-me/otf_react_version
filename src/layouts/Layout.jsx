@@ -20,7 +20,9 @@ function Layout(props) {
         : "english-direction"
         }`}>
 
-      <Header className="gym nav-lg" />
+      <Header className="gym nav-lg"
+        activeLanguage={global.activeLanguage}
+      />
       {/* <Navbar show={visible} toggleDrawer={(show) => toggleDrawer(show)} cssRoute={history.location.pathname} /> */}
       {/* <Contactpannel activeLanguage={global.activeLanguage} /> */}
       {props.children}

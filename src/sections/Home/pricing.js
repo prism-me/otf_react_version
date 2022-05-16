@@ -9,19 +9,17 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
         <section className="gym pricing set-relative pb-0"
             id="membership_packages">
             <Container>
+                <h2 className="oftHeading"
+                    style={{
+                        color: "#2E2E2E"
+                    }}
+                >Become a Member</h2>
+                <p className="oftsubHeading text-center mb-5">
+                    It only takes a minute in our studio to understand it’s not a competition – it’s a
+                    community. Check out our membership options and contact your local studio
+                    to find the right fit for you.
+                </p>
                 <Row>
-                    <Col md="10" className="offset-md-1">
-                        <h2 className="oftHeading"
-                            style={{
-                                color: "#2E2E2E"
-                            }}
-                        >Become a Member</h2>
-                        <p className="oftsubHeading text-center mb-5">
-                            It only takes a minute in our studio to understand it’s not a competition – it’s a
-                            community. Check out our membership options and contact your local studio
-                            to find the right fit for you.
-                        </p>
-                    </Col>
                     <Col lg="12" md="8" className="offset-md-2 offset-lg-0">
                         <Row className="justify-content-center">
                             {membershipsData?.map((item, i) => {
@@ -76,12 +74,12 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                     <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1'
                         style={{ border: "1px solid #F58220", color: "#F58220" }}
                     >
-                        <i class="fab fa-whatsapp mr-2"></i>
+                        <i className={`fab fa-whatsapp ${language === "en" ? 'mr-2' : 'ml-2'}`}></i>
                         Reach out to us
                     </a>
                 </center>
             </Container>
-        </section>
+        </section >
     )
 }
 

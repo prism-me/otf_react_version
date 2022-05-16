@@ -16,7 +16,7 @@ import Rowing from "../../assets/images/OTF/workout/rowing.mp4";
 import Cardio from "../../assets/images/OTF/workout/cardio.mp4";
 import strenth from "../../assets/images/OTF/workout/stregth.mp4";
 
-const WorkGrid = () => (
+const WorkGrid = ({ language }) => (
     <>
         <section className="gym format about-detail rightAnimation"
             style={{
@@ -69,17 +69,21 @@ const WorkGrid = () => (
                                     Your browser does not support the video tag.
                                 </video>
                             </Col>
-                            <Col sm={6} className="p-0">
-                                <img src={rowing1} alt="" className='img-fluid mblscreenworkoutgridspace' />
+                            <Col sm={6} className="p-0 mblscreenworkoutgridspace"
+                                style={{ backgroundImage: `url(${rowing1})` }}
+                            >
+                                {/* <img src={rowing1} alt="" className='img-fluid mblscreenworkoutgridspace' /> */}
                             </Col>
-                            <Col sm={6} className="p-0">
-                                <img src={rowing2} alt="" className='img-fluid mblscreenworkoutgridspace' />
+                            <Col sm={6} className="p-0 mblscreenworkoutgridspace"
+                                style={{ backgroundImage: `url(${rowing2})` }}
+                            >
+                                {/* <img src={rowing2} alt="" className='img-fluid mblscreenworkoutgridspace' /> */}
                             </Col>
                         </Row>
                         {/* <img src={mission} alt="" className='img-fluid' /> */}
 
                     </Col>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pl-5">
+                    <Col sm={6} className={`d-flex flex-column justify-content-center align-items-start ${language === "ar" ? 'pr-5' : 'pl-5'}`}>
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >01</h2>
@@ -99,7 +103,7 @@ const WorkGrid = () => (
 
             <Container>
                 <Row>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pr-5 mblscreenworkoutgridbottomspace">
+                    <Col sm={6} className={`d-flex flex-column justify-content-center align-items-start ${language === "ar" ? 'pl-5' : 'pr-5'} mblscreenworkoutgridbottomspace`}>
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >02</h2>
@@ -132,19 +136,21 @@ const WorkGrid = () => (
                             <Col sm={6} className="p-0">
                                 <Row>
                                     <Col sm={12}
-                                        style={{ padding: "0 0 0 0" }}
+                                        className="p-0 mblscreenworkoutcardiogridspace"
+                                        style={{ backgroundImage: `url(${cardio1})` }}
                                     >
-                                        <img src={cardio1} alt="" className='img-fluid mblscreenworkoutgridspace'
+                                        {/* <img src={cardio1} alt="" className='img-fluid mblscreenworkoutgridspace'
                                             style={{ height: "189px" }}
 
-                                        />
+                                        /> */}
                                     </Col>
                                     <Col sm={12}
-                                        style={{ padding: "0 0 0 0" }}
+                                        className="p-0 mblscreenworkoutcardiogridspace"
+                                        style={{ backgroundImage: `url(${cardio2})` }}
                                     >
-                                        <img src={cardio2} alt="" className='img-fluid mblscreenworkoutgridspace'
+                                        {/* <img src={cardio2} alt="" className='img-fluid mblscreenworkoutgridspace'
                                             style={{ height: "189px" }}
-                                        />
+                                        /> */}
                                     </Col>
                                 </Row>
                             </Col>
@@ -181,15 +187,19 @@ const WorkGrid = () => (
                                     Your browser does not support the video tag.
                                 </video>
                             </Col>
-                            <Col sm={6} className="p-0">
-                                <img src={strength1} alt="" className='img-fluid mblscreenworkoutgridspace' />
+                            <Col sm={6} className="p-0 mblscreenworkoutgridspace"
+                                style={{ backgroundImage: `url(${strength1})` }}
+                            >
+                                {/* <img src={strength1} alt="" className='img-fluid mblscreenworkoutgridspace' /> */}
                             </Col>
-                            <Col sm={6} className="p-0">
-                                <img src={strength2} alt="" className='img-fluid mblscreenworkoutgridspace' />
+                            <Col sm={6} className="p-0 mblscreenworkoutgridspace"
+                                style={{ backgroundImage: `url(${strength2})` }}
+                            >
+                                {/* <img src={strength2} alt="" className='img-fluid mblscreenworkoutgridspace' /> */}
                             </Col>
                         </Row>
                     </Col>
-                    <Col sm={6} className="d-flex flex-column justify-content-center align-items-start pl-5">
+                    <Col sm={6} className={`d-flex flex-column justify-content-center align-items-start ${language === "ar" ? 'pr-5' : 'pl-5'} `}>
                         <h2 className="oftHeading"
                             style={{ color: "#2E2E2E" }}
                         >03</h2>

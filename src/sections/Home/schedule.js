@@ -25,7 +25,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                             <div>
                                 {
                                     titleM &&
-                                    <h3 className={`oftHeading text-left ${subtitle && "mb-3"}`}>{titleM}</h3>
+                                    <h3 className={`oftHeading ${language === "ar" ? "text-right" : "text-left"} ${subtitle && "mb-3"}`}>{titleM}</h3>
                                 }
                                 {
                                     subtitle &&
@@ -111,7 +111,14 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                     </Col>
                     <Col md="5">
                         <div className="text-center center-content">
+                            {/* {
+                                language === "en" ? */}
                             <img alt="" className="img-fluid format-img" src={coachImg} />
+                            {/* : <img alt="" className="img-fluid format-img" src={coachImg} */}
+                            {/* style={{ transform: 'scaleX(-1)' }} */}
+                            {/* /> */}
+                            {/* } */}
+
                         </div>
                     </Col>
                 </Row>

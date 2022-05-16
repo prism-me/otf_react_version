@@ -63,9 +63,13 @@ const Workout = (props) => {
                 bannerImg={banerImg}
                 freeform="freeclass"
             >
-                <About />
+                <About
+                    language={global?.activeLanguage}
+                />
 
-                <WorkGrid />
+                <WorkGrid
+                    language={global?.activeLanguage}
+                />
 
                 <ScheduleSection
                     titleM={"Coach Professionalism"}
@@ -79,7 +83,9 @@ const Workout = (props) => {
                     language={global.activeLanguage}
                 />
 
-                <CounterSection />
+                <CounterSection
+                    language={global?.activeLanguage}
+                />
 
                 <section className="pb-0">
                     <Coaching />
