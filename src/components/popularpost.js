@@ -214,16 +214,16 @@ const BlogsList = [
     }
 ];
 
-const PopularPosts = ({ }) => {
+const PopularPosts = ({ language }) => {
 
     return (
         <div>
-            <h5 className="blog-title">Latest Articles</h5>
+            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>Latest Articles</h5>
             <div className="sidebar-container">
                 {BlogsList.length > 0 &&
                     BlogsList.reverse().slice(0, 5).map((item, index) => (
                         <div className="post-container d-flex" key={index}>
-                            <div className="m-r-15">
+                            <div className={`${language === "en" ? 'm-r-15' : 'm-l-15'}`}>
                                 <img alt="" style={{ width: "80px" }} src={item.image} />
                             </div>
                             <div>

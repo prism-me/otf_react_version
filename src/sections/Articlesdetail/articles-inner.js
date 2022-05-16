@@ -11,7 +11,7 @@ const ArticlesInner = ({ singleArticleData, language, isArabic }) => (
         <Container>
             <Row>
                 <DetailSecion
-                    className="col-lg-9 order-lg-2 detailArtpadding"
+                    className={`col-lg-9 order-lg-2 ${language === "en" ? 'detailArtpadding' : 'detailArtpaddingArabic'}`}
                     showcaseType="Image"
                     singleArticleData={singleArticleData}
                     language={language}
@@ -19,9 +19,15 @@ const ArticlesInner = ({ singleArticleData, language, isArabic }) => (
                 />
                 <Col lg="3">
                     <div className="blog-side">
-                        <Categories />
-                        <PopularPosts />
-                        <NewsLetter />
+                        <Categories
+                            language={language}
+                        />
+                        <PopularPosts
+                            language={language}
+                        />
+                        <NewsLetter
+                            language={language}
+                        />
                         {/* <Instagram /> */}
                     </div>
                 </Col>

@@ -19,8 +19,8 @@ const Articlesgrid = ({ language, articlesData, isArabic }) => {
                 <Row className="pl-0 pr-0">
                     <Col lg="12">
                         <Row className="split m-0">
-                            {articlesData.length > 0 ?
-                                articlesData.slice(0, loadItems).map((item, index) =>
+                            {articlesData?.length > 0 ?
+                                articlesData?.slice(0, loadItems).map((item, index) =>
                                     <CardWrapper
                                         key={`grid-no-sidebar-${index}`}
                                         className="col-12 blog-sec blog-list "
@@ -39,7 +39,7 @@ const Articlesgrid = ({ language, articlesData, isArabic }) => {
                                         description={isArabic
                                             ? item?.arabic?.short_description
                                             : item?.short_description}
-                                        readUrl={`article/${item.slug}`}
+                                        readUrl={`article/${item?.slug}`}
                                         language={language}
                                     />
                                 ) :
@@ -48,9 +48,9 @@ const Articlesgrid = ({ language, articlesData, isArabic }) => {
                     </Col>
                 </Row>
                 {
-                    articlesData.length >= 10 && loadItems != articlesData.length &&
+                    articlesData?.length >= 10 && loadItems != articlesData?.length &&
                     <center>
-                        <button className='otfBtn1 mt-4' onClick={() => setLoadItems(articlesData.length)}>
+                        <button className='otfBtn1 mt-4' onClick={() => setLoadItems(articlesData?.length)}>
                             Load More
                         </button>
                     </center>

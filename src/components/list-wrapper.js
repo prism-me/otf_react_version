@@ -44,11 +44,11 @@ const CardGridWrapper = ({
                                         </div>
                                     </div>
                                     <h5 className="blog-head font-600 mt-3">{title}</h5>
-                                    {description.length > MAX_LENGTH ?
+                                    {description?.length > MAX_LENGTH ?
                                         (
                                             <p className="para2"
                                                 dangerouslySetInnerHTML={{
-                                                    __html: `${description.substring(0, MAX_LENGTH)} .....`
+                                                    __html: `${description?.substring(0, MAX_LENGTH)} .....`
                                                 }}
                                             >
                                                 {/* {`${description.substring(0, MAX_LENGTH)} .....`} */}

@@ -170,7 +170,7 @@ const DetailWrapper = ({ className, showcaseType, singleArticleData, language, i
                     </p>
                 </div>
             </div>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=" className="mr-3" target={"_blank"}>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" className={` ${language === "en" ? 'mr-3' : 'ml-3'} `} target={"_blank"}>
                 <FacebookIcon />
             </a>
             <a href="https://twitter.com/share?url=" target={"_blank"}>

@@ -166,7 +166,7 @@ const Footer = (props) => {
             <Col lg="3" md="6" sm="12">
               <div className="footer-para">
                 <p className="para-address">
-                  <LocationOnIcon className="mr-2 paraIcons" />
+                  <LocationOnIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <strong>
                     Orangetheory Fitness
                     Mercato Mall - Level 1
@@ -178,13 +178,13 @@ const Footer = (props) => {
                   </span>
                 </p>
                 <p className="para-address mt-2">
-                  <PhoneIcon className="mr-2 paraIcons" />
+                  <PhoneIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <a href='tel:+9714 340 1040'>
                     +9714 340 1040
                   </a>
                 </p>
                 <p className="para-address mt-3">
-                  <LocationOnIcon className="mr-2 paraIcons" />
+                  <LocationOnIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <strong>
                     Times Square Centre - Ground Floor
                   </strong>
@@ -195,7 +195,7 @@ const Footer = (props) => {
                   </span>
                 </p>
                 <p className="para-address mt-2">
-                  <PhoneIcon className="mr-2 paraIcons" />
+                  <PhoneIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <a href='tel:+9714 324 4424'>
                     +9714 324 4424
                   </a>

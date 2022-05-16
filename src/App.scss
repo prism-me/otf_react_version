@@ -13396,6 +13396,34 @@ blog-section css start
     }
   }
 
+  .blog-title-arabic {
+    position: relative;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 1;
+
+    &:before {
+      content: "";
+      border-bottom: 4px solid $orange;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 15%;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      &:before {
+        width: 25%;
+        transition: 0.5s;
+      }
+    }
+  }
+
   .sidebar-container {
     &.insta {
       margin-bottom: 0;
@@ -22047,6 +22075,14 @@ footer {
 
   @media #{$sm, $md} {
     padding-left: 1rem;
+  }
+}
+
+.detailArtpaddingArabic {
+  padding-right: 4rem;
+
+  @media #{$sm, $md} {
+    padding-right: 1rem;
   }
 }
 

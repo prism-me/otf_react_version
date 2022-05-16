@@ -66,9 +66,15 @@ const Pressgrid = ({ pressData, isArabic, language }) => (
                 </Col>
                 <Col lg="3">
                     <div className="blog-side">
-                        <Categories />
-                        <PopularPosts />
-                        <NewsLetter />
+                        <Categories
+                            language={language}
+                        />
+                        <PopularPosts
+                            language={language}
+                        />
+                        <NewsLetter
+                            language={language}
+                        />
                         {/* <Instagram /> */}
                     </div>
                 </Col>
