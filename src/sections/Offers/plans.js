@@ -56,51 +56,56 @@ const Plans = ({ offersData, isArabic, language }) => {
                         </p>
                     </Col>
                 </Row>
-                <Slider className="owl-carousel owl-theme plans-slider"  {...settings}>
-                    {offersData &&
-                        offersData.length > 0 &&
-                        offersData.map((item, i) => (
-                            // <Col sm={4} key={i} className="mb-3">
-                            <div className="item" key={i}>
-                                <div className="plans-container hover-overlay text-center">
-                                    <div className="plans-feature-container">
-                                        <div className="plans-text">
-                                            <center>
-                                                <img src={item?.icon} className="feature-icon1 mb-4" alt={"icon"} />
-                                            </center>
-                                            <h4 className="plans-text-heading">
-                                                {
-                                                    isArabic ? item?.arabic?.name :
-                                                        item?.name
-                                                }
-                                            </h4>
-                                        </div>
-                                        <div className="plans-features">
-                                            <h5 className="plans-feature text-center"
-                                                dangerouslySetInnerHTML={{
-                                                    __html:
-                                                        isArabic ? item?.arabic?.description :
-                                                            item?.description
+                <Row>
+                    <Col xs="12">
+                        <Slider className="owl-carousel owl-theme plans-slider"  {...settings}>
+                            {offersData &&
+                                offersData.length > 0 &&
+                                offersData.map((item, i) => (
+                                    // <Col sm={4} key={i} className="mb-3">
+                                    <div className="item" key={i}>
+                                        <div className="plans-container hover-overlay text-center">
+                                            <div className="plans-feature-container">
+                                                <div className="plans-text">
+                                                    <center>
+                                                        <img src={item?.icon} className="feature-icon1 mb-4" alt={"icon"} />
+                                                    </center>
+                                                    <h4 className="plans-text-heading">
+                                                        {
+                                                            isArabic ? item?.arabic?.name :
+                                                                item?.name
+                                                        }
+                                                    </h4>
+                                                </div>
+                                                <div className="plans-features">
+                                                    <h5 className="plans-feature text-center"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html:
+                                                                isArabic ? item?.arabic?.description :
+                                                                    item?.description
 
-                                                }}
-                                            >
-                                            </h5>
-                                            <button className="otfBtn2"
-                                                onClick={() => setShowModal(true)}
-                                            >Book offer</button>
-                                            <BookOffer
-                                                show={showModal} onHide={() => setShowModal(false)}
-                                                title={"Book Offer"}
-                                            />
+                                                        }}
+                                                    >
+                                                    </h5>
+                                                    <button className="otfBtn2"
+                                                        onClick={() => setShowModal(true)}
+                                                    >Book offer</button>
+                                                    <BookOffer
+                                                        show={showModal} onHide={() => setShowModal(false)}
+                                                        title={"Book Offer"}
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            // </Col>
-                        ))
-                    }
-                </Slider>
+                                    // </Col>
+                                ))
+                            }
+                        </Slider>
+                    </Col>
+                </Row>
+
                 {/* <Col sm={4}
                     className={"imgOfferContainer mb-3"}
                     style={{ backgroundImage: `url(${plan})` }}
