@@ -77,8 +77,8 @@ const Trainer = ({ memberreviewData, title, language, isArabic }) => (
                                                     <div className="avatarStyle">
                                                         <span>{
                                                             isArabic
-                                                                ? x?.arabic?.name.charAt(0)
-                                                                : x?.name.charAt(0)
+                                                                ? x?.arabic?.name?.charAt(0)
+                                                                : x?.name?.charAt(0)
                                                         }</span>
                                                     </div>
                                                 </center>

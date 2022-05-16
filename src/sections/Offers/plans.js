@@ -1,32 +1,42 @@
 import React, { useState } from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {
     Container, Row, Col
 } from 'reactstrap'
 
-//images
 
-import Premier from "../../assets/images/OTF/icons/Premier.png";
-import PremierW from "../../assets/images/OTF/icons/PremierW.png";
+//images
 
 import plan from "../../assets/images/OTF/offer/plan.png"
 import BookOffer from '../Offers/startburning';
 
+var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    arrows: true,
+    swipeToSlide: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 575,
+            settings: { slidesToShow: 1 }
+        },
+        {
+            breakpoint: 768,
+            settings: { slidesToShow: 2 }
+        },
+        {
+            breakpoint: 1024,
+            settings: { slidesToShow: 3 }
+        }
+    ]
+};
 
-const plansData = [
-    {
-        icon: Premier,
-        iconW: PremierW,
-        title: "March 1 Offer",
-        feature1: "Buy 2 Months Membership and get the 3rd Month for 10dhs only."
-    },
-    {
-        icon: Premier,
-        iconW: PremierW,
-        title: "March 2 Offer",
-        feature1: "Refer FRIENDS and get a month membership free."
-    }
-];
-const Plans = () => {
+const Plans = ({ offersData, isArabic, language }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -45,20 +55,36 @@ const Plans = () => {
                             Ready to change the way you look, the way you feel, and your life? From free trial workout to monthly packages, Orangetheory has a plan perfect for you. By investing in your health today, you’re also investing in a longer, stronger and more vibrant future.
                         </p>
                     </Col>
-                    {plansData &&
-                        plansData.length > 0 &&
-                        plansData.map((item, i) => (
-                            <Col sm={4} key={i} className="mb-3">
+                </Row>
+                <Slider className="owl-carousel owl-theme plans-slider"  {...settings}>
+                    {offersData &&
+                        offersData.length > 0 &&
+                        offersData.map((item, i) => (
+                            // <Col sm={4} key={i} className="mb-3">
+                            <div className="item" key={i}>
                                 <div className="plans-container hover-overlay text-center">
                                     <div className="plans-feature-container">
                                         <div className="plans-text">
                                             <center>
-                                                <img src={item.icon} className="feature-icon1 mb-4" alt={"icon"} />
+                                                <img src={item?.icon} className="feature-icon1 mb-4" alt={"icon"} />
                                             </center>
-                                            <h4 className="plans-text-heading">{item.title}</h4>
+                                            <h4 className="plans-text-heading">
+                                                {
+                                                    isArabic ? item?.arabic?.name :
+                                                        item?.name
+                                                }
+                                            </h4>
                                         </div>
                                         <div className="plans-features">
-                                            <h5 className="plans-feature text-center">{item.feature1}</h5>
+                                            <h5 className="plans-feature text-center"
+                                                dangerouslySetInnerHTML={{
+                                                    __html:
+                                                        isArabic ? item?.arabic?.description :
+                                                            item?.description
+
+                                                }}
+                                            >
+                                            </h5>
                                             <button className="otfBtn2"
                                                 onClick={() => setShowModal(true)}
                                             >Book offer</button>
@@ -69,18 +95,21 @@ const Plans = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </Col>
+                            </div>
+
+                            // </Col>
                         ))
                     }
-                    <Col sm={4}
-                        className={"imgOfferContainer mb-3"}
-                        style={{ backgroundImage: `url(${plan})` }}
-                    >
-                        {/* <img src="/assets/images/OTF/offer/plan.png" className='img-fluid' alt={"img"} /> */}
-                    </Col>
-                </Row>
+                </Slider>
+                {/* <Col sm={4}
+                    className={"imgOfferContainer mb-3"}
+                    style={{ backgroundImage: `url(${plan})` }}
+                > */}
+                {/* <img src="/assets/images/OTF/offer/plan.png" className='img-fluid' alt={"img"} /> */}
+                {/* </Col>
+            </Row> */}
             </Container>
-        </section>
+        </section >
     )
 }
 export default Plans

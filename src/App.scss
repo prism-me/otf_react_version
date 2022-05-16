@@ -6,6 +6,9 @@
 // @import "~react-image-gallery/styles/scss/image-gallery.scss";
 // @import "~video-react/styles/scss/video-react";
 
+//fontawesome
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+
 //layouts
 @import "./layouts/Layout.scss";
 @import "./layouts/Navbar/Navbar.scss";
@@ -237,7 +240,7 @@ p {
 body {
   font-family: 'proxima-nova', sans-serif;
   // position: relative;
-  font-size: 14px;
+  font-size: $sub-fonts;
   color: $black;
   overflow-x: hidden;
 
@@ -19286,6 +19289,7 @@ header {
       background: $black;
       width: 100%;
       padding: 0.5rem 7rem;
+      // padding: 0.5rem 4rem;
       animation: slide-down 0.7s;
       box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
 
@@ -19536,6 +19540,35 @@ header {
       padding: 10px 0;
     }
 
+    .langDivStyle {
+      color: $white;
+      padding: 10px;
+
+      @media (max-width: 991px) {
+        color: $black;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.active {
+          color: $orange;
+          font-weight: 600;
+        }
+
+        &:hover {
+          color: $orange  !important;
+        }
+
+        @media (min-width: 991px) and (max-width: 1199px) {
+          font-size: 12px !important;
+          padding: 7px !important;
+        }
+      }
+    }
+
     .navItemStyle {
       color: $white;
 
@@ -19562,7 +19595,7 @@ header {
       a {
         &.active {
           color: $orange;
-          font-weight: 700;
+          font-weight: 600;
         }
 
         &:hover {
@@ -21588,6 +21621,66 @@ footer {
     }
   }
 
+  .plans-slider {
+    .slick-list {
+      overflow: inherit;
+
+      .slick-track {
+        .slick-slide {
+          >div {
+            .item {
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-arrow {
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        // background: rgba($black, 0.1);
+        background: $white;
+        border: 1px solid $black;
+      }
+    }
+
+    .slick-next {
+      right: -25px;
+
+      &:before {
+        // padding: 20px 18px 20px 20px;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        font-weight: 900;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        background: $white;
+      }
+    }
+
+    .slick-prev {
+      left: -25px;
+      z-index: 1;
+
+      &:before {
+        background: $white;
+        padding: 0.7rem 1rem;
+        border-radius: 100%;
+        color: $black;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f053';
+        font-weight: 900;
+        // padding: 20px 20px 20px 18px;
+      }
+    }
+  }
+
   .plans-container {
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -21630,6 +21723,14 @@ footer {
         margin-bottom: 2rem;
         font-weight: 400;
         font-family: 'proxima-nova', sans-serif;
+
+        p {
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 2rem;
+          font-weight: 400;
+          font-family: 'proxima-nova', sans-serif;
+        }
       }
 
     }
@@ -22395,7 +22496,14 @@ footer {
   }
 }
 
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 1240px !important;
+//   }
+// }
+
 @media only screen and (max-width: 1366px) and (min-width: 1200px) {
+
   .agency.blog {
     .blog-agency {
       .blog-contain {

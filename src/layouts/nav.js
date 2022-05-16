@@ -160,6 +160,13 @@ const Nav = (props) => {
                         </li>
                     )
                 })}
+                {/* <li className='langDivStyle'>
+                    <span className={props.global.activeLanguage === "en" ? "active" : ""} onClick={() => {
+                        props.setActiveLanguage("en");
+                    }}>EN</span> <span>/</span> <span className={props.global.activeLanguage === "ar" ? "active" : ""} onClick={() => {
+                        props.setActiveLanguage("ar");
+                    }}>AR</span>
+                </li> */}
                 <li>  <button className='otfBtn1 ml-3'
                     style={{
                         padding: "0.5rem 1.5rem"
@@ -202,7 +209,7 @@ const Nav = (props) => {
                     </Dropdown>
                 </div> */}
             </ul>
-        </div>
+        </div >
     )
 }
 
