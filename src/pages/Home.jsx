@@ -8,6 +8,8 @@ import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
 import CounterSection from "../sections/Home/counter";
 import TrainerSection from "../sections/Home/trainer";
+import ClassSchedule from "../sections/Home/classSchedule";
+
 // import FormatSection from "../sections/Home/format";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
@@ -122,12 +124,8 @@ const Home = (props) => {
           />
         </section>
 
-        <CounterSection
-          title="Get 10% off during this festive season!"
-          // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-          btntext="BECOME A MEMBER TODAY"
-          bgImg={offerbg}
-
+        <ClassSchedule
+          language={global?.activeLanguage}
         />
 
         <TrainerSection
