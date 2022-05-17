@@ -104,19 +104,19 @@ const Nav = (props) => {
                             {(menuItem.type === 'sub') ?
                                 <>
                                     <a className="dropdown mblscreenLocations" onClick={() => toggletNavActive(menuItem)}>
-                                        <span>{menuItem.title}</span>
+                                        <span>{menuItem.title[props.global.activeLanguage]}</span>
                                     </a>
                                     <a className="dropdown desktopcreenLocations" href={`/${props.global.activeLanguage}/locations`} onClick={() => toggletNavActive(menuItem)}>
-                                        <span>{menuItem.title}</span>
+                                        <span>{menuItem.title[props.global.activeLanguage]}</span>
                                     </a>
                                 </>
                                 : ''}
                             {(menuItem.type === 'link') &&
                                 <a
                                     href={`/${props.global.activeLanguage}/${menuItem.path}`}
-                                    className={`${menuItem.active ? 'active' : ''}`}
+                                    className={`${menuItem.active ? 'active' : ''} ${props.global.activeLanguage === "ar" ? 'text-right' : ''} `}
                                 >
-                                    {menuItem.title}
+                                    {menuItem.title[props.global.activeLanguage]}
                                 </a>
                                 // <Link to={`/${props.global.activeLanguage}/${menuItem.path}`}
                                 //     className={`${menuItem.active ? 'active' : ''} navMenuLink`}
@@ -167,12 +167,14 @@ const Nav = (props) => {
                         props.setActiveLanguage("ar");
                     }}>AR</span>
                 </li>
-                <li>  <button className={`otfBtn1 ${props?.activeLanguage === "en" ? 'ml-3' : 'mr-3'}`}
+                <li>  <button className={`otfBtn1 ${props.global.activeLanguage === "en" ? 'ml-3' : 'mr-3'}`}
                     style={{
                         padding: "0.5rem 1.5rem"
                     }}
                     onClick={() => setShowModal(true)}
-                >BOOK YOUR FREE CLASS!</button>
+                >
+                    {props.global.activeLanguage === "en" ? 'BOOK YOUR FREE CLASS!' : 'احجز فصولك المجانية!'}
+                </button>
                     <ApplyNow
                         show={showModal} onHide={() => setShowModal(false)}
                         title={"Free Class"}

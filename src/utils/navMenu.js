@@ -1,16 +1,28 @@
 export const MENUITEMS = [
     {
-        title: 'About us',
+        // title: 'About us',
+        title: {
+            en: "About us",
+            ar: "معلومات عنا"
+        },
         path: 'about',
         type: 'link'
     },
     {
-        title: 'Memberships',
+        // title: 'Memberships',
+        title: {
+            en: "Memberships",
+            ar: "العضويات"
+        },
         path: 'memberships',
         type: 'link'
     },
     {
-        title: 'The Workout',
+        // title: 'The Workout',
+        title: {
+            en: "The Workout",
+            ar: "التمرين"
+        },
         path: 'workout',
         type: 'link'
     },
@@ -20,12 +32,20 @@ export const MENUITEMS = [
     //     type: 'link'
     // },
     {
-        title: 'Testimonials',
+        // title: 'Testimonials',
+        title: {
+            en: "Testimonials",
+            ar: "الشهادات - التوصيات"
+        },
         path: 'testimonials',
         type: 'link'
     },
     {
-        title: 'Locations',
+        // title: 'Locations',
+        title: {
+            en: "Locations",
+            ar: "المواقع"
+        },
         path: 'locations',
         type: 'link'
     },
@@ -39,7 +59,11 @@ export const MENUITEMS = [
     //     ],
     // },
     {
-        title: 'FAQ',
+        // title: 'FAQ',
+        title: {
+            en: "FAQ",
+            ar: "التعليمات"
+        },
         path: 'faq',
         type: 'link'
     },

@@ -81,12 +81,12 @@ const Footer = (props) => {
                   <ul className="footer-lists">
                     <li>
                       <Link to={`/${global.activeLanguage}/locations`}>
-                        Select Your Locations
+                        {global.activeLanguage === "en" ? 'Select Your Locations' : 'حدد مواقعك'}
                       </Link>
                     </li>
                     <li>
                       <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
-                        Our Mission, Vision, & Values
+                        {global.activeLanguage === "en" ? 'Our Mission, Vision, & Values' : 'مهمتنا ورؤيتنا وقيمنا'}
                       </HashLink>
                       {/* <Link to={`/${global.activeLanguage}/about`}>
                         Our Mission, Vision, & Values
@@ -96,16 +96,24 @@ const Footer = (props) => {
                       <Link to={`/${global.activeLanguage}/press`}>Press</Link>
                     </li> */}
                     <li>
-                      <Link to={`/${global.activeLanguage}/offers`}>Offers</Link>
+                      <Link to={`/${global.activeLanguage}/offers`}>
+                        {global.activeLanguage === "en" ? 'Offers' : 'عروض'}
+                      </Link>
                     </li>
                     <li>
-                      <Link to={`/${global.activeLanguage}/faq`}>FAQ's</Link>
+                      <Link to={`/${global.activeLanguage}/faq`}>
+                        {global.activeLanguage === "en" ? "FAQ's" : 'التعليمات'}
+                      </Link>
                     </li>
                     <li>
-                      <Link to={`/${global.activeLanguage}/careers`}>Jobs</Link>
+                      <Link to={`/${global.activeLanguage}/careers`}>
+                        {global.activeLanguage === "en" ? "Jobs" : 'وظائف'}
+                      </Link>
                     </li>
                     <li>
-                      <Link to={`/${global.activeLanguage}/articles`} className='active'>Articles</Link>
+                      <Link to={`/${global.activeLanguage}/articles`} className='active'>
+                        {global.activeLanguage === "en" ? "Articles" : 'مقالات'}
+                      </Link>
                     </li>
                     {/* <li>
                       <Link to={`/${global.activeLanguage}/promotion-terms`}>Promotion Terms</Link>
@@ -121,7 +129,9 @@ const Footer = (props) => {
               <div className="logo-sec mb-3">
                 <p className='mb-3 text-center socialText'
                   style={{ fontSize: "14px" }}
-                >Follow Us On</p>
+                >
+                  {global.activeLanguage === "en" ? "Follow Us On" : 'اتبعنا'}
+                </p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
                     <a href="https://www.instagram.com/otfdubai/" className='instahover' target={"_blank"}>
@@ -148,7 +158,9 @@ const Footer = (props) => {
               <div>
                 <p className='mb-3 text-center socialText'
                   style={{ fontSize: "14px" }}
-                >Download Our App</p>
+                >
+                  {global.activeLanguage === "en" ? "Download Our App" : 'حمل تطبيقنا'}
+                </p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
                     <a href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN" target={"_blank"}>
@@ -168,36 +180,34 @@ const Footer = (props) => {
                 <p className="para-address">
                   <LocationOnIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <strong>
-                    Orangetheory Fitness
-                    Mercato Mall - Level 1
+                    {global.activeLanguage === "en" ? "Orangetheory Fitness Mercato Mall - Level 1" : 'أورانجثيوري فيتنس ميركاتو مول - الطابق الأول'}
                   </strong>
                   <br />
-                  <span style={{ fontWeight: "300" }}>
-                    Jumeirah Beach Road, Dubai
-                    United Arab Emirates
+                  <span style={{ fontWeight: "400" }}>
+                    {global.activeLanguage === "en" ? "Jumeirah Beach Road, Dubai United Arab Emirates" : 'طريق شاطئ الجميرا ، دبي ، الإمارات العربية المتحدة'}
                   </span>
                 </p>
                 <p className="para-address mt-2">
                   <PhoneIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <a href='tel:+9714 340 1040'>
-                    +9714 340 1040
+                    {global.activeLanguage === "en" ? "+9714 340 1040" : '+9714 340 1040'}
                   </a>
                 </p>
                 <p className="para-address mt-3">
                   <LocationOnIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <strong>
-                    Times Square Centre - Ground Floor
+                    {global.activeLanguage === "en" ? "Times Square Centre - Ground Floor" : 'مركز تايمز سكوير - الدور الأرضي'}
                   </strong>
                   <br />
-                  <span style={{ fontWeight: "300" }}>
-                    Sheikh Zayed Road, Dubai
-                    United Arab Emirates
+                  <span style={{ fontWeight: "400" }}>
+                    {global.activeLanguage === "en" ? "Sheikh Zayed Road, Dubai United Arab Emirates" : 'شارع الشيخ زايد ، دبي ، الإمارات العربية المتحدة'}
                   </span>
                 </p>
                 <p className="para-address mt-2">
                   <PhoneIcon className={`paraIcons ${global.activeLanguage === "en" ? 'mr-2' : 'ml-2'}`} />
                   <a href='tel:+9714 324 4424'>
-                    +9714 324 4424
+
+                    {global.activeLanguage === "en" ? "+9714 324 4424" : '+9714 324 4424'}
                   </a>
                 </p>
               </div>
