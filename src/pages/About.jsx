@@ -41,7 +41,7 @@ const About = (props) => {
             })
     }
 
-    // contact page API
+    // About page API
     const [content, setContent] = useState([]);
 
     const getPagesData = () => {

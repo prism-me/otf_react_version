@@ -9,7 +9,6 @@ const Ages = (props) => {
             size="xl"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            className="Ages"
             className={
                 props.lang === "ar"
                     ? "Ages agsModalDirArabic"

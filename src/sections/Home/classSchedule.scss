@@ -1,0 +1,48 @@
+.classSchedule {
+    .SubTitle {
+        color: $black;
+        font-size: $sub-fonts;
+        font-weight: 500;
+    }
+
+    .TableMB {
+        @media #{$sm} {
+            width: 900px;
+        }
+    }
+
+    .oftsubHeading {
+        a {
+            font-size: $sub-fonts;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .table thead th {
+        border: 2px solid $white;
+        font-size: $sub-fonts;
+        background: $orange;
+        color: $white;
+        font-family: 'klavika', sans-serif;
+    }
+
+    .table td {
+        border: 2px solid $white;
+        // font-size: $sub-fonts;
+        font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)))
+    }
+
+    .table tr {
+
+        &:nth-child(odd) {
+            background: #fcbc85bf;
+        }
+
+        &:nth-child(even) {
+            background: #fdebeb70;
+        }
+    }
+}
