@@ -31,10 +31,12 @@
 
     .table td {
         border: 2px solid $white;
-        font-size: $sub-fonts;
+        // font-size: $sub-fonts;
+        font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (1920 - 300)))
     }
 
     .table tr {
+
         &:nth-child(odd) {
             background: #fcbc85bf;
         }

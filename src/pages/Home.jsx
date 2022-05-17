@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
+import { API } from "../http/API";
 
 import BannerSection from "../sections/Home/homebanner";
 import AboutSection from "../sections/Home/about";
 import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
-import CounterSection from "../sections/Home/counter";
 import TrainerSection from "../sections/Home/trainer";
 import ClassSchedule from "../sections/Home/classSchedule";
-
-// import FormatSection from "../sections/Home/format";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
-
-import { API } from "../http/API";
-
 
 //images
 
@@ -24,7 +19,6 @@ import heatl2 from "../assets/images/OTF/icons/heatl2.png"
 import heatl3 from "../assets/images/OTF/icons/heatl3.png"
 
 import schBg from "../assets/images/OTF/home/health-safetybg.jpg";
-import offerbg from "../assets/images/OTF/home/get-off.jpg";
 import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 
 
@@ -35,7 +29,29 @@ const Home = (props) => {
     getAllTestimonial();
     getAllMemberships();
     getAllLocations();
+    getPagesData();
   }, []);
+
+  // home page API
+  const [content, setContent] = useState([]);
+
+  const getPagesData = () => {
+    API.get(`/pages`)
+      .then((response) => {
+        // debugger;
+        if (response.status === 200 || response.status === 201) {
+          let currentPage = response.data.data.find(
+            (x) => x.slug === "home"
+          );
+          API.get(`/all-sections/${currentPage._id}`)
+            .then((response) => {
+              setContent(response.data?.data[response.data.data?.length - 1]?.content);
+            })
+        }
+      })
+      .catch((err) => console.log(err));
+  }
+
 
   // memberships API 
   const [membershipsData, setMembershipsData] = useState([]);
@@ -126,6 +142,16 @@ const Home = (props) => {
 
         <ClassSchedule
           language={global?.activeLanguage}
+          mercatoSec={
+            global?.activeLanguage === "ar"
+              ? content?.arabic?.mercatoSection
+              : content?.mercatoSection
+          }
+          timesSec={
+            global?.activeLanguage === "ar"
+              ? content?.arabic?.timesSection
+              : content?.timesSection
+          }
         />
 
         <TrainerSection
@@ -134,8 +160,6 @@ const Home = (props) => {
           isArabic={global?.activeLanguage === "ar"}
           title="Testimonials"
         />
-
-        {/* <FormatSection /> */}
 
         <CalculateSection
           locationsData={locationsData}

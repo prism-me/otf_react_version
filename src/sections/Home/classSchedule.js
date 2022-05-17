@@ -2,28 +2,31 @@ import React from 'react'
 import { Container, Table, Row, Col } from 'reactstrap'
 
 
-const ClassSchedule = ({ locationsData, language, isArabic }) => {
+const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
 
     return (
         <>
             <section className="classSchedule gym p-0" id="bmi">
                 <Container>
                     <h3 className="oftHeading mb-3">
-                        CLASS SCHEDULE
+                        {
+                            mercatoSec?.title
+                        }
                     </h3>
                     <p className="oftsubHeading text-center mb-3">
-                        Orangetheory Fitness, Mercato Mall <a href="tel:+9714 340-10-40">(+9714 340-10-40)</a>
+                        {
+                            mercatoSec?.subtitle
+                        } <a href="tel:+9714 340-10-40">(+9714 340-10-40)</a>
                     </p>
 
                     <Table responsive className={"text-center TableMB"}>
-                        {/* <p className={"SubTitle"}
-                        dangerouslySetInnerHTML={{
-                            __html:
-                                props.reqTableData?.description
-                        }}
-                    >
-                    </p> */}
-                        <thead>
+                        <p className={"SubTitle"}
+                            dangerouslySetInnerHTML={{
+                                __html: mercatoSec?.content
+                            }}
+                        >
+                        </p>
+                        {/* <thead>
                             <tr>
                                 <th>Age</th>
                                 <th>American Gulf School (GRADE)</th>
@@ -140,7 +143,7 @@ const ClassSchedule = ({ locationsData, language, isArabic }) => {
                                 <td>4</td>
                                 <td>Terminale</td>
                             </tr>
-                        </tbody>
+                        </tbody> */}
                     </Table>
                 </Container>
             </section>
@@ -148,21 +151,24 @@ const ClassSchedule = ({ locationsData, language, isArabic }) => {
             <section className="classSchedule gym pb-0" id="bmi">
                 <Container>
                     <h3 className="oftHeading mb-3">
-                        CLASS SCHEDULE
+                        {
+                            timesSec?.title
+                        }
                     </h3>
                     <p className="oftsubHeading text-center mb-3">
-                        Orangetheory Fitness, Times Square Center <a href="tel:+9714 324-44-24">(+9714 324-44-24)</a>
+                        {
+                            timesSec?.subtitle
+                        } <a href="tel:+9714 324-44-24">(+9714 324-44-24)</a>
                     </p>
 
                     <Table responsive className={"text-center TableMB"}>
-                        {/* <p className={"SubTitle"}
-                        dangerouslySetInnerHTML={{
-                            __html:
-                                props.reqTableData?.description
-                        }}
-                    >
-                    </p> */}
-                        <thead>
+                        <p className={"SubTitle"}
+                            dangerouslySetInnerHTML={{
+                                __html: timesSec?.content
+                            }}
+                        >
+                        </p>
+                        {/* <thead>
                             <tr>
                                 <th>Age</th>
                                 <th>American Gulf School (GRADE)</th>
@@ -279,7 +285,7 @@ const ClassSchedule = ({ locationsData, language, isArabic }) => {
                                 <td>4</td>
                                 <td>Terminale</td>
                             </tr>
-                        </tbody>
+                        </tbody> */}
                     </Table>
                 </Container>
             </section>
