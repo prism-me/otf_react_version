@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
-
+import { constants } from '../../utils/constants';
 //images
 import videoImg from "../../assets/images/OTF/about/videoImg.png";
 import playicon from "../../assets/images/OTF/icons/playicon.png";
 
 
-const Testimonial = () => {
+const Testimonial = ({ language }) => {
     const [modal, setModal] = useState();
     const toggle = () => {
         setModal(!modal)
@@ -36,7 +36,9 @@ const Testimonial = () => {
 
             <Container>
                 <h3 className="oftHeading mb-4">
-                    Things we do differently
+                    {
+                        constants?.site_content?.video_sec?.title[language]
+                    }
                 </h3>
                 {/* <p className="oftsubHeading text-center p-padding">
                     Blandit neque fringilla eget faucibus fringilla euismod. Varius ullamcorper massa tortor, pretium massa justo enim tincidunt praesent. Iaculis lectus lectus ut ac. Cum eu velit venenatis tellus porttitor in. Vitae quis tortor massa dolor porttitor. Nec aliquet urna ut blandit vitae porttitor. Vel sed.
@@ -63,13 +65,19 @@ const Testimonial = () => {
                     <Col md="6">
                         <div className="testimonial">
                             <h3 className="testimonialheading">
-                                More than a gym
+                                {
+                                    constants?.site_content?.video_sec?.subtitle[language]
+                                }
                             </h3>
                             <p className="testimonialsubheading mb-2">
-                                Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.
+                                {
+                                    constants?.site_content?.video_sec?.description1[language]
+                                }
                             </p>
                             <p className="testimonialsubheading">
-                                MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live.
+                                {
+                                    constants?.site_content?.video_sec?.description2[language]
+                                }
                             </p>
                         </div>
                     </Col>

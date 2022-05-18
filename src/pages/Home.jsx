@@ -11,6 +11,7 @@ import TrainerSection from "../sections/Home/trainer";
 import ClassSchedule from "../sections/Home/classSchedule";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
+import { constants } from "../utils/constants";
 
 //images
 
@@ -116,16 +117,24 @@ const Home = (props) => {
           language={global?.activeLanguage}
         />
 
-        <TestimonialSection />
+        <TestimonialSection
+          language={global?.activeLanguage}
+        />
 
         <AboutSection
           language={global?.activeLanguage}
         />
 
         <ScheduleSection
-          title={"Health and Safety (It's not either/or)"}
-          detail={"As the pandemic continues, it’s incredibly important Orangetheory studios operate with an abundance of caution. We continually review and evaluate our safety and disinfection protocols to align with the latest recommendations and local government mandates."}
-          detail2="The Orangetheory studio design, structured class schedule, block interval training and tight-knit community of franchisees enables us to have a more controlled environment in comparison to other fitness gyms."
+          title={
+            constants?.site_content?.sche_sec?.title[global?.activeLanguage]
+          }
+          detail={
+            constants?.site_content?.sche_sec?.description1[global?.activeLanguage]
+          }
+          detail2={
+            constants?.site_content?.sche_sec?.description2[global?.activeLanguage]
+          }
           listImg={listImg}
           bgImg={schBg}
           coachImg={scheduleImg}
@@ -158,7 +167,9 @@ const Home = (props) => {
           testimonial={testimonialData}
           language={global?.activeLanguage}
           isArabic={global?.activeLanguage === "ar"}
-          title="Testimonials"
+          title={
+            constants?.site_content?.testim_sec?.title[global?.activeLanguage]
+          }
         />
 
         <CalculateSection

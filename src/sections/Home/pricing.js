@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
+import { constants } from '../../utils/constants';
 
 const Pricing = ({ membershipsData, isArabic, language }) => {
     const [showModal, setShowModal] = useState(false);
@@ -13,11 +14,15 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                     style={{
                         color: "#2E2E2E"
                     }}
-                >Become a Member</h2>
+                >
+                    {
+                        constants?.site_content?.member_sec?.title[language]
+                    }
+                </h2>
                 <p className="oftsubHeading text-center mb-5">
-                    It only takes a minute in our studio to understand it’s not a competition – it’s a
-                    community. Check out our membership options and contact your local studio
-                    to find the right fit for you.
+                    {
+                        constants?.site_content?.member_sec?.description[language]
+                    }
                 </p>
                 <Row>
                     <Col lg="12" md="8" className="offset-md-2 offset-lg-0">
@@ -56,8 +61,11 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                                                     <span
                                                         style={{ borderBottom: "1px solid #F58220" }}
                                                     >
-                                                        join now
-                                                    </span></button>
+                                                        {
+                                                            constants?.site_content?.member_sec?.join_btn[language]
+                                                        }
+                                                    </span>
+                                                </button>
                                             </div>
                                         </div>
                                     </Col>
@@ -75,7 +83,9 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                         style={{ border: "1px solid #F58220", color: "#F58220" }}
                     >
                         <i className={`fab fa-whatsapp ${language === "en" ? 'mr-2' : 'ml-2'}`}></i>
-                        Reach out to us
+                        {
+                            constants?.site_content?.member_sec?.btn_text[language]
+                        }
                     </a>
                 </center>
             </Container>

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
+import { constants } from '../../utils/constants';
 
 import googleIcon from "../../assets/images/OTF/icons/googleIcon.png"
 
@@ -31,7 +32,7 @@ var settings = {
     ]
 };
 
-const Trainer = ({ testimonial, title, isArabic }) => (
+const Trainer = ({ testimonial, title, isArabic, language }) => (
     <section className="app2 gym team">
         <Container>
             <h3 className="oftHeading"
@@ -124,7 +125,10 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                                                     }} alt="googleIcon" />
                                             </center>
                                             <p className="team-para">
-                                                Verified Reviews
+                                                {
+                                                    constants?.site_content?.testim_sec?.g_review[language]
+                                                }
+
                                             </p>
                                         </div>
                                     </div>

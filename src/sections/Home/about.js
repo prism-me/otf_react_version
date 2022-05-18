@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import { constants } from '../../utils/constants';
+
 import aboutImg from "../../assets/images/OTF/home/warrior-2-pose.png";
 
 const About = ({ language }) => (
@@ -10,7 +12,11 @@ const About = ({ language }) => (
         <div className="animated-bg"><i></i><i></i><i></i></div>
 
         <Container>
-            <h3 className="oftHeading">What happens in class doesn’t stay in class?</h3>
+            <h3 className="oftHeading">
+                {
+                    constants?.site_content?.about_sec?.title[language]
+                }
+            </h3>
             <Row>
                 <Col md="5">
                     <div className="text-center center-content">
@@ -24,10 +30,16 @@ const About = ({ language }) => (
                                 <p className="oftsubHeading"
                                 // style={{ fontSize: "14px" }}
                                 >
-                                    Orangetheory is a heart-rate based HIIT total-body group workout that combines science, coaching and technology to guarantee maximum results from the inside out. It’s designed to charge your metabolism for MORE caloric afterburn, MORE results, and MORE confidence, all to deliver you MORE LIFE.  Orangetheory is more than a gym because the work you do here in our studio will make all the difference out there in your world.
+                                    {
+                                        constants?.site_content?.about_sec?.description[language]
+                                    }
                                 </p>
                             </div>
-                            <Link className="otfBtn" to={`/${language}/workout`}>Learn More About The Workout</Link>
+                            <Link className="otfBtn" to={`/${language}/workout`}>
+                                {
+                                    constants?.site_content?.about_sec?.btn_text[language]
+                                }
+                            </Link>
                         </div>
                     </div>
                 </Col>

@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'reactstrap'
-import Documents from '../../components/Modals/Documents/Documents';
+// import Documents from '../../components/Modals/Documents/Documents';
 import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
 import { HashLink } from "react-router-hash-link";
+
+import { constants } from '../../utils/constants';
 
 import BackGroundVideo from "../../components/BackGroundVideo/BackGroundVideo";
 
@@ -52,7 +54,6 @@ const HomeBanner = ({ language }) => {
 
     // }, []);
 
-
     const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";
 
     return (
@@ -70,7 +71,10 @@ const HomeBanner = ({ language }) => {
                                             <div className="text-center">
                                                 <div className="header-text bold-text">
                                                     <h1>
-                                                        Get Results You Can See and Feel
+                                                        {
+                                                            constants?.site_content?.home_slider?.slider1?.title[language]
+                                                        }
+                                                        {/* Get Results You Can See and Feel */}
                                                     </h1>
                                                 </div>
                                                 <div className="link-horizontal">
@@ -79,7 +83,10 @@ const HomeBanner = ({ language }) => {
                                                             x.btn1 && */}
                                                         <li>
                                                             <HashLink to={`/${language}/memberships` + "#membership_packages"} className=" btn btn-default">
-                                                                VIEW MEMBERSHIP PACKAGES
+                                                                {
+                                                                    constants?.site_content?.home_slider?.slider1?.btn_text[language]
+                                                                }
+                                                                {/* VIEW MEMBERSHIP PACKAGES */}
                                                             </HashLink>
                                                             {/* <a className=" btn btn-default" href={`/${language}/memberships`}
                                                             // onClick={() => setShowModal(true)}
@@ -115,7 +122,10 @@ const HomeBanner = ({ language }) => {
                                             <div className="text-center">
                                                 <div className="header-text bold-text">
                                                     <h1>
-                                                        The Smartest Workout for More Results
+                                                        {
+                                                            constants?.site_content?.home_slider?.slider2?.title[language]
+                                                        }
+                                                        {/* The Smartest Workout for More Results */}
                                                     </h1>
                                                 </div>
                                                 {/* <div className="link-horizontal">

@@ -1,76 +1,107 @@
 export const constants = {
   site_content: {
-    site_name: {
-      en: "AMERICAN GULF SCHOOL",
-      ar: "المدرسة الأمريكية الخليجية",
+
+    home_slider: {
+      slider1: {
+        title: {
+          en: "Get Results You Can See and Feel",
+          ar: "احصل على نتائج يمكنك رؤيتها وتشعر بها"
+        },
+        btn_text: {
+          en: "VIEW MEMBERSHIP PACKAGES",
+          ar: "عرض باقات العضوية"
+        }
+      },
+      slider2: {
+        title: {
+          en: "The Smartest Workout for More Results",
+          ar: "التمرين الأذكى لمزيد من النتائج"
+        }
+      }
     },
-    seo_description: {
-      en: "AGS | AMERICAN GULF SCHOOL",
-      ar: "AGS | المدرسة الأمريكية الخليجية",
+    video_sec: {
+      title: {
+        en: "Things we do differently",
+        ar: "أشياء نقوم بها بشكل مختلف"
+      },
+      subtitle: {
+        en: "More than a gym",
+        ar: "أكثر من مجرد صالة ألعاب رياضية"
+      },
+      description1: {
+        en: "Orangetheory is a science-backed, technology-tracked, coach-inspired group workout designed to produce results from the inside out. The hardest part of our workouts is showing up - we make it simple for you to push yourself, be your personal best and give you more.",
+        ar: "Orangetheory هو تدريب جماعي مدعوم علميًا ومتعقبًا تقنيًا ومستوحى من المدرب مصمم لتحقيق نتائج من الداخل إلى الخارج. يتمثل أصعب جزء في تماريننا في الظهور - فنحن نجعل من السهل عليك دفع نفسك ، لتكون أفضل ما لديك ونمنحك المزيد."
+      },
+      description2: {
+        en: "MORE results. MORE confidence. MORE Life. More than a gym. Because you shouldn’t live to exercise. You should exercise to live.",
+        ar: "نتائج أخرى. المزيد من الثقة. أكثر حيوية. أكثر من مجرد صالة ألعاب رياضية. لأنه لا يجب أن تعيش لممارسة الرياضة. يجب عليك ممارسة للعيش."
+      }
     },
-    meta_cnt: {
-      en: "CONTACT US",
-      ar: "للتواصل معنا",
+    about_sec: {
+      title: {
+        en: "What happens in class doesn’t stay in class?",
+        ar: "ماذا يحدث في الفصل لا يبقى في الفصل؟"
+      },
+      description: {
+        en: "Orangetheory is a heart-rate based HIIT total-body group workout that combines science, coaching and technology to guarantee maximum results from the inside out. It’s designed to charge your metabolism for MORE caloric afterburn, MORE results, and MORE confidence, all to deliver you MORE LIFE.  Orangetheory is more than a gym because the work you do here in our studio will make all the difference out there in your world.",
+        ar: "أورانج ثيوري هو تمرين جماعي عالي الكثافة يعتمد على معدل ضربات القلب ويجمع بين العلم والتدريب والتكنولوجيا لضمان أقصى قدر من النتائج من الداخل إلى الخارج. إنه مصمم لشحن عملية التمثيل الغذائي الخاصة بك للحصول على مزيد من السعرات الحرارية بعد الحرق ، والمزيد من النتائج ، والمزيد من الثقة ، كل ذلك ليمنحك المزيد من الحياة. أورانج ثيوري أكثر من مجرد صالة ألعاب رياضية لأن العمل الذي تقوم به هنا في الاستوديو الخاص بنا سيحدث فرقًا كبيرًا في عالمك."
+      },
+      btn_text: {
+        en: "Learn More About The Workout",
+        ar: "تعرف على المزيد حول التمرين"
+      }
     },
-    meta_cnt_description: {
-      en: "CONTACT US",
-      ar: "للتواصل معنا",
+    sche_sec: {
+      title: {
+        en: "Health and Safety (It's not either/or)",
+        ar: "الصحة والسلامة (ليس إما / أو)"
+      },
+      description1: {
+        en: "As the pandemic continues, it’s incredibly important Orangetheory studios operate with an abundance of caution. We continually review and evaluate our safety and disinfection protocols to align with the latest recommendations and local government mandates.",
+        ar: "مع استمرار الوباء ، من المهم للغاية أن تعمل استوديوهات أورانجثيوري بحذر شديد. نقوم باستمرار بمراجعة وتقييم بروتوكولات السلامة والتطهير الخاصة بنا لتتماشى مع أحدث التوصيات وتفويضات الحكومة المحلية."
+      },
+      description2: {
+        en: "The Orangetheory studio design, structured class schedule, block interval training and tight-knit community of franchisees enables us to have a more controlled environment in comparison to other fitness gyms.",
+        ar: "يتيح لنا تصميم استوديو Orangetheory وجدول الحصص المنظمة والتدريب على فترات متقطعة ومجتمع مترابط من أصحاب الامتياز الحصول على بيئة أكثر تحكمًا مقارنة بصالات اللياقة البدنية الأخرى."
+      }
     },
-    meta_std: {
-      en: "STUDENT CARE",
-      ar: "رعاية الطلاب",
+    member_sec: {
+      title: {
+        en: "Become a Member",
+        ar: "أصبح عضوا"
+      },
+      description: {
+        en: "It only takes a minute in our studio to understand it’s not a competition – it’s a community. Check out our membership options and contact your local studio to find the right fit for you.",
+        ar: "يستغرق الأمر دقيقة واحدة فقط في الاستوديو الخاص بنا لفهم أنها ليست منافسة - إنها مجتمع. تحقق من خيارات العضوية لدينا واتصل بالاستوديو المحلي الخاص بك للعثور على ما يناسبك."
+      },
+      btn_text: {
+        en: "Reach out to us",
+        ar: "تواصل معنا"
+      },
+      join_btn: {
+        en: "join now",
+        ar: "نضم الان"
+      }
     },
-    meta_std_description: {
-      en: "STUDENT CARE",
-      ar: "رعاية الطلاب",
+    testim_sec: {
+      title: {
+        en: "Testimonials",
+        ar: "الشهادات - التوصيات"
+      },
+      g_review: {
+        en: "Verified Reviews",
+        ar: "مراجعات تم التحقق منها"
+      }
     },
-    meta_team: {
-      en: "OUR TEAM",
-      ar: "فريق العمل",
-    },
-    meta_team_description: {
-      en: "OUR TEAM",
-      ar: "فريق العمل"
-    },
-    meta_form: {
-      en: "ONLINE APPLICATION FORM",
-      ar: "إستمارة التقديم عبر الإنترنت",
-    },
-    meta_form_description: {
-      en: "ONLINE APPLICATION FORM",
-      ar: "إستمارة التقديم عبر الإنترنت",
-    },
-    meta_career: {
-      en: "CAREER",
-      ar: "الوظائف",
-    },
-    meta_career_description: {
-      en: "CAREER",
-      ar: "الوظائف",
-    },
-    exp_ags: {
-      en: "EXPERIENCE THE AGS DIFFERENCE",
-      ar: "اختبر الفرق مع المدرسة الأمريكية الخليجية",
-    },
-    meet_mentor: {
-      en: "MEET THE MENTORS",
-      ar: "تعرف على المعلمين",
-    },
-    meet_colleague: {
-      en: "MEET YOUR COLLEAGUES",
-      ar: "تعرف على زملائك",
-    },
-    our_team: {
-      en: "OUR TEAM",
-      ar: "فريق العمل",
-    },
-    read_more: {
-      en: "Read More >",
-      ar: "عرض المزيد >",
-    },
-    learn_more: {
-      en: "Learn More ",
-      ar: "عرض المزيد",
+    loca_sec: {
+      title: {
+        en: "Our Locations",
+        ar: "مواقعنا"
+      },
+      cont_text: {
+        en: "Contact No:",
+        ar: "رقم الاتصال:"
+      }
     },
     learn_less: {
       en: "Show Less ",

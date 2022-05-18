@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import $ from 'jquery';
+import { constants } from '../../utils/constants';
 
 import locationbg from "../../assets/images/OTF/home/locationbg.jpg";
 
@@ -26,7 +27,11 @@ const Calculate = ({ locationsData, language, isArabic }) => {
                         style={{ backgroundImage: `url(${locationbg})` }}
                     >
                         <div className={"p-5 mx-5 mb-4 calLocationspacing"}>
-                            <h3 className={`${language === "ar" ? "text-right" : 'text-left'} oftHeading `}>Our Locations</h3>
+                            <h3 className={`${language === "ar" ? "text-right" : 'text-left'} oftHeading `}>
+                                {
+                                    constants?.site_content?.loca_sec?.title[language]
+                                }
+                            </h3>
                             <Container>
                                 {
                                     locationsData?.map((x, i) => (
@@ -51,7 +56,9 @@ const Calculate = ({ locationsData, language, isArabic }) => {
                                                             ? x?.arabic?.address
                                                             : x?.address
                                                     } <br />
-                                                    Contact No: <a href={`tel:${x?.phone}`}>
+                                                    {
+                                                        constants?.site_content?.loca_sec?.cont_text[language]
+                                                    } <a href={`tel:${x?.phone}`}>
                                                         {
                                                             isArabic
                                                                 ? x?.arabic?.phone
