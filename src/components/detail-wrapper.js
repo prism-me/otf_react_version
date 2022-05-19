@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import { constants } from '../utils/constants';
 
 
 import { Col, Modal, ModalHeader, ModalBody } from 'reactstrap';
@@ -112,7 +113,7 @@ const DetailWrapper = ({ className, showcaseType, singleArticleData, language, i
 
             <div className="blog-text m-t-20">
                 <div className='d-flex justify-content-start align-items-center mb-3'>
-                    <h6 className="mr-3">
+                    <h6 className={` ${language === "en" ? 'mr-3' : 'ml-3'} `}>
                         {new Date(singleArticleData?.created_at).toLocaleDateString()}
                     </h6>
                     <h6>
@@ -153,7 +154,9 @@ const DetailWrapper = ({ className, showcaseType, singleArticleData, language, i
                         singleArticleData?.author_detail &&
                         <p className='oftsubHeading mb-1 mt-4'>
                             <strong>
-                                About the Author
+                                {
+                                    constants?.site_content?.articles_sec?.about_author[language]
+                                }
                             </strong>
                         </p>
                     }

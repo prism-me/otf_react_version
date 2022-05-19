@@ -1,11 +1,16 @@
 import React from 'react';
 import { InputGroup, Form } from 'react-bootstrap'
+import { constants } from '../utils/constants';
 
 const NewsLetter = ({ language }) => {
 
     return (
         <div className="sidebar-container">
-            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>newsletter</h5>
+            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>
+                {
+                    constants?.site_content?.articles_sec?.newsletter?.title[language]
+                }
+            </h5>
 
 
             <Form >
@@ -20,7 +25,9 @@ const NewsLetter = ({ language }) => {
                                 <>
                                     <Form.Control
                                         type="text"
-                                        placeholder='enter email'
+                                        placeholder={
+                                            constants?.site_content?.articles_sec?.newsletter?.email[language]
+                                        }
                                         style={{
                                             background: '#FFFFFF',
                                             border: "1px solid grey",
@@ -46,7 +53,9 @@ const NewsLetter = ({ language }) => {
                                 <>
                                     <Form.Control
                                         type="text"
-                                        placeholder='enter email'
+                                        placeholder={
+                                            constants?.site_content?.articles_sec?.newsletter?.email[language]
+                                        }
                                         style={{
                                             background: '#FFFFFF',
                                             border: "1px solid grey",

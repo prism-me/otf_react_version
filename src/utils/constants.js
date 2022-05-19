@@ -1,6 +1,5 @@
 export const constants = {
   site_content: {
-
     home_slider: {
       slider1: {
         title: {
@@ -103,326 +102,423 @@ export const constants = {
         ar: "رقم الاتصال:"
       }
     },
-    learn_less: {
-      en: "Show Less ",
-      ar: "إخفاء",
-    },
-    apply_now: {
-      en: "APPLY NOW",
-      ar: "سجل الآن",
-    },
-    waitlist: {
+    coach_sec: {
       title: {
-        en: "Join the waitlist for our 2022 programs.",
-        ar: "انضم إلى قائمة الانتظار لبرامجنا لعام 2022."
-      },
-      enter_email: {
-        en: "Enter your email address",
-        ar: "ادخل عنوان بريدك الإلكتروني"
-      },
-      enter_name: {
-        en: "Enter your name",
-        ar: "أدخل اسمك"
-      },
-      enroll: {
-        en: "Enroll",
-        ar: "سَجِّل"
-      },
-      email_req: {
-        en: "Email Required",
-        ar: "البريد الإلكتروني (مطلوب"
-      },
-      name_req: {
-        en: "Name Required",
-        ar: "الاسم مطلوب"
-      },
-    },
-    life_at_ags: {
-      en: "LIFE AT AMERICAN GULF SCHOOL",
-      ar: "الحياة في المدرسة الأمريكيّة الخليجيّة",
-    },
-    view_more: {
-      en: "View More >",
-      ar: "المزيد >",
-    },
-    view_less: {
-      en: "View Less",
-      ar: "أقل",
-    },
-    view_calender: {
-      en: "View Calendar",
-      ar: "عرض التقويم",
-    },
-    calender: {
-      title: {
-        en: "ACADEMIC CALENDAR 2021 - 2022",
-        ar: " التقويم الدراسي 2021 - 2022"
-      },
-      term1: {
-        en: "TERM 1 : WINTER 2021",
-        ar: "الفصل الدراسي الأول: شتاء 2021"
-      },
-      term1heading1: {
-        en: "First day of term",
-        ar: "اليوم الأول من الفصل الدراسي"
-      },
-      term1heading2: {
-        en: "Break",
-        ar: "مولد النبي (صلى الله عليه وسلم)"
-      },
-      term1heading3: {
-        en: "Winter Break",
-        ar: "يوم العلم الإماراتي"
-      },
-      term2: {
-        en: "TERM 2 : SPRING 2022",
-        ar: "الفصل الدراسي الثاني: ربيع 2022"
-      },
-      term2heading1: {
-        en: "School Return",
-        ar: "اليوم الأول من الفصل الدراسي"
-      },
-      term2heading2: {
-        en: "Break",
-        ar: "بداية عطلة الربيع"
-      },
-      term2heading3: {
-        en: "Spring Break",
-        ar: "بداية شهر رمضان (سيتم التأكيد لاحقاً)"
-      },
-      term3: {
-        en: "TERM 3 : SUMMER 2022",
-        ar: "الفصل الدراسي الثالث: صيف 2022"
-      },
-      term3heading1: {
-        en: "School Return",
-        ar: "اليوم الأول من الفصل الدراسي (سيتم التأكيد لاحقاً)"
-      },
-      term3heading2: {
-        en: "Last day of School",
-        ar: "اليوم الأخير من العام الدراسي"
-      },
-    },
-    stdTabs: {
-      tab1: {
-        en: "Inclusion",
-        ar: "إحاطة"
-      },
-      tab2: {
-        en: "Academic Support",
-        ar: "الدعم الأكاديمي"
-      },
-      tab3: {
-        en: "School Clinic",
-        ar: "عيادة المدرسة"
-      },
-      tab4: {
-        en: "Academic Guidance",
-        ar: "الإرشاد الأكاديمي"
-      },
-      tab5: {
-        en: "Wellbeing",
-        ar: "الصحة والسلامة"
+        en: "Our Certified Fitness Coaches",
+        ar: "مدربي اللياقة المعتمدين لدينا"
       }
     },
-    contact_us: {
+    team_sec: {
       title: {
-        en: "Contact Us",
-        ar: "للتواصل معنا"
+        en: "Our team",
+        ar: "فريقنا"
+      }
+    },
+    memberbanner_sec: {
+      title: {
+        en: "Let’s Talk Fitness Memberships",
+        ar: "دعونا نتحدث عن عضويات اللياقة البدنية"
       },
-      name: {
-        en: "Name",
-        ar: "اسم"
+      subtitle: {
+        en: "No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you.",
+        ar: "بغض النظر عن مستوى لياقتك ، فإن التمرين من 2 إلى 4 في الأسبوع هو كل ما تحتاجه لتحقيق أقصى قدر من النتائج في Orangetheory. فلنبحث عن خيار العضوية الذي يناسبك بشكل أفضل."
+      }
+    },
+    memberbenefit_sec: {
+      title: {
+        en: "Membership Benefits",
+        ar: "مزايا العضوية"
       },
-      phone: {
-        en: "Phone Number",
-        ar: "رقم الهاتف"
+      sec_1: {
+        en: "Easy online booking",
+        ar: "سهولة الحجز عبر الإنترنت"
+      },
+      sec_2: {
+        en: "Nationwide studio access",
+        ar: "الوصول إلى الاستوديو على الصعيد الوطني"
+      },
+      sec_3: {
+        en: "Month-to-month memberships",
+        ar: "عضويات شهرية"
+      },
+      avail_btn: {
+        en: "Avail now",
+        ar: "استفد الآن"
+      }
+    },
+    getapp_sec: {
+      title: {
+        en: "Get The App",
+        ar: "احصل على التطبيق"
+      },
+      sec_1: {
+        en: "View classes from multiple studios.",
+        ar: "مشاهدة الفصول من استوديوهات متعددة."
+      },
+      sec_2: {
+        en: "Find and save your favorite studios",
+        ar: "ابحث عن الاستوديوهات المفضلة لديك واحفظها"
+      },
+      sec_3: {
+        en: "Get easy-to-read workout summaries.",
+        ar: "احصل على ملخصات التمارين سهلة القراءة."
+      },
+      sec_4: {
+        en: "Track challenges and benchmarks.",
+        ar: "تتبع التحديات والمعايير."
+      },
+      sec_5: {
+        en: "View your body composition.",
+        ar: "عرض تكوين جسمك."
+      },
+      sec_6: {
+        en: "Track out-of-studio workouts.",
+        ar: "تتبع التدريبات خارج الاستوديو."
+      }
+    },
+    workoutbanner_sec: {
+      title: {
+        en: "Backed by science",
+        ar: "بدعم من العلم"
+      },
+      subtitle: {
+        en: "OTF Workout is backed by science, spending 12 minutes in Orange Zone gives you more strength, energy and more life. Join us now!",
+        ar: "تمارين OTF مدعومة بالعلوم ، حيث يمنحك قضاء 12 دقيقة في Orange Zone المزيد من القوة والطاقة والمزيد من الحياة. انضم إلينا الآن!"
+      },
+    },
+    workoutheartrate_sec: {
+      title: {
+        en: "The 5 Heart Rate Zones",
+        ar: "مناطق معدل ضربات القلب الخمس"
+      },
+      subtitle: {
+        en: "During our heart-rate based HIIT workout, your coach will guide you through our 5 different heart rate zones: resting, easy, challenging, uncomfortable and All Out, telling you when to push harder and when to pull back for recovery. The goal is to spend 12 minutes or more with your heart rate elevated in “The Orange Zone” to boost your metabolism, burn fat and burn more calories.",
+        ar: "أثناء تمرين HIIT المستند إلى معدل ضربات القلب ، سيرشدك مدربك خلال 5 نطاقات مختلفة لمعدل ضربات القلب: الراحة ، والسهولة ، والتحدي ، وغير المريح ، والجميع ، ويخبرك متى تضغط بقوة أكبر ومتى تتراجع من أجل التعافي. الهدف هو قضاء 12 دقيقة أو أكثر مع ارتفاع معدل ضربات القلب في المنطقة البرتقالية لزيادة التمثيل الغذائي وحرق الدهون وحرق المزيد من السعرات الحرارية."
+      },
+    },
+    workoutOtf_sec: {
+      title: {
+        en: "Your OTF Workout",
+        ar: "تمرين OTF الخاص بك"
+      },
+      sec_1: {
+        title: {
+          en: "Rowing",
+          ar: "تجديف"
+        },
+        subtitle: {
+          en: " Every stroke on the rower activates 85% of your body’s muscles to help you improve endurance, strength and power.",
+          ar: "تعمل كل تمريرة على المجدف على تنشيط 85٪ من عضلات جسمك لمساعدتك على التحمل والقوة والقوة."
+        }
+      },
+      sec_2: {
+        title: {
+          en: "Cardio",
+          ar: "القلب"
+        },
+        subtitle: {
+          en: "Whether you walk, jog or run, you’ll go at your own pace based on your fitness level. We also have bikes and striders available as alternates to the treadmill.",
+          ar: "سواء كنت تمشي أو تركض أو تركض ، ستمشي بالسرعة التي تناسبك بناءً على مستوى لياقتك. تتوفر لدينا أيضًا دراجات ومعدات ركاب كبديل لجهاز المشي."
+        }
+      },
+      sec_3: {
+        title: {
+          en: "Strength Training",
+          ar: "تدريب القوة"
+        },
+        subtitle: {
+          en: "Our weight and floor exercises change daily so you can focus on different muscles. Your coach can provide options for any movement if you have injuries or limitations.",
+          ar: "تتغير تمارين الوزن والأرض يوميًا حتى تتمكن من التركيز على عضلات مختلفة. يمكن لمدربك توفير خيارات لأي حركة إذا كانت لديك إصابات أو قيود."
+        }
+      }
+    },
+    workoutcoachprof_sec: {
+      title: {
+        en: "Coach Professionalism",
+        ar: "احتراف المدرب"
+      },
+      subtitle: {
+        en: "Our Coaches Are More than Just Coaches.",
+        ar: "المدربون لدينا أكثر من مجرد مدربين."
+      },
+      description: {
+        en: "As you take in the energy of our group workout, you’ll also get the attention and inspiration that comes from our experienced personal training coaches. They’re full of the life they promise and always pushing you forward with tough love.",
+        ar: "عندما تستفيد من طاقة التمرين الجماعي لدينا ، ستحصل أيضًا على الاهتمام والإلهام اللذين يأتيان من مدربي التدريب الشخصيين ذوي الخبرة لدينا. إنهم مليئون بالحياة التي يعدون بها ويدفعونك دائمًا إلى الأمام بحب شديد."
+      },
+      btn_text: {
+        en: "Know Our Fitness Experts",
+        ar: "تعرف على خبراء اللياقة لدينا"
+      }
+    },
+    workoutslider_sec: {
+      slider_1: {
+        title: {
+          en: "Get Results, Straight from Your Heart.",
+          ar: "احصل على نتائج مباشرة من قلبك."
+        },
+        subtitle: {
+          en: "Our workout is based on OTBeat Heart Rate technology that measures your heart rate and performance data in real time.",
+          ar: "يعتمد تمريننا على تقنية OTBeat Heart Rate التي تقيس معدل ضربات القلب وبيانات الأداء في الوقت الفعلي."
+        }
+      },
+      slider_2: {
+        title: {
+          en: "See Results in Real Time.",
+          ar: "انظر النتائج في الوقت الحقيقي."
+        },
+        subtitle: {
+          en: "In-studio monitors connect directly with your  OTBurn wearable to show your progress and keep you accountable to your level of effort.",
+          ar: "تتصل الشاشات داخل الاستوديو مباشرة بجهاز OTBurn القابل للارتداء لإظهار تقدمك وإبقائك مسؤولاً عن مستوى مجهودك."
+        }
+      },
+      slider_3: {
+        title: {
+          en: "Track Performance in the App.",
+          ar: "تتبع الأداء في التطبيق."
+        },
+        subtitle: {
+          en: "You’ll have 24/7 access to your results and fitness data so you can track your performance and set new goals.",
+          ar: "ستتمتع بإمكانية الوصول على مدار الساعة طوال أيام الأسبوع إلى نتائجك وبيانات اللياقة البدنية حتى تتمكن من تتبع أدائك وتحديد أهداف جديدة."
+        }
+      }
+    },
+    coaching_sec: {
+      title: {
+        en: " MORE COACHING. MORE SUPPORT. MORE MOTIVATION.",
+        ar: "المزيد من التدريب. المزيد من الدعم. مزيد من التحفيز."
+      },
+      subtitle: {
+        en: "Orangetheory Live delivers an energy-packed, full-body group personal training experience in an easy-to-use platform that makes you feel like you’re back in the studio. Get connected with a local coach who provides real-time feedback, motivation, and inspiration, and an intimate group setting that allows you to connect with the studio community before and after your workout.",
+        ar: "يقدم Orangetheory Live تجربة تدريب شخصية جماعية مليئة بالطاقة وكاملة في منصة سهلة الاستخدام تجعلك تشعر وكأنك في الاستوديو. تواصل مع مدرب محلي يقدم ملاحظات في الوقت الفعلي ، وتحفيزًا ، وإلهامًا ، وبيئة جماعية حميمة تسمح لك بالتواصل مع مجتمع الاستوديو قبل التمرين وبعده."
+      },
+      sec_1: {
+        title: {
+          en: "Science-Backed",
+          ar: "بدعم من العلم"
+        },
+        subtitle: {
+          en: "Backed by the science of Excess Post Exercise Oxygen Consumption (or EPOC), our interval training is designed for seasoned pros and beginners. Our integrated heart-rate technology will provide you with immediate feedback so that you can get the results you need! Set your own pace, and watch as your heart rate monitor tells you your level of exertion. Take it slow - or test your limits. The choice is always up to you.",
+          ar: "مدعومًا بعلم استهلاك الأكسجين الزائد بعد التمرين (أو EPOC) ، تم تصميم التدريب المتقطع لدينا للمحترفين والمبتدئين المخضرمين. ستزودك تقنية معدل ضربات القلب المتكاملة الخاصة بنا بردود فعل فورية حتى تتمكن من الحصول على النتائج التي تريدها! حدد وتيرتك الخاصة ، وشاهد جهاز مراقبة معدل ضربات القلب يخبرك بمستوى مجهودك. تعامل مع الأمر ببطء - أو اختبر حدودك. الخيار متروك لك دائمًا."
+        }
+      },
+      sec_2: {
+        title: {
+          en: "Technology-Tracked",
+          ar: "التكنولوجيا المتعقبة"
+        },
+        subtitle: {
+          en: "Our heart-rate monitored training is designed to maintain a target zone that stimulates metabolism and increases energy. We call it the afterburn. Our members burn an estimated 500 to 1,000 calories in one workout, no matter their fitness level, and keep burning calories for up to 36 hours.**",
+          ar: "تم تصميم تدريبنا لمراقبة معدل ضربات القلب للحفاظ على المنطقة المستهدفة التي تحفز عملية التمثيل الغذائي وتزيد من الطاقة. نسميها الحارق. يحرق أعضاؤنا ما يقدر بـ 500 إلى 1000 سعرة حرارية في تمرين واحد ، بغض النظر عن مستوى لياقتهم ، ويستمرون في حرق السعرات الحرارية لمدة تصل إلى 36 ساعة. **"
+        }
+      },
+      sec_3: {
+        title: {
+          en: "Coach-Inspired",
+          ar: "مدرب مستوحى"
+        },
+        subtitle: {
+          en: "At Orangetheory, you’ll get the energy of a group workout with all the benefits of an experienced personal trainer like: motivation, attention, and technique tips. Our coaches are knowledgeable, encouraging, and committed to helping you reach your fitness goals.",
+          ar: "في Orangetheory ، ستحصل على طاقة التمرين الجماعي مع جميع مزايا مدرب شخصي متمرس مثل: التحفيز والانتباه والنصائح الفنية. مدربوننا على دراية ويشجعون ويلتزمون بمساعدتك في الوصول إلى أهداف لياقتك."
+        }
+      }
+    },
+    testimonialbanner_sec: {
+      title: {
+        en: "What Our Members Are Saying About",
+        ar: "ماذا يقول أعضاؤنا عن"
+      },
+      subtitle: {
+        en: "Let's work towards a better version of ourselves - together.",
+        ar: "دعونا نعمل من أجل نسخة أفضل من أنفسنا - معًا."
+      }
+    },
+    membersay_sec: {
+      title: {
+        en: "What Our Members Are Saying About",
+        ar: "ماذا يقول أعضاؤنا عن"
+      }
+    },
+    videoTestim_sec: {
+      title: {
+        en: "Videos",
+        ar: "أشرطة فيديو"
+      },
+      btn_text: {
+        en: " View More",
+        ar: "عرض المزيد"
+      }
+    },
+    locationbanner_sec: {
+      title: {
+        en: "Find us near you!",
+        ar: "تجدنا بالقرب منك!"
+      }
+    },
+    faqbanner_sec: {
+      title: {
+        en: "Try Us For Free. Yes, Free!",
+        ar: "جربنا مجانا. نعم ، مجاني!"
+      },
+      btn_text: {
+        en: "book a free class now",
+        ar: "احجز فصل دراسي مجاني الآن"
+      },
+      subtitle: {
+        en: "*Promotion Terms. Limited Time Offer.",
+        ar: "* شروط الترقية. عرض لوقت محدود."
+      }
+    },
+    faq_sec: {
+      title: {
+        en: "Frequently Asked Questions",
+        ar: "أسئلة مكررة"
+      }
+    },
+    offerbanner_sec: {
+      title: {
+        en: "WORK 1 HOUR. BURN FOR 36",
+        ar: "العمل 1 ساعة. حرق 36"
+      },
+      subtitle: {
+        en: "Orangetheory Fitness is a one-of-a-kind, group high-intensity interval training workout.The result is more energy, visible toning, and extra calorie burn for up to 36 hours.",
+        ar: "Orangetheory Fitness هو تدريب جماعي فريد من نوعه على فترات متقطعة عالية الكثافة ، والنتيجة هي المزيد من الطاقة والتنغيم المرئي وحرق السعرات الحرارية الزائدة لمدة تصل إلى 36 ساعة."
+      },
+      detail: {
+        en: "Buy 2 Months Membership and get the 3rd Month for AED10 only.",
+        ar: "اشترِ عضوية لمدة شهرين واحصل على الشهر الثالث مقابل 10 دراهم فقط."
+      }
+    },
+    offerform_sec: {
+      title: {
+        en: "Book An Intro Class",
+        ar: "حجز حصة مقدمة"
+      },
+      submit_text: {
+        en: "Data Submitted Successfuly!",
+        ar: "تم إرسال البيانات بنجاح!"
+      },
+      full_name: {
+        en: "Full name",
+        ar: "الاسم الكامل"
       },
       email: {
-        en: "Email Address",
-        ar: "البريد الإلكتروني"
+        en: "Email address",
+        ar: "عنوان بريد الكتروني"
       },
-      msg: {
-        en: "Your Message",
-        ar: "رسالتك"
+      phone_number: {
+        en: "Phone number",
+        ar: "رقم الهاتف"
       },
-      numb_req: {
-        en: "Phone Number Required",
-        ar: "رقم الهاتف مطلوب"
+      location: {
+        en: "Select Location",
+        ar: "اختر موقعا"
       },
-      msg_req: {
-        en: "Message Required",
-        ar: "الرسالة المطلوبة"
+      offer: {
+        en: "Select Offer",
+        ar: "حدد عرض"
       },
-      addr: {
-        en: "Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates",
-        ar: "الرحمانية - شغرافة 4 - إمارة الشارقةّ - الإمارات العربية المتحدة"
-      },
-      admission: {
-        en: "FOR ADMISSIONS",
-        ar: "للقبول والتسجيل"
-      },
-      help_desk: {
-        en: "HELP DESK & QUERIES",
-        ar: "مكتب الإستفسارات والمساعدة"
-      },
-      send: {
-        en: "Send",
+      submit_btn: {
+        en: "Submit",
         ar: "إرسال"
       }
     },
-    enrollTabs: {
-      tab1: {
-        en: "Admissions Process",
-        ar: "إجراءات القبول"
+    offers_sec: {
+      title: {
+        en: "Limited Offers",
+        ar: "عروض محدودة"
       },
-      tab2: {
-        en: "Enquiry",
-        ar: "للإستفسار"
+      subtitle: {
+        en: "Ready to change the way you look, the way you feel, and your life? From free trial workout to monthly packages, Orangetheory has a plan perfect for you. By investing in your health today, you’re also investing in a longer, stronger and more vibrant future.",
+        ar: "هل أنت مستعد لتغيير مظهرك وشعورك وحياتك؟ من التمارين التجريبية المجانية إلى الحزم الشهرية ، لدى Orangetheory خطة مثالية لك. من خلال الاستثمار في صحتك اليوم ، فإنك تستثمر أيضًا في مستقبل أطول وأقوى وأكثر حيوية."
       },
-      tab3: {
-        en: "Fees and Payments",
-        ar: "الرسوم والمدفوعات"
-      },
-      tab4: {
-        en: "Online Application",
-        ar: "التقديم عبر الإنترنت"
-      },
-      tab5: {
-        en: "FAQs",
-        ar: "الأسئلة الشائعة"
+      btn_text: {
+        en: "Book offer",
+        ar: "عرض الكتاب"
       }
     },
-    adm_procd: {
-      en: "ADMISSIONS PROCEDURE",
-      ar: "عملية القبول"
-    },
-    dec_btn: {
-      en: "Click here to view the documents to be submitted once a student has been accepted and enrolled",
-      ar: "انقر هنا لعرض الوثائق التي يجب تقديمها بمجرد قبول الطالب وتسجيله"
-    },
-    age_btn: {
-      en: "Click here to view the detailed Age Requirement and Grade Level Placement.",
-      ar: "انقر هنا لعرض تفاصيل متطلبات العمر والتنسيب للمرحلة الصفية."
-    },
-    genr_policy: {
-      en: " Kindly read the General Policies, Fee Details and Payment Methods carefully.",
-      ar: "يرجى قراءة السياسات العامة، وتفاصيل وطرق دفع الرسوم  بعناية."
-    },
-    app_online: {
-      en: "Apply Online",
-      ar: "قم بالتسجيل عبر الإنترنت"
-    },
-    faq: {
-      en: "FREQUENTLY ASKED QUESTIONS",
-      ar: "الأسئلة المتكررة"
-    },
-    adm_contact: {
-      en: "ADMISSION CONTACT DETAILS",
-      ar: "معلومات الاتصال بقسم القبول"
-    },
-    adm_email: {
-      en: "Email Us here for admission.",
-      ar: "راسلنا على هذا البريد الإلكتروني للتسجيل."
-    },
-    adm_phone: {
-      en: "Phone Number:",
-      ar: "رقم الهاتف:"
-    },
-    req_call: {
+    offersworkouteveryone_sec: {
       title: {
-        en: "Request A Call Back",
-        ar: "طلب إتصال"
+        en: "A Workout for everyone",
+        ar: "تمرين للجميع"
       },
       subtitle: {
-        en: "For more information about admissions and tours, request a call back from our team by filling in the form below.",
-        ar: "لمزيد من المعلومات حول القبول والجولات، اطلب إعادة الاتصال من فريقنا عن طريق ملء النموذج أدناه."
-      },
-      enter_pname: {
-        en: "Parent/Guardian’s Name",
-        ar: "اسم الوالد / ولي الأمر"
-      },
-      enter_pnumb: {
-        en: "Parent/Guardian’s Mobile Number",
-        ar: ".رقم هاتف ولي الأمر \\ الوصي."
-      },
-      childDob: {
-        en: "Child’s Date Of Birth dd/mm/yyyy",
-        ar: ".تاريخ ميلاد الطّالب المُراد الاستفسار عنه \\ اليوم \\ الشّهر \\ السّنة "
-      },
-      submit: {
-        en: "Submit",
-        ar: "إرسال"
-      },
-      numb_req: {
-        en: "Parent/Guardian’s Mobile Number Required",
-        ar: "يجب إدخال رقم هاتف الوالد / الوصي"
-      },
-      name_req: {
-        en: "Parent/Guardian’s Full Name Required",
-        ar: "مطلوب الاسم الكامل للوالد / الوصي"
-      },
-      dob_req: {
-        en: "Child’s Date Of Birth Required",
-        ar: "يجب إدخال تاريخ ميلاد الطفل"
-      },
+        en: " Whether you’re an athlete or just starting your fitness journey, Orangetheory is designed for all fitness levels. Our experienced coaches provide options that allow you to safely perform movements that work around any physical issues. Walk, jog, run, or ride, you set your own pace. Well…technically your heart rate does.",
+        ar: "سواء كنت رياضيًا أو بدأت للتو رحلة لياقتك ، تم تصميم أورانج ثيوري لجميع مستويات اللياقة البدنية. يوفر المدربون ذوو الخبرة لدينا خيارات تسمح لك بأداء حركات بأمان تتغلب على أي مشاكل جسدية. المشي ، الركض ، الجري ، أو الركوب ، أنت تحدد وتيرتك الخاصة. حسنًا ... معدل ضربات قلبك يفعل من الناحية الفنية."
+      }
     },
-    school_tour: {
+    articles_sec: {
       title: {
-        en: "Book a School Tour",
-        ar: "احجز لجولة في المدرسة"
+        en: "Articles",
+        ar: "مقالات"
       },
-      subtitle: {
-        en: "Book a tour with our Admissions team to visit American Gulf School Sharjah, located in Al Rahmaniya 4, Sharjah. To book a tour of American Gulf School, please fill out the form below and a member of our Admissions team will contact you to arrange a suitable time.",
-        ar: `يمكنك من هنا حجز موعدًا لأخد جولة مع أحد أعضاء قسم القبول والتسجيل في المدرسة الأمريكيّة الخليجيّة، الواقعة في إمارة الشّارقة\ الرّحمانيّة 4.
-        يرجى تعبئة البيانات التّالية، وسيقوم أحد موظّفو المدرسة بالتّواصل معك مباشرةً لتحديد الموعد المناسب.`
+      read_btn: {
+        en: "read more",
+        ar: "اقرأ أكثر"
       },
-      enter_pname: {
-        en: "Parent/Guardian’s Full Name",
-        ar: "اسم ولي الأمر \\ الوصي "
+      load_more: {
+        en: "Load More",
+        ar: "تحميل المزيد"
       },
-      enter_pemail: {
-        en: "Parent/Guardian’s Email",
-        ar: "البريد الإلكتروني لولي الأمر \\ الوصي"
+      categories: {
+        en: "categories",
+        ar: "التصنيفات"
       },
-      email_req: {
-        en: "Parent/Guardian’s Email Required",
-        ar: "مطلوب البريد الإلكتروني للوالد / الوصي"
+      popular_post: {
+        en: "Latest Articles",
+        ar: "أحدث المقالات"
       },
+      newsletter: {
+        title: {
+          en: "newsletter",
+          ar: "النشرة الإخبارية"
+        },
+        email: {
+          en: "enter email",
+          ar: "أدخل البريد الإلكتروني"
+        }
+      },
+      about_author: {
+        en: "About the Author",
+        ar: "نبذة عن الكاتب"
+      }
     },
-    footer: {
-      logo_title: {
-        en: "AMERICAN GULF SCHOOL",
-        ar: "المدرسة الأمريكية الخليجية"
+    press_sec: {
+      title: {
+        en: "Orangetheory in the Press",
+        ar: "Orangetheory في الصحافة"
       },
-      subtitle: {
-        en: "For more information about admissions and tours, request a call back from our team by filling in the form below.",
-        ar: "لمزيد من المعلومات حول عمليات القبول والجولات ، اطلب معاودة الاتصال من فريقنا عن طريق ملء النموذج أدناه"
+      btn_text: {
+        en: "Book your Free class!",
+        ar: "احجز فصلك المجاني!"
       },
-      enter_pname: {
-        en: "Parent/Guardian’s Name",
-        ar: "اسم الوالد / الوصي"
+      read_btn: {
+        en: "read more",
+        ar: "اقرأ أكثر"
       },
-      enter_pnumb: {
-        en: "rdian’s Mobile Number",
-        ar: "رقم هاتف الوالد // ولي الأمر"
-      },
-      submit: {
-        en: "Submit",
-        ar: "إرسال"
-      },
-      numb_req: {
-        en: "Parent/Guardian’s Mobile Number Required",
-        ar: "يجب إدخال رقم هاتف الوالد / الوصي"
-      },
-      name_req: {
-        en: "Parent/Guardian’s Full Name Required",
-        ar: "مطلوب الاسم الكامل للوالد / الوصي"
-      },
+      social_sec: {
+        title: {
+          en: "Follow us on Social Media",
+          ar: "تابعنا على وسائل التواصل الإجتماعي"
+        },
+        subtitle: {
+          en: "Like and Follow Us to Stay up to Date with the Latest Events from our OTF Community.",
+          ar: "قم بإعجابنا ومتابعتنا للبقاء على اطلاع بأحدث الأحداث من مجتمع OTF الخاص بنا."
+        },
+        btn_text: {
+          en: "BECOME A MEMBER TODAY",
+          ar: "كن عضوا اليوم"
+        }
+      }
     },
-    online_form_des: {
-      en: "Thank you for your interest in American Gulf School, we look forward to receiving your application. Please use this form to submit an application for your son/daughter. Once your application has been received, a member of the admissions team will contact you to request the essential supporting documents required to process your son/daughter’s application. Please note, your application will become ‘active’ once all of the essential supporting documents are received.",
-      ar: "شكرا على اهتمامك بالانضمام إلى المدرسة الأمريكية الخليجية، نحن نتطلع إلى تلقي طلبك. يرجى استخدام هذا النموذج لتقديم الطلب لابنك/ ابنتك. بمجرد استلام طلبك، سيقوم أحد أعضاء فريق القبول بالتواصل معك للحصول على بعض الوثائق الضرورية لمواصلة العمل على طلب ابنك/ ابنتك. يرجى ملاحظة أن طلبك سيصبح مفعلاً بمجرد استلامنا لجميع المستندات الضرورية."
-    },
+    getOff_sec: {
+      title: {
+        en: "Get 10% off during this festive season!",
+        ar: "احصل على خصم 10٪ خلال موسم الأعياد هذا!"
+      },
+      btn_text: {
+        en: "BECOME A MEMBER TODAY",
+        ar: "كن عضوا اليوم"
+      }
+    }
   },
 };

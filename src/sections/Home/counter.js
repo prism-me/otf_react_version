@@ -45,7 +45,7 @@ const Counter = ({ title, subtitle, btntext, bgImg, classname }) => {
                                     <LinkedInIcon />
                                 </a>
                             </li>
-                            <li >
+                            <li className="mr-2">
                                 <a href="https://twitter.com/orangetheory" className="text-white" target={"_blank"}>
                                     <TwitterIcon />
                                 </a>

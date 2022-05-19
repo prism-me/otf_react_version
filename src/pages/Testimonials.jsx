@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
-
+import { constants } from "../utils/constants";
 import TrainerSection from "../sections/Home/trainer";
 import Testimonial from "../sections/Testimonial/trainer";
 import Layout from '../components/common-layout';
@@ -55,15 +55,21 @@ const Testimonials = (props) => {
                 />
             </Helmet>
             <Layout
-                title="What Our Members Are Saying About"
-                subtitle="Let's work towards a better version of ourselves - together."
+                title={
+                    constants?.site_content?.testimonialbanner_sec?.title[global?.activeLanguage]
+                }
+                subtitle={
+                    constants?.site_content?.testimonialbanner_sec?.subtitle[global?.activeLanguage]
+                }
                 // btntext="Book your Free class!"
                 bannerImg={aboutBanner}
                 freeform="freeclass"
             >
 
                 <TrainerSection
-                    title="Testimonials"
+                    title={
+                        constants?.site_content?.testim_sec?.title[global?.activeLanguage]
+                    }
                     testimonial={testimonialData}
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
@@ -71,13 +77,17 @@ const Testimonials = (props) => {
 
                 <Testimonial
                     memberreviewData={memberreviewData}
-                    title="What Our Members Are Saying About:"
+                    title={
+                        constants?.site_content?.membersay_sec?.title[global?.activeLanguage]
+                    }
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
                 />
                 <VideotesTimonial
                     videotestimonialData={videotestimonialData}
-                    title="Videos"
+                    title={
+                        constants?.site_content?.videoTestim_sec?.title[global?.activeLanguage]
+                    }
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
                 />

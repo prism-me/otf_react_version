@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
 import { API } from '../http/API';
 import { useParams } from "react-router-dom";
+import { constants } from "../utils/constants";
 
 //images
 import articlesBanner from "../assets/images/OTF/banner/articlesbanner.jpg";
@@ -62,9 +63,13 @@ const ArticlesDetail = (props) => {
                 />
 
                 <CounterSection
-                    title="Get 10% off during this festive season!"
+                    title={
+                        constants?.site_content?.getOff_sec?.title[global?.activeLanguage]
+                    }
                     // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-                    btntext="BECOME A MEMBER TODAY"
+                    btntext={
+                        constants?.site_content?.getOff_sec?.btn_text[global?.activeLanguage]
+                    }
                     bgImg={articalBg}
                 />
 

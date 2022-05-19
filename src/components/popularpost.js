@@ -1,4 +1,5 @@
 import React from 'react';
+import { constants } from '../utils/constants';
 
 //images
 import art1 from "../assets/images/OTF/articles/downto.jpg";
@@ -218,7 +219,11 @@ const PopularPosts = ({ language }) => {
 
     return (
         <div>
-            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>Latest Articles</h5>
+            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>
+                {
+                    constants?.site_content?.articles_sec?.popular_post[language]
+                }
+            </h5>
             <div className="sidebar-container">
                 {BlogsList.length > 0 &&
                     BlogsList.reverse().slice(0, 5).map((item, index) => (

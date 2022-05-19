@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { API } from "../http/API";
+import { constants } from "../utils/constants";
 
 import Offerbanner from "../sections/Offers/offerbanner"
 import Plans from "../sections/Offers/plans"
@@ -40,7 +41,9 @@ const Offers = (props) => {
                     content="Offers"
                 />
             </Helmet>
-            <Offerbanner />
+            <Offerbanner
+                language={global?.activeLanguage}
+            />
 
             <Plans
                 offersData={offersData}
@@ -48,9 +51,13 @@ const Offers = (props) => {
                 isArabic={global?.activeLanguage === "ar"}
             />
 
-            <Coaching />
+            <Coaching
+                language={global?.activeLanguage}
+            />
 
-            <Workouteveryone />
+            <Workouteveryone
+                language={global?.activeLanguage}
+            />
         </div>
     );
 }

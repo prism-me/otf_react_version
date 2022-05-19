@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap';
+import { constants } from '../../utils/constants';
 
 // import Custom Components
 import CardWrapper from "../../components/list-wrapper";
@@ -51,7 +52,9 @@ const Articlesgrid = ({ language, articlesData, isArabic }) => {
                     articlesData?.length >= 10 && loadItems != articlesData?.length &&
                     <center>
                         <button className='otfBtn1 mt-4' onClick={() => setLoadItems(articlesData?.length)}>
-                            Load More
+                            {
+                                constants?.site_content?.articles_sec?.load_more[language]
+                            }
                         </button>
                     </center>
                 }

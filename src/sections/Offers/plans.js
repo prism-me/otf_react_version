@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import {
     Container, Row, Col
 } from 'reactstrap'
-
+import { constants } from '../../utils/constants';
 
 //images
 
@@ -47,12 +47,18 @@ const Plans = ({ offersData, isArabic, language }) => {
                         <div className="title title2 title-inner">
                             <div className="main-title">
                                 <h2 className="borders text-center m-b-0 oftHeading">
-                                    <span>Limited Offers</span>
+                                    <span>
+                                        {
+                                            constants?.site_content?.offers_sec?.title[language]
+                                        }
+                                    </span>
                                 </h2>
                             </div>
                         </div>
                         <p className="oftsubHeading">
-                            Ready to change the way you look, the way you feel, and your life? From free trial workout to monthly packages, Orangetheory has a plan perfect for you. By investing in your health today, you’re also investing in a longer, stronger and more vibrant future.
+                            {
+                                constants?.site_content?.offers_sec?.subtitle[language]
+                            }
                         </p>
                     </Col>
                 </Row>
@@ -89,10 +95,16 @@ const Plans = ({ offersData, isArabic, language }) => {
                                                     </h5>
                                                     <button className="otfBtn2"
                                                         onClick={() => setShowModal(true)}
-                                                    >Book offer</button>
+                                                    >
+                                                        {
+                                                            constants?.site_content?.offers_sec?.btn_text[language]
+                                                        }
+                                                    </button>
                                                     <BookOffer
                                                         show={showModal} onHide={() => setShowModal(false)}
-                                                        title={"Book Offer"}
+                                                        title={
+                                                            constants?.site_content?.offers_sec?.btn_text[language]
+                                                        }
                                                     />
                                                 </div>
                                             </div>

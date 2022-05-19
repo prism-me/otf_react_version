@@ -58,6 +58,7 @@ const Pressgrid = ({ pressData, isArabic, language }) => (
                                         }
                                         description={item.description}
                                         readUrl={item.url}
+                                        language={language}
                                     />
                                 ) :
                                 '!! No Data Found'}

@@ -8,6 +8,7 @@ import {
 import StartBurning from './startburning';
 import { API } from "../../http/API"
 import { Alert } from "react-bootstrap"
+import { constants } from '../../utils/constants';
 
 //images
 import bannerImg from "../../assets/images/OTF/banner/offerbanner.jpg"
@@ -22,7 +23,7 @@ const offerlist = [
     "March 2 Offer"
 ];
 
-const Offerbanner = () => {
+const Offerbanner = ({ language }) => {
 
     const defaultState = {
         name: "",
@@ -71,15 +72,19 @@ const Offerbanner = () => {
                 <Row>
                     <Col sm={12} md={6} lg={6} className='d-flex flex-column justify-content-center align-items-start offerMblDivsize'>
                         <h2 className="offer-text">
-                            WORK 1 HOUR. BURN FOR 36
+                            {
+                                constants?.site_content?.offerbanner_sec?.title[language]
+                            }
                         </h2>
                         <p className="offer-detail">
-                            Orangetheory Fitness is a one-of-a-kind, group high-intensity interval training workout.
-                            The result is more energy, visible toning, and extra calorie burn for up to 36 hours.
+                            {
+                                constants?.site_content?.offerbanner_sec?.subtitle[language]
+                            }
                         </p>
                         <h3 className="offer-subtext">
-                            Buy 2 Months Membership and
-                            get the 3rd Month for AED10 only.
+                            {
+                                constants?.site_content?.offerbanner_sec?.detail[language]
+                            }
                         </h3>
                     </Col>
                     <Col sm={12} md={6} lg={6}>
@@ -87,10 +92,15 @@ const Offerbanner = () => {
                             <button className='offerBtn px-5'
                                 onClick={() => setShowModal(true)}
                             >
-                                Book An Intro Class</button>
+                                {
+                                    constants?.site_content?.offerform_sec?.title[language]
+                                }
+                            </button>
                             <StartBurning
                                 show={showModal} onHide={() => setShowModal(false)}
-                                title="Book An Intro Class"
+                                title={
+                                    constants?.site_content?.offerform_sec?.title[language]
+                                }
                             />
                         </center>
 
@@ -101,13 +111,18 @@ const Offerbanner = () => {
                                 }}
                                 dismissible
                             >
-                                Data Submitted Successfuly!
+                                {
+                                    constants?.site_content?.offerform_sec?.submit_text[language]
+                                }
                             </Alert>
                         }
 
                         <Form className='offer-form' onSubmit={handleSubmit}>
                             <h3 className="offer-subtext">
-                                Book An Intro Class</h3>
+                                {
+                                    constants?.site_content?.offerform_sec?.title[language]
+                                }
+                            </h3>
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -115,7 +130,9 @@ const Offerbanner = () => {
                                     id="name"
                                     value={formValues.name}
                                     onChange={handleChange}
-                                    placeholder="Full name"
+                                    placeholder={
+                                        constants?.site_content?.offerform_sec?.full_name[language]
+                                    }
                                     className='inputStyle'
                                     required
                                 />
@@ -129,7 +146,9 @@ const Offerbanner = () => {
                                             id="email"
                                             value={formValues.email}
                                             onChange={handleChange}
-                                            placeholder="Email address"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.email[language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -143,7 +162,9 @@ const Offerbanner = () => {
                                             id="phone"
                                             value={formValues.phone}
                                             onChange={handleChange}
-                                            placeholder="Phone number"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.phone_number[language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -158,7 +179,11 @@ const Offerbanner = () => {
                                     onChange={handleChange}
                                     style={{ color: "#495057", width: "100%" }}
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Location</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.offerform_sec?.location[language]
+                                        }
+                                    </option>
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
@@ -177,7 +202,11 @@ const Offerbanner = () => {
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Offer</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.offerform_sec?.offer[language]
+                                        }
+                                    </option>
                                     {offerlist &&
                                         offerlist.length > 0 &&
                                         offerlist.map((x) => (
@@ -200,7 +229,11 @@ const Offerbanner = () => {
                                         }}
                                     />
                                     :
-                                    <button className="breadcrumb-btn px-5 mt-3">Submit</button>
+                                    <button className="breadcrumb-btn px-5 mt-3">
+                                        {
+                                            constants?.site_content?.offerform_sec?.submit_btn[language]
+                                        }
+                                    </button>
                             }
                         </Form>
                     </Col>

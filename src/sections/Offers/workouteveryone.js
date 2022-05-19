@@ -2,8 +2,9 @@ import React from 'react'
 import {
     Container, Row, Col
 } from 'reactstrap'
+import { constants } from '../../utils/constants';
 
-const Workouteveryone = () => {
+const Workouteveryone = ({ language }) => {
     return (
         <section className="coaching rightAnimation">
 
@@ -27,10 +28,14 @@ const Workouteveryone = () => {
 
             <Container>
                 <h2 className="oftHeading text-center">
-                    A Workout for everyone
+                    {
+                        constants?.site_content?.offersworkouteveryone_sec?.title[language]
+                    }
                 </h2>
                 <p className="oftsubHeading text-center">
-                    Whether you’re an athlete or just starting your fitness journey, Orangetheory is designed for all fitness levels. Our experienced coaches provide options that allow you to safely perform movements that work around any physical issues. Walk, jog, run, or ride, you set your own pace. Well…technically your heart rate does.
+                    {
+                        constants?.site_content?.offersworkouteveryone_sec?.subtitle[language]
+                    }
                 </p>
             </Container>
         </section >

@@ -4,6 +4,7 @@ import ArticlesGrid from "../sections/Articles/articlesgrid";
 import CounterSection from "../sections/Home/counter";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants";
 // import Layout from '../components/common-layout';
 import { API } from "../http/API"
 
@@ -50,7 +51,9 @@ const Articles = (props) => {
         bannerImg={articalBanner}
       > */}
       <section className="pb-0 pt-5">
-        <AboutArticles />
+        <AboutArticles
+          language={global?.activeLanguage}
+        />
       </section>
 
       <ArticlesGrid
@@ -60,9 +63,13 @@ const Articles = (props) => {
       />
 
       <CounterSection
-        title="Get 10% off during this festive season!"
+        title={
+          constants?.site_content?.getOff_sec?.title[global?.activeLanguage]
+        }
         // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
-        btntext="BECOME A MEMBER TODAY"
+        btntext={
+          constants?.site_content?.getOff_sec?.btn_text[global?.activeLanguage]
+        }
         bgImg={articalBg}
       />
 

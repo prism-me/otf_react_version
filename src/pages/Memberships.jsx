@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout';
 import { API } from "../http/API"
+import { constants } from "../utils/constants";
 
 
 //images
@@ -37,15 +38,15 @@ const Memberships = (props) => {
     const benefitList = [
         {
             img: benefits1,
-            title: "Easy online booking"
+            title: `${constants?.site_content?.memberbenefit_sec?.sec_1[props?.global?.activeLanguage]}`
         },
         {
             img: benefits2,
-            title: "Nationwide studio access"
+            title: `${constants?.site_content?.memberbenefit_sec?.sec_2[props?.global?.activeLanguage]}`
         },
         {
             img: benefits3,
-            title: "Month-to-month memberships"
+            title: `${constants?.site_content?.memberbenefit_sec?.sec_3[props?.global?.activeLanguage]}`
         }
     ];
 
@@ -75,8 +76,12 @@ const Memberships = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Let’s Talk Fitness Memberships"
-                subtitle="No matter what your fitness level is, 2 to 4 workout a week is all you need to maximize your results at Orangetheory. Let’s find the membership option that works best for you."
+                title={
+                    constants?.site_content?.memberbanner_sec?.title[global?.activeLanguage]
+                }
+                subtitle={
+                    constants?.site_content?.memberbanner_sec?.subtitle[global?.activeLanguage]
+                }
                 // btntext="Become a Member Today"
                 bannerImg={banerImg}
             >
@@ -98,6 +103,7 @@ const Memberships = (props) => {
 
                 <Benefits
                     benefitList={benefitList}
+                    language={global?.activeLanguage}
                 />
 
                 <GetApp

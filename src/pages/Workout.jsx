@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants";
 
 import WorkGrid from "../sections/Workout/workgrid";
 import ScheduleSection from "../sections/Home/schedule";
@@ -54,11 +55,12 @@ const Workout = (props) => {
             </Helmet>
 
             <Layout
-                title="Backed by science"
-                subtitle="OTF Workout is backed by science, 
-                spending 12 minutes in Orange Zone 
-                gives you more strength, energy and 
-                more life. Join us now!"
+                title={
+                    constants?.site_content?.workoutbanner_sec?.title[global?.activeLanguage]
+                }
+                subtitle={
+                    constants?.site_content?.workoutbanner_sec?.subtitle[global?.activeLanguage]
+                }
                 // btntext="Book your free class with us!"
                 bannerImg={banerImg}
                 freeform="freeclass"
@@ -72,11 +74,19 @@ const Workout = (props) => {
                 />
 
                 <ScheduleSection
-                    titleM={"Coach Professionalism"}
-                    subtitle={"Our Coaches Are More than Just Coaches."}
-                    detail={"As you take in the energy of our group workout, you’ll also get the attention and inspiration that comes from our experienced personal training coaches. They’re full of the life they promise and always pushing you forward with tough love."}
+                    titleM={
+                        constants?.site_content?.workoutcoachprof_sec?.title[global?.activeLanguage]
+                    }
+                    subtitle={
+                        constants?.site_content?.workoutcoachprof_sec?.subtitle[global?.activeLanguage]
+                    }
+                    detail={
+                        constants?.site_content?.workoutcoachprof_sec?.description[global?.activeLanguage]
+                    }
                     // detail2={"Fermentum in commodo, massa faucibus velit ut natoque. Ultrices sit varius ut justo nisl, interdum. Tortor, odio egestas erat volutpat. Urna volutpat aliquam leo mauris magna at feugiat accumsan."}
-                    btnfitnessText="Know Our Fitness Experts"
+                    btnfitnessText={
+                        constants?.site_content?.workoutcoachprof_sec?.btn_text[global?.activeLanguage]
+                    }
                     bgImg={coachprofBg}
                     coachImg={coachImg}
                     freeform="freeclass"
@@ -88,14 +98,18 @@ const Workout = (props) => {
                 />
 
                 <section className="pb-0">
-                    <Coaching />
+                    <Coaching
+                        language={global?.activeLanguage}
+                    />
                 </section>
 
                 <TrainerSection
                     testimonial={testimonialData}
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
-                    title="What Our Members Are Saying About"
+                    title={
+                        constants?.site_content?.membersay_sec?.title[global?.activeLanguage]
+                    }
                 />
 
 

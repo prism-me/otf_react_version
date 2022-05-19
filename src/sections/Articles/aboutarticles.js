@@ -1,10 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
-const Aboutarticles = () => (
+import { constants } from '../../utils/constants';
+
+const Aboutarticles = ({ language }) => (
     <section className="gym format about-detail pb-0">
         <Container>
             <h3 className="oftHeading text-center mb-3">
-                Articles
+                {
+                    constants?.site_content?.articles_sec?.title[language]
+                }
             </h3>
             {/* <Row>
                 <Col md="8" className="offset-md-2">

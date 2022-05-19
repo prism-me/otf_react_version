@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
+import { constants } from '../../utils/constants';
 
-const Benefits = ({ benefitList }) => {
+const Benefits = ({ benefitList, language }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -31,7 +32,9 @@ const Benefits = ({ benefitList }) => {
                     style={{
                         color: "#2E2E2E"
                     }}
-                >Membership Benefits</h3>
+                >
+                    {constants?.site_content?.memberbenefit_sec?.title[language]}
+                </h3>
                 <Row>
                     {benefitList &&
                         benefitList.length > 0 &&
@@ -65,7 +68,7 @@ const Benefits = ({ benefitList }) => {
                         style={{ border: "1px solid #F58220" }}
                         onClick={() => setShowModal(true)}
                     >
-                        Avail now
+                        {constants?.site_content?.memberbenefit_sec?.avail_btn[language]}
                     </button>
                     <Documents
                         show={showModal} onHide={() => setShowModal(false)}

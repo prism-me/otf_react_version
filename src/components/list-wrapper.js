@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'reactstrap'
+import { constants } from '../utils/constants';
 // import LocationOnIcon from '@material-ui/icons/LocationOn';
 // import { AccessTime } from '@material-ui/icons';
 
@@ -75,7 +76,11 @@ const CardGridWrapper = ({
                                                     fontWeight: "700",
                                                     outline: "0"
                                                 }}
-                                            >read more</button></Link>
+                                            >
+                                                {
+                                                    constants?.site_content?.articles_sec?.read_btn[language]
+                                                }
+                                            </button></Link>
                                     </div>
                                 </div>
                             </div>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { constants } from '../../utils/constants';
 
 //images
 import dummy from "../../assets/images/OTF/team/imageplace.jpg";
@@ -43,7 +44,11 @@ const FitnessCoach = ({ coachData, language, isArabic }) => (
                     <div className="title title2 title-inner">
                         <div className="main-title">
                             <h2 className="font-primary borders text-center m-b-0">
-                                <span>Our Certified Fitness Coaches</span>
+                                <span>
+                                    {
+                                        constants?.site_content?.coach_sec?.title[language]
+                                    }
+                                </span>
                             </h2>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import 'react-light-accordion/demo/css/index.css';
 import { Container } from 'reactstrap'
 import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
+import { constants } from "../utils/constants";
 
 import Coaching from "../sections/Offers/coaching"
 import { API } from "../http/API"
@@ -71,9 +72,15 @@ const Faq = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Try Us For Free. Yes, Free!"
-                btntext="book a free class now"
-                promtext="*Promotion Terms. Limited Time Offer."
+                title={
+                    constants?.site_content?.faqbanner_sec?.title[global?.activeLanguage]
+                }
+                btntext={
+                    constants?.site_content?.faqbanner_sec?.btn_text[global?.activeLanguage]
+                }
+                promtext={
+                    constants?.site_content?.faqbanner_sec?.subtitle[global?.activeLanguage]
+                }
                 bannerImg={bannerImg}
                 freeform="freeclass"
             >
@@ -101,7 +108,11 @@ const Faq = (props) => {
 
                         <div className="faq-block">
                             <div>
-                                <h3 className="frequent-text">Frequently Asked Questions</h3>
+                                <h3 className="frequent-text">
+                                    {
+                                        constants?.site_content?.faq_sec?.title[global?.activeLanguage]
+                                    }
+                                </h3>
                                 <Accordion atomic={true}>
                                     {
                                         faqsData?.map((x, i) => (
@@ -127,7 +138,9 @@ const Faq = (props) => {
                 />
 
                 <section className="pb-0">
-                    <Coaching />
+                    <Coaching
+                        language={global?.activeLanguage}
+                    />
                 </section>
 
             </Layout>

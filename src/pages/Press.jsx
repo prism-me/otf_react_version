@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants";
 
 // import AboutPress from "../sections/Press/aboutpress";
 import PressGrid from "../sections/Press/pressgrid";
@@ -45,10 +46,14 @@ const Press = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Orangetheory in the Press"
+                title={
+                    constants?.site_content?.press_sec?.title[global?.activeLanguage]
+                }
                 // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 bannerImg={pressBanner}
-                btntext="Book your Free class!"
+                btntext={
+                    constants?.site_content?.press_sec?.btn_text[global?.activeLanguage]
+                }
                 freeform="freeclass"
             >
                 {/* <AboutPress /> */}
@@ -60,9 +65,15 @@ const Press = (props) => {
                 />
 
                 <CounterSection
-                    title="Follow us on Social Media"
-                    subtitle="Like and Follow Us to Stay up to Date with the Latest Events from our OTF Community."
-                    btntext="BECOME A MEMBER TODAY"
+                    title={
+                        constants?.site_content?.press_sec?.social_sec?.title[global?.activeLanguage]
+                    }
+                    subtitle={
+                        constants?.site_content?.press_sec?.social_sec?.subtitle[global?.activeLanguage]
+                    }
+                    btntext={
+                        constants?.site_content?.press_sec?.social_sec?.btn_text[global?.activeLanguage]
+                    }
                     bgImg={pressBg}
                     classname="press"
                 />

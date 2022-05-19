@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { constants } from '../utils/constants';
 
 const categories = [
     {
@@ -33,7 +34,11 @@ const categories = [
 ];
 const Categories = ({ language }) => (
     <div>
-        <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>categories</h5>
+        <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>
+            {
+                constants?.site_content?.articles_sec?.categories[language]
+            }
+        </h5>
         <div className="sidebar-container borders">
             <ul className="sidebar-list">
                 {

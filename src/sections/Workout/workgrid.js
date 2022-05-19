@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap'
+import { constants } from '../../utils/constants';
 
 //images
 import rowing1 from "../../assets/images/OTF/workout/rowing1.jpg";
@@ -47,7 +48,9 @@ const WorkGrid = ({ language }) => (
                         color: "#2E2E2E"
                     }}
                 >
-                    Your OTF Workout
+                    {
+                        constants?.site_content?.workoutOtf_sec?.title[language]
+                    }
                 </h3>
                 <Row>
                     <Col sm={6} className="mblscreenworkoutgridbottomspace">
@@ -88,10 +91,14 @@ const WorkGrid = ({ language }) => (
                             style={{ color: "#2E2E2E" }}
                         >01</h2>
                         <h2 className="oftHeading">
-                            Rowing
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_1?.title[language]
+                            }
                         </h2>
                         <p className="oftsubHeading">
-                            Every stroke on the rower activates 85% of your body’s muscles to help you improve endurance, strength and power.
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_1?.subtitle[language]
+                            }
                         </p>
                     </Col>
                 </Row>
@@ -108,10 +115,14 @@ const WorkGrid = ({ language }) => (
                             style={{ color: "#2E2E2E" }}
                         >02</h2>
                         <h2 className="oftHeading">
-                            Cardio
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_2?.title[language]
+                            }
                         </h2>
                         <p className="oftsubHeading">
-                            Whether you walk, jog or run, you’ll go at your own pace based on your fitness level. We also have bikes and striders available as alternates to the treadmill.
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_2?.subtitle[language]
+                            }
                         </p>
                     </Col>
                     <Col sm={6}>
@@ -204,10 +215,14 @@ const WorkGrid = ({ language }) => (
                             style={{ color: "#2E2E2E" }}
                         >03</h2>
                         <h2 className="oftHeading">
-                            Strength Training
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_3?.title[language]
+                            }
                         </h2>
                         <p className="oftsubHeading">
-                            Our weight and floor exercises change daily so you can focus on different muscles. Your coach can provide options for any movement if you have injuries or limitations.
+                            {
+                                constants?.site_content?.workoutOtf_sec?.sec_3?.subtitle[language]
+                            }
                         </p>
                     </Col>
                 </Row>

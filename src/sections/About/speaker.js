@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { constants } from '../../utils/constants';
 
 //images
 
@@ -42,7 +43,11 @@ const Speaker = ({ teamsData, language, isArabic }) => (
                     <div className="title title2 title-inner">
                         <div className="main-title">
                             <h2 className="font-primary borders text-center m-b-0">
-                                <span>Our team</span>
+                                <span>
+                                    {
+                                        constants?.site_content?.team_sec?.title[language]
+                                    }
+                                </span>
                             </h2>
                         </div>
                     </div>

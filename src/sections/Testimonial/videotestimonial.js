@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import ModalVideo from 'react-modal-video'
+import ModalVideo from 'react-modal-video';
+import { constants } from '../../utils/constants';
 
 
 const VideotesTimonial = ({ videotestimonialData, title, isArabic, language }) => {
@@ -70,7 +71,9 @@ const VideotesTimonial = ({ videotestimonialData, title, isArabic, language }) =
                     <button className='otfBtn1 mt-5'
                         style={{ border: "1px solid #F58220" }}
                         onClick={() => setLoadItems(videotestimonialData.length)}>
-                        View More
+                        {
+                            constants?.site_content?.videoTestim_sec?.btn_text[language]
+                        }
                     </button>
                 </center>
             }

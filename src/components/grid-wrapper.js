@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import { AccessTime } from '@material-ui/icons';
+import { AccessTime, Language } from '@material-ui/icons';
+import { constants } from '../utils/constants';
 
 
 const CardGridWrapper = ({
@@ -13,6 +14,7 @@ const CardGridWrapper = ({
     title,
     description,
     readUrl,
+    language
 }) => {
     const MAX_LENGTH = 130;
 
@@ -54,7 +56,11 @@ const CardGridWrapper = ({
                                                 fontWeight: "700",
                                                 outline: "0"
                                             }}
-                                        >read more</button>
+                                        >
+                                            {
+                                                constants?.site_content?.press_sec?.read_btn[language]
+                                            }
+                                        </button>
                                     </a>
                                 </div>
                             </div>

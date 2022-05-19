@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
+import { constants } from '../../utils/constants';
 
 import heartrate from "../../assets/images/OTF/membership/workotapp.png";
 import GooglePlay from "../../assets/images/OTF/logo/GooglePlay.png"
@@ -19,26 +20,62 @@ const GetApp = ({ language }) => (
                                 style={{
                                     color: "#2E2E2E"
                                 }}
-                            >Get the App</h3>
+                            >
+                                {
+                                    constants?.site_content?.getapp_sec?.title[language]
+                                }
+                            </h3>
                             <div className="format-sub-text">
-                                <ul className='pl-4' style={{ listStyle: "circle" }}>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        View classes from multiple studios.
+                                <ul
+                                    className={`${language === "en" ? 'pl-4' : 'pr-4'}`}
+                                    style={{ listStyle: "circle" }}>
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_1[language]
+                                        }
                                     </li>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        Find and save your favorite studios.
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_2[language]
+                                        }
                                     </li>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        Get easy-to-read workout summaries.
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_3[language]
+                                        }
                                     </li>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        Track challenges and benchmarks.
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_4[language]
+                                        }
                                     </li>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        View your body composition.
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_5[language]
+                                        }
                                     </li>
-                                    <li style={{ fontSize: "16px", fontWeight: "400", textAlign: "left", lineHeight: "1.8" }}>
-                                        Track out-of-studio workouts.
+                                    <li
+                                        className={`${language === "en" ? 'text-left' : 'text-right'}`}
+                                        style={{ fontSize: "16px", fontWeight: "400", lineHeight: "1.8" }}
+                                    >
+                                        {
+                                            constants?.site_content?.getapp_sec?.sec_6[language]
+                                        }
                                     </li>
                                 </ul>
                                 <ul className="d-flex footer-social social mt-4">

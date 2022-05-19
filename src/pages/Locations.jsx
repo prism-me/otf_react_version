@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Layout from '../components/common-layout'
 import CalculateSection from "../sections/Home/calculate";
 import { API } from "../http/API"
+import { constants } from "../utils/constants";
 
 //images
 import bannerImage from "../assets/images/OTF/banner/locationbanner.jpg";
@@ -42,7 +43,9 @@ const Locations = (props) => {
                 />
             </Helmet>
             <Layout
-                title="Find us near you!"
+                title={
+                    constants?.site_content?.locationbanner_sec?.title[global?.activeLanguage]
+                }
                 // subtitle="Feugiat vulputate cursus sagittis pulvinar duis non magna cursus. Parturient donec vehicula neque, ut consectetur pretium. Velit et duis a purus vitae vivamus. Aliquet tellus est."
                 // btntext="Book your session"
                 bannerImg={bannerImage}
