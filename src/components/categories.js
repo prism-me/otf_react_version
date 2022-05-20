@@ -10,13 +10,14 @@ const Categories = ({ isArabic, articlesData }) => {
         if (!findItem)
             uniqueCategories.push(item);
     });
+
     return (
         <div>
             <h5 className="blog-title">categories</h5>
             <div className="sidebar-container borders">
                 <ul className="sidebar-list">
                     {
-                        articlesData?.map((x, i) => (
+                        uniqueCategories?.map((x, i) => (
                             <li className="d-flex" key={i}>
                                 <Link href="#">
                                     <a>

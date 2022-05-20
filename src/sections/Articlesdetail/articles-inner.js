@@ -23,7 +23,10 @@ const ArticlesInner = ({ singleArticleData, language, isArabic, articlesData }) 
                             articlesData={articlesData}
                             isArabic={isArabic}
                         />
-                        <PopularPosts />
+                        <PopularPosts
+                            articlesData={articlesData}
+                            isArabic={isArabic}
+                        />
                         <NewsLetter />
                         {/* <Instagram /> */}
                     </div>
