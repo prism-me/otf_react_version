@@ -6,7 +6,7 @@ import PopularPosts from "../../components/popularpost"
 import NewsLetter from "../../components/newsletter"
 // import Instagram from "../../components/instagram"
 
-const ArticlesInner = ({ singleArticleData, language, isArabic }) => (
+const ArticlesInner = ({ singleArticleData, language, isArabic, articlesData }) => (
     <section className="agency gym blog-sec blog-sidebar single_blog_item">
         <Container>
             <Row>
@@ -19,7 +19,10 @@ const ArticlesInner = ({ singleArticleData, language, isArabic }) => (
                 />
                 <Col lg="3">
                     <div className="blog-side">
-                        <Categories />
+                        <Categories
+                            articlesData={articlesData}
+                            isArabic={isArabic}
+                        />
                         <PopularPosts />
                         <NewsLetter />
                         {/* <Instagram /> */}

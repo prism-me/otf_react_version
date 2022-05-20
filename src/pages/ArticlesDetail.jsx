@@ -14,6 +14,11 @@ import articalBg from "../assets/images/OTF/articles/articalbg.jpg";
 
 const ArticlesDetail = (props) => {
 
+    useEffect(() => {
+        getSingleArticle();
+        getAllArticles();
+    }, []);
+
     // single data get API Integration
     const [singleArticleData, setSingleArticleData] = useState([]);
 
@@ -29,9 +34,18 @@ const ArticlesDetail = (props) => {
             })
     }
 
-    useEffect(() => {
-        getSingleArticle();
-    }, []);
+    // articles API 
+    const [articlesData, setArticlesData] = useState([]);
+
+    const getAllArticles = () => {
+        API.get('/articles').then(response => {
+            const allarticles = response.data?.data;
+            setArticlesData(allarticles);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
 
     const { global } = props;
@@ -59,6 +73,7 @@ const ArticlesDetail = (props) => {
                     singleArticleData={singleArticleData}
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
+                    articlesData={articlesData}
                 />
 
                 <CounterSection
