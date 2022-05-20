@@ -8,6 +8,7 @@ import {
 import ClearIcon from "@material-ui/icons/Clear";
 import { API } from "../../http/API"
 import { Alert } from "react-bootstrap"
+import { constants } from '../../utils/constants';
 
 
 const StartBurning = (props) => {
@@ -78,10 +79,12 @@ const StartBurning = (props) => {
                                 dismissible
                                 className='mt-5'
                             >
-                                Data Submitted Successfuly!
+                                {
+                                    constants?.site_content?.offerform_sec?.submit_text[props?.language]
+                                }
                             </Alert>
                         }
-                        <Form className='offer-form' onSubmit={handleSubmit}>
+                        <Form className='offer-form' onSubmit={handleSubmit} dir={`${props?.language === "ar" && 'rtl'}`}>
                             <h3 className="offer-subtext">
                                 {props.title}
                             </h3>
@@ -90,14 +93,16 @@ const StartBurning = (props) => {
                                     type="text"
                                     name="name"
                                     id="name"
-                                    placeholder="Full name"
+                                    placeholder={
+                                        constants?.site_content?.offerform_sec?.full_name[props?.language]
+                                    }
                                     value={formValues.name}
                                     onChange={handleChange}
                                     className='inputStyle'
                                     required
                                 />
                             </FormGroup>
-                            <Row form>
+                            <Row form >
                                 <Col sm={6}>
                                     <FormGroup>
                                         <Input
@@ -106,7 +111,9 @@ const StartBurning = (props) => {
                                             id="email"
                                             value={formValues.email}
                                             onChange={handleChange}
-                                            placeholder="Email address"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.email[props?.language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -120,7 +127,9 @@ const StartBurning = (props) => {
                                             id="phone"
                                             value={formValues.phone}
                                             onChange={handleChange}
-                                            placeholder="Phone number"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.phone_number[props?.language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -136,7 +145,11 @@ const StartBurning = (props) => {
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Location</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.offerform_sec?.location[props?.language]
+                                        }
+                                    </option>
                                     {location &&
                                         location.length > 0 &&
                                         location.map((x) => (
@@ -155,7 +168,11 @@ const StartBurning = (props) => {
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Offer</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.offerform_sec?.offer[props?.language]
+                                        }
+                                    </option>
                                     {offerlist &&
                                         offerlist.length > 0 &&
                                         offerlist.map((x) => (
@@ -180,7 +197,11 @@ const StartBurning = (props) => {
                                     :
                                     <button className="offerBtn px-5 mt-3"
                                         style={{ border: "1px solid #F58220" }}
-                                    >Submit</button>
+                                    >
+                                        {
+                                            constants?.site_content?.offerform_sec?.submit_btn[props?.language]
+                                        }
+                                    </button>
                             }
                         </Form>
                     </Container>

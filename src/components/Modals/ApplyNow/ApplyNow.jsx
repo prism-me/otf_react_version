@@ -7,6 +7,7 @@ import {
   Label
 } from 'reactstrap';
 import ClearIcon from "@material-ui/icons/Clear";
+import { constants } from '../../../utils/constants';
 
 import { API } from "../../../http/API"
 import { Alert } from "react-bootstrap"
@@ -84,7 +85,7 @@ const ApplyNow = (props) => {
                 Data Submitted Successfuly!
               </Alert>
             }
-            <Form className='offer-form' onSubmit={handleSubmit}>
+            <Form className='offer-form' onSubmit={handleSubmit} dir={`${props?.language === "ar" && 'rtl'}`}>
               <h3 className="offer-subtext mb-0">
                 Free Intro Class*
               </h3>

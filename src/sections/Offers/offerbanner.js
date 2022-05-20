@@ -101,6 +101,7 @@ const Offerbanner = ({ language }) => {
                                 title={
                                     constants?.site_content?.offerform_sec?.title[language]
                                 }
+                                language={language}
                             />
                         </center>
 
