@@ -22004,9 +22004,15 @@ footer {
     }
 
     .offer-detailtext {
-      font-size: 14px;
+      font-size: $sub-fonts;
       font-weight: 400;
       color: $black;
+
+      p {
+        font-size: $sub-fonts;
+        font-weight: 400;
+        color: $black;
+      }
     }
 
     .inputStyle {
@@ -22078,27 +22084,42 @@ footer {
   }
 
   .middle {
+    cursor: pointer;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100%;
+    // width: 100%;
+    // opacity: 0;
+    // transition: .5s ease;
+    // background-color: #f583209c;
+
     transition: .5s ease;
-    background-color: #f583209c;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 
     .text {
+      background-color: $orange;
       color: white;
-      font-size: $sub-fonts;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      // color: white;
+      // font-size: $sub-fonts;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // -webkit-transform: translate(-50%, -50%);
+      // -ms-transform: translate(-50%, -50%);
+      // transform: translate(-50%, -50%);
+      // text-align: center;
     }
   }
 
