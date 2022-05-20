@@ -9,6 +9,20 @@
       font-weight: 400;
       color: $black;
     }
+
+    ul {
+      list-style: circle;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+
+      li {
+        font-size: $sub-fonts;
+        line-height: 1.8;
+        font-weight: 400;
+        color: $black;
+        text-align: justify;
+      }
+    }
   }
 
   .offer-subtext {
