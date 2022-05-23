@@ -87,6 +87,7 @@ const About = (props) => {
                 // btntext="Book your Free class!"
                 bannerImg={content?.banner?.banner_image}
                 freeform="freeclass"
+                language={global?.activeLanguage}
             >
 
                 <AbouSection

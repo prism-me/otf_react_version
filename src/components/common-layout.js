@@ -2,7 +2,7 @@ import React from 'react';
 import Breadcrumb from "./breadcrumb"
 
 
-const CommonLayout = ({ children, btntext, title, subtitle, bannerImg, promtext, freeform }) => {
+const CommonLayout = ({ children, btntext, title, subtitle, bannerImg, promtext, freeform, language }) => {
 
     return (
         <>
@@ -13,6 +13,7 @@ const CommonLayout = ({ children, btntext, title, subtitle, bannerImg, promtext,
                 btntext={btntext}
                 promtext={promtext}
                 freeform={freeform}
+                language={language}
             />
 
             <>{children}</>

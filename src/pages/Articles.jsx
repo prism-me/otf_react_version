@@ -64,6 +64,7 @@ const Articles = (props) => {
         // subtitle="Senectus viverra laoreet proin eget. Ullamcorper in lorem nisl aliquet orci enim vel, a. Ut quis luctus massa."
         btntext="BECOME A MEMBER TODAY"
         bgImg={articalBg}
+        language={global?.activeLanguage}
       />
 
       {/* </Layout> */}

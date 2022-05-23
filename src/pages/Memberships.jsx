@@ -98,6 +98,7 @@ const Memberships = (props) => {
 
                 <Benefits
                     benefitList={benefitList}
+                    language={global?.activeLanguage}
                 />
 
                 <GetApp />

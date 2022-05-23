@@ -139,6 +139,7 @@ const HomeBanner = ({ language }) => {
                 </Slider>
                 <ApplyNow
                     show={showCModal} onHide={() => setCShowModal(false)}
+                    language={language}
                 />
 
                 {/* <Slider className="default-dots gym-slider" id="gym-slider" {...settings}>

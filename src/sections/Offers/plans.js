@@ -36,7 +36,7 @@ var settings = {
     ]
 };
 
-const Plans = ({ offersData, isArabic, language }) => {
+const Plans = ({ offersData, isArabic, language, locationsData }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -90,10 +90,6 @@ const Plans = ({ offersData, isArabic, language }) => {
                                                     <button className="otfBtn2"
                                                         onClick={() => setShowModal(true)}
                                                     >Book offer</button>
-                                                    <BookOffer
-                                                        show={showModal} onHide={() => setShowModal(false)}
-                                                        title={"Book Offer"}
-                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -105,6 +101,13 @@ const Plans = ({ offersData, isArabic, language }) => {
                         </Slider>
                     </Col>
                 </Row>
+                <BookOffer
+                    show={showModal} onHide={() => setShowModal(false)}
+                    title={"Book Offer"}
+                    offersData={offersData}
+                    language={language}
+                    locationsData={locationsData}
+                />
 
                 {/* <Col sm={4}
                     className={"imgOfferContainer mb-3"}

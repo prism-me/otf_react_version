@@ -13,6 +13,7 @@ const Offers = (props) => {
 
     useEffect(() => {
         getAllOffers();
+        getAllLocations();
     }, []);
 
     // offers API 
@@ -28,6 +29,21 @@ const Offers = (props) => {
             })
     }
 
+    // locations API 
+
+    const [locationsData, setLocationsData] = useState([]);
+
+    const getAllLocations = () => {
+        API.get('/locations').then(response => {
+            const alllocations = response.data?.data;
+            setLocationsData(alllocations);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+
     const { global } = props;
     return (
         <div>
@@ -40,12 +56,17 @@ const Offers = (props) => {
                     content="Offers"
                 />
             </Helmet>
-            <Offerbanner />
+            <Offerbanner
+                language={global?.activeLanguage}
+                offersData={offersData}
+                locationsData={locationsData}
+            />
 
             <Plans
                 offersData={offersData}
                 language={global?.activeLanguage}
                 isArabic={global?.activeLanguage === "ar"}
+                locationsData={locationsData}
             />
 
             <Coaching />

@@ -65,6 +65,7 @@ const Press = (props) => {
                     btntext="BECOME A MEMBER TODAY"
                     bgImg={pressBg}
                     classname="press"
+                    language={global?.activeLanguage}
                 />
 
             </Layout>

@@ -69,6 +69,7 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                         <Documents
                             show={showModal} onHide={() => setShowModal(false)}
                             title="Become a Member Today"
+                            language={language}
                         />
                     </Col>
                 </Row>

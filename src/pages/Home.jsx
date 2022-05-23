@@ -129,6 +129,7 @@ const Home = (props) => {
           listImg={listImg}
           bgImg={schBg}
           coachImg={scheduleImg}
+          language={global?.activeLanguage}
 
         />
 

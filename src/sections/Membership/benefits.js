@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
 
-const Benefits = ({ benefitList }) => {
+const Benefits = ({ benefitList, language }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -70,6 +70,7 @@ const Benefits = ({ benefitList }) => {
                     <Documents
                         show={showModal} onHide={() => setShowModal(false)}
                         title="Become a Member Today"
+                        language={language}
                     />
                     {/* <p className='mt-2'><small>*Available once pandemic restrictions are lifted.</small></p> */}
                 </center>

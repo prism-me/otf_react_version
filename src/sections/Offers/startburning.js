@@ -21,14 +21,6 @@ const StartBurning = (props) => {
         type: "book_offer_form"
     };
 
-    const location = [
-        "Mercato Mall",
-        "Times Square Center"
-    ];
-    const offerlist = [
-        "March 1 Offer",
-        "March 2 Offer"
-    ];
 
     const [formValues, setFormValues] = useState(defaultState);
     const [isValid, setIsValid] = useState(false);
@@ -137,10 +129,17 @@ const StartBurning = (props) => {
 
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Location</option>
-                                    {location &&
-                                        location.length > 0 &&
-                                        location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {props?.locationsData &&
+                                        props?.locationsData.length > 0 &&
+                                        props?.locationsData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    props?.language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 
@@ -156,10 +155,17 @@ const StartBurning = (props) => {
 
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Offer</option>
-                                    {offerlist &&
-                                        offerlist.length > 0 &&
-                                        offerlist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {props?.offersData &&
+                                        props?.offersData.length > 0 &&
+                                        props?.offersData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    props?.language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 

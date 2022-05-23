@@ -6,7 +6,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-const Counter = ({ title, subtitle, btntext, bgImg, classname }) => {
+const Counter = ({ title, subtitle, btntext, bgImg, classname, language }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -61,6 +61,7 @@ const Counter = ({ title, subtitle, btntext, bgImg, classname }) => {
                     <Documents
                         show={showModal} onHide={() => setShowModal(false)}
                         title={btntext}
+                        language={language}
                     />
                 </div>
             </Container>

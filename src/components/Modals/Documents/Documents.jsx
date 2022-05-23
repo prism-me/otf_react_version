@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Modal, ModalBody, Form,
     FormGroup,
@@ -11,6 +11,38 @@ import { Alert } from "react-bootstrap"
 
 const Documents = (props) => {
 
+    // locations API 
+
+    useEffect(() => {
+        getAllLocations();
+        getAllMemberships();
+    }, []);
+
+    const [locationsData, setLocationsData] = useState([]);
+
+    const getAllLocations = () => {
+        API.get('/locations').then(response => {
+            const alllocations = response.data?.data;
+            setLocationsData(alllocations);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    // memberships API 
+    const [membershipsData, setMembershipsData] = useState([]);
+
+    const getAllMemberships = () => {
+        API.get('/memberships').then(response => {
+            const allmemberships = response.data?.data;
+            setMembershipsData(allmemberships);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     const defaultState = {
         name: "",
         email: "",
@@ -19,19 +51,6 @@ const Documents = (props) => {
         membership_package: "",
         type: "membership_form"
     };
-
-    const location = [
-        "Mercato Mall",
-        "Times Square Center"
-    ];
-
-    const membershiplist = [
-        "Orange Premier",
-        "Orange Elite",
-        "Orange Basic",
-        "Class Packages",
-        "Corporate Memberships"
-    ];
 
     const [formValues, setFormValues] = useState(defaultState);
     const [isValid, setIsValid] = useState(false);
@@ -144,10 +163,17 @@ const Documents = (props) => {
 
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Location</option>
-                                    {location &&
-                                        location.length > 0 &&
-                                        location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {locationsData &&
+                                        locationsData.length > 0 &&
+                                        locationsData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x}>
+                                                {
+                                                    props?.language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 
@@ -163,10 +189,17 @@ const Documents = (props) => {
 
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Membership Package</option>
-                                    {membershiplist &&
-                                        membershiplist.length > 0 &&
-                                        membershiplist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {membershipsData &&
+                                        membershipsData.length > 0 &&
+                                        membershipsData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    props?.language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 

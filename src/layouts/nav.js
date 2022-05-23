@@ -176,6 +176,7 @@ const Nav = (props) => {
                     <ApplyNow
                         show={showModal} onHide={() => setShowModal(false)}
                         title={"Free Class"}
+                        language={props.global.activeLanguage}
                     />
                 </li>
                 {/* <div

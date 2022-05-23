@@ -22,7 +22,7 @@ const offerlist = [
     "March 2 Offer"
 ];
 
-const Offerbanner = () => {
+const Offerbanner = ({ offersData, language, locationsData }) => {
 
     const defaultState = {
         name: "",
@@ -91,6 +91,9 @@ const Offerbanner = () => {
                             <StartBurning
                                 show={showModal} onHide={() => setShowModal(false)}
                                 title="Book An Intro Class"
+                                offersData={offersData}
+                                language={language}
+                                locationsData={locationsData}
                             />
                         </center>
 
@@ -159,10 +162,17 @@ const Offerbanner = () => {
                                     style={{ color: "#495057", width: "100%" }}
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Location</option>
-                                    {location &&
-                                        location.length > 0 &&
-                                        location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {locationsData &&
+                                        locationsData.length > 0 &&
+                                        locationsData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 
@@ -178,10 +188,17 @@ const Offerbanner = () => {
 
                                 >
                                     <option style={{ color: "#495057" }} value="">Select Offer</option>
-                                    {offerlist &&
-                                        offerlist.length > 0 &&
-                                        offerlist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {offersData &&
+                                        offersData.length > 0 &&
+                                        offersData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 

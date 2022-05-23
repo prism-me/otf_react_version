@@ -21,7 +21,6 @@ const Locations = (props) => {
     const getAllLocations = () => {
         API.get('/locations').then(response => {
             const alllocations = response.data?.data;
-            console.log("locationsData", response.data?.data)
             setLocationsData(alllocations);
         })
             .catch(err => {

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import Documents from './Modals/Documents/Documents';
 import ApplyNow from './Modals/ApplyNow/ApplyNow';
 
-const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform }) => {
+const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform, language }) => {
 
     const [showModal, setShowModal] = useState(false);
 
@@ -32,6 +32,7 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform })
                                 <ApplyNow
                                     show={showModal} onHide={() => setShowModal(false)}
                                     title={"Free Class"}
+                                    language={language}
                                 />
                             }
                             {
@@ -39,6 +40,7 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform })
                                 <Documents
                                     show={showModal} onHide={() => setShowModal(false)}
                                     title="Become a Member Today"
+                                    language={language}
                                 />
                             }
 

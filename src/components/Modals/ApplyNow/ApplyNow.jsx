@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Modal, ModalBody, Form,
   FormGroup,
@@ -14,6 +14,24 @@ import { Alert } from "react-bootstrap"
 
 const ApplyNow = (props) => {
 
+  // locations API 
+
+  useEffect(() => {
+    getAllLocations();
+  }, []);
+
+  const [locationsData, setLocationsData] = useState([]);
+
+  const getAllLocations = () => {
+    API.get('/locations').then(response => {
+      const alllocations = response.data?.data;
+      setLocationsData(alllocations);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
   const defaultState = {
     location: "",
     first_name: "",
@@ -24,10 +42,6 @@ const ApplyNow = (props) => {
     type: "book_class_form"
   };
 
-  const location = [
-    "Mercato Mall",
-    "Times Square Center"
-  ];
 
   const [formValues, setFormValues] = useState(defaultState);
   const [isValid, setIsValid] = useState(false);
@@ -118,10 +132,17 @@ const ApplyNow = (props) => {
 
                 >
                   <option style={{ color: "#495057" }} value="">Select Location</option>
-                  {location &&
-                    location.length > 0 &&
-                    location.map((x) => (
-                      <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                  {locationsData &&
+                    locationsData.length > 0 &&
+                    locationsData.map((x) => (
+                      <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                        {
+                          props?.language === "ar"
+                            ? x?.arabic?.name
+                            :
+                            x?.name
+                        }
+                      </option>
                     ))
                   }
 

@@ -43,6 +43,7 @@ function BottomTabNavigator(props) {
         <ApplyNow
           show={showModal} onHide={() => setShowModal(false)}
           title={"Free Class"}
+          language={props.activeLanguage}
         />
       </BottomNavigation>
     </div>
