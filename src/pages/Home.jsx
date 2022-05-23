@@ -34,6 +34,8 @@ const Home = (props) => {
 
   // home page API
   const [content, setContent] = useState([]);
+  const [homeMetaData, setHomeMetaData] = useState([]);
+
 
   const getPagesData = () => {
     API.get(`/pages`)
@@ -43,6 +45,7 @@ const Home = (props) => {
           let currentPage = response.data.data.find(
             (x) => x.slug === "home"
           );
+          setHomeMetaData(currentPage);
           API.get(`/all-sections/${currentPage._id}`)
             .then((response) => {
               setContent(response.data?.data[response.data.data?.length - 1]?.content);
@@ -105,10 +108,21 @@ const Home = (props) => {
     <>
       <div>
         <Helmet>
-          <title>Orange Theory</title>
+          <title>
+            {
+              global?.activeLanguage === "ar"
+                ? homeMetaData?.arabic?.meta_details?.meta_title
+                : homeMetaData?.meta_details?.meta_title
+            }
+          </title>
           <meta
             name='description'
-            content="Orange Theory"
+            content={global?.activeLanguage === "ar" ?
+              homeMetaData?.arabic?.meta_details
+                ?.meta_description
+              : homeMetaData?.meta_details
+                ?.meta_description
+            }
           />
         </Helmet>
 

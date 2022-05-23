@@ -14,6 +14,7 @@ const Locations = (props) => {
 
     useEffect(() => {
         getAllLocations();
+        getPagesData();
     }, []);
 
     const [locationsData, setLocationsData] = useState([]);
@@ -28,16 +29,42 @@ const Locations = (props) => {
             })
     }
 
+    // locations page API
+    const [locationsMetaData, setLocationsMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "locations"
+                    );
+                    setLocationsMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Locations
+                    {
+                        global?.activeLanguage === "ar"
+                            ? locationsMetaData?.arabic?.meta_details?.meta_title
+                            : locationsMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Location"
+                    content={global?.activeLanguage === "ar" ?
+                        locationsMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : locationsMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout

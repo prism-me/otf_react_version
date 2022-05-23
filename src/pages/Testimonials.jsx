@@ -19,6 +19,7 @@ const Testimonials = (props) => {
 
     useEffect(() => {
         getAllTestimonial();
+        getPagesData();
     }, []);
 
     // testimonial API 
@@ -42,16 +43,42 @@ const Testimonials = (props) => {
             })
     }
 
+    // testimonials page API
+    const [testimonialsMetaData, setTestimonialsMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "testimonials"
+                    );
+                    setTestimonialsMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Testimonials
+                    {
+                        global?.activeLanguage === "ar"
+                            ? testimonialsMetaData?.arabic?.meta_details?.meta_title
+                            : testimonialsMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Testimonials"
+                    content={global?.activeLanguage === "ar" ?
+                        testimonialsMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : testimonialsMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout

@@ -1,37 +1,85 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
 import PrivacySection from "../sections/privacy-policy/privacy";
 import Layout from '../components/common-layout';
+import { API } from "../http/API"
 
 //images
-import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
+// import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const TermsOfUse = (props) => {
+
+    useEffect(() => {
+        getPagesData();
+    }, []);
+
+    // terms of use page API
+    const [content, setContent] = useState([]);
+    const [termsMetaData, setTermsMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "terms-of-use"
+                    );
+                    setTermsMetaData(currentPage);
+                    API.get(`/all-sections/${currentPage._id}`)
+                        .then((response) => {
+                            setContent(response.data?.data[response.data.data?.length - 1]?.content);
+                        })
+                }
+            })
+            .catch((err) => console.log(err));
+    }
 
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Terms Of Use
+                    {
+                        global?.activeLanguage === "ar"
+                            ? termsMetaData?.arabic?.meta_details?.meta_title
+                            : termsMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Terms Of Use"
+                    content={global?.activeLanguage === "ar" ?
+                        termsMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : termsMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout
-                title="Terms Of Use"
+                title={
+                    global?.activeLanguage === "ar"
+                        ? content?.arabic?.banner?.title
+                        : content?.banner?.title
+                }
                 // subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 // btntext="Lorem ipsum dolor"
-                bannerImg={aboutBanner}
+                bannerImg={content?.banner?.banner_image}
             >
 
                 <PrivacySection
-                    title={"Terms Of Use"}
-                    detail="These terms of use (the “Terms”) are a legal contract between you and Ultimate Fitness Group, LLC d/b/a Orangetheory Fitness (“Company”, “we” or “us”) and are applicable to the services available on or through the Company’s websites located at the urls: www.orangetheory.com and www.orangetheory.com/en-us/athome/, as well as the Company’s mobile applications (collectively, the “Site”, where applicable).  By accessing any area of the Site, you agree to be legally bound to and to abide by the Terms.  If you do not agree with any of the Terms, do not access or otherwise use the Site. Note:  These terms contain a dispute resolution and arbitration provision, including class action waiver that affects your rights under the Terms and with respect to disputes you may have with the Company.  You may opt out of the binding individual arbitration and class action waiver as provided below."
+                    title={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.intro?.title
+                            : content?.intro?.title
+                    }
+                    detail={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.intro?.content
+                            : content?.intro?.content
+                    }
                 />
 
             </Layout>

@@ -14,6 +14,7 @@ const Offers = (props) => {
     useEffect(() => {
         getAllOffers();
         getAllLocations();
+        getPagesData();
     }, []);
 
     // offers API 
@@ -43,17 +44,42 @@ const Offers = (props) => {
             })
     }
 
+    // offers page API
+    const [offersMetaData, setOffersMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "offers"
+                    );
+                    setOffersMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
 
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Offers
+                    {
+                        global?.activeLanguage === "ar"
+                            ? offersMetaData?.arabic?.meta_details?.meta_title
+                            : offersMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Offers"
+                    content={global?.activeLanguage === "ar" ?
+                        offersMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : offersMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Offerbanner
