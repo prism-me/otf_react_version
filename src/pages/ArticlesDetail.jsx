@@ -18,6 +18,14 @@ const ArticlesDetail = (props) => {
         getSingleArticle();
         getAllArticles();
     }, []);
+    useEffect(() => {
+        // console.log("history", history.location.pathname)
+        const pathname = props.location.pathname.split("/")[3];
+        if (pathname) {
+            getSingleArticle();
+            getAllArticles();
+        }
+    }, [props.location.pathname.split("/")[3]]);
 
     // single data get API Integration
     const [singleArticleData, setSingleArticleData] = useState([]);
@@ -74,6 +82,7 @@ const ArticlesDetail = (props) => {
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
                     articlesData={articlesData}
+                    location={props.location.pathname}
                 />
 
                 <CounterSection

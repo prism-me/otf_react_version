@@ -11,12 +11,12 @@ import dummy from "../../assets/images/OTF/team/imageplace.jpg";
 var settings = {
     dots: true,
     arrows: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     arrows: false,
     slidesToShow: 6,
     autoplay: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: '0',
     slidesToScroll: 1,
     responsive: [

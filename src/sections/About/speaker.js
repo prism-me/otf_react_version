@@ -4,18 +4,21 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 //images
+import dummy from "../../assets/images/OTF/team/imageplace.jpg";
+
 
 
 var settings = {
     dots: true,
     arrows: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     arrows: false,
     slidesToShow: 5,
     autoplay: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: '0',
     slidesToScroll: 1,
     responsive: [
@@ -53,7 +56,12 @@ const Speaker = ({ teamsData, language, isArabic }) => (
                             <div className="item" key={i}>
                                 <div className="text-center">
                                     <div className="team-img">
-                                        <img alt="" className="img-fluid" src={x.img} />
+                                        {
+                                            x.img === null ?
+                                                <img alt="" className="img-fluid" src={dummy} />
+                                                :
+                                                <img alt="" className="img-fluid" src={x.img} />
+                                        }
                                         {/* <div className="overlay"></div>
                                             <div className="social">
                                                 <ul>
