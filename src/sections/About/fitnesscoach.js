@@ -85,7 +85,7 @@ const FitnessCoach = ({ coachData, language, isArabic }) => {
                                                         );
                                                         setCoachImg(x?.img);
                                                     }}
-                                                >Coach Details</div>
+                                                >Coach Profile</div>
                                             </div>
                                         </div>
                                         <div className="employee">

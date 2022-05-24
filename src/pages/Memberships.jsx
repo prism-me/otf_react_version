@@ -42,7 +42,7 @@ const Memberships = (props) => {
         },
         {
             img: benefits2,
-            title: "Nationwide studio access"
+            title: "Cross Region Studio Access"
         },
         {
             img: benefits3,
