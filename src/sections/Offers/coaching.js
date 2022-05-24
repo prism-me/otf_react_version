@@ -90,7 +90,15 @@ const Coaching = ({ language }) => {
                         </Container>
                     </Col>
                     <Col sm={5}>
-                        <img src={coachinsp} className='img-fluid' alt={"img"} />
+                        {
+                            language === "en" ?
+                                <img src={coachinsp} className='img-fluid' alt={"img"} />
+                                :
+                                <img src={coachinsp} className='img-fluid' alt={"img"}
+                                    style={{ transform: 'scaleX(-1)' }}
+                                />
+                        }
+
                     </Col>
                 </Row>
             </Container>

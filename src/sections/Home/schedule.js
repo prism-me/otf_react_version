@@ -116,13 +116,13 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                     </Col>
                     <Col md="5">
                         <div className="text-center center-content">
-                            {/* {
-                                language === "en" ? */}
-                            <img alt="" className="img-fluid format-img" src={coachImg} />
-                            {/* : <img alt="" className="img-fluid format-img" src={coachImg} */}
-                            {/* style={{ transform: 'scaleX(-1)' }} */}
-                            {/* /> */}
-                            {/* } */}
+                            {
+                                language === "en" ?
+                                    <img alt="" className="img-fluid format-img" src={coachImg} />
+                                    : <img alt="" className="img-fluid format-img" src={coachImg}
+                                        style={{ transform: 'scaleX(-1)' }}
+                                    />
+                            }
 
                         </div>
                     </Col>
