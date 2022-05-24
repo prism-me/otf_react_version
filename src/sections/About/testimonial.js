@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+// import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
 
 //images
-import videoImg from "../../assets/images/OTF/about/videoImg.png";
-import playicon from "../../assets/images/OTF/icons/playicon.png";
+import videoImg from "../../assets/images/OTF/about/videoImg.jpg";
+// import playicon from "../../assets/images/OTF/icons/playicon.png";
 
 
 const Testimonial = () => {
@@ -44,7 +44,8 @@ const Testimonial = () => {
                 <Row>
                     <Col md="6" sm="12">
                         <div className="center-content">
-                            <div className="video w-100"
+                            <img src={videoImg} alt={"image"} className="img-fluid" />
+                            {/* <div className="video w-100"
                                 style={{ background: `url(${videoImg})` }}
                             >
                                 <a className="button center-content" onClick={toggle}>
@@ -57,7 +58,7 @@ const Testimonial = () => {
                                             src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FOTFDubai%2Fvideos%2F1068162367292930%2F&show_text=false&width=560&t=0"></iframe>
                                     </ModalBody>
                                 </Modal>
-                            </div>
+                            </div> */}
                         </div>
                     </Col>
                     <Col md="6">
