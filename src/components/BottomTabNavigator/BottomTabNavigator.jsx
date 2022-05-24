@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import ApplyNow from '../Modals/ApplyNow/ApplyNow';
 import { Link } from "react-router-dom";
+import { constants } from "../../utils/constants";
 
 const useStyles = makeStyles({
   root: {
@@ -28,18 +29,26 @@ function BottomTabNavigator(props) {
         className={classes.root}
       >
         <Link to={`/${props.activeLanguage}/memberships`}>
-          <button className={"BNButton"}>
-            Memberships
+          <button className={`BNButton ${props.activeLanguage === "ar" && 'px-4'}`}>
+            {
+              constants?.site_content?.bottomnav_sec?.btn_text2[props.activeLanguage]
+            }
           </button>
         </Link>
         <Link to={`/${props.activeLanguage}/locations`}>
-          <button className={"BNButton"}>
-            Locations
+          <button className={`BNButton ${props.activeLanguage === "ar" && 'px-4'}`}>
+            {
+              constants?.site_content?.bottomnav_sec?.btn_text2[props.activeLanguage]
+            }
           </button>
         </Link>
-        <button className={"BNButton"}
+        <button className={`BNButton ${props.activeLanguage === "ar" && 'px-4'}`}
           onClick={() => setShowModal(true)}
-        >Book a Free Class!</button>
+        >
+          {
+            constants?.site_content?.bottomnav_sec?.btn_text3[props.activeLanguage]
+          }
+        </button>
         <ApplyNow
           show={showModal} onHide={() => setShowModal(false)}
           title={"Free Class"}

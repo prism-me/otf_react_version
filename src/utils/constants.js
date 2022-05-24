@@ -489,7 +489,7 @@ export const constants = {
       },
       btn_text: {
         en: "Book your Free class!",
-        ar: "احجز فصلك المجاني!"
+        ar: "احجز فصلك المجاني !"
       },
       read_btn: {
         en: "read more",
@@ -566,6 +566,20 @@ export const constants = {
       btn_text: {
         en: "BECOME A MEMBER TODAY",
         ar: "كن عضوا اليوم"
+      }
+    },
+    bottomnav_sec: {
+      btn_text1: {
+        en: "Memberships",
+        ar: "العضويات"
+      },
+      btn_text2: {
+        en: "Locations",
+        ar: "المواقع"
+      },
+      btn_text3: {
+        en: "Book a Free Class!",
+        ar: "احجز فصل دراسي مجاني !"
       }
     }
   },
