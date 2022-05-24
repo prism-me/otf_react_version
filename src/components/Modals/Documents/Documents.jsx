@@ -8,6 +8,7 @@ import {
 import ClearIcon from "@material-ui/icons/Clear";
 import { API } from "../../../http/API"
 import { Alert } from "react-bootstrap"
+import { constants } from '../../../utils/constants';
 
 const Documents = (props) => {
 
@@ -104,10 +105,12 @@ const Documents = (props) => {
                                 dismissible
                                 className='mt-5'
                             >
-                                Data Submitted Successfuly!
+                                {
+                                    constants?.site_content?.offerform_sec?.submit_text[props?.language]
+                                }
                             </Alert>
                         }
-                        <Form className='offer-form' onSubmit={handleSubmit}>
+                        <Form className='offer-form' onSubmit={handleSubmit} dir={`${props?.language === "ar" && 'rtl'}`}>
                             <h3 className="offer-subtext">
                                 {props.title}
                             </h3>
@@ -116,7 +119,9 @@ const Documents = (props) => {
                                     type="text"
                                     name="name"
                                     id="name"
-                                    placeholder="Full name"
+                                    placeholder={
+                                        constants?.site_content?.offerform_sec?.full_name[props?.language]
+                                    }
                                     value={formValues.name}
                                     onChange={handleChange}
                                     className='inputStyle'
@@ -132,7 +137,9 @@ const Documents = (props) => {
                                             id="email"
                                             value={formValues.email}
                                             onChange={handleChange}
-                                            placeholder="Email address"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.email[props?.language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -146,7 +153,9 @@ const Documents = (props) => {
                                             id="phone"
                                             value={formValues.phone}
                                             onChange={handleChange}
-                                            placeholder="Phone number"
+                                            placeholder={
+                                                constants?.site_content?.offerform_sec?.phone_number[props?.language]
+                                            }
                                             className='inputStyle'
                                             required
                                         />
@@ -162,7 +171,11 @@ const Documents = (props) => {
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Location</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.offerform_sec?.location[props?.language]
+                                        }
+                                    </option>
                                     {locationsData &&
                                         locationsData.length > 0 &&
                                         locationsData.map((x) => (
@@ -188,7 +201,11 @@ const Documents = (props) => {
                                     style={{ color: "#495057", width: "100%" }}
 
                                 >
-                                    <option style={{ color: "#495057" }} value="">Select Membership Package</option>
+                                    <option style={{ color: "#495057" }} value="">
+                                        {
+                                            constants?.site_content?.memberform_sec?.membership[props?.language]
+                                        }
+                                    </option>
                                     {membershipsData &&
                                         membershipsData.length > 0 &&
                                         membershipsData.map((x) => (
@@ -220,7 +237,11 @@ const Documents = (props) => {
                                     :
                                     <button className="offerBtn px-5 mt-3"
                                         style={{ border: "1px solid #F58220" }}
-                                    >Submit</button>
+                                    >
+                                        {
+                                            constants?.site_content?.offerform_sec?.submit_btn[props?.language]
+                                        }
+                                    </button>
                             }
                         </Form>
                     </Container>

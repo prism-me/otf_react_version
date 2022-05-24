@@ -519,6 +519,54 @@ export const constants = {
         en: "BECOME A MEMBER TODAY",
         ar: "كن عضوا اليوم"
       }
+    },
+    free_classForm: {
+      title: {
+        en: "Free Intro Class*",
+        ar: "حصة مقدمة مجانية *"
+      },
+      subtitle: {
+        en: "Experience our workout for free. Please fill out the form and a member of the team will be in touch.",
+        ar: "تجربة التمرين لدينا مجانا. يرجى ملء النموذج وسيتواصل معك أحد أعضاء الفريق."
+      },
+      form_title: {
+        en: "* All fields are mandatory",
+        ar: "* كل الحقول إلزامية"
+      },
+      form_subtitle: {
+        en: "Find Your Location",
+        ar: "ابحث عن موقعك"
+      },
+      first_name: {
+        en: "First Name",
+        ar: "الاسم الأول"
+      },
+      last_name: {
+        en: "Last Name",
+        ar: "الكنية"
+      },
+      email: {
+        en: "Email",
+        ar: "بريد الالكتروني"
+      },
+      phone_number: {
+        en: "Phone Number",
+        ar: "رقم الهاتف"
+      },
+      checkbox_text: {
+        en: "Yes I’d like to get updates and offers from Orangetheory Fitness by text.",
+        ar: "نعم ، أود الحصول على تحديثات وعروض من Orangetheory Fitness عبر الرسائل النصية."
+      }
+    },
+    memberform_sec: {
+      membership: {
+        en: "Select Membership Package",
+        ar: "حدد باقة العضوية"
+      },
+      btn_text: {
+        en: "BECOME A MEMBER TODAY",
+        ar: "كن عضوا اليوم"
+      }
     }
   },
 };

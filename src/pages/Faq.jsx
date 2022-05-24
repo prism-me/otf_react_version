@@ -109,6 +109,7 @@ const Faq = (props) => {
                     constants?.site_content?.faqbanner_sec?.subtitle[global?.activeLanguage]
                 }
                 bannerImg={bannerImg}
+                language={global?.activeLanguage}
                 freeform="freeclass"
             >
                 <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">

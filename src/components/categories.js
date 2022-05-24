@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { constants } from '../utils/constants';
 
-const Categories = ({ isArabic, articlesData }) => {
+const Categories = ({ isArabic, articlesData, language }) => {
 
     // ......get unique data.......
     const uniqueCategories = [];
@@ -14,7 +14,11 @@ const Categories = ({ isArabic, articlesData }) => {
 
     return (
         <div>
-            <h5 className="blog-title">categories</h5>
+            <h5 className={`${language === "en" ? 'blog-title' : 'blog-title-arabic'}`}>
+                {
+                    constants?.site_content?.articles_sec?.categories[language]
+                }
+            </h5>
             <div className="sidebar-container borders">
                 <ul className="sidebar-list">
                     {

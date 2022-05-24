@@ -22,7 +22,7 @@ const PopularPosts = ({ articlesData, isArabic, language, location }) => {
                     ).filter(
                         (x) => x.slug !== location.split("/")[3]).slice(0, 5).map((item, index) => (
                             <div className="post-container d-flex" key={index}>
-                                <div className="m-r-15">
+                                <div className={`${language === "en" ? 'm-r-15' : 'm-l-15'}`}>
                                     <img alt="" style={{ width: "80px" }} src={item?.featured_img} />
                                 </div>
                                 <div>

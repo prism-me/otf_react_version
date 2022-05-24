@@ -96,21 +96,37 @@ const ApplyNow = (props) => {
                 dismissible
                 className='mt-5'
               >
-                Data Submitted Successfuly!
+                {
+                  constants?.site_content?.offerform_sec?.submit_text[props?.language]
+                }
               </Alert>
             }
             <Form className='offer-form' onSubmit={handleSubmit} dir={`${props?.language === "ar" && 'rtl'}`}>
               <h3 className="offer-subtext mb-0">
-                Free Intro Class*
+                {
+                  constants?.site_content?.free_classForm?.title[props?.language]
+                }
               </h3>
-              <p className='mt-3 offer-detailtext'>
-                Experience our workout for free. Please fill out the form and a member of the team will be in touch.
+              <p
+                className={`mt-3 offer-detailtext ${props?.language === "ar" && 'text-right'}`}
+              >
+                {
+                  constants?.site_content?.free_classForm?.subtitle[props?.language]
+                }
               </p>
-              <p className='mt-3 offer-detailtext'>
-                * All fields are mandatory
+              <p
+                className={`mt-3 offer-detailtext ${props?.language === "ar" && 'text-right'}`}
+              >
+                {
+                  constants?.site_content?.free_classForm?.form_title[props?.language]
+                }
               </p>
-              <p className='mt-3 mb-2 offer-detailtext'>
-                Find Your Location
+              <p
+                className={`mt-3 mb-2 offer-detailtext ${props?.language === "ar" && 'text-right'}`}
+              >
+                {
+                  constants?.site_content?.free_classForm?.form_subtitle[props?.language]
+                }
               </p>
               {/* <FormGroup>
                 <Input
@@ -132,7 +148,11 @@ const ApplyNow = (props) => {
                   style={{ color: "#495057", width: "100%" }}
 
                 >
-                  <option style={{ color: "#495057" }} value="">Select Location</option>
+                  <option style={{ color: "#495057" }} value="">
+                    {
+                      constants?.site_content?.offerform_sec?.location[props?.language]
+                    }
+                  </option>
                   {locationsData &&
                     locationsData.length > 0 &&
                     locationsData.map((x) => (
@@ -158,7 +178,9 @@ const ApplyNow = (props) => {
                       id="first_name"
                       value={formValues.first_name}
                       onChange={handleChange}
-                      placeholder="First Name"
+                      placeholder={
+                        constants?.site_content?.free_classForm?.first_name[props?.language]
+                      }
                       className='inputStyle'
                       required
                     />
@@ -172,7 +194,9 @@ const ApplyNow = (props) => {
                       id="last_name"
                       value={formValues.last_name}
                       onChange={handleChange}
-                      placeholder="Last Name"
+                      placeholder={
+                        constants?.site_content?.free_classForm?.last_name[props?.language]
+                      }
                       className='inputStyle'
                       required
                     />
@@ -186,7 +210,9 @@ const ApplyNow = (props) => {
                       id="phone"
                       value={formValues.phone}
                       onChange={handleChange}
-                      placeholder="Phone Number"
+                      placeholder={
+                        constants?.site_content?.free_classForm?.phone_number[props?.language]
+                      }
                       className='inputStyle'
                       required
                     />
@@ -200,7 +226,9 @@ const ApplyNow = (props) => {
                       id="email"
                       value={formValues.email}
                       onChange={handleChange}
-                      placeholder="Email"
+                      placeholder={
+                        constants?.site_content?.free_classForm?.email[props?.language]
+                      }
                       className='inputStyle'
                       required
                     />
@@ -208,7 +236,9 @@ const ApplyNow = (props) => {
                 </Col>
               </Row>
               <FormGroup check>
-                <Label check>
+                <Label check
+                  className={`${props?.language === "ar" && 'text-right'}`}
+                >
                   <Input type="checkbox"
                     className='inputStyle'
                     value="Yes I’d like to get updates and
@@ -218,9 +248,11 @@ const ApplyNow = (props) => {
                     onClick={handleChange}
                     name="get_updates"
                   />
-                  Yes I’d like to get updates and
-                  offers from Orangetheory Fitness
-                  by text.
+                  <span className={`${props?.language === "ar" && 'pr-4'}`}>
+                    {
+                      constants?.site_content?.free_classForm?.checkbox_text[props?.language]
+                    }
+                  </span>
                 </Label>
               </FormGroup>
               {
@@ -238,7 +270,11 @@ const ApplyNow = (props) => {
                   :
                   <button className="offerBtn px-5 mt-4"
                     style={{ border: "1px solid #F58220" }}
-                  >Submit</button>
+                  >
+                    {
+                      constants?.site_content?.offerform_sec?.submit_btn[props?.language]
+                    }
+                  </button>
               }
 
             </Form>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Documents from './Modals/Documents/Documents';
 import ApplyNow from './Modals/ApplyNow/ApplyNow';
+import { constants } from '../utils/constants';
 
 const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform, language }) => {
 
@@ -39,7 +40,9 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform, l
                                 !freeform &&
                                 <Documents
                                     show={showModal} onHide={() => setShowModal(false)}
-                                    title="Become a Member Today"
+                                    title={
+                                        constants?.site_content?.memberform_sec?.btn_text[language]
+                                    }
                                     language={language}
                                 />
                             }

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import Documents from '../../components/Modals/Documents/Documents';
 import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
 import { HashLink } from "react-router-hash-link";
+import { constants } from '../../utils/constants';
 
 
 const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgImg, subtitle, detail2, coachImg, freeform, btnfitnessText }) => {
@@ -89,7 +90,9 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                                             !freeform &&
                                             <Documents
                                                 show={showModal} onHide={() => setShowModal(false)}
-                                                title="Become a Member Today"
+                                                title={
+                                                    constants?.site_content?.memberform_sec?.btn_text[language]
+                                                }
                                                 language={language}
                                             />
                                         }

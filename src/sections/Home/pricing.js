@@ -74,7 +74,9 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                         </Row>
                         <Documents
                             show={showModal} onHide={() => setShowModal(false)}
-                            title="Become a Member Today"
+                            title={
+                                constants?.site_content?.memberform_sec?.btn_text[language]
+                            }
                             language={language}
                         />
                     </Col>
