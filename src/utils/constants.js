@@ -134,8 +134,8 @@ export const constants = {
         ar: "سهولة الحجز عبر الإنترنت"
       },
       sec_2: {
-        en: "Nationwide studio access",
-        ar: "الوصول إلى الاستوديو على الصعيد الوطني"
+        en: "Cross Region Studio Access",
+        ar: "الوصول إلى استوديو عبر المنطقة"
       },
       sec_3: {
         en: "Month-to-month memberships",

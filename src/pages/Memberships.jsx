@@ -27,6 +27,7 @@ const Memberships = (props) => {
 
     useEffect(() => {
         getAllMemberships();
+        getPagesData();
     }, []);
 
     const list = [
@@ -63,16 +64,42 @@ const Memberships = (props) => {
             })
     }
 
+    // memberships page API
+    const [membershipsMetaData, setMembershipsMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "memberships"
+                    );
+                    setMembershipsMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Memberships
+                    {
+                        global?.activeLanguage === "ar"
+                            ? membershipsMetaData?.arabic?.meta_details?.meta_title
+                            : membershipsMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Memberships"
+                    content={global?.activeLanguage === "ar" ?
+                        membershipsMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : membershipsMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout

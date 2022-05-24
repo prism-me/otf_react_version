@@ -20,6 +20,7 @@ const Faq = (props) => {
     useEffect(() => {
         getAllFaqs();
         getAllLocations();
+        getPagesData();
     }, []);
 
     const DummyContent1 = (props) => (
@@ -59,16 +60,42 @@ const Faq = (props) => {
             })
     }
 
+    // faq page API
+    const [faqMetaData, setFaqMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "faq"
+                    );
+                    setFaqMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div >
             <Helmet>
                 <title>
-                    FAQ's
+                    {
+                        global?.activeLanguage === "ar"
+                            ? faqMetaData?.arabic?.meta_details?.meta_title
+                            : faqMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="FAQ's"
+                    content={global?.activeLanguage === "ar" ?
+                        faqMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : faqMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout

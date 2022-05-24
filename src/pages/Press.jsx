@@ -18,9 +18,10 @@ const Press = (props) => {
 
     useEffect(() => {
         getAllPress();
+        getPagesData();
     }, []);
 
-    // articles API 
+    // press API 
     const [pressData, setPressData] = useState([]);
 
     const getAllPress = () => {
@@ -33,16 +34,42 @@ const Press = (props) => {
             })
     }
 
+    // press page API
+    const [pressMetaData, setPressMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "press"
+                    );
+                    setPressMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div className="home-page">
             <Helmet>
                 <title>
-                    Press
+                    {
+                        global?.activeLanguage === "ar"
+                            ? pressMetaData?.arabic?.meta_details?.meta_title
+                            : pressMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Press"
+                    content={global?.activeLanguage === "ar" ?
+                        pressMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : pressMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout
@@ -76,6 +103,7 @@ const Press = (props) => {
                     }
                     bgImg={pressBg}
                     classname="press"
+                    language={global?.activeLanguage}
                 />
 
             </Layout>

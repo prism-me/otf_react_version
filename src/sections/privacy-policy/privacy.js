@@ -7,8 +7,11 @@ const Privacy = ({ title, detail }) => (
                 <h2 className={"oftHeading"}>
                     {title}
                 </h2>
-                <p className="oftsubHeading">
-                    {detail}
+                <p className="oftPrivacysubHeading"
+                    dangerouslySetInnerHTML={{
+                        __html: detail
+                    }}
+                >
                 </p>
             </div>
         </div>

@@ -17,6 +17,7 @@ const Articles = (props) => {
 
   useEffect(() => {
     getAllArticles();
+    getPagesData();
   }, []);
 
   // articles API 
@@ -32,16 +33,42 @@ const Articles = (props) => {
       })
   }
 
+  // articles page API
+  const [articlesMetaData, setArticlesMetaData] = useState([]);
+
+  const getPagesData = () => {
+    API.get(`/pages`)
+      .then((response) => {
+        // debugger;
+        if (response.status === 200 || response.status === 201) {
+          let currentPage = response.data.data.find(
+            (x) => x.slug === "articles"
+          );
+          setArticlesMetaData(currentPage);
+        }
+      })
+      .catch((err) => console.log(err));
+  }
+
   const { global } = props;
   return (
     <div>
       <Helmet>
         <title>
-          Articles
+          {
+            global?.activeLanguage === "ar"
+              ? articlesMetaData?.arabic?.meta_details?.meta_title
+              : articlesMetaData?.meta_details?.meta_title
+          }
         </title>
         <meta
           name="description"
-          content="Articles"
+          content={global?.activeLanguage === "ar" ?
+            articlesMetaData?.arabic?.meta_details
+              ?.meta_description
+            : articlesMetaData?.meta_details
+              ?.meta_description
+          }
         />
       </Helmet>
       {/* <Layout
@@ -71,6 +98,7 @@ const Articles = (props) => {
           constants?.site_content?.getOff_sec?.btn_text[global?.activeLanguage]
         }
         bgImg={articalBg}
+        language={global?.activeLanguage}
       />
 
       {/* </Layout> */}

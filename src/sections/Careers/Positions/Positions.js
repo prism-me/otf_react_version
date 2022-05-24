@@ -126,7 +126,7 @@ const Positions = (props) => {
                     <ApplyNow
                         show={modalShow}
                         onHide={() => setModalShow(false)}
-                        lang={props.language}
+                        language={props.language}
                         careerDescription={jobDescription}
                     />
                 </div>
@@ -191,7 +191,7 @@ const Positions = (props) => {
                     <ApplyNow
                         show={modalShow}
                         onHide={() => setModalShow(false)}
-                        lang={props.language}
+                        language={props.language}
                         careerDescription={jobDescription}
                     />
                 </div>

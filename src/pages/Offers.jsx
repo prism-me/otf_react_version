@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { API } from "../http/API";
-import { constants } from "../utils/constants";
-
 import Offerbanner from "../sections/Offers/offerbanner"
 import Plans from "../sections/Offers/plans"
 import Coaching from "../sections/Offers/coaching"
@@ -14,6 +12,8 @@ const Offers = (props) => {
 
     useEffect(() => {
         getAllOffers();
+        getAllLocations();
+        getPagesData();
     }, []);
 
     // offers API 
@@ -29,26 +29,69 @@ const Offers = (props) => {
             })
     }
 
+    // locations API 
+
+    const [locationsData, setLocationsData] = useState([]);
+
+    const getAllLocations = () => {
+        API.get('/locations').then(response => {
+            const alllocations = response.data?.data;
+            setLocationsData(alllocations);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    // offers page API
+    const [offersMetaData, setOffersMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "offers"
+                    );
+                    setOffersMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    Offers
+                    {
+                        global?.activeLanguage === "ar"
+                            ? offersMetaData?.arabic?.meta_details?.meta_title
+                            : offersMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="Offers"
+                    content={global?.activeLanguage === "ar" ?
+                        offersMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : offersMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Offerbanner
                 language={global?.activeLanguage}
+                offersData={offersData}
+                locationsData={locationsData}
             />
 
             <Plans
                 offersData={offersData}
                 language={global?.activeLanguage}
                 isArabic={global?.activeLanguage === "ar"}
+                locationsData={locationsData}
             />
 
             <Coaching

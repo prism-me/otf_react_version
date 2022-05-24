@@ -43,6 +43,7 @@ const About = (props) => {
 
     // About page API
     const [content, setContent] = useState([]);
+    const [aboutMetaData, setAboutMetaData] = useState([]);
 
     const getPagesData = () => {
         API.get(`/pages`)
@@ -52,6 +53,7 @@ const About = (props) => {
                     let currentPage = response.data.data.find(
                         (x) => x.slug === "about-us"
                     );
+                    setAboutMetaData(currentPage);
                     API.get(`/all-sections/${currentPage._id}`)
                         .then((response) => {
                             setContent(response.data?.data[response.data.data?.length - 1]?.content);
@@ -66,11 +68,20 @@ const About = (props) => {
         <div>
             <Helmet>
                 <title>
-                    About Us
+                    {
+                        global?.activeLanguage === "ar"
+                            ? aboutMetaData?.arabic?.meta_details?.meta_title
+                            : aboutMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="About Us"
+                    content={global?.activeLanguage === "ar" ?
+                        aboutMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : aboutMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
             <Layout
@@ -87,6 +98,7 @@ const About = (props) => {
                 // btntext="Book your Free class!"
                 bannerImg={content?.banner?.banner_image}
                 freeform="freeclass"
+                language={global?.activeLanguage}
             >
 
                 <AbouSection

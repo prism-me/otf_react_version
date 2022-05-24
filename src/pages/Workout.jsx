@@ -26,6 +26,7 @@ const Workout = (props) => {
 
     useEffect(() => {
         getAllTestimonial();
+        getPagesData();
     }, []);
 
     // testimonial API 
@@ -41,16 +42,42 @@ const Workout = (props) => {
             })
     }
 
+    // workout page API
+    const [workoutMetaData, setWorkoutMetaData] = useState([]);
+
+    const getPagesData = () => {
+        API.get(`/pages`)
+            .then((response) => {
+                // debugger;
+                if (response.status === 200 || response.status === 201) {
+                    let currentPage = response.data.data.find(
+                        (x) => x.slug === "the-workout"
+                    );
+                    setWorkoutMetaData(currentPage);
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     const { global } = props;
     return (
         <div>
             <Helmet>
                 <title>
-                    The Workout
+                    {
+                        global?.activeLanguage === "ar"
+                            ? workoutMetaData?.arabic?.meta_details?.meta_title
+                            : workoutMetaData?.meta_details?.meta_title
+                    }
                 </title>
                 <meta
                     name="description"
-                    content="The Workout"
+                    content={global?.activeLanguage === "ar" ?
+                        workoutMetaData?.arabic?.meta_details
+                            ?.meta_description
+                        : workoutMetaData?.meta_details
+                            ?.meta_description
+                    }
                 />
             </Helmet>
 

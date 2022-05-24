@@ -82,6 +82,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                                             <ApplyNow
                                                 show={showModal} onHide={() => setShowModal(false)}
                                                 title={"Free Class"}
+                                                language={language}
                                             />
                                         }
                                         {
@@ -89,6 +90,7 @@ const Schedule = ({ titleM, title, detail, list, listImg, language, btnText, bgI
                                             <Documents
                                                 show={showModal} onHide={() => setShowModal(false)}
                                                 title="Become a Member Today"
+                                                language={language}
                                             />
                                         }
 

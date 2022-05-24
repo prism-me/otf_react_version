@@ -15,6 +15,19 @@ import articalBg from "../assets/images/OTF/articles/articalbg.jpg";
 
 const ArticlesDetail = (props) => {
 
+    useEffect(() => {
+        getSingleArticle();
+        getAllArticles();
+    }, []);
+    useEffect(() => {
+        // console.log("history", history.location.pathname)
+        const pathname = props.location.pathname.split("/")[3];
+        if (pathname) {
+            getSingleArticle();
+            getAllArticles();
+        }
+    }, [props.location.pathname.split("/")[3]]);
+
     // single data get API Integration
     const [singleArticleData, setSingleArticleData] = useState([]);
 
@@ -30,9 +43,18 @@ const ArticlesDetail = (props) => {
             })
     }
 
-    useEffect(() => {
-        getSingleArticle();
-    }, []);
+    // articles API 
+    const [articlesData, setArticlesData] = useState([]);
+
+    const getAllArticles = () => {
+        API.get('/articles').then(response => {
+            const allarticles = response.data?.data;
+            setArticlesData(allarticles);
+        })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
 
     const { global } = props;
@@ -60,6 +82,8 @@ const ArticlesDetail = (props) => {
                     singleArticleData={singleArticleData}
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
+                    articlesData={articlesData}
+                    location={props.location.pathname}
                 />
 
                 <CounterSection
@@ -71,6 +95,7 @@ const ArticlesDetail = (props) => {
                         constants?.site_content?.getOff_sec?.btn_text[global?.activeLanguage]
                     }
                     bgImg={articalBg}
+                    language={global?.activeLanguage}
                 />
 
             </Layout>

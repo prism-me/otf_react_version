@@ -13,20 +13,8 @@ import { constants } from '../../utils/constants';
 //images
 import bannerImg from "../../assets/images/OTF/banner/offerbanner.jpg"
 
-const location = [
-    "Mercato Mall",
-    "Times Square Center"
-];
-
-const offerlist = [
-    "March 1 Offer",
-    "March 2 Offer"
-];
-
-const Offerbanner = ({ language }) => {
-
+const Offerbanner = ({ offersData, language, locationsData }) => {
     const defaultState = {
-        name: "",
         email: "",
         phone: "",
         location: "",
@@ -102,6 +90,8 @@ const Offerbanner = ({ language }) => {
                                     constants?.site_content?.offerform_sec?.title[language]
                                 }
                                 language={language}
+                                offersData={offersData}
+                                locationsData={locationsData}
                             />
                         </center>
 
@@ -185,10 +175,17 @@ const Offerbanner = ({ language }) => {
                                             constants?.site_content?.offerform_sec?.location[language]
                                         }
                                     </option>
-                                    {location &&
-                                        location.length > 0 &&
-                                        location.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {locationsData &&
+                                        locationsData.length > 0 &&
+                                        locationsData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 
@@ -208,10 +205,17 @@ const Offerbanner = ({ language }) => {
                                             constants?.site_content?.offerform_sec?.offer[language]
                                         }
                                     </option>
-                                    {offerlist &&
-                                        offerlist.length > 0 &&
-                                        offerlist.map((x) => (
-                                            <option style={{ color: "#495057" }} key={x} value={x}>{x}</option>
+                                    {offersData &&
+                                        offersData.length > 0 &&
+                                        offersData.map((x) => (
+                                            <option style={{ color: "#495057" }} key={x} value={x?.name}>
+                                                {
+                                                    language === "ar"
+                                                        ? x?.arabic?.name
+                                                        :
+                                                        x?.name
+                                                }
+                                            </option>
                                         ))
                                     }
 

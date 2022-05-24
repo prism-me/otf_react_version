@@ -75,6 +75,7 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                         <Documents
                             show={showModal} onHide={() => setShowModal(false)}
                             title="Become a Member Today"
+                            language={language}
                         />
                     </Col>
                 </Row>
@@ -82,7 +83,9 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
                     <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1'
                         style={{ border: "1px solid #F58220", color: "#F58220" }}
                     >
-                        <i className={`fab fa-whatsapp ${language === "en" ? 'mr-2' : 'ml-2'}`}></i>
+                        <i className={`fab fa-whatsapp ${language === "en" ? 'mr-2' : 'ml-2'}`}
+                            style={{ color: "#25d366" }}
+                        ></i>
                         {
                             constants?.site_content?.member_sec?.btn_text[language]
                         }

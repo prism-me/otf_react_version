@@ -9,7 +9,7 @@ import { constants } from '../../utils/constants';
 
 //images
 
-import plan from "../../assets/images/OTF/offer/plan.png"
+// import plan from "../../assets/images/OTF/offer/plan.png"
 import BookOffer from '../Offers/startburning';
 
 var settings = {
@@ -36,7 +36,7 @@ var settings = {
     ]
 };
 
-const Plans = ({ offersData, isArabic, language }) => {
+const Plans = ({ offersData, isArabic, language, locationsData }) => {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -100,12 +100,6 @@ const Plans = ({ offersData, isArabic, language }) => {
                                                             constants?.site_content?.offers_sec?.btn_text[language]
                                                         }
                                                     </button>
-                                                    <BookOffer
-                                                        show={showModal} onHide={() => setShowModal(false)}
-                                                        title={
-                                                            constants?.site_content?.offers_sec?.btn_text[language]
-                                                        }
-                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -117,6 +111,15 @@ const Plans = ({ offersData, isArabic, language }) => {
                         </Slider>
                     </Col>
                 </Row>
+                <BookOffer
+                    show={showModal} onHide={() => setShowModal(false)}
+                    title={
+                        constants?.site_content?.offers_sec?.btn_text[language]
+                    }
+                    offersData={offersData}
+                    language={language}
+                    locationsData={locationsData}
+                />
 
                 {/* <Col sm={4}
                     className={"imgOfferContainer mb-3"}
