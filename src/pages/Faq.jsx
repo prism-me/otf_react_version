@@ -10,6 +10,7 @@ import { constants } from "../utils/constants";
 
 import Coaching from "../sections/Offers/coaching"
 import { API } from "../http/API"
+import FaqSection from "../sections/faq/FaqSection"
 
 //images
 
@@ -112,7 +113,13 @@ const Faq = (props) => {
                 language={global?.activeLanguage}
                 freeform="freeclass"
             >
-                <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">
+
+                <FaqSection
+                    faqData={faqsData}
+                    isArabic={global?.activeLanguage === "ar"}
+                    language={global?.activeLanguage}
+                />
+                {/* <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">
 
                     <div className="animated-bg"><i
                         style={{
@@ -157,7 +164,7 @@ const Faq = (props) => {
                             </div>
                         </div>
                     </Container>
-                </section>
+                </section> */}
 
                 <CalculateSection
                     locationsData={locationsData}

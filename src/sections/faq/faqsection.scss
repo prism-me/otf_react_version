@@ -1,0 +1,67 @@
+.faq-section {
+    .frequent-text {
+        font-size: $main-fonts;
+        font-weight: 600;
+        font-style: italic;
+        color: $black;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media #{$sm} {
+            font-size: 22px;
+        }
+    }
+
+    .accordion {
+        border: 0;
+    }
+
+    .accordion__panel {
+        font-size: $sub-fonts;
+        text-align: justify;
+        padding: 18px 20px;
+
+        p {
+            font-size: $sub-fonts;
+            text-align: justify;
+        }
+    }
+
+    .accordion__item {
+        border: none;
+    }
+
+    .accordion__button {
+        background-color: transparent;
+        color: $orange;
+        cursor: pointer;
+        padding: 18px 0;
+        width: 100%;
+        text-align: inherit;
+        border: none;
+        border-bottom: 1px solid $orange;
+
+        .title {
+            color: $black;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .accordion__button:before {
+        display: inline-block;
+        content: '';
+        height: 10px;
+        width: 10px;
+        margin-right: 12px;
+        margin-left: 0;
+        border-bottom: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        transform: rotate(-45deg);
+        transition: all 0.3s linear;
+    }
+
+}

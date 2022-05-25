@@ -30,6 +30,7 @@
     "path-to-regexp": "^6.2.0",
     "pure-react-carousel": "^1.27.6",
     "react": "^17.0.2",
+    "react-accessible-accordion": "^5.0.0",
     "react-bootstrap": "^1.5.2",
     "react-build-sitemap": "^0.2.2",
     "react-card-flip": "^1.1.1",
