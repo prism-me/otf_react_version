@@ -19298,13 +19298,23 @@ header {
   &.nav-lg {
     padding: 2rem 1rem;
 
+    .otflogo {
+      @media (min-width: 992px) and (max-width: 1091px) {
+        width: 120px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1308px) {
+        width: 195px;
+      }
+    }
+
     .sticky-nav {
       position: fixed;
       top: 0;
       left: 0;
       background: $black;
       width: 100%;
-      padding: 0.5rem 7rem;
+      padding: 0.5rem 3rem;
       // padding: 0.5rem 4rem;
       animation: slide-down 0.7s;
       box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
@@ -19314,7 +19324,7 @@ header {
       }
 
       @media (min-width: 992px) and (max-width: 1243px) {
-        padding: 0.5rem 3rem;
+        padding: 0.5rem 1rem;
       }
 
     }
@@ -19333,6 +19343,10 @@ header {
 
     nav ul li a {
       font-size: 16px;
+
+      @media (min-width: 1200px) and (max-width: 1308px) {
+        font-size: 14px;
+      }
 
       @media #{$sm, $md} {
         font-family: 'proxima-nova', sans-serif !important;

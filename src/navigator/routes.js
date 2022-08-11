@@ -14,6 +14,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
 import Workout from "../pages/Workout";
 import PromotionTerms from "../pages/PromotionTerms";
+import OurSchedule from "../pages/OurSchedule";
 
 
 
@@ -78,6 +79,13 @@ export const routes = [
     name: "FAQ",
     path: "/faq",
     component: Faq,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "OurSchedule",
+    path: "/class-schedule",
+    component: OurSchedule,
     isPrivate: false,
     exact: true,
   },

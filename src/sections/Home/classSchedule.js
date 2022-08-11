@@ -6,7 +6,7 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
 
     return (
         <>
-            <section className="classSchedule gym p-0" id="bmi">
+            <section className="classSchedule gym pb-0" id="bmi">
                 <Container>
                     <h3 className="oftHeading mb-3">
                         {
@@ -148,7 +148,7 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                 </Container>
             </section>
 
-            <section className="classSchedule gym pb-0" id="bmi">
+            <section className="classSchedule gym pt-4" id="bmi">
                 <Container>
                     <h3 className="oftHeading mb-3">
                         {
@@ -287,6 +287,16 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                             </tr>
                         </tbody> */}
                     </Table>
+                    <center>
+                        <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1 mt-3'
+                            style={{ border: "1px solid #F58220", color: "#F58220" }}
+                        >
+                            <i class="fab fa-whatsapp mr-2"
+                                style={{ color: "#25d366" }}
+                            ></i>
+                            Reach out to us
+                        </a>
+                    </center>
                 </Container>
             </section>
         </>

@@ -8,7 +8,6 @@ import AboutSection from "../sections/Home/about";
 import ScheduleSection from "../sections/Home/schedule";
 import PricingSection from "../sections/Home/pricing";
 import TrainerSection from "../sections/Home/trainer";
-import ClassSchedule from "../sections/Home/classSchedule";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
 
@@ -21,40 +20,13 @@ import heatl3 from "../assets/images/OTF/icons/heatl3.png"
 import schBg from "../assets/images/OTF/home/health-safetybg.jpg";
 import scheduleImg from "../assets/images/OTF/home/health-safty.png";
 
-
-
 const Home = (props) => {
 
   useEffect(() => {
     getAllTestimonial();
     getAllMemberships();
     getAllLocations();
-    getPagesData();
   }, []);
-
-  // home page API
-  const [content, setContent] = useState([]);
-  const [homeMetaData, setHomeMetaData] = useState([]);
-
-
-  const getPagesData = () => {
-    API.get(`/pages`)
-      .then((response) => {
-        // debugger;
-        if (response.status === 200 || response.status === 201) {
-          let currentPage = response.data.data.find(
-            (x) => x.slug === "home"
-          );
-          setHomeMetaData(currentPage);
-          API.get(`/all-sections/${currentPage._id}`)
-            .then((response) => {
-              setContent(response.data?.data[response.data.data?.length - 1]?.content);
-            })
-        }
-      })
-      .catch((err) => console.log(err));
-  }
-
 
   // memberships API 
   const [membershipsData, setMembershipsData] = useState([]);
@@ -109,20 +81,11 @@ const Home = (props) => {
       <div>
         <Helmet>
           <title>
-            {
-              global?.activeLanguage === "ar"
-                ? homeMetaData?.arabic?.meta_details?.meta_title
-                : homeMetaData?.meta_details?.meta_title
-            }
+            Orange Theory Fitness
           </title>
           <meta
             name='description'
-            content={global?.activeLanguage === "ar" ?
-              homeMetaData?.arabic?.meta_details
-                ?.meta_description
-              : homeMetaData?.meta_details
-                ?.meta_description
-            }
+            content="Orange Theory Fitness"
           />
         </Helmet>
 
@@ -147,27 +110,13 @@ const Home = (props) => {
 
         />
 
-        <section className="pt-0">
+        <section className="p-0">
           <PricingSection
             membershipsData={membershipsData}
             language={global?.activeLanguage}
             isArabic={global?.activeLanguage === "ar"}
           />
         </section>
-
-        <ClassSchedule
-          language={global?.activeLanguage}
-          mercatoSec={
-            global?.activeLanguage === "ar"
-              ? content?.arabic?.mercatoSection
-              : content?.mercatoSection
-          }
-          timesSec={
-            global?.activeLanguage === "ar"
-              ? content?.arabic?.timesSection
-              : content?.timesSection
-          }
-        />
 
         <TrainerSection
           testimonial={testimonialData}

@@ -29,6 +29,11 @@ export const MENUITEMS = [
         path: 'locations',
         type: 'link'
     },
+    {
+        title: 'Class Schedule',
+        path: 'class-schedule',
+        type: 'link'
+    },
     // {
     //     title: 'Locations', type: 'sub', children: [
     //         { path: 'location1', title: 'Location1', type: 'link' },

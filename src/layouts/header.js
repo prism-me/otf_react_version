@@ -35,12 +35,12 @@ const Header = props => {
     return (
         <>
             <header className={`${props.className || 'app2'} loding-header nav-abs custom-scroll ${history.location.pathname.split('/')[2] === "articles" ? "bg-dark py-2" : ""}`}>
-                <Container>
+                <Container fluid>
                     <Row>
                         <Col>
                             <nav className={`${stickyClass}`}>
                                 <a className="m-r-auto" href="/">
-                                    <img alt="" className="img-fluid" src={logo} />
+                                    <img alt="" className="img-fluid otflogo" src={logo} />
                                 </a>
                                 <div className="responsive-btn">
                                     <a className="toggle-nav" onClick={clickSidebar} >
