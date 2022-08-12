@@ -9,7 +9,7 @@ const Breadcrumb = ({ btntext, title, subtitle, bannerImg, promtext, freeform, l
 
     return (
         <section className="agency breadcrumb-section "
-            style={{ background: `url(${bannerImg})` }}
+            style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${bannerImg})` }}
         >
             <Container>
                 <Row>

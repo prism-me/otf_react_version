@@ -10,7 +10,7 @@ import VideotesTimonial from "../sections/Testimonial/videotestimonial";
 import { API } from "../http/API"
 
 //images
-import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
+import testimonialbanner from "../assets/images/OTF/banner/testimonialbanner.jpg";
 // import offerbg from "../assets/images/OTF/home/get-off.jpg";
 
 
@@ -85,7 +85,7 @@ const Testimonials = (props) => {
                 title="What Our Members Are Saying About"
                 subtitle="Let's work towards a better version of ourselves - together."
                 // btntext="Book your Free class!"
-                bannerImg={aboutBanner}
+                bannerImg={testimonialbanner}
                 freeform="freeclass"
             >
 

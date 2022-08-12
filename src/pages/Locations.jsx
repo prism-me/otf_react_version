@@ -6,7 +6,7 @@ import CalculateSection from "../sections/Home/calculate";
 import { API } from "../http/API"
 
 //images
-import bannerImage from "../assets/images/OTF/banner/locationbanner.jpg";
+import locationbanner from "../assets/images/OTF/banner/locationbanner.jpg";
 
 const Locations = (props) => {
 
@@ -71,7 +71,7 @@ const Locations = (props) => {
                 title="Find us near you!"
                 // subtitle="Feugiat vulputate cursus sagittis pulvinar duis non magna cursus. Parturient donec vehicula neque, ut consectetur pretium. Velit et duis a purus vitae vivamus. Aliquet tellus est."
                 // btntext="Book your session"
-                bannerImg={bannerImage}
+                bannerImg={locationbanner}
             >
                 <CalculateSection
                     locationsData={locationsData}

@@ -14,7 +14,6 @@ import { API } from "../http/API"
 
 
 //images
-// import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const About = (props) => {
 

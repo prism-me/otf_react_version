@@ -7,7 +7,6 @@ import Layout from '../components/common-layout';
 import { API } from "../http/API"
 
 //images
-// import aboutBanner from "../assets/images/OTF/banner/aboutbanner.jpg";
 
 const TermsOfUse = (props) => {
 

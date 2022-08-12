@@ -13,7 +13,7 @@ import { API } from "../http/API"
 
 //images
 
-import banerImg from "../assets/images/OTF/banner/aboutbanner.jpg"
+import workoutbanner from "../assets/images/OTF/banner/workoutbanner.jpg"
 
 import coachprofBg from "../assets/images/OTF/membership/corporateBg.jpg"
 import coachImg from "../assets/images/OTF/workout/coachImg.png";
@@ -87,7 +87,7 @@ const Workout = (props) => {
                 gives you more strength, energy and 
                 more life. Join us now!"
                 // btntext="Book your free class with us!"
-                bannerImg={banerImg}
+                bannerImg={workoutbanner}
                 freeform="freeclass"
             >
                 <About />

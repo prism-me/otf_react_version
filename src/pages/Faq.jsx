@@ -12,7 +12,7 @@ import { API } from "../http/API"
 
 //images
 
-import bannerImg from "../assets/images/OTF/banner/faqbanner.jpg";
+import faqbanner from "../assets/images/OTF/banner/faqbanner.jpg";
 
 const Faq = (props) => {
 
@@ -101,7 +101,7 @@ const Faq = (props) => {
                 title="Try Us For Free. Yes, Free!"
                 btntext="book a free class now"
                 promtext="*Promotion Terms. Limited Time Offer."
-                bannerImg={bannerImg}
+                bannerImg={faqbanner}
                 freeform="freeclass"
             >
                 <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">
