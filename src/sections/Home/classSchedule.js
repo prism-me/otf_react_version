@@ -148,7 +148,7 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                 </Container>
             </section>
 
-            <section className="classSchedule gym pt-4" id="bmi">
+            <section className="classSchedule gym pt-4 pb-0" id="bmi">
                 <Container>
                     <h3 className="oftHeading mb-3">
                         {

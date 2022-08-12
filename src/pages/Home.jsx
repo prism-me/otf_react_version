@@ -10,6 +10,7 @@ import PricingSection from "../sections/Home/pricing";
 import TrainerSection from "../sections/Home/trainer";
 import CalculateSection from "../sections/Home/calculate";
 import TestimonialSection from "../sections/About/testimonial";
+import ClassSchedule from "../sections/Home/classSchedule";
 
 //images
 
@@ -26,7 +27,30 @@ const Home = (props) => {
     getAllTestimonial();
     getAllMemberships();
     getAllLocations();
+    getPagesData();
   }, []);
+
+  // class schedule page API
+  const [content, setContent] = useState([]);
+  const [scheduleMetaData, setScheduleMetaData] = useState([]);
+
+  const getPagesData = () => {
+    API.get(`/pages`)
+      .then((response) => {
+        // debugger;
+        if (response.status === 200 || response.status === 201) {
+          let currentPage = response.data.data.find(
+            (x) => x.slug === "class-schedule"
+          );
+          setScheduleMetaData(currentPage);
+          API.get(`/all-sections/${currentPage._id}`)
+            .then((response) => {
+              setContent(response.data?.data[response.data.data?.length - 1]?.content);
+            })
+        }
+      })
+      .catch((err) => console.log(err));
+  }
 
   // memberships API 
   const [membershipsData, setMembershipsData] = useState([]);
@@ -117,6 +141,20 @@ const Home = (props) => {
             isArabic={global?.activeLanguage === "ar"}
           />
         </section>
+
+        <ClassSchedule
+          language={global?.activeLanguage}
+          mercatoSec={
+            global?.activeLanguage === "ar"
+              ? content?.arabic?.mercatoSection
+              : content?.mercatoSection
+          }
+          timesSec={
+            global?.activeLanguage === "ar"
+              ? content?.arabic?.timesSection
+              : content?.timesSection
+          }
+        />
 
         <TrainerSection
           testimonial={testimonialData}

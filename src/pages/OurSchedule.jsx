@@ -72,20 +72,21 @@ const OurSchedule = (props) => {
                 freeform="freeclass"
                 language={global?.activeLanguage}
             >
-
-                <ClassSchedule
-                    language={global?.activeLanguage}
-                    mercatoSec={
-                        global?.activeLanguage === "ar"
-                            ? content?.arabic?.mercatoSection
-                            : content?.mercatoSection
-                    }
-                    timesSec={
-                        global?.activeLanguage === "ar"
-                            ? content?.arabic?.timesSection
-                            : content?.timesSection
-                    }
-                />
+                <section className="pt-0">
+                    <ClassSchedule
+                        language={global?.activeLanguage}
+                        mercatoSec={
+                            global?.activeLanguage === "ar"
+                                ? content?.arabic?.mercatoSection
+                                : content?.mercatoSection
+                        }
+                        timesSec={
+                            global?.activeLanguage === "ar"
+                                ? content?.arabic?.timesSection
+                                : content?.timesSection
+                        }
+                    />
+                </section>
 
             </Layout>
         </div>
