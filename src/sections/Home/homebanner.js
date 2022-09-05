@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Container, Row, Col } from 'reactstrap'
-import Documents from '../../components/Modals/Documents/Documents';
-import ApplyNow from '../../components/Modals/ApplyNow/ApplyNow';
+import { Container, Row, Col } from "reactstrap";
+// import Documents from "../../components/Modals/Documents/Documents";
+import ApplyNow from "../../components/Modals/ApplyNow/ApplyNow";
 import { HashLink } from "react-router-hash-link";
 
 import BackGroundVideo from "../../components/BackGroundVideo/BackGroundVideo";
@@ -12,113 +12,124 @@ import BackGroundVideo from "../../components/BackGroundVideo/BackGroundVideo";
 import slider1 from "../../assets/images/OTF/banner/homeBannerSlider.jpg";
 
 var settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    arrows: false,
-    autoplay: false,
-    swipeToSlide: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  dots: true,
+  infinite: true,
+  speed: 1000,
+  arrows: false,
+  autoplay: false,
+  swipeToSlide: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 };
 
-
 const sliderData = [
-    {
-        bannerImg: slider1,
-        title: "Get Results You Can See and Feel",
-        // btn2: "BOOK A FREE CLASS NOW",
-        btn1: "VIEW MEMBERSHIP PACKAGES",
-    },
-    {
-        bannerImg: slider1,
-        title: "The Smartest Workout for More Results",
-        btn1: "BOOK A FREE CLASS NOW",
-        // btn2: "view membership details"
-    }
+  {
+    bannerImg: slider1,
+    title: "Get Results You Can See and Feel",
+    // btn2: "BOOK A FREE CLASS NOW",
+    btn1: "VIEW MEMBERSHIP PACKAGES",
+  },
+  {
+    bannerImg: slider1,
+    title: "The Smartest Workout for More Results",
+    btn1: "BOOK A FREE CLASS NOW",
+    // btn2: "view membership details"
+  },
 ];
 
 const HomeBanner = ({ language }) => {
-    const [showModal, setShowModal] = useState(false);
-    const [showCModal, setCShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showCModal, setCShowModal] = useState(false);
 
-    const [autoplay, setAutoplay] = useState({ ...settings.autoplay });
+  const [autoplay, setAutoplay] = useState({ ...settings.autoplay });
 
-    // useEffect(() => {
+  // useEffect(() => {
 
-    //     setTimeout(() => {
-    //         setAutoplay(true);
-    //     }, 2000);
+  //     setTimeout(() => {
+  //         setAutoplay(true);
+  //     }, 2000);
 
-    // }, []);
+  // }, []);
 
+  const videoSource =
+    "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";
 
-    const videoSource = "https://dafoos.b-cdn.net/otfvideo/SNEAKPEEK_280422_12SECS_V2_1920x920_withoutlogomp4.mp4";
+  return (
+    <section className="gym header" id="home">
+      <div className="header5-content">
+        <Slider
+          className="default-dots gym-slider"
+          id="gym-slider"
+          {...settings}
+          autoplay={false}
+        >
+          <div className="item">
+            <BackGroundVideo videoSource={videoSource}>
+              <div className="content">
+                <div className={"inner-header flex "}>
+                  <Container>
+                    <div className="center-text justify-content-center align-items-center">
+                      <div className="text-center">
+                        <div>
+                          <button
+                            className="homebannerBtn"
+                            onClick={() => setShowModal(true)}
+                          >
+                            BOOK YOUR FREE CLASS!
+                          </button>
+                        </div>
 
-    return (
-        <section className="gym header" id="home">
-            <div className="header5-content">
-                <Slider className="default-dots gym-slider" id="gym-slider" {...settings} autoplay={false}>
-                    <div className="item">
-                        <BackGroundVideo
-                            videoSource={videoSource}
-                        >
-                            <div className='content'>
-                                <div className={"inner-header flex "}>
-                                    <Container>
-                                        <div className="center-text justify-content-center align-items-center">
-                                            <div className="text-center">
-                                                <div className="header-text bold-text">
-                                                    <h1>
-                                                        Get Results You Can See and Feel
-                                                    </h1>
-                                                </div>
-                                                <div className="link-horizontal">
-                                                    <ul className="justify-content-center">
-                                                        {/* {
+                        <div className="header-text bold-text">
+                          <h1>Get Results You Can See and Feel</h1>
+                        </div>
+                        <div className="link-horizontal">
+                          <ul className="justify-content-center">
+                            {/* {
                                                             x.btn1 && */}
-                                                        <li>
-                                                            <HashLink to={`/${language}/memberships` + "#membership_packages"} className=" btn btn-default">
-                                                                VIEW MEMBERSHIP PACKAGES
-                                                            </HashLink>
-                                                            {/* <a className=" btn btn-default" href={`/${language}/memberships`}
+                            <li>
+                              <HashLink
+                                to={
+                                  `/${language}/memberships` +
+                                  "#membership_packages"
+                                }
+                                className=" btn btn-default"
+                              >
+                                VIEW MEMBERSHIP PACKAGES
+                              </HashLink>
+                              {/* <a className=" btn btn-default" href={`/${language}/memberships`}
                                                             // onClick={() => setShowModal(true)}
                                                             >
                                                                 VIEW MEMBERSHIP PACKAGES
                                                             </a> */}
-                                                            {/* <Documents
+                              {/* <Documents
                                                                 show={showModal} onHide={() => setShowModal(false)}
                                                                 title={"VIEW MEMBERSHIP PACKAGES"}
                                                             /> */}
-                                                        </li>
-                                                        {/* } */}
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </Container>
-                                </div>
-                            </div>
-                        </BackGroundVideo>
+                            </li>
+                            {/* } */}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div className="item" >
-                        <div className="gym-header bg gym-headerBg"
-                            style={{ backgroundImage: `url(${slider1})` }}
-                        >
-                            <Container>
-                                <Row>
-                                    <Col md="10" className="offset-md-1">
-                                        <div className="center-text">
-                                            <div className="text-center">
-                                                <div className="header-text bold-text">
-                                                    <h1>
-                                                        The Smartest Workout for More Results
-                                                    </h1>
-                                                </div>
-                                                {/* <div className="link-horizontal">
+                  </Container>
+                </div>
+              </div>
+            </BackGroundVideo>
+          </div>
+          <div className="item">
+            <div
+              className="gym-header bg gym-headerBg"
+              style={{ backgroundImage: `url(${slider1})` }}
+            >
+              <Container>
+                <Row>
+                  <Col md="10" className="offset-md-1">
+                    <div className="center-text">
+                      <div className="text-center">
+                        <div className="header-text bold-text">
+                          <h1>The Smartest Workout for More Results</h1>
+                        </div>
+                        {/* <div className="link-horizontal">
                                                     <ul className="justify-content-center">
                                                         <li>
                                                             <a className=" btn btn-default"
@@ -129,20 +140,22 @@ const HomeBanner = ({ language }) => {
                                                         </li>
                                                     </ul>
                                                 </div> */}
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
+                      </div>
                     </div>
-                </Slider>
-                <ApplyNow
-                    show={showCModal} onHide={() => setCShowModal(false)}
-                    language={language}
-                />
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </div>
+        </Slider>
+        <ApplyNow
+          show={showModal}
+          onHide={() => setShowModal(false)}
+          language={language}
+          title={"Free Class"}
+        />
 
-                {/* <Slider className="default-dots gym-slider" id="gym-slider" {...settings}>
+        {/* <Slider className="default-dots gym-slider" id="gym-slider" {...settings}>
                     {sliderData &&
                         sliderData.length > 0 &&
                         sliderData.map((x, i) => (
@@ -212,9 +225,9 @@ const HomeBanner = ({ language }) => {
                         )
                     }
                 </Slider> */}
-            </div>
-        </section>
-    )
-}
+      </div>
+    </section>
+  );
+};
 
 export default HomeBanner;

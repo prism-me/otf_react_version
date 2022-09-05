@@ -3662,6 +3662,32 @@ header {
 
   .header5-content {
     .gym-slider {
+      .homebannerBtn{
+        color: $white;
+        padding: 0.5rem 2.5rem;
+        border: 1px solid $orange;
+        text-transform: uppercase;
+        background: $orange;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom:45px;
+
+        @media (max-width:767px){
+          font-size: 14px;
+          margin-bottom:30px;
+        }
+    
+        &:hover {
+          background: $white;
+          color: $orange;
+          border: 1px solid $white;
+        }
+    
+        &:focus {
+          outline: 0;
+        }
+      }
       .item {
         img {
           display: block;
@@ -12699,7 +12725,7 @@ breadcrumb-section css start
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  // background-blend-mode: overlay;
+  background-blend-mode: overlay;
   padding: 230px 0;
 
   li {
@@ -12870,8 +12896,12 @@ breadcrumb-section css start
     background: $orange;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
 
+    @media (max-width:767px){
+      font-size: 14px;
+    }
+    
     &:hover {
       background: $white;
       color: $orange;

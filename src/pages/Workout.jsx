@@ -6,7 +6,7 @@ import WorkGrid from "../sections/Workout/workgrid";
 import ScheduleSection from "../sections/Home/schedule";
 // import CounterSection from "../sections/Home/counter";
 import CounterSection from "../sections/About/counter";
-import TrainerSection from "../sections/Home/trainer";
+// import TrainerSection from "../sections/Home/trainer";
 import Coaching from "../sections/Offers/coaching"
 import Layout from '../components/common-layout';
 import { API } from "../http/API"
@@ -24,22 +24,22 @@ import About from "../sections/Workout/about";
 const Workout = (props) => {
 
     useEffect(() => {
-        getAllTestimonial();
+        // getAllTestimonial();
         getPagesData();
     }, []);
 
     // testimonial API 
-    const [testimonialData, setTestimonialData] = useState([]);
+    // const [testimonialData, setTestimonialData] = useState([]);
 
-    const getAllTestimonial = () => {
-        API.get('/testimonials').then(response => {
-            const alltestimonial = response.data?.data?.filter(x => x.type === "testimonial");
-            setTestimonialData(alltestimonial);
-        })
-            .catch(err => {
-                console.log(err)
-            })
-    }
+    // const getAllTestimonial = () => {
+    //     API.get('/testimonials').then(response => {
+    //         const alltestimonial = response.data?.data?.filter(x => x.type === "testimonial");
+    //         setTestimonialData(alltestimonial);
+    //     })
+    //         .catch(err => {
+    //             console.log(err)
+    //         })
+    // }
 
     // workout page API
     const [workoutMetaData, setWorkoutMetaData] = useState([]);
@@ -112,12 +112,12 @@ const Workout = (props) => {
                     <Coaching />
                 </section>
 
-                <TrainerSection
+                {/* <TrainerSection
                     testimonial={testimonialData}
                     language={global?.activeLanguage}
                     isArabic={global?.activeLanguage === "ar"}
                     title="What Our Members Are Saying About"
-                />
+                /> */}
 
 
                 {/* <CounterSection

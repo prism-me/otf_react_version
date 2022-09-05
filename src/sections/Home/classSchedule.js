@@ -288,7 +288,7 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                         </tbody> */}
                     </Table>
                     <center>
-                        <a href={"https://wa.me/+971800625336"} target={"_blank"} className='btn otfBtn1 mt-3'
+                        <a href={"https://wa.me/+971504276004"} target={"_blank"} className='btn otfBtn1 mt-3'
                             style={{ border: "1px solid #F58220", color: "#F58220" }}
                         >
                             <i class="fab fa-whatsapp mr-2"
