@@ -126,6 +126,14 @@ const HomeBanner = ({ language }) => {
                   <Col md="10" className="offset-md-1">
                     <div className="center-text">
                       <div className="text-center">
+                        <div>
+                          <button
+                            className="homebannerBtn"
+                            onClick={() => setShowModal(true)}
+                          >
+                            BOOK YOUR FREE CLASS!
+                          </button>
+                        </div>
                         <div className="header-text bold-text">
                           <h1>The Smartest Workout for More Results</h1>
                         </div>
