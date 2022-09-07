@@ -16,6 +16,15 @@
     max-width: 450px;
   }
 
+  .downloadcontent {
+    @media (max-width: 575px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
   .offer-subtext {
     color: #000;
     font-size: 30px;

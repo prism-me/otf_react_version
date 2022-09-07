@@ -22,20 +22,22 @@ const DownloadApp = (props) => {
               </span>
             </p>
             <Row>
-              <Col sm={6}>
+              <Col sm={6} className="downloadcontent">
                 <h3 className="offer-subtext">Download Our App</h3>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN"
-                  target={"_blank"}
-                >
-                  <img src={GooglePlay} alt="logo" className="mr-3" />
-                </a>
-                <a
-                  href="https://apps.apple.com/us/app/orangetheory-fitness/id1424351827"
-                  target={"_blank"}
-                >
-                  <img src={AppStore} alt="logo" />
-                </a>
+                <div>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN"
+                    target={"_blank"}
+                  >
+                    <img src={GooglePlay} alt="logo" className="mr-3" />
+                  </a>
+                  <a
+                    href="https://apps.apple.com/us/app/orangetheory-fitness/id1424351827"
+                    target={"_blank"}
+                  >
+                    <img src={AppStore} alt="logo" />
+                  </a>
+                </div>
               </Col>
               <Col
                 sm={6}
