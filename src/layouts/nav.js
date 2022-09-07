@@ -5,8 +5,8 @@ import { useHistory } from "react-router-dom";
 import ClearIcon from "@material-ui/icons/Clear";
 import { connect } from "react-redux";
 import { types } from "../redux/global/types";
-import ApplyNow from "../components/Modals/ApplyNow/ApplyNow";
 import { Dropdown } from "react-bootstrap";
+import DownloadApp from "../components/Modals/DownloadApp/DownloadApp";
 
 const Nav = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -193,27 +193,21 @@ const Nav = (props) => {
                 </li> */}
         <li>
           {" "}
-          <a
-            href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN"
+          <button
             className="otfBtn1 ml-3"
             style={{
               padding: "0.5rem 1.5rem",
             }}
-            target="_blank"
+            onClick={() => setShowModal(true)}
           >
             Download our App
-          </a>
-          {/* <button className='otfBtn1 ml-3'
-                    style={{
-                        padding: "0.5rem 1.5rem"
-                    }}
-                    onClick={() => setShowModal(true)}
-                >BOOK YOUR FREE CLASS!</button>
-                    <ApplyNow
-                        show={showModal} onHide={() => setShowModal(false)}
-                        title={"Free Class"}
-                        language={props.global.activeLanguage}
-                    /> */}
+          </button>
+          <DownloadApp
+            show={showModal}
+            onHide={() => setShowModal(false)}
+            title={"Free Class"}
+            language={props.global.activeLanguage}
+          />
         </li>
         {/* <div
                     className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}

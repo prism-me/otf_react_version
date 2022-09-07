@@ -23,6 +23,7 @@
 @import "./components/Modals/ApplyNow/ApplyNow.scss";
 @import "./components/BackToTop/BackToTop.scss";
 @import "./components/Modals/Documents/Documents";
+@import "./components/Modals/DownloadApp/DownloadApp.scss";
 @import "./components/Modals/Ages/Ages";
 @import "./components/Modals/GeneralPolicies/GeneralPolicies";
 @import "./components/BackGroundVideo/BackGroundVideo";
@@ -4762,7 +4763,7 @@ booking section end
 
       .membersaysabout-container {
         padding: 25px 30px;
-        height: 500px;
+        // height: 500px;
         border-radius: 10px;
         margin: 5px;
         background: $white;
@@ -4802,7 +4803,7 @@ booking section end
         .membersaysabout-para {
           letter-spacing: 0;
           font-size: $sub-fonts;
-
+          height: 250px;
           p {
             letter-spacing: 0;
             font-size: $sub-fonts;
@@ -4845,7 +4846,7 @@ booking section end
 
       .team-container {
         // padding: 25px 30px;
-        height: 700px;
+        // height: 700px;
         border: 1px solid $orange;
         box-shadow: 0 0 10px 5px rgba(253, 248, 247, 0.69);
         border-radius: 10px;
@@ -4887,11 +4888,13 @@ booking section end
         .team-para {
           letter-spacing: 0;
           font-size: $sub-fonts;
-
           p {
             letter-spacing: 0;
             font-size: $sub-fonts;
           }
+        }
+        .team-para-height{
+          height: 450px;
         }
       }
     }

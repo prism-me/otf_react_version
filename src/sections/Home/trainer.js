@@ -107,7 +107,7 @@ const Trainer = ({ testimonial, title, isArabic }) => (
                                                         : x?.date
                                                 }
                                             </h6>
-                                            <p className="team-para"
+                                            <p className="team-para team-para-height"
                                                 dangerouslySetInnerHTML={{
                                                     __html:
                                                         isArabic
