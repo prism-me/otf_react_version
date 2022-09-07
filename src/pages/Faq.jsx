@@ -99,9 +99,9 @@ const Faq = (props) => {
             </Helmet>
             <Layout
                 title="Try Us For Free. Yes, Free!"
-                btntext="book a free class now"
                 promtext="*Promotion Terms. Limited Time Offer."
                 bannerImg={faqbanner}
+                btntext="Book your Free class!"
                 freeform="freeclass"
             >
                 <section className="saas1 faq testimonial-bg inner-container rightAnimation" id="faq">
