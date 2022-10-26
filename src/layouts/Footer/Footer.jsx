@@ -1,20 +1,19 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Container, Row, Col } from 'reactstrap'
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import PhoneIcon from '@material-ui/icons/Phone';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { Container, Row, Col } from "reactstrap";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import PhoneIcon from "@material-ui/icons/Phone";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 //images
-import footerlogo from "../../assets/images/OTF/logo/footer_logo.png"
-import GooglePlay from "../../assets/images/OTF/logo/GooglePlay.png"
-import AppStore from "../../assets/images/OTF/logo/AppStore.png"
-
+import footerlogo from "../../assets/images/OTF/logo/footer_logo.png";
+import GooglePlay from "../../assets/images/OTF/logo/GooglePlay.png";
+import AppStore from "../../assets/images/OTF/logo/AppStore.png";
 
 const Footer = (props) => {
   const { global } = props;
@@ -26,9 +25,12 @@ const Footer = (props) => {
           <Row>
             <Col lg="3" md="6" sm="12" className="set-first">
               <div className="footer-contant">
-                <img alt="" className="img-fluid footer-logo mb-0"
+                <img
+                  alt=""
+                  className="img-fluid footer-logo mb-0"
                   style={{ marginTop: "-1rem" }}
-                  src={footerlogo} />
+                  src={footerlogo}
+                />
                 {/* <div className="logo-sec my-4">
                   <p className='mb-3'
                     style={{ fontSize: "14px" }}
@@ -85,7 +87,9 @@ const Footer = (props) => {
                       </Link>
                     </li>
                     <li>
-                      <HashLink to={`/${global.activeLanguage}/about` + "#mission"}>
+                      <HashLink
+                        to={`/${global.activeLanguage}/about` + "#mission"}
+                      >
                         Our Mission, Vision, & Values
                       </HashLink>
                       {/* <Link to={`/${global.activeLanguage}/about`}>
@@ -96,7 +100,9 @@ const Footer = (props) => {
                       <Link to={`/${global.activeLanguage}/press`}>Press</Link>
                     </li> */}
                     <li>
-                      <Link to={`/${global.activeLanguage}/offers`}>Offers</Link>
+                      <Link to={`/${global.activeLanguage}/offers`}>
+                        Offers
+                      </Link>
                     </li>
                     <li>
                       <Link to={`/${global.activeLanguage}/faq`}>FAQ's</Link>
@@ -105,7 +111,12 @@ const Footer = (props) => {
                       <Link to={`/${global.activeLanguage}/careers`}>Jobs</Link>
                     </li>
                     <li>
-                      <Link to={`/${global.activeLanguage}/articles`} className='active'>Articles</Link>
+                      <Link
+                        to={`/${global.activeLanguage}/articles`}
+                        className="active"
+                      >
+                        Articles
+                      </Link>
                     </li>
                     {/* <li>
                       <Link to={`/${global.activeLanguage}/promotion-terms`}>Promotion Terms</Link>
@@ -119,44 +130,72 @@ const Footer = (props) => {
             </Col>
             <Col lg="3" md="6" sm="12">
               <div className="logo-sec mb-3">
-                <p className='mb-3 text-center socialText'
+                <p
+                  className="mb-3 text-center socialText"
                   style={{ fontSize: "14px" }}
-                >Follow Us On</p>
+                >
+                  Follow Us On
+                </p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
-                    <a href="https://www.instagram.com/otfdubai/" className='instahover' target={"_blank"}>
+                    <a
+                      href="https://www.instagram.com/otfdubai/"
+                      className="instahover"
+                      target={"_blank"}
+                    >
                       <InstagramIcon />
                     </a>
                   </li>
                   <li className="footer-social-list ">
-                    <a href="https://www.facebook.com/OTFDubai" className='fbhover' target={"_blank"}>
+                    <a
+                      href="https://www.facebook.com/OTFDubai"
+                      className="fbhover"
+                      target={"_blank"}
+                    >
                       <FacebookIcon />
                     </a>
                   </li>
                   <li className="footer-social-list ">
-                    <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHB6rwn1JfoIwAAAYADKMRIRbmDSr01qAQt0NDCj3xmyxOni_Oals07utfzDUhFAPsFqL1Uo6pXz5uaI_6j7n11OuWi6OI229bWFL4oQbuTC8F8tvpELsBNAgd2UFDtJi4LsY0=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Forangetheory-fitness" className='linkhover' target={"_blank"}>
+                    <a
+                      href="https://www.linkedin.com/company/otfdubai/"
+                      className="linkhover"
+                      target={"_blank"}
+                    >
                       <LinkedInIcon />
                     </a>
                   </li>
                   <li className="footer-social-list ">
-                    <a href="https://twitter.com/orangetheory" className='twithover' target={"_blank"}>
+                    <a
+                      href="https://twitter.com/orangetheory"
+                      className="twithover"
+                      target={"_blank"}
+                    >
                       <TwitterIcon />
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <p className='mb-3 text-center socialText'
+                <p
+                  className="mb-3 text-center socialText"
                   style={{ fontSize: "14px" }}
-                >Download Our App</p>
+                >
+                  Download Our App
+                </p>
                 <ul className="d-flex footer-social social justify-content-center align-items-center mblfootersocial">
                   <li className="footer-social-list">
-                    <a href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN" target={"_blank"}>
-                      <img src={GooglePlay} alt="logo" className='mr-3' />
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.orangetheoryfitness.orangetheory&hl=en_IN"
+                      target={"_blank"}
+                    >
+                      <img src={GooglePlay} alt="logo" className="mr-3" />
                     </a>
                   </li>
                   <li className="footer-social-list">
-                    <a href="https://apps.apple.com/us/app/orangetheory-fitness/id1424351827" target={"_blank"}>
+                    <a
+                      href="https://apps.apple.com/us/app/orangetheory-fitness/id1424351827"
+                      target={"_blank"}
+                    >
                       <img src={AppStore} alt="logo" />
                     </a>
                   </li>
@@ -167,38 +206,27 @@ const Footer = (props) => {
               <div className="footer-para">
                 <p className="para-address">
                   <LocationOnIcon className="mr-2 paraIcons" />
-                  <strong>
-                    Orangetheory Fitness
-                    Mercato Mall - Level 1
-                  </strong>
+                  <strong>Orangetheory Fitness Mercato Mall - Level 1</strong>
                   <br />
                   <span style={{ fontWeight: "300" }}>
-                    Jumeirah Beach Road, Dubai
-                    United Arab Emirates
+                    Jumeirah Beach Road, Dubai United Arab Emirates
                   </span>
                 </p>
                 <p className="para-address mt-2">
                   <PhoneIcon className="mr-2 paraIcons" />
-                  <a href='tel:+9714 340 1040'>
-                    +9714 340 1040
-                  </a>
+                  <a href="tel:+9714 340 1040">+9714 340 1040</a>
                 </p>
                 <p className="para-address mt-3">
                   <LocationOnIcon className="mr-2 paraIcons" />
-                  <strong>
-                    Times Square Centre - Ground Floor
-                  </strong>
+                  <strong>Times Square Centre - Ground Floor</strong>
                   <br />
                   <span style={{ fontWeight: "300" }}>
-                    Sheikh Zayed Road, Dubai
-                    United Arab Emirates
+                    Sheikh Zayed Road, Dubai United Arab Emirates
                   </span>
                 </p>
                 <p className="para-address mt-2">
                   <PhoneIcon className="mr-2 paraIcons" />
-                  <a href='tel:+9714 324 4424'>
-                    +9714 324 4424
-                  </a>
+                  <a href="tel:+9714 324 4424">+9714 324 4424</a>
                 </p>
               </div>
             </Col>
@@ -207,12 +235,37 @@ const Footer = (props) => {
       </footer>
       <div className="gym copyright text-center">
         <Container>
-          © <Link className="copyright-text" to="/">Orangetheoryfitness</Link> | <Link className="copyright-text " to={`/${global.activeLanguage}/terms-of-use`}>Terms of use </Link> | <Link className="copyright-text" to={`/${global.activeLanguage}/privacy-policy`}>Privacy Policy</Link> | Designed and Managed by <a className="copyright-text" href="https://www.prism-me.com/" target={"_blank"}>Prism Digital.</a>
+          ©{" "}
+          <Link className="copyright-text" to="/">
+            Orangetheoryfitness
+          </Link>{" "}
+          |{" "}
+          <Link
+            className="copyright-text "
+            to={`/${global.activeLanguage}/terms-of-use`}
+          >
+            Terms of use{" "}
+          </Link>{" "}
+          |{" "}
+          <Link
+            className="copyright-text"
+            to={`/${global.activeLanguage}/privacy-policy`}
+          >
+            Privacy Policy
+          </Link>{" "}
+          | Designed and Managed by{" "}
+          <a
+            className="copyright-text"
+            href="https://www.prism-me.com/"
+            target={"_blank"}
+          >
+            Prism Digital.
+          </a>
         </Container>
       </div>
-    </Fragment >
-  )
-}
+    </Fragment>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
