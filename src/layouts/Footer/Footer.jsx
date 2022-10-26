@@ -6,7 +6,7 @@ import { Container, Row, Col } from "reactstrap";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
+// import TwitterIcon from "@material-ui/icons/Twitter";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
@@ -164,7 +164,7 @@ const Footer = (props) => {
                       <LinkedInIcon />
                     </a>
                   </li>
-                  <li className="footer-social-list ">
+                  {/* <li className="footer-social-list ">
                     <a
                       href="https://twitter.com/orangetheory"
                       className="twithover"
@@ -172,7 +172,7 @@ const Footer = (props) => {
                     >
                       <TwitterIcon />
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div>

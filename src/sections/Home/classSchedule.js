@@ -1,32 +1,25 @@
-import React from 'react'
-import { Container, Table, Row, Col } from 'reactstrap'
-
+import React from "react";
+import { Container, Table, Row, Col } from "reactstrap";
 
 const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
+  return (
+    <>
+      <section className="classSchedule gym pb-0" id="bmi">
+        <Container>
+          <h3 className="oftHeading mb-3">{mercatoSec?.title}</h3>
+          <p className="oftsubHeading text-center mb-3">
+            {mercatoSec?.subtitle}{" "}
+            <a href="tel:+9714 340-10-40">(+9714 340-10-40)</a>
+          </p>
 
-    return (
-        <>
-            <section className="classSchedule gym pb-0" id="bmi">
-                <Container>
-                    <h3 className="oftHeading mb-3">
-                        {
-                            mercatoSec?.title
-                        }
-                    </h3>
-                    <p className="oftsubHeading text-center mb-3">
-                        {
-                            mercatoSec?.subtitle
-                        } <a href="tel:+9714 340-10-40">(+9714 340-10-40)</a>
-                    </p>
-
-                    <Table responsive className={"text-center TableMB"}>
-                        <p className={"SubTitle"}
-                            dangerouslySetInnerHTML={{
-                                __html: mercatoSec?.content
-                            }}
-                        >
-                        </p>
-                        {/* <thead>
+          <Table responsive className={"text-center TableMB"}>
+            <p
+              className={"SubTitle"}
+              dangerouslySetInnerHTML={{
+                __html: mercatoSec?.content,
+              }}
+            ></p>
+            {/* <thead>
                             <tr>
                                 <th>Age</th>
                                 <th>American Gulf School (GRADE)</th>
@@ -144,31 +137,26 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                                 <td>Terminale</td>
                             </tr>
                         </tbody> */}
-                    </Table>
-                </Container>
-            </section>
+          </Table>
+        </Container>
+      </section>
 
-            <section className="classSchedule gym pt-4 pb-0" id="bmi">
-                <Container>
-                    <h3 className="oftHeading mb-3">
-                        {
-                            timesSec?.title
-                        }
-                    </h3>
-                    <p className="oftsubHeading text-center mb-3">
-                        {
-                            timesSec?.subtitle
-                        } <a href="tel:+9714 324-44-24">(+9714 324-44-24)</a>
-                    </p>
+      <section className="classSchedule gym pt-4 pb-0" id="bmi">
+        <Container>
+          <h3 className="oftHeading mb-3">{timesSec?.title}</h3>
+          <p className="oftsubHeading text-center mb-3">
+            {timesSec?.subtitle}{" "}
+            <a href="tel:+9714 324-44-24">(+9714 324-44-24)</a>
+          </p>
 
-                    <Table responsive className={"text-center TableMB"}>
-                        <p className={"SubTitle"}
-                            dangerouslySetInnerHTML={{
-                                __html: timesSec?.content
-                            }}
-                        >
-                        </p>
-                        {/* <thead>
+          <Table responsive className={"text-center TableMB"}>
+            <p
+              className={"SubTitle"}
+              dangerouslySetInnerHTML={{
+                __html: timesSec?.content,
+              }}
+            ></p>
+            {/* <thead>
                             <tr>
                                 <th>Age</th>
                                 <th>American Gulf School (GRADE)</th>
@@ -286,22 +274,25 @@ const ClassSchedule = ({ timesSec, language, mercatoSec }) => {
                                 <td>Terminale</td>
                             </tr>
                         </tbody> */}
-                    </Table>
-                    <center>
-                        <a href={"https://wa.me/+971504276004"} target={"_blank"} className='btn otfBtn1 mt-3'
-                            style={{ border: "1px solid #F58220", color: "#F58220" }}
-                        >
-                            <i class="fab fa-whatsapp mr-2"
-                                style={{ color: "#25d366" }}
-                            ></i>
-                            Reach out to us
-                        </a>
-                    </center>
-                </Container>
-            </section>
-        </>
-
-    )
-}
+          </Table>
+          <center>
+            <a
+              href={"https://wa.me/+971504276004"}
+              target={"_blank"}
+              className="btn otfBtn1 mt-3"
+              style={{ border: "1px solid #F58220", color: "#F58220" }}
+            >
+              <i
+                class="fab fa-whatsapp mr-2"
+                style={{ color: "#25d366", fontSize: "20px" }}
+              ></i>
+              Reach out to us
+            </a>
+          </center>
+        </Container>
+      </section>
+    </>
+  );
+};
 
 export default ClassSchedule;

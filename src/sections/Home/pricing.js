@@ -88,7 +88,10 @@ const Pricing = ({ membershipsData, isArabic, language }) => {
             className="btn otfBtn1"
             style={{ border: "1px solid #F58220", color: "#F58220" }}
           >
-            <i class="fab fa-whatsapp mr-2" style={{ color: "#25d366" }}></i>
+            <i
+              class="fab fa-whatsapp mr-2"
+              style={{ color: "#25d366", fontSize: "20px" }}
+            ></i>
             Reach out to us
           </a>
         </center>
