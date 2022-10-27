@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
-  Modal, ModalBody, Form,
+  Modal,
+  ModalBody,
+  Form,
   FormGroup,
   Input,
-  Row, Col, Container,
-  Label
-} from 'reactstrap';
+  Row,
+  Col,
+  Container,
+  Label,
+} from "reactstrap";
 import ClearIcon from "@material-ui/icons/Clear";
 
-import { API } from "../../../http/API"
-import { Alert } from "react-bootstrap"
-
+import { API } from "../../../http/API";
+import { Alert } from "react-bootstrap";
 
 const ApplyNow = (props) => {
-
-  // locations API 
+  // locations API
 
   useEffect(() => {
     getAllLocations();
@@ -23,14 +25,15 @@ const ApplyNow = (props) => {
   const [locationsData, setLocationsData] = useState([]);
 
   const getAllLocations = () => {
-    API.get('/locations').then(response => {
-      const alllocations = response.data?.data;
-      setLocationsData(alllocations);
-    })
-      .catch(err => {
-        console.log(err)
+    API.get("/locations")
+      .then((response) => {
+        const alllocations = response.data?.data;
+        setLocationsData(alllocations);
       })
-  }
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const defaultState = {
     location: "",
@@ -39,9 +42,8 @@ const ApplyNow = (props) => {
     phone: "",
     email: "",
     get_updates: "",
-    type: "book_class_form"
+    type: "book_class_form",
   };
-
 
   const [formValues, setFormValues] = useState(defaultState);
   const [isValid, setIsValid] = useState(false);
@@ -55,62 +57,60 @@ const ApplyNow = (props) => {
       .then((response) => {
         if (response.status === 200 || response.status === 201) {
           setLoading(false);
-          setIsValid(true)
+          setIsValid(true);
           setFormValues({ ...defaultState });
         }
       })
       .catch((err) => {
+        setLoading(false);
         alert("Something went wrong.");
         console.log(err);
       });
-  }
+  };
   const handleChange = (e) => {
     setFormValues({
       ...formValues,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <>
       <Modal isOpen={props.show} className="sburning">
         <ModalBody>
           <Container>
-            <p className='modalIconWrape mt-3'>
-              <span className='modalIconStyle'
+            <p className="modalIconWrape mt-3">
+              <span
+                className="modalIconStyle"
                 style={{
-                  padding: "0.6rem 0.7rem 0.7rem 0.7rem"
+                  padding: "0.6rem 0.7rem 0.7rem 0.7rem",
                 }}
               >
-                <ClearIcon
-                  onClick={props.onHide}
-                />
+                <ClearIcon onClick={props.onHide} />
               </span>
             </p>
-            {isValid &&
-              <Alert variant="success"
+            {isValid && (
+              <Alert
+                variant="success"
                 onClose={() => {
                   setIsValid(false);
                 }}
                 dismissible
-                className='mt-5'
+                className="mt-5"
               >
                 Data Submitted Successfuly!
               </Alert>
-            }
-            <Form className='offer-form' onSubmit={handleSubmit}>
-              <h3 className="offer-subtext mb-0">
-                Free Intro Class*
-              </h3>
-              <p className='mt-3 offer-detailtext'>
-                Experience our workout for free. Please fill out the form and a member of the team will be in touch.
+            )}
+            <Form className="offer-form" onSubmit={handleSubmit}>
+              <h3 className="offer-subtext mb-0">Free Intro Class*</h3>
+              <p className="mt-3 offer-detailtext">
+                Experience our workout for free. Please fill out the form and a
+                member of the team will be in touch.
               </p>
-              <p className='mt-3 offer-detailtext'>
+              <p className="mt-3 offer-detailtext">
                 * All fields are mandatory
               </p>
-              <p className='mt-3 mb-2 offer-detailtext'>
-                Find Your Location
-              </p>
+              <p className="mt-3 mb-2 offer-detailtext">Find Your Location</p>
               {/* <FormGroup>
                 <Input
                   type="text"
@@ -122,30 +122,30 @@ const ApplyNow = (props) => {
                 />
               </FormGroup> */}
               <FormGroup>
-                <Input type="select" name="location"
+                <Input
+                  type="select"
+                  name="location"
                   value={formValues.location}
                   onChange={handleChange}
                   id="exampleSelect"
-                  className='inputStyle'
+                  className="inputStyle"
                   required
                   style={{ color: "#495057", width: "100%" }}
-
                 >
-                  <option style={{ color: "#495057" }} value="">Select Location</option>
+                  <option style={{ color: "#495057" }} value="">
+                    Select Location
+                  </option>
                   {locationsData &&
                     locationsData.length > 0 &&
-                    locationsData.map((x) => (
-                      <option style={{ color: "#495057" }} key={x} value={x?.name}>
-                        {
-                          props?.language === "ar"
-                            ? x?.arabic?.name
-                            :
-                            x?.name
-                        }
+                    locationsData.map((x, i) => (
+                      <option
+                        style={{ color: "#495057" }}
+                        key={i}
+                        value={x?.name}
+                      >
+                        {props?.language === "ar" ? x?.arabic?.name : x?.name}
                       </option>
-                    ))
-                  }
-
+                    ))}
                 </Input>
               </FormGroup>
               <Row form>
@@ -158,7 +158,7 @@ const ApplyNow = (props) => {
                       value={formValues.first_name}
                       onChange={handleChange}
                       placeholder="First Name"
-                      className='inputStyle'
+                      className="inputStyle"
                       required
                     />
                   </FormGroup>
@@ -172,7 +172,7 @@ const ApplyNow = (props) => {
                       value={formValues.last_name}
                       onChange={handleChange}
                       placeholder="Last Name"
-                      className='inputStyle'
+                      className="inputStyle"
                       required
                     />
                   </FormGroup>
@@ -186,7 +186,7 @@ const ApplyNow = (props) => {
                       value={formValues.phone}
                       onChange={handleChange}
                       placeholder="Phone Number"
-                      className='inputStyle'
+                      className="inputStyle"
                       required
                     />
                   </FormGroup>
@@ -200,7 +200,7 @@ const ApplyNow = (props) => {
                       value={formValues.email}
                       onChange={handleChange}
                       placeholder="Email"
-                      className='inputStyle'
+                      className="inputStyle"
                       required
                     />
                   </FormGroup>
@@ -208,8 +208,9 @@ const ApplyNow = (props) => {
               </Row>
               <FormGroup check>
                 <Label check>
-                  <Input type="checkbox"
-                    className='inputStyle'
+                  <Input
+                    type="checkbox"
+                    className="inputStyle"
                     value="Yes I’d like to get updates and
                     offers from Orangetheory Fitness
                     by text."
@@ -217,35 +218,36 @@ const ApplyNow = (props) => {
                     onClick={handleChange}
                     name="get_updates"
                   />
-                  Yes I’d like to get updates and
-                  offers from Orangetheory Fitness
-                  by text.
+                  Yes I’d like to get updates and offers from Orangetheory
+                  Fitness by text.
                 </Label>
               </FormGroup>
-              {
-                loading ?
-                  <div className="loader"
-                    style={{
-                      borderTopColor: "#2E2E2E",
-                      borderRightColor: "#2E2E2E",
-                      borderBottomColor: "#2E2E2E",
-                      borderLeftColor: "#F58220",
-                      width: "sm" ? "6em" : "md" ? "10em" : "10em",
-                      height: "sm" ? "6em" : "md" ? "10em" : "10em",
-                    }}
-                  />
-                  :
-                  <button className="offerBtn px-5 mt-4"
-                    style={{ border: "1px solid #F58220" }}
-                  >Submit</button>
-              }
-
+              {loading ? (
+                <div
+                  className="loader"
+                  style={{
+                    borderTopColor: "#2E2E2E",
+                    borderRightColor: "#2E2E2E",
+                    borderBottomColor: "#2E2E2E",
+                    borderLeftColor: "#F58220",
+                    width: "sm" ? "6em" : "md" ? "10em" : "10em",
+                    height: "sm" ? "6em" : "md" ? "10em" : "10em",
+                  }}
+                />
+              ) : (
+                <button
+                  className="offerBtn px-5 mt-4"
+                  style={{ border: "1px solid #F58220" }}
+                >
+                  Submit
+                </button>
+              )}
             </Form>
           </Container>
         </ModalBody>
       </Modal>
     </>
   );
-}
+};
 
 export default ApplyNow;
