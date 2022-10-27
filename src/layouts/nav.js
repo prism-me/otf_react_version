@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MENUITEMS } from "../utils/navMenu";
-import { useHistory } from "react-router-dom";
 import ClearIcon from "@material-ui/icons/Clear";
 import { connect } from "react-redux";
 import { types } from "../redux/global/types";
-import { Dropdown } from "react-bootstrap";
+// import { Dropdown } from "react-bootstrap";
 import DownloadApp from "../components/Modals/DownloadApp/DownloadApp";
+import { useLocation } from "react-router-dom";
 
 const Nav = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -18,11 +18,10 @@ const Nav = (props) => {
     setSidebar(!sidebar);
     document.querySelector(".navbar").classList.remove("openSidebar");
   };
-  const history = useHistory();
-
+  const location = useLocation();
   useEffect(() => {
-    const currentUrl = history.location.pathname.split("/")[2];
-    mainmenu.filter((items) => {
+    const currentUrl = location.pathname.split("/")[2];
+    MENUITEMS?.filter((items) => {
       if (items.path === currentUrl) setNavActive(items);
       if (!items.children) return false;
       items.children.filter((subItems) => {
@@ -33,10 +32,10 @@ const Nav = (props) => {
         });
       });
     });
-  }, []);
+  }, [location.pathname.split("/")[2]]);
 
   const setNavActive = (item) => {
-    MENUITEMS.filter((menuItem) => {
+    MENUITEMS?.filter((menuItem) => {
       if (menuItem != item) menuItem.active = false;
       if (menuItem.children && menuItem.children.includes(item))
         menuItem.active = true;
@@ -89,31 +88,31 @@ const Nav = (props) => {
             <li key={i} className={"navItemStyle"}>
               {menuItem.type === "sub" ? (
                 <>
-                  <a
+                  <Link
                     className="dropdown mblscreenLocations"
                     onClick={() => toggletNavActive(menuItem)}
                   >
                     <span>{menuItem.title}</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="dropdown desktopcreenLocations"
-                    href={`/${props.global.activeLanguage}/locations`}
+                    to={`/${props.global.activeLanguage}/locations`}
                     onClick={() => toggletNavActive(menuItem)}
                   >
                     <span>{menuItem.title}</span>
-                  </a>
+                  </Link>
                 </>
               ) : (
                 ""
               )}
               {
                 menuItem.type === "link" && (
-                  <a
-                    href={`/${props.global.activeLanguage}/${menuItem.path}`}
+                  <Link
+                    to={`/${props.global.activeLanguage}/${menuItem.path}`}
                     className={`${menuItem.active ? "active" : ""}`}
                   >
                     {menuItem.title}
-                  </a>
+                  </Link>
                 )
                 // <Link to={`/${props.global.activeLanguage}/${menuItem.path}`}
                 //     className={`${menuItem.active ? 'active' : ''} navMenuLink`}
@@ -138,17 +137,17 @@ const Nav = (props) => {
                       className={`${childrenItem.children ? "sub-menu " : ""}`}
                     >
                       {childrenItem.type === "sub" ? (
-                        <a
-                          href="#javascript"
+                        <Link
+                          to="#javascript"
                           onClick={() => toggletNavActive(childrenItem)}
                         >
                           {childrenItem.title}
-                        </a>
+                        </Link>
                       ) : (
                         ""
                       )}
                       {childrenItem.type === "link" ? (
-                        <Link href={`${childrenItem.path}`}>
+                        <Link to={`${childrenItem.path}`}>
                           <a> {childrenItem.title} </a>
                         </Link>
                       ) : (
@@ -163,7 +162,7 @@ const Nav = (props) => {
                           {childrenItem.children.map((childrenSubItem, key) => (
                             <li key={key}>
                               {childrenSubItem.type === "link" ? (
-                                <Link href={`${childrenSubItem.path}`}>
+                                <Link to={`${childrenSubItem.path}`}>
                                   <a className="sub-menu-title">
                                     {childrenSubItem.title}
                                   </a>
